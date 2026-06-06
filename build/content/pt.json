@@ -429,7 +429,8 @@
   "breadcrumbHome": "Início",
   "labels": {
     "does": "O que fazemos",
-    "products": "O que gerimos"
+    "products": "O que gerimos",
+    "related": "Serviços relacionados"
   },
   "pageCta": {
     "title": "Vamos falar da sua operação?",
@@ -459,10 +460,10 @@
           ],
           "products": [
             "Roupa de cama",
-            "Toalhas e felpo",
-            "Roupões e chinelos",
+            "Toalhas e roupões",
             "Roupa de mesa",
-            "Fardamento"
+            "Edredões e almofadas",
+            "Cortinas"
           ]
         },
         {
@@ -554,11 +555,12 @@
             "Frequências e par-stock ajustados à ocupação real"
           ],
           "products": [
-            "Lençóis e capas",
-            "Toalhas e roupões",
-            "Chinelos e têxtil de spa",
-            "Roupa de mesa de restaurante",
-            "Cortinas e decoração"
+            "Lençóis percal e sateen",
+            "Capas e edredões nórdicos",
+            "Almofadas e protetores de colchão",
+            "Toalhas de felpo e roupões",
+            "Chinelos e cortinas de banho",
+            "Colchas, pés de cama e plaids"
           ]
         },
         {
@@ -572,11 +574,11 @@
             "Linhas e cores à medida do conceito do espaço"
           ],
           "products": [
-            "Toalhas e cobre-toalhas",
+            "Roupa de mesa em sateen, trama e linho",
+            "Caminhos de mesa",
             "Guardanapos",
-            "Aventais e jalecas",
-            "Panos e têxtil de copa",
-            "Panos de bar e limpeza"
+            "Capas de cadeira",
+            "Confeção à medida"
           ]
         },
         {

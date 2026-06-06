@@ -429,7 +429,8 @@
   "breadcrumbHome": "Home",
   "labels": {
     "does": "What we do",
-    "products": "What we manage"
+    "products": "What we manage",
+    "related": "Related services"
   },
   "pageCta": {
     "title": "Shall we talk about your operation?",
@@ -459,10 +460,10 @@
           ],
           "products": [
             "Bed linen",
-            "Towels & terry",
-            "Bathrobes & slippers",
+            "Towels & bathrobes",
             "Table linen",
-            "Uniforms"
+            "Duvets & pillows",
+            "Curtains"
           ]
         },
         {
@@ -554,11 +555,12 @@
             "Frequencies and par stock matched to real occupancy"
           ],
           "products": [
-            "Sheets & duvet covers",
-            "Towels & bathrobes",
-            "Slippers & spa textiles",
-            "Restaurant table linen",
-            "Curtains & décor"
+            "Percale & sateen sheets",
+            "Duvet covers & nordic duvets",
+            "Pillows & mattress protectors",
+            "Terry towels & bathrobes",
+            "Slippers & shower curtains",
+            "Bedspreads, bed runners & plaids"
           ]
         },
         {
@@ -572,11 +574,11 @@
             "Bespoke lines and colours to match the venue's concept"
           ],
           "products": [
-            "Tablecloths & overlays",
+            "Table linen in sateen, weave & linen",
+            "Table runners",
             "Napkins",
-            "Aprons & chef jackets",
-            "Cloths & service textiles",
-            "Bar & cleaning cloths"
+            "Chair covers",
+            "Bespoke making-up"
           ]
         },
         {

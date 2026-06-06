@@ -105,8 +105,10 @@ Marcados con `[CORCHETES]` en el contenido y aquí:
    Cuando VELUM obtenga certificaciones, reemplazar por los sellos vigentes.
 7. **Cifras propias:** sustituir métricas cualitativas por datos verificados de
    VELUM (ahorro de agua/energía, retención, vida útil, etc.) cuando existan.
-8. **Catálogos de proveedores:** quedaron pendientes de adjuntar; pueden integrarse
-   como sección de producto o descargas por sector.
+8. **Catálogos de proveedores:** las listas de productos de las páginas de
+   Servicios y Sectores se basan en los catálogos de proveedores (Distrihogar
+   Hotel Division y Resuinsa Profesional). Ampliar con referencias concretas si
+   se desea un catálogo de producto detallado.
 
 ## Despliegue
 

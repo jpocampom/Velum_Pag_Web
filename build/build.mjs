@@ -539,13 +539,24 @@ function pageCtaBand(c) {
 function buildDetail(c, routeId) {
   const p = c.pages[routeId];
   const homeUrl = ROUTES.home[c.lang];
+  // Which services each sector relates to (sector index → service indices)
+  const SECTOR_SERVICES = [[0, 1, 2, 3], [0, 1, 3], [1, 2, 4]];
   const blocks = p.items.map((it, i) => {
     const does = it.does.map((d) => `<li>${d}</li>`).join("");
     const chips = it.products.map((x) => `<li>${x}</li>`).join("");
     const tag = it.tag
       ? `<span class="detail-tag">${it.tag}</span>`
       : `<span class="detail-index">${String(i + 1).padStart(2, "0")}</span>`;
-    return `<article class="detail-block" data-reveal>
+    const blockId = routeId === "servicios" ? `servicio-${i + 1}` : `sector-${i + 1}`;
+    let related = "";
+    if (routeId === "sectores") {
+      const svc = c.pages.servicios.items;
+      const links = (SECTOR_SERVICES[i] || [])
+        .map((j) => `<a class="chip-link" href="${ROUTES.servicios[c.lang]}#servicio-${j + 1}">${svc[j].title} <span aria-hidden="true">→</span></a>`)
+        .join("");
+      related = `<div class="detail-related"><span class="detail-related__label">${c.labels.related}</span><div class="chip-links">${links}</div></div>`;
+    }
+    return `<article class="detail-block" id="${blockId}" data-reveal>
       <div class="detail-block__head">
         ${tag}
         <h2 class="h-mid">${it.title}</h2>
@@ -561,8 +572,12 @@ function buildDetail(c, routeId) {
           <ul class="chips">${chips}</ul>
         </div>
       </div>
+      ${related}
     </article>`;
   }).join("");
+  const otherHub = routeId === "servicios"
+    ? { href: ROUTES.sectores[c.lang], label: c.sectors.more }
+    : { href: ROUTES.servicios[c.lang], label: c.services.more };
   return `${head(c, routeId, p.meta.title, p.meta.description)}
 <body>
 ${skip(c)}
@@ -577,7 +592,10 @@ ${header(c, routeId)}
     </div>
   </section>
   <section class="section detail">
-    <div class="wrap">${blocks}</div>
+    <div class="wrap">
+      ${blocks}
+      <div class="section-more"><a class="link-arrow" href="${otherHub.href}">${otherHub.label} <span class="arr" aria-hidden="true">→</span></a></div>
+    </div>
   </section>
   ${pageCtaBand(c)}
 </main>
