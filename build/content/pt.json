@@ -1,0 +1,222 @@
+{
+  "lang": "pt",
+  "locale": "pt-PT",
+  "ogLocale": "pt_PT",
+  "dir": "ltr",
+  "home": "/pt/",
+  "meta": {
+    "title": "Renting têxtil e gestão têxtil integral | VELUM",
+    "description": "Renting, lavagem e gestão integral do seu têxtil em toda a Espanha. Um único interlocutor, rastreabilidade total e a tranquilidade de ter tudo sob controlo."
+  },
+  "brand": { "name": "VELUM", "tagline": "O seu têxtil. O nosso compromisso." },
+  "skip": "Saltar para o conteúdo",
+  "nav": {
+    "items": [
+      { "label": "Serviços", "href": "#servicios" },
+      { "label": "Setores", "href": "#sectores" },
+      { "label": "Como trabalhamos", "href": "#proceso" },
+      { "label": "Porquê a VELUM", "href": "#porque" },
+      { "label": "Sustentabilidade", "href": "#sostenibilidad" }
+    ],
+    "cta": "Pedir diagnóstico",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Cuidado têxtil premium · Espanha",
+    "headlineHtml": "O seu têxtil, impecável.<br>O seu dia, <em class=\"serif-em\">tranquilo</em>.",
+    "sub": "Gerimos o ciclo completo do seu têxtil —fornecimento, lavagem, reposição e rastreabilidade— para que se ocupe apenas do que realmente importa: os seus hóspedes.",
+    "ctaPrimary": "Pedir diagnóstico têxtil",
+    "ctaSecondary": "Ver como trabalhamos"
+  },
+  "trust": {
+    "line": "Cobertura nacional para hotelaria, restauração e saúde. Um único interlocutor, de Cádis a Girona.",
+    "stats": [
+      { "num": "2", "label": "unidades próprias" },
+      { "num": "Nacional", "label": "cobertura em toda a Espanha" },
+      { "num": "100%", "label": "peças rastreadas com RFID" },
+      { "num": "1", "label": "gestor dedicado por conta" }
+    ]
+  },
+  "manifesto": {
+    "kicker": "A promessa",
+    "title": "Não somos uma lavandaria.",
+    "bodyHtml": "Não vendemos lavagem. Vendemos a certeza de que cada lençol, cada toalha de mesa e cada bata estarão onde têm de estar, impecáveis, quando precisar deles. Somos a equipa que cuida do seu têxtil de princípio a fim —sem sustos, sem chamadas de urgência, sem desculpas— para que a sua marca se sinta em cada toque. <span class=\"promise\">Não compra lavagem. Compra tranquilidade.</span>"
+  },
+  "services": {
+    "kicker": "Serviços",
+    "title": "Todo o ciclo do seu têxtil, em mãos únicas.",
+    "intro": "Desenhamos um serviço à medida da sua operação e gerimo-lo de ponta a ponta. Você define o nível; nós respondemos pelo resultado.",
+    "items": [
+      { "title": "Renting têxtil", "body": "Aceda a têxtil de gama alta sem imobilizar capital. Nós fornecemos, mantemos e renovamos; você paga pelo uso e esquece o inventário.", "icon": "rent" },
+      { "title": "Lavandaria industrial", "body": "Processos controlados em unidades próprias, com padrões de higiene e acabamento à altura do cinco estrelas. Cada peça regressa pronta para vestir a sua marca.", "icon": "wash" },
+      { "title": "Reposição e logística", "body": "Entregas no prazo, stock garantido e rotas pensadas para a sua operação. O têxtil chega quando deve, na quantidade que deve, sem que tenha de o pedir.", "icon": "logistics" },
+      { "title": "Personalização", "body": "Bordados, etiquetagem e peças à medida que fazem o seu têxtil falar a sua língua. A sua identidade, tecida em cada detalhe.", "icon": "custom" },
+      { "title": "Rastreabilidade e gestão RFID", "body": "Cada peça identificada e seguida em tempo real: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.", "icon": "rfid" }
+    ]
+  },
+  "sectors": {
+    "kicker": "Setores",
+    "title": "Conhecemos o seu setor por dentro.",
+    "intro": "Cada operação tem a sua exigência. Adaptamos têxtil, frequências e protocolos à realidade do seu negócio.",
+    "items": [
+      {
+        "tag": "Hotelaria",
+        "title": "Hotelaria",
+        "body": "Para hotéis, resorts e spas de 4 e 5 estrelas onde o toque de um lençol faz parte da experiência. Garantimos brancura, suavidade e disponibilidade, noite após noite, sem que a operação o note.",
+        "items": ["Roupa de cama", "Toalhas e roupões", "Têxtil de spa", "Cortinas e decoração"]
+      },
+      {
+        "tag": "Restauração",
+        "title": "Restauração",
+        "body": "Para restaurantes, catering e banquetes onde a mesa começa na toalha. Roupa de mesa impecável e fardamento cuidado, pronto a cada serviço, esteja a sala cheia ou a abarrotar.",
+        "items": ["Roupa de mesa e guardanapos", "Fardamento de sala e cozinha", "Panos e têxtil de copa"]
+      },
+      {
+        "tag": "Saúde",
+        "title": "Saúde",
+        "body": "Para hospitais, clínicas e lares onde a higiene não admite meios-termos. Processos validados, rastreabilidade por peça e total fiabilidade em cada entrega.",
+        "items": ["Roupa de cama clínica", "Fardamento sanitário", "Batas e pijamas de doente", "Têxtil cirúrgico"]
+      }
+    ]
+  },
+  "process": {
+    "kicker": "Como trabalhamos",
+    "title": "Começar é simples. Continuar, tranquilo.",
+    "intro": "Um método claro de princípio a fim: você conta-nos a sua operação e nós respondemos pelo têxtil, todos os dias.",
+    "steps": [
+      { "title": "Diagnóstico têxtil gratuito", "body": "Visitamos a sua operação, ouvimos os seus pontos críticos e medimos o seu consumo real de têxtil." },
+      { "title": "Proposta à medida", "body": "Desenhamos um serviço com peças, frequências e níveis de serviço ajustados ao seu negócio." },
+      { "title": "Implementação", "body": "Pomos o serviço em marcha com um plano claro, sem interrupções no seu dia a dia." },
+      { "title": "Gestão e reposição", "body": "Cuidamos da lavagem, das entregas e do stock; você apenas desfruta do têxtil sempre a postos." },
+      { "title": "Melhoria contínua", "body": "Revemos dados e resultados consigo e afinamos o serviço época após época." }
+    ]
+  },
+  "why": {
+    "kicker": "Porquê a VELUM",
+    "title": "Porque nos escolhem.",
+    "items": [
+      { "title": "Discretamente excelentes", "body": "O melhor serviço é o que não se nota. Cuidamos de cada detalhe para que o seu têxtil esteja perfeito sem que tenha de pensar nele." },
+      { "title": "Obsessivamente fiáveis", "body": "Cumprimos o que prometemos, entrega após entrega. Prazos, quantidades e qualidade: o que dissemos, quando o dissemos." },
+      { "title": "Genuinamente próximos", "body": "Um gestor dedicado que conhece a sua conta pelo nome. Uma só pessoa que responde, sem centrais telefónicas nem respostas enlatadas." },
+      { "title": "Tecnicamente profundos", "body": "Unidades próprias, processos controlados e rastreabilidade RFID. Por trás da simplicidade que vê há um domínio técnico que não se improvisa." }
+    ]
+  },
+  "manager": {
+    "kicker": "Um único interlocutor",
+    "title": "Uma pessoa que conhece a sua conta como a palma da mão.",
+    "body": "Cada cliente conta com um gestor têxtil dedicado: o mesmo nome, o mesmo número, a mesma pessoa que compreende a sua operação e se antecipa ao que precisa. Sem departamentos a empurrar a responsabilidade uns para os outros, sem voltar a explicar o seu caso de cada vez. Uma chamada, e resolvido.",
+    "badge": "O seu gestor têxtil"
+  },
+  "standards": {
+    "kicker": "Padrões",
+    "title": "O rigor que cada setor exige.",
+    "intro": "Trabalhamos em conformidade com as normas que marcam a diferença em higiene, qualidade e ambiente. Estes são os padrões que orientam cada processo.",
+    "items": [
+      { "code": "UNE-EN 14065", "desc": "Controlo de biocontaminação (RABC) — a referência europeia de higiene têxtil, fundamental no setor da saúde." },
+      { "code": "ISO 9001", "desc": "Gestão da qualidade em todo o ciclo do serviço." },
+      { "code": "ISO 14001", "desc": "Gestão ambiental das nossas operações." },
+      { "code": "ISO 50001", "desc": "Gestão da energia e melhoria contínua da eficiência." },
+      { "code": "OEKO-TEX", "desc": "Têxtil livre de substâncias nocivas, seguro ao contacto com a pele." }
+    ],
+    "note": "Padrões de referência do setor que orientam os nossos protocolos. As certificações em vigor são detalhadas a pedido."
+  },
+  "sustainability": {
+    "kicker": "Sustentabilidade",
+    "title": "Cuidar do seu têxtil é também cuidar do que nos rodeia.",
+    "body": "A gestão profissional do têxtil é, por natureza, mais sustentável do que a lavagem em casa ou em pequenas máquinas: prolongamos a vida útil de cada peça e otimizamos cada recurso. Fazemo-lo porque é o correto e porque a sua marca também se mede por isso.",
+    "claims": [
+      "Menor consumo de água e energia por quilo face à lavagem convencional, graças à escala industrial.",
+      "Economia circular: reparamos e reutilizamos o têxtil antes de o retirar, e reciclamo-lo de forma responsável no fim da sua vida.",
+      "Rastreabilidade RFID que reduz as perdas de têxtil e prolonga a sua vida útil."
+    ]
+  },
+  "coverage": {
+    "kicker": "Cobertura",
+    "title": "Toda a Espanha, sob um mesmo padrão.",
+    "body": "Operamos em toda a Península com duas unidades próprias e uma rede de parceiros homologados que trabalham segundo os nossos protocolos. Tenha um ou cem estabelecimentos, o serviço é o mesmo em todo o lado.",
+    "now": "Espanha — disponível agora",
+    "soon": "Portugal — brevemente"
+  },
+  "faq": {
+    "kicker": "Perguntas frequentes",
+    "title": "O que vai querer saber.",
+    "items": [
+      { "q": "O que é o renting têxtil e como funciona?", "a": "É o aluguer de roupa de cama, roupa de quarto ou roupa de mesa com lavagem, manutenção e reposição incluídas por uma tarifa periódica. Não compra têxtil nem imobiliza capital: paga pelo uso e nós tratamos de tudo o resto." },
+      { "q": "Que vantagens tem externalizar a lavandaria de um hotel ou restaurante?", "a": "Elimina o investimento em maquinaria e pessoal, converte um custo fixo em variável consoante a sua ocupação, ganha espaço e assegura qualidade e disponibilidade constantes. A sua equipa concentra-se no cliente, não no têxtil." },
+      { "q": "Quanto custa o serviço?", "a": "Depende do volume, do tipo de peça, da ocupação e da frequência. Por isso começamos sempre com um diagnóstico têxtil gratuito: analisamos a sua operação e apresentamos-lhe uma proposta à medida, sem compromisso." },
+      { "q": "O renting é mais sustentável do que comprar e lavar?", "a": "Sim. O modelo de gestão profissional prolonga a vida útil de cada peça, otimiza água e energia à escala industrial e reduz o resíduo têxtil através de reparação, reutilização e reciclagem responsável." },
+      { "q": "Cumprem a regulamentação de higiene para têxtil sanitário?", "a": "Trabalhamos em conformidade com a norma UNE-EN 14065 (controlo de biocontaminação, RABC) e com padrões de qualidade ISO, com rastreabilidade por peça. A higiene do têxtil sanitário é uma prioridade absoluta e documentada." },
+      { "q": "Em que zonas prestam serviço?", "a": "Damos cobertura em toda a Espanha com unidades próprias e uma rede de parceiros homologados, e brevemente em Portugal. Onde quer que esteja, o padrão de serviço é o mesmo." },
+      { "q": "Como gerem a reposição e as perdas de têxtil?", "a": "Cada peça tem identificação RFID e é seguida em tempo real. Repomos consoante a sua ocupação, controlamos o inventário e minimizamos as perdas: sabe a todo o momento o que tem e onde está." }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "Vamos falar",
+    "title": "Descubra quanto pesa o seu têxtil quando deixa de ser o seu problema.",
+    "sub": "Peça um diagnóstico têxtil gratuito. Sem compromisso: analisamos a sua operação e mostramos-lhe o que pode melhorar.",
+    "button": "Pedir diagnóstico gratuito"
+  },
+  "form": {
+    "title": "Conte-nos sobre a sua operação.",
+    "fields": {
+      "nombre": "Nome completo",
+      "empresa": "Empresa",
+      "sector": "Setor",
+      "sectorPlaceholder": "Selecione o seu setor",
+      "sectorOptions": ["Hotelaria", "Restauração", "Saúde", "Outro"],
+      "email": "Email",
+      "telefono": "Telefone",
+      "volumen": "N.º de quartos ou volume aproximado",
+      "mensaje": "Conte-nos do que precisa"
+    },
+    "submit": "Enviar pedido",
+    "consentHtml": "Li e aceito a <a href=\"{privacy}\">Política de privacidade</a>. Os seus dados serão utilizados apenas para responder ao seu pedido.",
+    "success": "Obrigado. Um gestor da VELUM entrará em contacto consigo em menos de 24 horas úteis."
+  },
+  "footer": {
+    "descriptor": "A VELUM é a plataforma ibérica de cuidado têxtil premium para hotelaria, restauração e saúde. Fornecimento, lavagem, reposição e rastreabilidade, geridos de princípio a fim.",
+    "groups": [
+      { "title": "Serviços", "links": [
+        { "label": "Renting têxtil", "href": "#servicios" },
+        { "label": "Lavandaria industrial", "href": "#servicios" },
+        { "label": "Reposição e logística", "href": "#servicios" },
+        { "label": "Personalização", "href": "#servicios" },
+        { "label": "Rastreabilidade RFID", "href": "#servicios" }
+      ]},
+      { "title": "Setores", "links": [
+        { "label": "Hotelaria", "href": "#sectores" },
+        { "label": "Restauração", "href": "#sectores" },
+        { "label": "Saúde", "href": "#sectores" }
+      ]},
+      { "title": "VELUM", "links": [
+        { "label": "Como trabalhamos", "href": "#proceso" },
+        { "label": "Porquê a VELUM", "href": "#porque" },
+        { "label": "Sustentabilidade", "href": "#sostenibilidad" },
+        { "label": "Contacto", "href": "#contacto" }
+      ]}
+    ],
+    "legalTitle": "Legal",
+    "cookieSettings": "Configuração de cookies",
+    "copyright": "VELUM. Todos os direitos reservados.",
+    "trademark": "VELUM™ é uma marca de [RAZÓN SOCIAL]."
+  },
+  "legalLinks": {
+    "aviso": { "label": "Aviso legal", "href": "/pt/aviso-legal/" },
+    "privacidad": { "label": "Política de privacidade", "href": "/pt/politica-de-privacidade/" },
+    "cookies": { "label": "Política de cookies", "href": "/pt/politica-de-cookies/" }
+  },
+  "cookies": {
+    "title": "Valorizamos a sua privacidade",
+    "text": "Utilizamos cookies próprios e de terceiros para garantir o funcionamento do site e, com o seu consentimento, para fins analíticos. Pode aceitá-los todos, recusá-los ou configurar as suas preferências. Mais informação na nossa <a href=\"/pt/politica-de-cookies/\">Política de cookies</a>.",
+    "accept": "Aceitar todos",
+    "reject": "Recusar todos",
+    "configure": "Configurar"
+  },
+  "langSwitch": { "es": "Español", "en": "English", "pt": "Português" },
+  "backHome": "Voltar ao início",
+  "legalPages": {
+    "aviso": { "title": "Aviso legal", "updated": "junho de 2026", "updatedLabel": "Última atualização", "metaDescription": "Aviso legal da VELUM: informação do titular, condições de utilização e propriedade intelectual." },
+    "privacidad": { "title": "Política de privacidade", "updated": "junho de 2026", "updatedLabel": "Última atualização", "metaDescription": "Política de privacidade da VELUM em conformidade com o RGPD e a LOPDGDD: responsável, finalidades e direitos." },
+    "cookies": { "title": "Política de cookies", "updated": "junho de 2026", "updatedLabel": "Última atualização", "metaDescription": "Política de cookies da VELUM: tipos de cookies, consentimento e como geri-los." }
+  }
+}

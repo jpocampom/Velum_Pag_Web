@@ -1,0 +1,222 @@
+{
+  "lang": "es",
+  "locale": "es-ES",
+  "ogLocale": "es_ES",
+  "dir": "ltr",
+  "home": "/",
+  "meta": {
+    "title": "Renting textil y gestión textil integral | VELUM",
+    "description": "Renting, lavado y gestión integral de tu textil en toda España. Un solo interlocutor, trazabilidad total y la tranquilidad de que todo está bajo control."
+  },
+  "brand": { "name": "VELUM", "tagline": "Tu textil. Nuestro compromiso." },
+  "skip": "Saltar al contenido",
+  "nav": {
+    "items": [
+      { "label": "Servicios", "href": "#servicios" },
+      { "label": "Sectores", "href": "#sectores" },
+      { "label": "Cómo trabajamos", "href": "#proceso" },
+      { "label": "Por qué VELUM", "href": "#porque" },
+      { "label": "Sostenibilidad", "href": "#sostenibilidad" }
+    ],
+    "cta": "Solicitar diagnóstico",
+    "menu": "Menú"
+  },
+  "hero": {
+    "eyebrow": "Cuidado textil premium · España",
+    "headlineHtml": "Tu textil, impecable.<br>Tu día, <em class=\"serif-em\">tranquilo</em>.",
+    "sub": "Gestionamos el ciclo completo de tu textil —suministro, lavado, reposición y trazabilidad— para que tú solo te ocupes de lo que de verdad importa: tus huéspedes.",
+    "ctaPrimary": "Solicitar diagnóstico textil",
+    "ctaSecondary": "Ver cómo trabajamos"
+  },
+  "trust": {
+    "line": "Cobertura nacional para hostelería, restauración y salud. Un único interlocutor, de Cádiz a Girona.",
+    "stats": [
+      { "num": "2", "label": "plantas propias" },
+      { "num": "Nacional", "label": "cobertura en toda España" },
+      { "num": "100%", "label": "piezas trazadas con RFID" },
+      { "num": "1", "label": "gestor dedicado por cuenta" }
+    ]
+  },
+  "manifesto": {
+    "kicker": "La promesa",
+    "title": "No somos una lavandería.",
+    "bodyHtml": "No vendemos lavado. Vendemos la certeza de que cada sábana, cada mantel y cada bata estarán donde tienen que estar, impecables, cuando los necesites. Somos el equipo que se ocupa de tu textil de principio a fin —sin sustos, sin llamadas de urgencia, sin excusas— para que tu marca se sienta en cada tacto. <span class=\"promise\">Tú no compras lavado. Compras tranquilidad.</span>"
+  },
+  "services": {
+    "kicker": "Servicios",
+    "title": "Todo el ciclo de tu textil, en unas solas manos.",
+    "intro": "Diseñamos un servicio a medida de tu operación y lo gestionamos de extremo a extremo. Tú decides el nivel; nosotros respondemos por el resultado.",
+    "items": [
+      { "title": "Renting textil", "body": "Accede a textil de gama alta sin inmovilizar capital. Nosotros suministramos, mantenemos y renovamos; tú pagas por uso y olvídate del inventario.", "icon": "rent" },
+      { "title": "Lavado industrial", "body": "Procesos controlados en plantas propias, con estándares de higiene y acabado a la altura del cinco estrellas. Cada pieza vuelve lista para vestir tu marca.", "icon": "wash" },
+      { "title": "Reposición y logística", "body": "Entregas en plazo, stock garantizado y rutas pensadas para tu operación. El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo.", "icon": "logistics" },
+      { "title": "Personalización", "body": "Bordados, etiquetado y piezas a medida que hacen que tu textil hable tu idioma. Tu identidad, tejida en cada detalle.", "icon": "custom" },
+      { "title": "Trazabilidad y gestión RFID", "body": "Cada pieza identificada y seguida en tiempo real: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.", "icon": "rfid" }
+    ]
+  },
+  "sectors": {
+    "kicker": "Sectores",
+    "title": "Conocemos tu sector por dentro.",
+    "intro": "Cada operación tiene su exigencia. Adaptamos textil, frecuencias y protocolos a la realidad de tu negocio.",
+    "items": [
+      {
+        "tag": "Hostelería",
+        "title": "Hostelería",
+        "body": "Para hoteles, resorts y spas de 4 y 5 estrellas donde el tacto de una sábana es parte de la experiencia. Garantizamos blancura, suavidad y disponibilidad, noche tras noche, sin que la operación lo note.",
+        "items": ["Lencería de cama", "Toallas y albornoces", "Textil de spa", "Cortinas y decoración"]
+      },
+      {
+        "tag": "Restauración",
+        "title": "Restauración",
+        "body": "Para restaurantes, catering y banqueting donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, lista en cada servicio, esté lleno o a rebosar.",
+        "items": ["Mantelería y servilletas", "Uniformidad de sala y cocina", "Paños y textil de office"]
+      },
+      {
+        "tag": "Salud",
+        "title": "Salud",
+        "body": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad por pieza y absoluta fiabilidad en cada entrega.",
+        "items": ["Ropa de cama clínica", "Uniformidad sanitaria", "Batas y pijamas de paciente", "Textil quirúrgico"]
+      }
+    ]
+  },
+  "process": {
+    "kicker": "Cómo trabajamos",
+    "title": "Empezar es sencillo. Seguir, tranquilo.",
+    "intro": "Un método claro de principio a fin: tú nos cuentas tu operación y nosotros respondemos por el textil, cada día.",
+    "steps": [
+      { "title": "Diagnóstico textil gratuito", "body": "Visitamos tu operación, escuchamos tus puntos de dolor y medimos tu consumo real de textil." },
+      { "title": "Propuesta a medida", "body": "Diseñamos un servicio con piezas, frecuencias y niveles de servicio ajustados a tu negocio." },
+      { "title": "Implantación", "body": "Ponemos en marcha el servicio con un plan claro, sin interrupciones para tu día a día." },
+      { "title": "Gestión y reposición", "body": "Nos ocupamos del lavado, las entregas y el stock; tú solo disfrutas del textil siempre a punto." },
+      { "title": "Mejora continua", "body": "Revisamos datos y resultados contigo y afinamos el servicio temporada tras temporada." }
+    ]
+  },
+  "why": {
+    "kicker": "Por qué VELUM",
+    "title": "Por qué nos eligen.",
+    "items": [
+      { "title": "Discretamente excelentes", "body": "El mejor servicio es el que no se nota. Cuidamos cada detalle para que tu textil esté perfecto sin que tengas que pensar en él." },
+      { "title": "Obsesivamente fiables", "body": "Cumplimos lo que prometemos, entrega tras entrega. Plazos, cantidades y calidad: lo que dijimos, cuando lo dijimos." },
+      { "title": "Genuinamente cercanos", "body": "Un gestor dedicado que conoce tu cuenta por su nombre. Una sola persona que responde, sin centralitas ni respuestas enlatadas." },
+      { "title": "Técnicamente profundos", "body": "Plantas propias, procesos controlados y trazabilidad RFID. Detrás de la sencillez que ves hay un dominio técnico que no se improvisa." }
+    ]
+  },
+  "manager": {
+    "kicker": "Un solo interlocutor",
+    "title": "Una persona que conoce tu cuenta como la palma de su mano.",
+    "body": "Cada cliente cuenta con un gestor textil dedicado: el mismo nombre, el mismo número, la misma persona que entiende tu operación y se anticipa a lo que necesitas. Sin departamentos que se pasan la pelota, sin volver a explicar tu caso cada vez. Una llamada, y resuelto.",
+    "badge": "Tu gestor textil"
+  },
+  "standards": {
+    "kicker": "Estándares",
+    "title": "El rigor que exige cada sector.",
+    "intro": "Trabajamos conforme a las normas que marcan la diferencia en higiene, calidad y medioambiente. Estos son los estándares que guían cada proceso.",
+    "items": [
+      { "code": "UNE-EN 14065", "desc": "Control de biocontaminación (RABC) — la referencia europea de higiene textil, clave en el sector salud." },
+      { "code": "ISO 9001", "desc": "Gestión de la calidad en todo el ciclo del servicio." },
+      { "code": "ISO 14001", "desc": "Gestión ambiental de nuestras operaciones." },
+      { "code": "ISO 50001", "desc": "Gestión de la energía y mejora continua de la eficiencia." },
+      { "code": "OEKO-TEX", "desc": "Textil libre de sustancias nocivas, seguro al contacto con la piel." }
+    ],
+    "note": "Estándares de referencia del sector que orientan nuestros protocolos. Las certificaciones vigentes se detallan a petición."
+  },
+  "sustainability": {
+    "kicker": "Sostenibilidad",
+    "title": "Cuidar tu textil es también cuidar lo que nos rodea.",
+    "body": "La gestión profesional del textil es, por naturaleza, más sostenible que el lavado en casa o en pequeñas máquinas: alargamos la vida útil de cada pieza y optimizamos cada recurso. Lo hacemos porque es lo correcto y porque tu marca también se mide por ello.",
+    "claims": [
+      "Menor consumo de agua y energía por kilo frente al lavado convencional, gracias a la escala industrial.",
+      "Economía circular: reparamos y reutilizamos el textil antes de retirarlo, y lo reciclamos de forma responsable al final de su vida.",
+      "Trazabilidad RFID que reduce las pérdidas de textil y prolonga su vida útil."
+    ]
+  },
+  "coverage": {
+    "kicker": "Cobertura",
+    "title": "Toda España, bajo un mismo estándar.",
+    "body": "Operamos en toda la Península con dos plantas propias y una red de partners homologados que trabajan bajo nuestros protocolos. Tengas uno o cien establecimientos, el servicio es el mismo en todas partes.",
+    "now": "España — disponible ahora",
+    "soon": "Portugal — próximamente"
+  },
+  "faq": {
+    "kicker": "Preguntas frecuentes",
+    "title": "Lo que querrás saber.",
+    "items": [
+      { "q": "¿Qué es el renting textil y cómo funciona?", "a": "Es el alquiler de ropa de cama, lencería o mantelería con lavado, mantenimiento y reposición incluidos por una tarifa periódica. No compras textil ni inmovilizas capital: pagas por uso y nosotros nos ocupamos de todo lo demás." },
+      { "q": "¿Qué ventajas tiene externalizar la lavandería de un hotel o restaurante?", "a": "Eliminas la inversión en maquinaria y personal, conviertes un coste fijo en variable según tu ocupación, ganas espacio y aseguras calidad y disponibilidad constantes. Tu equipo se centra en el cliente, no en el textil." },
+      { "q": "¿Cuánto cuesta el servicio?", "a": "Depende del volumen, el tipo de pieza, la ocupación y la frecuencia. Por eso empezamos siempre con un diagnóstico textil gratuito: analizamos tu operación y te presentamos una propuesta a medida, sin compromiso." },
+      { "q": "¿Es más sostenible el renting que comprar y lavar?", "a": "Sí. El modelo de gestión profesional alarga la vida útil de cada pieza, optimiza agua y energía a escala industrial y reduce el residuo textil mediante reparación, reutilización y reciclaje responsable." },
+      { "q": "¿Cumplís la normativa de higiene para textil sanitario?", "a": "Trabajamos conforme a la norma UNE-EN 14065 (control de biocontaminación, RABC) y a estándares de calidad ISO, con trazabilidad por pieza. La higiene del textil sanitario es una prioridad absoluta y documentada." },
+      { "q": "¿En qué zonas prestáis servicio?", "a": "Damos cobertura en toda España con plantas propias y una red de partners homologados, y próximamente en Portugal. Allá donde estés, el estándar de servicio es el mismo." },
+      { "q": "¿Cómo gestionáis la reposición y las pérdidas de textil?", "a": "Cada pieza lleva identificación RFID y se sigue en tiempo real. Reponemos según tu ocupación, controlamos el inventario y minimizamos las pérdidas: sabes en todo momento qué tienes y dónde está." }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "Hablemos",
+    "title": "Descubre cuánto pesa tu textil cuando deja de ser tu problema.",
+    "sub": "Solicita un diagnóstico textil gratuito. Sin compromiso: analizamos tu operación y te mostramos qué puede mejorar.",
+    "button": "Solicitar diagnóstico gratuito"
+  },
+  "form": {
+    "title": "Cuéntanos sobre tu operación.",
+    "fields": {
+      "nombre": "Nombre y apellidos",
+      "empresa": "Empresa",
+      "sector": "Sector",
+      "sectorPlaceholder": "Selecciona tu sector",
+      "sectorOptions": ["Hostelería", "Restauración", "Salud", "Otro"],
+      "email": "Email",
+      "telefono": "Teléfono",
+      "volumen": "Nº de habitaciones o volumen aproximado",
+      "mensaje": "Cuéntanos qué necesitas"
+    },
+    "submit": "Enviar solicitud",
+    "consentHtml": "He leído y acepto la <a href=\"{privacy}\">Política de privacidad</a>. Tus datos se usarán únicamente para responder a tu solicitud.",
+    "success": "Gracias. Un gestor de VELUM se pondrá en contacto contigo en menos de 24 horas laborables."
+  },
+  "footer": {
+    "descriptor": "VELUM es la plataforma ibérica de cuidado textil premium para hostelería, restauración y salud. Suministro, lavado, reposición y trazabilidad, gestionados de principio a fin.",
+    "groups": [
+      { "title": "Servicios", "links": [
+        { "label": "Renting textil", "href": "#servicios" },
+        { "label": "Lavado industrial", "href": "#servicios" },
+        { "label": "Reposición y logística", "href": "#servicios" },
+        { "label": "Personalización", "href": "#servicios" },
+        { "label": "Trazabilidad RFID", "href": "#servicios" }
+      ]},
+      { "title": "Sectores", "links": [
+        { "label": "Hostelería", "href": "#sectores" },
+        { "label": "Restauración", "href": "#sectores" },
+        { "label": "Salud", "href": "#sectores" }
+      ]},
+      { "title": "VELUM", "links": [
+        { "label": "Cómo trabajamos", "href": "#proceso" },
+        { "label": "Por qué VELUM", "href": "#porque" },
+        { "label": "Sostenibilidad", "href": "#sostenibilidad" },
+        { "label": "Contacto", "href": "#contacto" }
+      ]}
+    ],
+    "legalTitle": "Legal",
+    "cookieSettings": "Configuración de cookies",
+    "copyright": "VELUM. Todos los derechos reservados.",
+    "trademark": "VELUM™ es una marca de [RAZÓN SOCIAL]."
+  },
+  "legalLinks": {
+    "aviso": { "label": "Aviso legal", "href": "/aviso-legal/" },
+    "privacidad": { "label": "Política de privacidad", "href": "/politica-de-privacidad/" },
+    "cookies": { "label": "Política de cookies", "href": "/politica-de-cookies/" }
+  },
+  "cookies": {
+    "title": "Valoramos tu privacidad",
+    "text": "Usamos cookies propias y de terceros para garantizar el funcionamiento del sitio y, con tu consentimiento, para fines analíticos. Puedes aceptarlas todas, rechazarlas o configurar tus preferencias. Más información en nuestra <a href=\"/politica-de-cookies/\">Política de cookies</a>.",
+    "accept": "Aceptar todas",
+    "reject": "Rechazar todas",
+    "configure": "Configurar"
+  },
+  "langSwitch": { "es": "Español", "en": "English", "pt": "Português" },
+  "backHome": "Volver al inicio",
+  "legalPages": {
+    "aviso": { "title": "Aviso legal", "updated": "junio de 2026", "updatedLabel": "Última actualización", "metaDescription": "Aviso legal de VELUM: información del titular, condiciones de uso y propiedad intelectual." },
+    "privacidad": { "title": "Política de privacidad", "updated": "junio de 2026", "updatedLabel": "Última actualización", "metaDescription": "Política de privacidad de VELUM conforme al RGPD y la LOPDGDD: responsable, finalidades y derechos." },
+    "cookies": { "title": "Política de cookies", "updated": "junio de 2026", "updatedLabel": "Última actualización", "metaDescription": "Política de cookies de VELUM: tipos de cookies, consentimiento y cómo gestionarlas." }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "velum-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VELUM — premium trilingual (ES/EN/PT) textile-care marketing site. Static, dependency-free.",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "icons": "node build/make-icons.mjs",
+    "all": "node build/make-icons.mjs && node build/build.mjs",
+    "serve": "node -e \"const h=require('node:http'),f=require('node:fs'),p=require('node:path');const t={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.svg':'image/svg+xml','.png':'image/png','.xml':'application/xml','.webmanifest':'application/manifest+json'};h.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]);let fp=p.join(process.cwd(),u);try{if(f.statSync(fp).isDirectory())fp=p.join(fp,'index.html')}catch(e){}if(!f.existsSync(fp))fp=p.join(process.cwd(),'404.html');const e=p.extname(fp);s.writeHead(f.existsSync(fp)?200:404,{'content-type':t[e]||'application/octet-stream'});f.createReadStream(fp).pipe(s)}).listen(8080,()=>console.log('VELUM dev server → http://localhost:8080'))\""
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FBFAF6"/>
+  <g transform="translate(96,210)" fill="none" stroke="#211F1B" stroke-width="2.2" stroke-linecap="square" opacity="0.9">
+    <g transform="scale(2.1)"><line x1="26.5" y1="6" x2="26.5" y2="27"/><line x1="33.5" y1="6" x2="33.5" y2="27"/><line x1="26.5" y1="45" x2="26.5" y2="94"/><line x1="33.5" y1="45" x2="33.5" y2="94"/><line x1="66.5" y1="6" x2="66.5" y2="55"/><line x1="73.5" y1="6" x2="73.5" y2="55"/><line x1="66.5" y1="73" x2="66.5" y2="94"/><line x1="73.5" y1="73" x2="73.5" y2="94"/><line x1="6" y1="32.5" x2="61" y2="32.5"/><line x1="6" y1="39.5" x2="61" y2="39.5"/><line x1="79" y1="32.5" x2="94" y2="32.5"/><line x1="79" y1="39.5" x2="94" y2="39.5"/><line x1="6" y1="60.5" x2="21" y2="60.5"/><line x1="6" y1="67.5" x2="21" y2="67.5"/><line x1="39" y1="60.5" x2="94" y2="60.5"/><line x1="39" y1="67.5" x2="94" y2="67.5"/></g>
+  </g>
+  <text x="330" y="300" font-family="Cormorant Garamond, Georgia, serif" font-size="150" letter-spacing="40" fill="#211F1B">VELUM</text>
+  <text x="338" y="372" font-family="DM Sans, sans-serif" font-size="30" letter-spacing="6" fill="#7C786E">Cuidado textil premium · Hostelería · Restauración · Salud</text>
+  <rect x="338" y="404" width="120" height="2" fill="#ADB59C"/>
+</svg>
