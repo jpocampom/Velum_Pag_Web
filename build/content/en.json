@@ -8,15 +8,33 @@
     "title": "Textile rental and end-to-end textile management | VELUM",
     "description": "Rental, laundering and complete management of your textiles across Spain. A single point of contact, full traceability and the assurance that everything is under control."
   },
-  "brand": { "name": "VELUM", "tagline": "Your textiles. Our commitment." },
+  "brand": {
+    "name": "VELUM",
+    "tagline": "Your textiles. Our commitment."
+  },
   "skip": "Skip to content",
   "nav": {
     "items": [
-      { "label": "Services", "href": "#servicios" },
-      { "label": "Sectors", "href": "#sectores" },
-      { "label": "How we work", "href": "#proceso" },
-      { "label": "Why VELUM", "href": "#porque" },
-      { "label": "Sustainability", "href": "#sostenibilidad" }
+      {
+        "label": "Services",
+        "route": "servicios"
+      },
+      {
+        "label": "Sectors",
+        "route": "sectores"
+      },
+      {
+        "label": "How we work",
+        "href": "#proceso"
+      },
+      {
+        "label": "Why VELUM",
+        "href": "#porque"
+      },
+      {
+        "label": "Sustainability",
+        "href": "#sostenibilidad"
+      }
     ],
     "cta": "Request an assessment",
     "menu": "Menu"
@@ -31,10 +49,22 @@
   "trust": {
     "line": "Nationwide coverage for hospitality, food service and healthcare. A single point of contact, from Cádiz to Girona.",
     "stats": [
-      { "num": "2", "label": "owned plants" },
-      { "num": "Nationwide", "label": "coverage across Spain" },
-      { "num": "100%", "label": "items tracked with RFID" },
-      { "num": "1", "label": "dedicated manager per account" }
+      {
+        "num": "2",
+        "label": "owned plants"
+      },
+      {
+        "num": "Nationwide",
+        "label": "coverage across Spain"
+      },
+      {
+        "num": "100%",
+        "label": "items tracked with RFID"
+      },
+      {
+        "num": "1",
+        "label": "dedicated manager per account"
+      }
     ]
   },
   "manifesto": {
@@ -47,12 +77,33 @@
     "title": "Your entire textile lifecycle, in one pair of hands.",
     "intro": "We design a service tailored to your operation and manage it end to end. You set the level; we answer for the result.",
     "items": [
-      { "title": "Textile rental", "body": "Access premium textiles without tying up capital. We supply, maintain and renew; you pay per use and forget about inventory.", "icon": "rent" },
-      { "title": "Industrial laundry", "body": "Controlled processes in our own plants, with hygiene and finishing standards worthy of five-star service. Every item returns ready to dress your brand.", "icon": "wash" },
-      { "title": "Replenishment and logistics", "body": "On-time deliveries, guaranteed stock and routes built around your operation. Textiles arrive when they should, in the quantity they should, without you having to ask.", "icon": "logistics" },
-      { "title": "Customisation", "body": "Embroidery, labelling and bespoke pieces that make your textiles speak your language. Your identity, woven into every detail.", "icon": "custom" },
-      { "title": "RFID traceability and management", "body": "Every item identified and tracked in real time: you know what you have, where it is and what condition it's in. Total control, zero invisible losses.", "icon": "rfid" }
-    ]
+      {
+        "title": "Textile rental",
+        "body": "Access premium textiles without tying up capital. We supply, maintain and renew; you pay per use and forget about inventory.",
+        "icon": "rent"
+      },
+      {
+        "title": "Industrial laundry",
+        "body": "Controlled processes in our own plants, with hygiene and finishing standards worthy of five-star service. Every item returns ready to dress your brand.",
+        "icon": "wash"
+      },
+      {
+        "title": "Replenishment and logistics",
+        "body": "On-time deliveries, guaranteed stock and routes built around your operation. Textiles arrive when they should, in the quantity they should, without you having to ask.",
+        "icon": "logistics"
+      },
+      {
+        "title": "Customisation",
+        "body": "Embroidery, labelling and bespoke pieces that make your textiles speak your language. Your identity, woven into every detail.",
+        "icon": "custom"
+      },
+      {
+        "title": "RFID traceability and management",
+        "body": "Every item identified and tracked in real time: you know what you have, where it is and what condition it's in. Total control, zero invisible losses.",
+        "icon": "rfid"
+      }
+    ],
+    "more": "See all services"
   },
   "sectors": {
     "kicker": "Sectors",
@@ -63,42 +114,84 @@
         "tag": "Hospitality",
         "title": "Hospitality",
         "body": "For 4- and 5-star hotels, resorts and spas where the feel of a sheet is part of the experience. We guarantee whiteness, softness and availability, night after night, without your operation ever noticing.",
-        "items": ["Bed linen", "Towels and bathrobes", "Spa textiles", "Curtains and soft furnishings"]
+        "items": [
+          "Bed linen",
+          "Towels and bathrobes",
+          "Spa textiles",
+          "Curtains and soft furnishings"
+        ]
       },
       {
         "tag": "Food service",
         "title": "Food service",
         "body": "For restaurants, catering and banqueting where the table begins with the linen. Flawless table linen and well-kept uniforms, ready for every service, whether busy or full to the brim.",
-        "items": ["Table linen and napkins", "Front-of-house and kitchen uniforms", "Cloths and back-of-house textiles"]
+        "items": [
+          "Table linen and napkins",
+          "Front-of-house and kitchen uniforms",
+          "Cloths and back-of-house textiles"
+        ]
       },
       {
         "tag": "Healthcare",
         "title": "Healthcare",
         "body": "For hospitals, clinics and care homes where hygiene leaves no room for nuance. Validated processes, item-level traceability and absolute reliability with every delivery.",
-        "items": ["Clinical bed linen", "Medical uniforms", "Patient gowns and pyjamas", "Surgical textiles"]
+        "items": [
+          "Clinical bed linen",
+          "Medical uniforms",
+          "Patient gowns and pyjamas",
+          "Surgical textiles"
+        ]
       }
-    ]
+    ],
+    "more": "See all sectors"
   },
   "process": {
     "kicker": "How we work",
     "title": "Getting started is simple. Staying on track is effortless.",
     "intro": "A clear method from start to finish: you tell us about your operation and we answer for your textiles, every day.",
     "steps": [
-      { "title": "Free textile assessment", "body": "We visit your operation, listen to your pain points and measure your real textile consumption." },
-      { "title": "Tailored proposal", "body": "We design a service with items, frequencies and service levels matched to your business." },
-      { "title": "Implementation", "body": "We roll out the service with a clear plan, without disrupting your day-to-day." },
-      { "title": "Management and replenishment", "body": "We take care of laundering, deliveries and stock; you simply enjoy textiles that are always ready." },
-      { "title": "Continuous improvement", "body": "We review data and results with you and fine-tune the service season after season." }
+      {
+        "title": "Free textile assessment",
+        "body": "We visit your operation, listen to your pain points and measure your real textile consumption."
+      },
+      {
+        "title": "Tailored proposal",
+        "body": "We design a service with items, frequencies and service levels matched to your business."
+      },
+      {
+        "title": "Implementation",
+        "body": "We roll out the service with a clear plan, without disrupting your day-to-day."
+      },
+      {
+        "title": "Management and replenishment",
+        "body": "We take care of laundering, deliveries and stock; you simply enjoy textiles that are always ready."
+      },
+      {
+        "title": "Continuous improvement",
+        "body": "We review data and results with you and fine-tune the service season after season."
+      }
     ]
   },
   "why": {
     "kicker": "Why VELUM",
     "title": "Why clients choose us.",
     "items": [
-      { "title": "Quietly excellent", "body": "The best service is the one you never notice. We attend to every detail so your textiles are perfect without you ever having to think about them." },
-      { "title": "Obsessively reliable", "body": "We deliver on what we promise, delivery after delivery. Deadlines, quantities and quality: what we said, when we said it." },
-      { "title": "Genuinely close", "body": "A dedicated manager who knows your account by name. One person who answers, with no call centres and no canned replies." },
-      { "title": "Technically deep", "body": "Our own plants, controlled processes and RFID traceability. Behind the simplicity you see lies a technical mastery that can't be improvised." }
+      {
+        "title": "Quietly excellent",
+        "body": "The best service is the one you never notice. We attend to every detail so your textiles are perfect without you ever having to think about them."
+      },
+      {
+        "title": "Obsessively reliable",
+        "body": "We deliver on what we promise, delivery after delivery. Deadlines, quantities and quality: what we said, when we said it."
+      },
+      {
+        "title": "Genuinely close",
+        "body": "A dedicated manager who knows your account by name. One person who answers, with no call centres and no canned replies."
+      },
+      {
+        "title": "Technically deep",
+        "body": "Our own plants, controlled processes and RFID traceability. Behind the simplicity you see lies a technical mastery that can't be improvised."
+      }
     ]
   },
   "manager": {
@@ -112,11 +205,26 @@
     "title": "The rigour each sector demands.",
     "intro": "We work to the standards that make the difference in hygiene, quality and the environment. These are the standards that guide every process.",
     "items": [
-      { "code": "UNE-EN 14065", "desc": "Biocontamination control (RABC) — the European benchmark for textile hygiene, essential in the healthcare sector." },
-      { "code": "ISO 9001", "desc": "Quality management across the entire service lifecycle." },
-      { "code": "ISO 14001", "desc": "Environmental management of our operations." },
-      { "code": "ISO 50001", "desc": "Energy management and continuous improvement of efficiency." },
-      { "code": "OEKO-TEX", "desc": "Textiles free from harmful substances, safe in contact with the skin." }
+      {
+        "code": "UNE-EN 14065",
+        "desc": "Biocontamination control (RABC) — the European benchmark for textile hygiene, essential in the healthcare sector."
+      },
+      {
+        "code": "ISO 9001",
+        "desc": "Quality management across the entire service lifecycle."
+      },
+      {
+        "code": "ISO 14001",
+        "desc": "Environmental management of our operations."
+      },
+      {
+        "code": "ISO 50001",
+        "desc": "Energy management and continuous improvement of efficiency."
+      },
+      {
+        "code": "OEKO-TEX",
+        "desc": "Textiles free from harmful substances, safe in contact with the skin."
+      }
     ],
     "note": "Sector benchmark standards that guide our protocols. Current certifications are detailed on request."
   },
@@ -141,13 +249,34 @@
     "kicker": "Frequently asked questions",
     "title": "What you'll want to know.",
     "items": [
-      { "q": "What is textile rental and how does it work?", "a": "It's the rental of bed linen, table linen and other textiles with laundering, maintenance and replenishment included for a recurring fee. You don't buy textiles or tie up capital: you pay per use and we take care of everything else." },
-      { "q": "What are the advantages of outsourcing a hotel's or restaurant's laundry?", "a": "You eliminate investment in machinery and staff, turn a fixed cost into a variable one based on occupancy, free up space and secure constant quality and availability. Your team focuses on the guest, not on the textiles." },
-      { "q": "How much does the service cost?", "a": "It depends on volume, type of item, occupancy and frequency. That's why we always start with a free textile assessment: we analyse your operation and present a tailored proposal, with no obligation." },
-      { "q": "Is rental more sustainable than buying and washing?", "a": "Yes. The professional management model extends the working life of every item, optimises water and energy at industrial scale and reduces textile waste through repair, reuse and responsible recycling." },
-      { "q": "Do you comply with hygiene regulations for healthcare textiles?", "a": "We work to standard UNE-EN 14065 (biocontamination control, RABC) and to ISO quality standards, with item-level traceability. The hygiene of healthcare textiles is an absolute, documented priority." },
-      { "q": "Which areas do you serve?", "a": "We provide coverage across Spain with our own plants and a network of approved partners, and soon in Portugal. Wherever you are, the standard of service is the same." },
-      { "q": "How do you manage replenishment and textile losses?", "a": "Every item carries RFID identification and is tracked in real time. We replenish according to your occupancy, control inventory and minimise losses: you always know what you have and where it is." }
+      {
+        "q": "What is textile rental and how does it work?",
+        "a": "It's the rental of bed linen, table linen and other textiles with laundering, maintenance and replenishment included for a recurring fee. You don't buy textiles or tie up capital: you pay per use and we take care of everything else."
+      },
+      {
+        "q": "What are the advantages of outsourcing a hotel's or restaurant's laundry?",
+        "a": "You eliminate investment in machinery and staff, turn a fixed cost into a variable one based on occupancy, free up space and secure constant quality and availability. Your team focuses on the guest, not on the textiles."
+      },
+      {
+        "q": "How much does the service cost?",
+        "a": "It depends on volume, type of item, occupancy and frequency. That's why we always start with a free textile assessment: we analyse your operation and present a tailored proposal, with no obligation."
+      },
+      {
+        "q": "Is rental more sustainable than buying and washing?",
+        "a": "Yes. The professional management model extends the working life of every item, optimises water and energy at industrial scale and reduces textile waste through repair, reuse and responsible recycling."
+      },
+      {
+        "q": "Do you comply with hygiene regulations for healthcare textiles?",
+        "a": "We work to standard UNE-EN 14065 (biocontamination control, RABC) and to ISO quality standards, with item-level traceability. The hygiene of healthcare textiles is an absolute, documented priority."
+      },
+      {
+        "q": "Which areas do you serve?",
+        "a": "We provide coverage across Spain with our own plants and a network of approved partners, and soon in Portugal. Wherever you are, the standard of service is the same."
+      },
+      {
+        "q": "How do you manage replenishment and textile losses?",
+        "a": "Every item carries RFID identification and is tracked in real time. We replenish according to your occupancy, control inventory and minimise losses: you always know what you have and where it is."
+      }
     ]
   },
   "ctaFinal": {
@@ -163,7 +292,12 @@
       "empresa": "Company",
       "sector": "Sector",
       "sectorPlaceholder": "Select your sector",
-      "sectorOptions": ["Hospitality", "Food service", "Healthcare", "Other"],
+      "sectorOptions": [
+        "Hospitality",
+        "Food service",
+        "Healthcare",
+        "Other"
+      ],
       "email": "Email",
       "telefono": "Phone",
       "volumen": "Number of rooms or approximate volume",
@@ -176,24 +310,69 @@
   "footer": {
     "descriptor": "VELUM is the Iberian platform for premium textile care in hospitality, food service and healthcare. Supply, laundering, replenishment and traceability, managed from start to finish.",
     "groups": [
-      { "title": "Services", "links": [
-        { "label": "Textile rental", "href": "#servicios" },
-        { "label": "Industrial laundry", "href": "#servicios" },
-        { "label": "Replenishment and logistics", "href": "#servicios" },
-        { "label": "Customisation", "href": "#servicios" },
-        { "label": "RFID traceability", "href": "#servicios" }
-      ]},
-      { "title": "Sectors", "links": [
-        { "label": "Hospitality", "href": "#sectores" },
-        { "label": "Food service", "href": "#sectores" },
-        { "label": "Healthcare", "href": "#sectores" }
-      ]},
-      { "title": "VELUM", "links": [
-        { "label": "How we work", "href": "#proceso" },
-        { "label": "Why VELUM", "href": "#porque" },
-        { "label": "Sustainability", "href": "#sostenibilidad" },
-        { "label": "Contact", "href": "#contacto" }
-      ]}
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "Textile rental",
+            "href": "#servicios"
+          },
+          {
+            "label": "Industrial laundry",
+            "href": "#servicios"
+          },
+          {
+            "label": "Replenishment and logistics",
+            "href": "#servicios"
+          },
+          {
+            "label": "Customisation",
+            "href": "#servicios"
+          },
+          {
+            "label": "RFID traceability",
+            "href": "#servicios"
+          }
+        ]
+      },
+      {
+        "title": "Sectors",
+        "links": [
+          {
+            "label": "Hospitality",
+            "href": "#sectores"
+          },
+          {
+            "label": "Food service",
+            "href": "#sectores"
+          },
+          {
+            "label": "Healthcare",
+            "href": "#sectores"
+          }
+        ]
+      },
+      {
+        "title": "VELUM",
+        "links": [
+          {
+            "label": "How we work",
+            "href": "#proceso"
+          },
+          {
+            "label": "Why VELUM",
+            "href": "#porque"
+          },
+          {
+            "label": "Sustainability",
+            "href": "#sostenibilidad"
+          },
+          {
+            "label": "Contact",
+            "href": "#contacto"
+          }
+        ]
+      }
     ],
     "legalTitle": "Legal",
     "cookieSettings": "Cookie settings",
@@ -201,9 +380,18 @@
     "trademark": "VELUM™ is a trademark of [RAZÓN SOCIAL]."
   },
   "legalLinks": {
-    "aviso": { "label": "Legal notice", "href": "/en/legal-notice/" },
-    "privacidad": { "label": "Privacy policy", "href": "/en/privacy-policy/" },
-    "cookies": { "label": "Cookie policy", "href": "/en/cookie-policy/" }
+    "aviso": {
+      "label": "Legal notice",
+      "href": "/en/legal-notice/"
+    },
+    "privacidad": {
+      "label": "Privacy policy",
+      "href": "/en/privacy-policy/"
+    },
+    "cookies": {
+      "label": "Cookie policy",
+      "href": "/en/cookie-policy/"
+    }
   },
   "cookies": {
     "title": "We value your privacy",
@@ -212,11 +400,204 @@
     "reject": "Reject all",
     "configure": "Configure"
   },
-  "langSwitch": { "es": "Español", "en": "English", "pt": "Português" },
+  "langSwitch": {
+    "es": "Español",
+    "en": "English",
+    "pt": "Português"
+  },
   "backHome": "Back to home",
   "legalPages": {
-    "aviso": { "title": "Legal notice", "updated": "June 2026", "updatedLabel": "Last updated", "metaDescription": "VELUM legal notice: owner information, terms of use and intellectual property." },
-    "privacidad": { "title": "Privacy policy", "updated": "June 2026", "updatedLabel": "Last updated", "metaDescription": "VELUM privacy policy in accordance with the GDPR and the LOPDGDD: controller, purposes and rights." },
-    "cookies": { "title": "Cookie policy", "updated": "June 2026", "updatedLabel": "Last updated", "metaDescription": "VELUM cookie policy: types of cookies, consent and how to manage them." }
+    "aviso": {
+      "title": "Legal notice",
+      "updated": "June 2026",
+      "updatedLabel": "Last updated",
+      "metaDescription": "VELUM legal notice: owner information, terms of use and intellectual property."
+    },
+    "privacidad": {
+      "title": "Privacy policy",
+      "updated": "June 2026",
+      "updatedLabel": "Last updated",
+      "metaDescription": "VELUM privacy policy in accordance with the GDPR and the LOPDGDD: controller, purposes and rights."
+    },
+    "cookies": {
+      "title": "Cookie policy",
+      "updated": "June 2026",
+      "updatedLabel": "Last updated",
+      "metaDescription": "VELUM cookie policy: types of cookies, consent and how to manage them."
+    }
+  },
+  "breadcrumbHome": "Home",
+  "labels": {
+    "does": "What we do",
+    "products": "What we manage"
+  },
+  "pageCta": {
+    "title": "Shall we talk about your operation?",
+    "sub": "Request a free textile assessment and we'll show you exactly what we can manage for you.",
+    "button": "Request a free assessment"
+  },
+  "pages": {
+    "servicios": {
+      "meta": {
+        "title": "Textile care services · rental, laundry & management | VELUM",
+        "description": "Textile rental, industrial laundry, replacement, personalization and RFID traceability. See what we do in each service and the textiles we manage."
+      },
+      "hero": {
+        "eyebrow": "Services",
+        "title": "One service. Your whole textile, handled.",
+        "sub": "We cover the full lifecycle of professional textiles —from supply to traceability— and tailor it to the level your operation needs. Here is what we do in each service and what we manage for you."
+      },
+      "items": [
+        {
+          "title": "Textile rental",
+          "lead": "Access high-end textiles without buying them or tying up capital. We supply, maintain and renew; you pay for use.",
+          "does": [
+            "Supply of hotel- and healthcare-grade professional textiles",
+            "Maintenance, laundering and replacement included in a pay-per-use fee",
+            "Automatic renewal of items at the end of their service life",
+            "Stock scaled to season and occupancy, with no one-off purchases"
+          ],
+          "products": [
+            "Bed linen",
+            "Towels & terry",
+            "Bathrobes & slippers",
+            "Table linen",
+            "Uniforms"
+          ]
+        },
+        {
+          "title": "Industrial laundry",
+          "lead": "Controlled processes in our own plants, with hygiene and finishing standards worthy of five-star and clinical environments.",
+          "does": [
+            "Scheduled collection and sorting by client and item type",
+            "Washing and disinfection with hygiene controls (RABC / EN 14065 reference)",
+            "Drying, pressing and professional finishing, item by item",
+            "Quality control and removal of defective items before delivery"
+          ],
+          "products": [
+            "Flatwork",
+            "Terry & towelling",
+            "Table linen",
+            "Uniforms",
+            "Healthcare textiles"
+          ]
+        },
+        {
+          "title": "Replacement & logistics",
+          "lead": "Textiles arrive when they should, in the quantity they should, without you having to ask. Routes built around your operation.",
+          "does": [
+            "Scheduled collection and delivery routes tailored to you",
+            "Safety stock to cover occupancy peaks and events",
+            "On-time deliveries with agreed service levels (SLA)",
+            "Management of linen rooms and points of use on your premises"
+          ],
+          "products": [
+            "Scheduled deliveries",
+            "Safety stock",
+            "Linen-room management",
+            "Nationwide coverage"
+          ]
+        },
+        {
+          "title": "Personalization",
+          "lead": "Your identity, woven into every detail. We make textiles speak your brand's language.",
+          "does": [
+            "Embroidery, screen printing and labelling with your corporate identity",
+            "Bespoke pieces in colour, fabric and weight",
+            "Integrated RFID labelling on every item for traceability",
+            "Distinct lines by property, plant or category"
+          ],
+          "products": [
+            "Logo embroidery",
+            "Corporate trims & colour",
+            "Woven labels",
+            "Bespoke pieces"
+          ]
+        },
+        {
+          "title": "Traceability & RFID management",
+          "lead": "Every item identified and tracked in real time: you know what you have, where it is and its condition. Full control, zero invisible loss.",
+          "does": [
+            "Per-item identification with laundry-proof RFID chips",
+            "Automatic counting on collection and delivery, no manual counts",
+            "Real-time inventory and service-life tracking of every item",
+            "Consumption, loss and replacement reports for your team"
+          ],
+          "products": [
+            "RFID chip per item",
+            "Real-time inventory",
+            "Consumption reports",
+            "Loss control"
+          ]
+        }
+      ]
+    },
+    "sectores": {
+      "meta": {
+        "title": "Sectors: hospitality, food service and healthcare | VELUM",
+        "description": "End-to-end textile care for hospitality, food service and healthcare. See what we do in each sector and the textile products we manage."
+      },
+      "hero": {
+        "eyebrow": "Sectors",
+        "title": "Every sector, its own demands. The same peace of mind.",
+        "sub": "We adapt textiles, frequencies and protocols to the reality of each business. Here is what we do in each sector and the textiles we manage."
+      },
+      "items": [
+        {
+          "tag": "Hospitality",
+          "title": "Hospitality",
+          "lead": "For 4- and 5-star hotels, resorts and spas where the feel of a sheet is part of the experience. Whiteness, softness and availability, night after night.",
+          "does": [
+            "End-to-end management of bed and bath linen with consistent quality",
+            "Spa and pool textiles with agile replacement in high season",
+            "Table linen for the hotel's F&B, ready for every service",
+            "Frequencies and par stock matched to real occupancy"
+          ],
+          "products": [
+            "Sheets & duvet covers",
+            "Towels & bathrobes",
+            "Slippers & spa textiles",
+            "Restaurant table linen",
+            "Curtains & décor"
+          ]
+        },
+        {
+          "tag": "Food service",
+          "title": "Food service",
+          "lead": "For restaurants, catering and banqueting where the table begins with the linen. Impeccable table linen and well-kept uniforms, full house or not.",
+          "does": [
+            "Always-impeccable table linen, pressed and ready for every service",
+            "Well-kept, replenished front- and back-of-house uniforms",
+            "Management of event, banquet and seasonal peaks",
+            "Bespoke lines and colours to match the venue's concept"
+          ],
+          "products": [
+            "Tablecloths & overlays",
+            "Napkins",
+            "Aprons & chef jackets",
+            "Cloths & service textiles",
+            "Bar & cleaning cloths"
+          ]
+        },
+        {
+          "tag": "Healthcare",
+          "title": "Healthcare",
+          "lead": "For hospitals, clinics and care homes where hygiene allows no nuance. Validated processes, per-item traceability and absolute reliability.",
+          "does": [
+            "Validated wash processes with biocontamination control (RABC)",
+            "Per-item traceability and documentation for audits",
+            "Management of patient linen, uniforms and technical textiles",
+            "Reliable replacement: care wards cannot run out of textiles"
+          ],
+          "products": [
+            "Clinical bed linen",
+            "Patient gowns & pyjamas",
+            "Healthcare uniforms",
+            "Reusable surgical textiles",
+            "Microfibre & technical cloths"
+          ]
+        }
+      ]
+    }
   }
 }

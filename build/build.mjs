@@ -21,6 +21,8 @@ const OGLOCALE = { es: "es_ES", en: "en_GB", pt: "pt_PT" };
 // Canonical page → per-language URL path
 const ROUTES = {
   home:       { es: "/",                         en: "/en/",                  pt: "/pt/" },
+  servicios:  { es: "/servicios/",               en: "/en/services/",         pt: "/pt/servicos/" },
+  sectores:   { es: "/sectores/",                en: "/en/sectors/",          pt: "/pt/setores/" },
   aviso:      { es: "/aviso-legal/",             en: "/en/legal-notice/",     pt: "/pt/aviso-legal/" },
   privacidad: { es: "/politica-de-privacidad/",  en: "/en/privacy-policy/",   pt: "/pt/politica-de-privacidade/" },
   cookies:    { es: "/politica-de-cookies/",     en: "/en/cookie-policy/",    pt: "/pt/politica-de-cookies/" }
@@ -94,9 +96,10 @@ function langSwitch(c, routeId) {
 function header(c, routeId) {
   const onHome = routeId === "home";
   const homeUrl = ROUTES.home[c.lang];
-  const navItems = onHome
-    ? c.nav.items.map((i) => `<a class="nav-link" href="${i.href}">${i.label}</a>`).join("")
-    : c.nav.items.map((i) => `<a class="nav-link" href="${homeUrl}${i.href}">${i.label}</a>`).join("");
+  const navItems = c.nav.items.map((i) => {
+    const href = i.route ? ROUTES[i.route][c.lang] : (onHome ? i.href : homeUrl + i.href);
+    return `<a class="nav-link" href="${href}">${i.label}</a>`;
+  }).join("");
   const ctaHref = onHome ? "#contacto" : homeUrl + "#contacto";
   return `<header class="site-header">
   <div class="wrap">
@@ -189,6 +192,23 @@ function jsonLd(c, routeId) {
       mainEntity: c.faq.items.map((f) => ({
         "@type": "Question", name: f.q,
         acceptedAnswer: { "@type": "Answer", text: f.a }
+      }))
+    });
+  }
+  if (routeId === "servicios" || routeId === "sectores") {
+    const p = c.pages[routeId];
+    blocks.push({
+      "@context": "https://schema.org", "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: c.breadcrumbHome, item: DOMAIN + ROUTES.home[c.lang] },
+        { "@type": "ListItem", position: 2, name: p.hero.eyebrow, item: DOMAIN + ROUTES[routeId][c.lang] }
+      ]
+    });
+    blocks.push({
+      "@context": "https://schema.org", "@type": "ItemList",
+      name: p.hero.title,
+      itemListElement: p.items.map((it, i) => ({
+        "@type": "ListItem", position: i + 1, name: it.title
       }))
     });
   }
@@ -295,6 +315,7 @@ function homeMain(c) {
       <p class="lede">${c.services.intro}</p>
     </div>
     <div class="services-grid">${svc}</div>
+    <div class="section-more" data-reveal><a class="link-arrow" href="${ROUTES.servicios[c.lang]}">${c.services.more} <span class="arr" aria-hidden="true">→</span></a></div>
   </div>
 </section>`;
 
@@ -315,6 +336,7 @@ function homeMain(c) {
       <p class="lede">${c.sectors.intro}</p>
     </div>
     <div class="sectors-grid">${sec}</div>
+    <div class="section-more" data-reveal><a class="link-arrow" href="${ROUTES.sectores[c.lang]}">${c.sectors.more} <span class="arr" aria-hidden="true">→</span></a></div>
   </div>
 </section>`;
 
@@ -502,6 +524,66 @@ ${homeMain(c)}
 ${tail(c, "home")}`;
 }
 
+function pageCtaBand(c) {
+  const homeUrl = ROUTES.home[c.lang];
+  return `<section class="section cta-final">
+  <div class="wrap" style="text-align:center;display:grid;gap:22px;justify-items:center;">
+    <span class="kicker">${c.ctaFinal.eyebrow}</span>
+    <h2 class="h-section" style="max-width:20ch;">${c.pageCta.title}</h2>
+    <p class="lede" style="max-width:54ch;">${c.pageCta.sub}</p>
+    <a class="btn btn--primary" href="${homeUrl}#contacto">${c.pageCta.button} <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>`;
+}
+
+function buildDetail(c, routeId) {
+  const p = c.pages[routeId];
+  const homeUrl = ROUTES.home[c.lang];
+  const blocks = p.items.map((it, i) => {
+    const does = it.does.map((d) => `<li>${d}</li>`).join("");
+    const chips = it.products.map((x) => `<li>${x}</li>`).join("");
+    const tag = it.tag
+      ? `<span class="detail-tag">${it.tag}</span>`
+      : `<span class="detail-index">${String(i + 1).padStart(2, "0")}</span>`;
+    return `<article class="detail-block" data-reveal>
+      <div class="detail-block__head">
+        ${tag}
+        <h2 class="h-mid">${it.title}</h2>
+        <p class="lede">${it.lead}</p>
+      </div>
+      <div class="detail-cols">
+        <div class="detail-col">
+          <h3 class="detail-col__title">${c.labels.does}</h3>
+          <ul class="detail-list">${does}</ul>
+        </div>
+        <div class="detail-col">
+          <h3 class="detail-col__title">${c.labels.products}</h3>
+          <ul class="chips">${chips}</ul>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+  return `${head(c, routeId, p.meta.title, p.meta.description)}
+<body>
+${skip(c)}
+${header(c, routeId)}
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="breadcrumb"><a href="${homeUrl}">${c.breadcrumbHome}</a> <span aria-hidden="true">/</span> <span aria-current="page">${p.hero.eyebrow}</span></nav>
+      <span class="kicker" style="margin-top:20px;">${p.hero.eyebrow}</span>
+      <h1 class="display" style="margin-top:14px;font-size:var(--fs-section);max-width:18ch;">${p.hero.title}</h1>
+      <p class="lede" style="margin-top:22px;">${p.hero.sub}</p>
+    </div>
+  </section>
+  <section class="section detail">
+    <div class="wrap">${blocks}</div>
+  </section>
+  ${pageCtaBand(c)}
+</main>
+${tail(c, routeId)}`;
+}
+
 function buildLegal(c, routeId) {
   const page = c.legalPages[routeId]; // { title, updated }
   const body = legalBody(c.lang, LEGAL_FILE[routeId]);
@@ -598,6 +680,8 @@ function run() {
   for (const lang of LANGS) {
     const c = load(lang);
     built.push(writeOut(ROUTES.home[lang], buildHome(c)));
+    built.push(writeOut(ROUTES.servicios[lang], buildDetail(c, "servicios")));
+    built.push(writeOut(ROUTES.sectores[lang], buildDetail(c, "sectores")));
     for (const routeId of ["aviso", "privacidad", "cookies"]) {
       built.push(writeOut(ROUTES[routeId][lang], buildLegal(c, routeId)));
     }

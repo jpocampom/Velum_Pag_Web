@@ -12,8 +12,8 @@
   "skip": "Saltar al contenido",
   "nav": {
     "items": [
-      { "label": "Servicios", "href": "#servicios" },
-      { "label": "Sectores", "href": "#sectores" },
+      { "label": "Servicios", "route": "servicios" },
+      { "label": "Sectores", "route": "sectores" },
       { "label": "Cómo trabajamos", "href": "#proceso" },
       { "label": "Por qué VELUM", "href": "#porque" },
       { "label": "Sostenibilidad", "href": "#sostenibilidad" }
@@ -46,6 +46,7 @@
     "kicker": "Servicios",
     "title": "Todo el ciclo de tu textil, en unas solas manos.",
     "intro": "Diseñamos un servicio a medida de tu operación y lo gestionamos de extremo a extremo. Tú decides el nivel; nosotros respondemos por el resultado.",
+    "more": "Ver todos los servicios",
     "items": [
       { "title": "Renting textil", "body": "Accede a textil de gama alta sin inmovilizar capital. Nosotros suministramos, mantenemos y renovamos; tú pagas por uso y olvídate del inventario.", "icon": "rent" },
       { "title": "Lavado industrial", "body": "Procesos controlados en plantas propias, con estándares de higiene y acabado a la altura del cinco estrellas. Cada pieza vuelve lista para vestir tu marca.", "icon": "wash" },
@@ -58,6 +59,7 @@
     "kicker": "Sectores",
     "title": "Conocemos tu sector por dentro.",
     "intro": "Cada operación tiene su exigencia. Adaptamos textil, frecuencias y protocolos a la realidad de tu negocio.",
+    "more": "Ver todos los sectores",
     "items": [
       {
         "tag": "Hostelería",
@@ -214,6 +216,132 @@
   },
   "langSwitch": { "es": "Español", "en": "English", "pt": "Português" },
   "backHome": "Volver al inicio",
+  "breadcrumbHome": "Inicio",
+  "labels": { "does": "Qué hacemos", "products": "Qué gestionamos" },
+  "pageCta": {
+    "title": "¿Hablamos de tu operación?",
+    "sub": "Pide un diagnóstico textil gratuito y te mostramos exactamente qué podemos gestionar por ti.",
+    "button": "Solicitar diagnóstico gratuito"
+  },
+  "pages": {
+    "servicios": {
+      "meta": {
+        "title": "Servicios de cuidado textil · renting, lavado y gestión | VELUM",
+        "description": "Renting textil, lavado industrial, reposición, personalización y trazabilidad RFID. Descubre qué hacemos en cada servicio y qué textil gestionamos."
+      },
+      "hero": {
+        "eyebrow": "Servicios",
+        "title": "Un único servicio. Todo tu textil resuelto.",
+        "sub": "Cubrimos el ciclo completo del textil profesional —del suministro a la trazabilidad— y lo adaptamos al nivel que tu operación necesita. Esto es lo que hacemos en cada servicio y lo que gestionamos por ti."
+      },
+      "items": [
+        {
+          "title": "Renting textil",
+          "lead": "Accede a textil de gama alta sin comprarlo ni inmovilizar capital. Nosotros suministramos, mantenemos y renovamos; tú pagas por uso.",
+          "does": [
+            "Suministro de textil profesional de calidad hotelera y sanitaria",
+            "Mantenimiento, lavado y reposición incluidos en una tarifa por uso",
+            "Renovación automática de las piezas al final de su vida útil",
+            "Escalado de stock según temporada y ocupación, sin compras puntuales"
+          ],
+          "products": ["Ropa de cama", "Toallas y felpa", "Albornoces y zapatillas", "Mantelería", "Uniformidad"]
+        },
+        {
+          "title": "Lavado industrial",
+          "lead": "Procesos controlados en plantas propias, con estándares de higiene y acabado a la altura del cinco estrellas y del entorno sanitario.",
+          "does": [
+            "Recogida programada y clasificación por cliente y tipo de pieza",
+            "Lavado y desinfección con controles de higiene (referencia RABC / UNE-EN 14065)",
+            "Secado, planchado y acabado profesional pieza a pieza",
+            "Control de calidad y retirada de piezas defectuosas antes de la entrega"
+          ],
+          "products": ["Ropa plana", "Felpa y rizo", "Mantelería", "Uniformidad", "Textil sanitario"]
+        },
+        {
+          "title": "Reposición y logística",
+          "lead": "El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo. Rutas pensadas para tu operación.",
+          "does": [
+            "Rutas de recogida y entrega programadas a tu medida",
+            "Stock de seguridad para cubrir picos de ocupación y eventos",
+            "Entregas en plazo con niveles de servicio (SLA) acordados",
+            "Gestión de armarios y puntos de uso en tus instalaciones"
+          ],
+          "products": ["Entregas programadas", "Stock de seguridad", "Gestión de office", "Cobertura nacional"]
+        },
+        {
+          "title": "Personalización",
+          "lead": "Tu identidad, tejida en cada detalle. Hacemos que el textil hable tu idioma de marca.",
+          "does": [
+            "Bordado, serigrafía y etiquetado con tu identidad corporativa",
+            "Piezas a medida en color, tejido y gramaje",
+            "Etiquetado RFID integrado en cada pieza para su trazabilidad",
+            "Líneas diferenciadas por establecimiento, planta o categoría"
+          ],
+          "products": ["Bordado de logo", "Ribetes y color corporativo", "Etiquetas tejidas", "Piezas a medida"]
+        },
+        {
+          "title": "Trazabilidad y gestión RFID",
+          "lead": "Cada pieza identificada y seguida en tiempo real: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
+          "does": [
+            "Identificación por pieza con chip RFID resistente al lavado industrial",
+            "Conteo automático en recogida y entrega, sin recuentos manuales",
+            "Inventario en tiempo real y control de vida útil de cada pieza",
+            "Informes de consumo, pérdidas y reposición para tu equipo"
+          ],
+          "products": ["Chip RFID por pieza", "Inventario en tiempo real", "Informes de consumo", "Control de pérdidas"]
+        }
+      ]
+    },
+    "sectores": {
+      "meta": {
+        "title": "Sectores: hostelería, restauración y salud | VELUM",
+        "description": "Cuidado textil integral para hostelería, restauración y salud. Descubre qué hacemos en cada sector y qué productos textiles gestionamos."
+      },
+      "hero": {
+        "eyebrow": "Sectores",
+        "title": "Cada sector, su exigencia. La misma tranquilidad.",
+        "sub": "Adaptamos textil, frecuencias y protocolos a la realidad de cada negocio. Esto es lo que hacemos en cada sector y el textil que gestionamos."
+      },
+      "items": [
+        {
+          "tag": "Hostelería",
+          "title": "Hostelería",
+          "lead": "Para hoteles, resorts y spas de 4 y 5 estrellas donde el tacto de una sábana es parte de la experiencia. Blancura, suavidad y disponibilidad, noche tras noche.",
+          "does": [
+            "Gestión integral de lencería de cama y baño con calidad constante",
+            "Textil de spa y piscina con reposición ágil en temporada alta",
+            "Mantelería para el F&B del hotel, lista en cada servicio",
+            "Frecuencias y par-stock ajustados a la ocupación real"
+          ],
+          "products": ["Sábanas y fundas", "Toallas y albornoces", "Zapatillas y textil de spa", "Mantelería de restaurante", "Cortinas y decoración"]
+        },
+        {
+          "tag": "Restauración",
+          "title": "Restauración",
+          "lead": "Para restaurantes, catering y banqueting donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, esté lleno o a rebosar.",
+          "does": [
+            "Mantelería siempre impecable, planchada y a punto en cada servicio",
+            "Uniformidad de sala y cocina cuidada y repuesta",
+            "Gestión de picos de eventos, banquetes y temporada",
+            "Líneas y colores a medida del concepto del local"
+          ],
+          "products": ["Manteles y cubremanteles", "Servilletas", "Delantales y chaquetillas", "Paños y textil de office", "Litos y bayetas"]
+        },
+        {
+          "tag": "Salud",
+          "title": "Salud",
+          "lead": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad por pieza y absoluta fiabilidad.",
+          "does": [
+            "Procesos de lavado validados con control de biocontaminación (RABC)",
+            "Trazabilidad por pieza y documentación para auditorías",
+            "Gestión de ropa de paciente, uniformidad y textil técnico",
+            "Reposición fiable: las plantas asistenciales no pueden quedarse sin textil"
+          ],
+          "products": ["Ropa de cama clínica", "Pijamas y batas de paciente", "Uniformidad sanitaria", "Textil quirúrgico reutilizable", "Microfibra y bayetas técnicas"]
+        }
+      ]
+    }
+  },
   "legalPages": {
     "aviso": { "title": "Aviso legal", "updated": "junio de 2026", "updatedLabel": "Última actualización", "metaDescription": "Aviso legal de VELUM: información del titular, condiciones de uso y propiedad intelectual." },
     "privacidad": { "title": "Política de privacidad", "updated": "junio de 2026", "updatedLabel": "Última actualización", "metaDescription": "Política de privacidad de VELUM conforme al RGPD y la LOPDGDD: responsable, finalidades y derechos." },

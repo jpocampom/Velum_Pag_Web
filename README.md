@@ -29,7 +29,8 @@ assets/
   js/velum.js            Interacción (header, reveal, cookies, formulario)
   img/                   Isotipo SVG, favicon, OG e iconos PNG (generados)
 index.html               (GENERADO) Home ES — raíz
-en/ pt/                  (GENERADO) Home EN / PT
+servicios/ sectores/     (GENERADO) Páginas de Servicios y Sectores (ES)
+en/ pt/                  (GENERADO) Home + servicios/sectores + legales EN / PT
 aviso-legal/ ...         (GENERADO) Páginas legales por idioma
 sitemap.xml robots.txt site.webmanifest 404.html   (GENERADO / estático)
 ```
@@ -42,7 +43,7 @@ sitemap.xml robots.txt site.webmanifest 404.html   (GENERADO / estático)
 
 ```bash
 npm run icons   # genera los PNG del isotipo (una vez, o si cambia la marca)
-npm run build   # genera las 12 páginas + sitemap/robots/manifest/SVGs
+npm run build   # genera las 18 páginas + sitemap/robots/manifest/SVGs
 npm run all     # iconos + build
 npm run serve   # servidor local de desarrollo → http://localhost:8080
 ```
