@@ -26,7 +26,7 @@
 
   /* Rhythm */
   --gutter: clamp(20px, 5vw, 120px);
-  --section-y: clamp(72px, 11vh, 168px);
+  --section-y: clamp(56px, 8vh, 132px);
   --maxw: 1440px;
   --radius: 4px;
 
@@ -299,17 +299,20 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .process { counter-reset: step; }
 .process-steps { display: grid; gap: 0; }
 .process-step {
-  display: grid; grid-template-columns: 88px 1fr; gap: clamp(20px, 3vw, 48px);
-  padding-block: clamp(28px, 3.4vh, 44px); border-top: 1px solid var(--line); align-items: baseline;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "num head" "num body";
+  column-gap: clamp(18px, 3vw, 32px); row-gap: 6px;
+  padding-block: clamp(24px, 3.2vh, 40px); border-top: 1px solid var(--line); align-items: baseline;
 }
 .process-step:last-child { border-bottom: 1px solid var(--line); }
-.process-step .step-num { font-family: var(--serif); font-size: clamp(30px, 3vw, 52px); font-weight: 300; color: var(--sage-deep); line-height: 1; }
-.process-step h3 { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 36px); font-weight: 400; }
-.process-step p { color: rgba(31,30,27,0.74); margin: 8px 0 0; max-width: 52ch; }
-.process-step .step-body { display: flex; flex-direction: column; }
+.process-step .step-num { grid-area: num; font-family: var(--serif); font-size: clamp(30px, 3vw, 52px); font-weight: 300; color: var(--sage-deep); line-height: 1; }
+.process-step .step-head { grid-area: head; }
+.process-step .step-body { grid-area: body; display: flex; flex-direction: column; }
+.process-step h3 { font-family: var(--serif); font-size: clamp(23px, 2.4vw, 36px); font-weight: 400; line-height: 1.08; }
+.process-step p { color: rgba(31,30,27,0.74); margin: 0; max-width: 54ch; }
 @media (min-width: 760px){
-  .process-step { grid-template-columns: 88px 0.7fr 1.3fr; }
-  .process-step p { margin-top: 0; }
+  .process-step { grid-template-columns: 84px 0.8fr 1.4fr; grid-template-areas: "num head body"; align-items: baseline; }
 }
 
 /* =====================================================================
@@ -542,3 +545,77 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 /* Skip link */
 .skip-link { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 10px 16px; border-radius: 6px; z-index: 2000; }
 .skip-link:focus { left: 8px; }
+
+/* =====================================================================
+   Responsive refinement — tablet & mobile
+   Goal: shorter, calmer, no horizontal overflow, real tap targets.
+   ===================================================================== */
+
+/* Tablet / collapsed-nav range */
+@media (max-width: 980px) {
+  /* The language switcher lives inside the slide-out menu on mobile —
+     keep the top bar to just logo + menu button. */
+  .header-actions .lang-switch { display: none; }
+  .header-actions { gap: 8px; }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --section-y: 52px;
+    --gutter: 22px;
+    --fs-hero: clamp(38px, 11.5vw, 60px);
+    --fs-section: clamp(30px, 8vw, 46px);
+    --fs-mid: clamp(26px, 6.4vw, 38px);
+  }
+
+  /* Hero: tighter under the fixed header */
+  .hero { padding-top: 104px; }
+  .hero .lede { margin-top: 22px; }
+  .hero .hero-cta { margin-top: 30px; gap: 12px; }
+  .hero .btn { width: 100%; justify-content: center; }
+
+  /* Drop forced min-heights so cards size to content — big length saver */
+  .svc-card, .why-cell { min-height: 0; }
+  .svc-card { padding: 26px 24px; }
+  .why-cell { padding: 30px 26px; }
+
+  /* Hide purely decorative blocks on mobile (less scroll, no overlap) */
+  .split__visual { display: none; }
+
+  /* Section heads breathe less */
+  .section-head { margin-bottom: 32px; gap: 14px; }
+
+  /* Trust stats: tighter */
+  .trustbar .wrap { gap: 28px; }
+  .stat .num { font-size: clamp(38px, 12vw, 56px); }
+
+  /* Manifesto + split stack cleanly */
+  .manifesto .wrap, .coverage .wrap, .split { gap: 28px; }
+
+  /* Detail / legal blocks */
+  .detail-block { padding-block: 32px; }
+  .page-hero { padding-top: 104px; }
+
+  /* Cookie banner: full-width, stacked, thumb-friendly */
+  .cookie-banner { padding: 18px 18px; gap: 14px; bottom: 12px; }
+  .cookie-actions { width: 100%; }
+  .cookie-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  /* Avoid the decorative weave drifting under hero text on small screens */
+  .hero__weave { display: none; }
+
+  /* Legal/cookie tables: contained, horizontally scrollable instead of
+     blowing out the viewport width. */
+  .legal-body table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .legal-body thead, .legal-body tbody { display: table; width: 100%; min-width: 460px; }
+  .legal-body th, .legal-body td { font-size: 13px; padding: 8px 10px; }
+
+  /* Stack the two-up form fields */
+  .form .row.two { grid-template-columns: 1fr; }
+}
+
+/* Guarantee no element forces sideways scrolling */
+html, body { max-width: 100%; }
+img, svg, table { max-width: 100%; }
