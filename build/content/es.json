@@ -5,12 +5,12 @@
   "dir": "ltr",
   "home": "/",
   "meta": {
-    "title": "Renting textil y gestión textil integral | VELUM",
-    "description": "Renting, lavado y gestión integral de tu textil en toda España. Un solo interlocutor, trazabilidad total y la tranquilidad de que todo está bajo control."
+    "title": "Renting textil premium para hostelería y salud | VELUM",
+    "description": "Dotación, cuidado y reposición de textil con un único interlocutor. Cobertura en toda España con dos plantas propias y red de aliados homologados. Su aliado en textile care."
   },
   "brand": {
     "name": "VELUM",
-    "tagline": "Tu textil. Nuestro compromiso."
+    "tagline": "El aliado invisible que sostiene la excelencia."
   },
   "skip": "Saltar al contenido",
   "nav": {
@@ -36,179 +36,180 @@
         "href": "#sostenibilidad"
       }
     ],
-    "cta": "Solicitar diagnóstico",
+    "cta": "Solicitar propuesta",
     "menu": "Menú"
   },
   "hero": {
-    "eyebrow": "Cuidado textil premium · España",
-    "headlineHtml": "Tu textil, impecable.<br>Tu día, <em class=\"serif-em\">tranquilo</em>.",
-    "sub": "Gestionamos el ciclo completo de tu textil —suministro, lavado, reposición y trazabilidad— para que tú solo te ocupes de lo que de verdad importa: tus huéspedes.",
-    "ctaPrimary": "Solicitar diagnóstico textil",
-    "ctaSecondary": "Ver cómo trabajamos"
+    "eyebrow": "Textile care premium · Península Ibérica",
+    "headlineHtml": "Textile care premium<br>para quienes <em class=\"serif-em\">no pueden fallar</em>.",
+    "sub": "Dotamos, cuidamos y reponemos el textil de hostelería, restauración y salud bajo un único interlocutor.",
+    "ctaPrimary": "Hablar con un interlocutor",
+    "ctaSecondary": "Ver el modelo"
   },
   "trust": {
-    "line": "Cobertura nacional para hostelería, restauración y salud. Un único interlocutor, de Cádiz a Girona.",
+    "line": "El estándar nace en nuestras plantas y llega, idéntico, a cada rincón de España.",
     "stats": [
       {
         "num": "2",
-        "label": "plantas propias"
+        "label": "plantas propias donde nace el estándar"
       },
       {
-        "num": "Nacional",
-        "label": "cobertura en toda España"
+        "num": "Red",
+        "label": "nacional de aliados homologados"
       },
       {
-        "num": "Total",
-        "label": "trazabilidad de tu textil"
+        "num": "España",
+        "label": "mismo estándar en todo el país"
       },
       {
         "num": "1",
-        "label": "gestor dedicado por cuenta"
+        "label": "interlocutor, de principio a fin"
       }
     ]
   },
   "manifesto": {
-    "kicker": "La promesa",
-    "title": "No somos una lavandería.",
-    "bodyHtml": "No vendemos lavado. Vendemos la certeza de que cada sábana, cada mantel y cada bata estarán donde tienen que estar, impecables, cuando los necesites. Somos el equipo que se ocupa de tu textil de principio a fin —sin sustos, sin llamadas de urgencia, sin excusas— para que tu marca se sienta en cada tacto. <span class=\"promise\">Tú no compras lavado. Compras tranquilidad.</span>"
+    "kicker": "Por qué existimos",
+    "title": "El aliado invisible que sostiene la excelencia.",
+    "bodyHtml": "Hay detalles que el cliente nunca menciona cuando están bien, y que no perdona cuando fallan. La sábana que abraza, el mantel que viste la mesa, la bata que transmite confianza. VELUM existe para que ese textil esté siempre a la altura, sin que usted tenga que pensarlo. <span class=\"promise\">Trabajamos en silencio para que su marca brille en voz alta.</span>"
   },
   "services": {
-    "kicker": "Servicios",
-    "title": "Todo el ciclo de tu textil, en unas solas manos.",
-    "intro": "Diseñamos un servicio a medida de tu operación y lo gestionamos de extremo a extremo. Tú decides el nivel; nosotros respondemos por el resultado.",
+    "kicker": "El modelo",
+    "title": "Un modelo renting-first, pensado para no fallar.",
+    "intro": "No le vendemos un lavado: le entregamos un textil siempre disponible, siempre a punto. Usted decide el estándar; nosotros nos ocupamos de todo lo demás, ciclo tras ciclo.",
     "more": "Ver todos los servicios",
     "items": [
       {
-        "title": "Renting textil",
-        "body": "Accede a textil de gama alta sin inmovilizar capital. Nosotros suministramos, mantenemos y renovamos; tú pagas por uso y olvídate del inventario.",
+        "title": "Dotar",
+        "body": "Vestimos su negocio con el textil adecuado: tejido, gramaje y acabado elegidos a la medida de su marca, sin inmovilizar su capital.",
         "icon": "rent"
       },
       {
-        "title": "Lavado industrial",
-        "body": "Procesos controlados en plantas propias, con estándares de higiene y acabado a la altura del cinco estrellas. Cada pieza vuelve lista para vestir tu marca.",
+        "title": "Cuidar",
+        "body": "Cada pieza vuelve a su punto óptimo, ciclo tras ciclo, con un estándar que no varía. El cuidado es el soporte; la disponibilidad es la promesa.",
         "icon": "wash"
       },
       {
-        "title": "Reposición y logística",
-        "body": "Entregas en plazo, existencias garantizadas y rutas pensadas para tu operación. El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo.",
-        "icon": "logistics"
-      },
-      {
-        "title": "Personalización",
-        "body": "Bordados, etiquetado y piezas a medida que hacen que tu textil hable tu idioma. Tu identidad, tejida en cada detalle.",
+        "title": "Reponer",
+        "body": "Lo que se desgasta se renueva antes de que se note. Su stock vivo se ajusta solo, sin roturas ni excedentes.",
         "icon": "custom"
       },
       {
-        "title": "Trazabilidad y control de inventario",
-        "body": "Controlamos tu inventario textil de principio a fin: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
+        "title": "Entregar",
+        "body": "El textil llega a punto, en su sitio y a tiempo. Previsibilidad en lugar de sorpresas.",
+        "icon": "logistics"
+      },
+      {
+        "title": "Controlar",
+        "body": "Inventario trazado y consumo a la vista. Usted sabe siempre qué tiene, dónde y en qué estado.",
         "icon": "rfid"
       }
     ],
     "cta": {
-      "title": "¿No sabes por dónde empezar?",
-      "text": "Pide un diagnóstico textil gratuito y te decimos exactamente qué necesitas.",
-      "link": "Solicitar diagnóstico"
+      "title": "¿Hablamos de su estándar?",
+      "text": "Le proponemos el modelo a la medida de su operación, sin compromiso.",
+      "link": "Solicitar propuesta"
     }
   },
   "sectors": {
-    "kicker": "Sectores",
-    "title": "Conocemos tu sector por dentro.",
-    "intro": "Cada operación tiene su exigencia. Adaptamos textil, frecuencias y protocolos a la realidad de tu negocio.",
+    "kicker": "A quién servimos",
+    "title": "Tres mundos exigentes. Un mismo estándar.",
+    "intro": "Cada sector tiene su lenguaje y sus urgencias. Conocemos los tres y hablamos el idioma de cada uno.",
     "more": "Ver todos los sectores",
     "items": [
       {
         "tag": "Hostelería",
-        "title": "Hostelería",
-        "body": "Para hoteles, resorts y spas de 4 y 5 estrellas donde el tacto de una sábana es parte de la experiencia. Garantizamos blancura, suavidad y disponibilidad, noche tras noche, sin que la operación lo note.",
+        "title": "Hoteles que se recuerdan por el tacto.",
+        "body": "La primera impresión se juega en la habitación. Un textil impecable, siempre disponible, que sostiene la promesa de su categoría noche tras noche.",
         "items": [
-          "Lencería de cama",
+          "Sábanas y fundas",
           "Toallas y albornoces",
-          "Textil de spa",
-          "Cortinas y decoración"
+          "Lencería de baño",
+          "Ropa de cama por categoría"
         ]
       },
       {
         "tag": "Restauración",
-        "title": "Restauración",
-        "body": "Para restaurantes, catering y banquetes donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, lista en cada servicio, esté lleno o a rebosar.",
+        "title": "Mesas que visten la experiencia.",
+        "body": "El mantel y la servilleta hablan antes que la carta. Cuidamos esa primera palabra para que su sala diga exactamente lo que usted quiere transmitir.",
         "items": [
-          "Mantelería y servilletas",
-          "Uniformidad de sala y cocina",
-          "Paños y textil de antecocina"
+          "Mantelería",
+          "Servilletas",
+          "Cubremanteles",
+          "Lencería de cocina"
         ]
       },
       {
         "tag": "Salud",
-        "title": "Salud",
-        "body": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad y absoluta fiabilidad en cada entrega.",
+        "title": "Confianza que se nota en cada textil.",
+        "body": "En salud, el textil es parte del cuidado. Higiene, disponibilidad y consistencia, gestionadas con el rigor que el sector exige.",
         "items": [
           "Ropa de cama clínica",
+          "Pijamas y batas",
           "Uniformidad sanitaria",
-          "Batas y pijamas de paciente",
-          "Textil quirúrgico"
+          "Textil técnico de planta"
         ]
       }
     ]
   },
   "process": {
-    "kicker": "Cómo trabajamos",
-    "title": "Empezar es sencillo. Seguir, tranquilo.",
-    "intro": "Un método claro de principio a fin: tú nos cuentas tu operación y nosotros respondemos por el textil, cada día.",
+    "kicker": "Cómo empezamos",
+    "title": "Previsibilidad, paso a paso.",
+    "intro": "Un circuito pensado para que el textil nunca sea su preocupación. Esto es lo que sucede cuando trabaja con VELUM.",
     "steps": [
       {
-        "title": "Diagnóstico textil gratuito",
-        "body": "Visitamos tu operación, escuchamos tus puntos de dolor y medimos tu consumo real de textil."
+        "title": "Escuchamos",
+        "body": "Analizamos su operación, su categoría y sus picos. El estándar lo define usted."
       },
       {
-        "title": "Propuesta a medida",
-        "body": "Diseñamos un servicio con piezas, frecuencias y niveles de servicio ajustados a tu negocio."
+        "title": "Diseñamos su dotación",
+        "body": "Seleccionamos tejido, gramaje y acabado, y dimensionamos el textil a la medida de su marca, sin inmovilizar capital."
       },
       {
-        "title": "Implantación",
-        "body": "Ponemos en marcha el servicio con un plan claro, sin interrupciones para tu día a día."
+        "title": "Implantamos",
+        "body": "Ponemos el servicio en marcha con un plan claro, sin interrupciones en su día a día."
       },
       {
-        "title": "Gestión y reposición",
-        "body": "Nos ocupamos del lavado, las entregas y las existencias; tú solo disfrutas del textil siempre a punto."
+        "title": "Operamos",
+        "body": "Cuidamos, reponemos y entregamos ciclo tras ciclo. Usted solo nota que todo está donde debe estar."
       },
       {
-        "title": "Mejora continua",
-        "body": "Revisamos datos y resultados contigo y afinamos el servicio temporada tras temporada."
+        "title": "Mejoramos",
+        "body": "Revisamos datos y resultados con usted y afinamos el servicio temporada tras temporada."
       }
     ]
   },
   "why": {
-    "kicker": "Por qué VELUM",
-    "title": "Por qué nos eligen.",
+    "kicker": "La diferencia",
+    "title": "Lo que cambia cuando el textil deja de ser su problema.",
     "items": [
       {
-        "title": "Discretamente excelentes",
-        "body": "El mejor servicio es el que no se nota. Cuidamos cada detalle para que tu textil esté perfecto sin que tengas que pensar en él."
+        "title": "Un solo interlocutor",
+        "body": "Una persona que conoce su negocio y responde por todo. Sin cadenas de proveedores, sin pelotas fuera."
       },
       {
-        "title": "Obsesivamente fiables",
-        "body": "Cumplimos lo que prometemos, entrega tras entrega. Plazos, cantidades y calidad: lo que dijimos, cuando lo dijimos."
+        "title": "El estándar viaja con usted",
+        "body": "Dos plantas propias donde nace la calidad y una red nacional de aliados homologados que la lleva, idéntica, a cada rincón."
       },
       {
-        "title": "Genuinamente cercanos",
-        "body": "Un gestor dedicado que conoce tu cuenta por su nombre. Una sola persona que responde, sin centralitas ni respuestas enlatadas."
+        "title": "Capital libre, espacio libre",
+        "body": "El textil deja de ser un activo inmovilizado y un almacén que ocupa. Su inversión vuelve a su negocio."
       },
       {
-        "title": "Técnicamente profundos",
-        "body": "Plantas propias, procesos controlados y trazabilidad de tu textil. Detrás de la sencillez que ves hay un dominio técnico que no se improvisa."
+        "title": "Adaptación 100%",
+        "body": "Nada de catálogo cerrado. Tejido, gramaje y acabado se eligen a la medida de su marca."
       }
     ]
   },
   "manager": {
-    "kicker": "Un solo interlocutor",
-    "title": "Una persona que conoce tu cuenta como la palma de su mano.",
-    "body": "Cada cliente cuenta con un gestor textil dedicado: el mismo nombre, el mismo número, la misma persona que entiende tu operación y se anticipa a lo que necesitas. Sin departamentos que se pasan la pelota, sin volver a explicar tu caso cada vez. Una llamada, y resuelto.",
-    "badge": "Tu gestor textil"
+    "kicker": "Una sola voz",
+    "title": "Una persona. Todas las respuestas.",
+    "body": "Olvídese de coordinar proveedores, perseguir entregas o explicar su negocio diez veces. Con VELUM tiene un interlocutor que conoce su operación, anticipa sus necesidades y responde por el conjunto. Cuando algo importa, sabe exactamente a quién llamar, y esa persona ya sabe quién es usted.",
+    "badge": "Su interlocutor, de principio a fin"
   },
   "standards": {
     "kicker": "Estándares",
     "title": "El rigor que exige cada sector.",
-    "intro": "Trabajamos conforme a las normas que marcan la diferencia en higiene, calidad y medioambiente. Estos son los estándares que guían cada proceso.",
+    "intro": "Operamos bajo los marcos de referencia que definen la higiene, la calidad y la gestión ambiental del sector, y exigimos el mismo estándar a nuestra red de aliados.",
     "items": [
       {
         "code": "UNE-EN 14065",
@@ -231,72 +232,72 @@
         "desc": "Textil libre de sustancias nocivas, seguro al contacto con la piel."
       }
     ],
-    "note": "Estándares de referencia del sector que orientan nuestros protocolos. Las certificaciones vigentes se detallan a petición."
+    "note": "Marcos de referencia del sector que orientan nuestros protocolos. Las certificaciones vigentes y su alcance se detallan a petición."
   },
   "sustainability": {
-    "kicker": "Sostenibilidad",
-    "title": "Cuidar tu textil es también cuidar lo que nos rodea.",
-    "body": "La gestión profesional del textil es, por naturaleza, más sostenible que el lavado en casa o en pequeñas máquinas: alargamos la vida útil de cada pieza y optimizamos cada recurso. Lo hacemos porque es lo correcto y porque tu marca también se mide por ello.",
+    "kicker": "Hacer las cosas bien",
+    "title": "El cuidado también es del entorno.",
+    "body": "El modelo renting es circular por naturaleza: alargamos la vida útil de cada pieza, reponemos solo lo necesario y evitamos el textil de usar y tirar. Hacer las cosas bien también significa hacerlas con respeto por lo que viene después.",
     "claims": [
-      "Menor consumo de agua y energía por kilo frente al lavado convencional, gracias a la escala industrial.",
-      "Economía circular: reparamos y reutilizamos el textil antes de retirarlo, y lo reciclamos de forma responsable al final de su vida.",
-      "La trazabilidad de tu textil reduce las pérdidas y prolonga su vida útil."
+      "Vida útil prolongada — cada pieza se cuida para durar, no para reemplazarse.",
+      "Reposición justa — se renueva lo necesario, sin excedentes ni desperdicio.",
+      "Procesos responsables — control de recursos en cada ciclo."
     ]
   },
   "coverage": {
-    "kicker": "Cobertura",
-    "title": "Toda España, bajo un mismo estándar.",
-    "body": "Operamos en toda la Península con dos plantas propias y una red de partners homologados que trabajan bajo nuestros protocolos. Tengas uno o cien establecimientos, el servicio es el mismo en todas partes.",
-    "now": "España — disponible ahora",
+    "kicker": "Dónde llegamos",
+    "title": "El estándar nace en dos plantas y llega a toda España.",
+    "body": "Nuestras dos plantas propias son el corazón donde se define la calidad. Una red nacional de aliados homologados la extiende, idéntica, a cada rincón del país. Mismo estándar, esté donde esté su negocio.",
+    "now": "España — ahora",
     "soon": "Portugal — próximamente"
   },
   "faq": {
-    "kicker": "Preguntas frecuentes",
-    "title": "Lo que querrás saber.",
+    "kicker": "Antes de que pregunte",
+    "title": "Lo que conviene saber.",
     "items": [
       {
-        "q": "¿Qué es el renting textil y cómo funciona?",
-        "a": "Es el alquiler de ropa de cama, lencería o mantelería con lavado, mantenimiento y reposición incluidos por una tarifa periódica. No compras textil ni inmovilizas capital: pagas por uso y nosotros nos ocupamos de todo lo demás."
+        "q": "¿VELUM es una lavandería?",
+        "a": "No. VELUM es una plataforma de textile care premium en modelo renting. El cuidado del textil es parte del servicio, pero lo que entregamos es disponibilidad: el textil adecuado, siempre a punto, sin que usted tenga que poseerlo ni gestionarlo."
       },
       {
-        "q": "¿Qué ventajas tiene externalizar la lavandería de un hotel o restaurante?",
-        "a": "Eliminas la inversión en maquinaria y personal, conviertes un coste fijo en variable según tu ocupación, ganas espacio y aseguras calidad y disponibilidad constantes. Tu equipo se centra en el cliente, no en el textil."
+        "q": "¿Qué significa «renting-first»?",
+        "a": "Significa que usted no compra textil ni inmoviliza capital en él. Nosotros lo dotamos, lo mantenemos y lo reponemos; usted lo usa y paga por tenerlo siempre disponible. El mantenimiento es el soporte, no el titular."
       },
       {
-        "q": "¿Cuánto cuesta el servicio?",
-        "a": "Depende del volumen, el tipo de pieza, la ocupación y la frecuencia. Por eso empezamos siempre con un diagnóstico textil gratuito: analizamos tu operación y te presentamos una propuesta a medida, sin compromiso."
+        "q": "¿Trabajan en toda España?",
+        "a": "Sí. El estándar nace en nuestras dos plantas propias y se extiende a través de una red nacional de aliados homologados. El resultado es el mismo en cualquier punto del país. Portugal llegará próximamente."
       },
       {
-        "q": "¿Es más sostenible el renting que comprar y lavar?",
-        "a": "Sí. El modelo de gestión profesional alarga la vida útil de cada pieza, optimiza agua y energía a escala industrial y reduce el residuo textil mediante reparación, reutilización y reciclaje responsable."
+        "q": "¿Puedo elegir el tejido y el acabado?",
+        "a": "Por completo. No trabajamos con catálogo cerrado: elegimos tejido, gramaje y acabado a la medida de su marca y de su categoría. La adaptación es del 100%."
       },
       {
-        "q": "¿Cumplís la normativa de higiene para textil sanitario?",
-        "a": "Trabajamos conforme a la norma UNE-EN 14065 (control de biocontaminación, RABC) y a estándares de calidad ISO, con trazabilidad del proceso. La higiene del textil sanitario es una prioridad absoluta y documentada."
+        "q": "¿Qué pasa si necesito más textil en temporada alta?",
+        "a": "Lo prevemos con usted. Ajustamos el stock vivo según sus picos para que nunca le falte y nunca le sobre. Previsibilidad, sin sustos."
       },
       {
-        "q": "¿En qué zonas prestáis servicio?",
-        "a": "Damos cobertura en toda España con plantas propias y una red de partners homologados, y próximamente en Portugal. Allá donde estés, el estándar de servicio es el mismo."
+        "q": "¿Cómo sé en todo momento qué textil tengo?",
+        "a": "Con inventario trazado y consumo a la vista. Sabe siempre qué tiene, dónde está y en qué estado, sin sorpresas ni descuadres."
       },
       {
-        "q": "¿Cómo gestionáis la reposición y las pérdidas de textil?",
-        "a": "Controlamos tu inventario y reponemos según tu ocupación, minimizando las pérdidas: sabes en todo momento qué tienes y dónde está."
+        "q": "¿Quién me atiende cuando surge algo?",
+        "a": "Un único interlocutor que conoce su negocio y responde por todo el servicio. Sin cadenas de proveedores ni respuestas a medias."
       }
     ]
   },
   "ctaFinal": {
-    "eyebrow": "Hablemos",
-    "title": "Descubre cuánto pesa tu textil cuando deja de ser tu problema.",
-    "sub": "Solicita un diagnóstico textil gratuito. Sin compromiso: analizamos tu operación y te mostramos qué puede mejorar.",
-    "button": "Solicitar diagnóstico gratuito"
+    "eyebrow": "Empecemos",
+    "title": "Hablemos de lo que su marca no puede permitirse fallar.",
+    "sub": "Le proponemos un modelo a la medida de su operación, con un interlocutor que responde desde el primer día.",
+    "button": "Hablar con un interlocutor"
   },
   "form": {
-    "title": "Cuéntanos sobre tu operación.",
+    "title": "Cuéntenos sobre su operación.",
     "fields": {
       "nombre": "Nombre y apellidos",
       "empresa": "Empresa",
       "sector": "Sector",
-      "sectorPlaceholder": "Selecciona tu sector",
+      "sectorPlaceholder": "Seleccione su sector",
       "sectorOptions": [
         "Hostelería",
         "Restauración",
@@ -306,36 +307,36 @@
       "email": "Email",
       "telefono": "Teléfono",
       "volumen": "Nº de habitaciones o volumen aproximado",
-      "mensaje": "Cuéntanos qué necesitas"
+      "mensaje": "Cuéntenos qué necesita"
     },
     "submit": "Enviar solicitud",
-    "consentHtml": "He leído y acepto la <a href=\"{privacy}\">Política de privacidad</a>. Tus datos se usarán únicamente para responder a tu solicitud.",
-    "success": "Gracias. Un gestor de VELUM se pondrá en contacto contigo en menos de 24 horas laborables."
+    "consentHtml": "He leído y acepto la <a href=\"{privacy}\">Política de privacidad</a>. Sus datos se usarán únicamente para responder a su solicitud.",
+    "success": "Gracias. Un interlocutor de VELUM se pondrá en contacto con usted en menos de 24 horas laborables."
   },
   "footer": {
-    "descriptor": "VELUM es la plataforma ibérica de cuidado textil premium para hostelería, restauración y salud. Suministro, lavado, reposición y trazabilidad, gestionados de principio a fin.",
+    "descriptor": "VELUM es la plataforma ibérica de textile care premium para hostelería, restauración y salud. Dotación, cuidado, reposición y control, bajo un único interlocutor.",
     "groups": [
       {
         "title": "Servicios",
         "links": [
           {
-            "label": "Renting textil",
+            "label": "Dotación a medida",
             "href": "#servicios"
           },
           {
-            "label": "Lavado industrial",
+            "label": "Cuidado y mantenimiento",
             "href": "#servicios"
           },
           {
-            "label": "Reposición y logística",
+            "label": "Reposición continua",
             "href": "#servicios"
           },
           {
-            "label": "Personalización",
+            "label": "Entrega y logística",
             "href": "#servicios"
           },
           {
-            "label": "Trazabilidad y control",
+            "label": "Control e inventario",
             "href": "#servicios"
           }
         ]
@@ -399,8 +400,8 @@
     }
   },
   "cookies": {
-    "title": "Valoramos tu privacidad",
-    "text": "Usamos cookies propias y de terceros para garantizar el funcionamiento del sitio y, con tu consentimiento, para fines analíticos. Puedes aceptarlas todas, rechazarlas o configurar tus preferencias. Más información en nuestra <a href=\"/politica-de-cookies/\">Política de cookies</a>.",
+    "title": "Valoramos su privacidad",
+    "text": "Usamos cookies propias y de terceros para garantizar el funcionamiento del sitio y, con su consentimiento, para fines analíticos. Puede aceptarlas todas, rechazarlas o configurar sus preferencias. Más información en nuestra <a href=\"/politica-de-cookies/\">Política de cookies</a>.",
     "accept": "Aceptar todas",
     "reject": "Rechazar todas",
     "configure": "Configurar"
@@ -418,30 +419,30 @@
     "related": "Servicios relacionados"
   },
   "pageCta": {
-    "title": "¿Hablamos de tu operación?",
-    "sub": "Pide un diagnóstico textil gratuito y te mostramos exactamente qué podemos gestionar por ti.",
-    "button": "Solicitar diagnóstico gratuito"
+    "title": "¿Hablamos de su operación?",
+    "sub": "Le proponemos un modelo a la medida de su negocio, con un interlocutor que responde desde el primer día.",
+    "button": "Solicitar propuesta"
   },
   "pages": {
     "servicios": {
       "meta": {
-        "title": "Servicios de cuidado textil · renting, lavado y gestión | VELUM",
-        "description": "Renting textil, lavado industrial, reposición, personalización y control de inventario. Descubre qué hacemos en cada servicio y qué textil gestionamos."
+        "title": "Servicios de renting textil · dotación, cuidado y reposición | VELUM",
+        "description": "Dotación a medida, cuidado y mantenimiento, reposición continua, entrega y control de inventario. Todo su textil resuelto bajo un único interlocutor."
       },
       "hero": {
         "eyebrow": "Servicios",
-        "title": "Un único servicio. Todo tu textil resuelto.",
-        "sub": "Cubrimos el ciclo completo del textil profesional —del suministro a la trazabilidad— y lo adaptamos al nivel que tu operación necesita. Esto es lo que hacemos en cada servicio y lo que gestionamos por ti."
+        "title": "Todo lo que su textil necesita. Bajo un solo interlocutor.",
+        "sub": "Un modelo renting-first que dota, cuida y repone el textil de su negocio para que esté siempre a punto, sin inmovilizar su capital ni ocupar su tiempo."
       },
       "items": [
         {
-          "title": "Renting textil",
-          "lead": "Accede a textil de gama alta sin comprarlo ni inmovilizar capital. Nosotros suministramos, mantenemos y renovamos; tú pagas por uso.",
+          "title": "Dotación a medida",
+          "lead": "Vestimos su negocio con el textil que su marca merece.",
           "does": [
-            "Suministro de textil profesional de calidad hotelera y sanitaria",
-            "Mantenimiento, lavado y reposición incluidos en una tarifa por uso",
-            "Renovación automática de las piezas al final de su vida útil",
-            "Escalado de existencias según temporada y ocupación, sin compras puntuales"
+            "Selección de tejido, gramaje y acabado a la medida de su categoría",
+            "Definición del estándar junto a usted, sin comprar ni inmovilizar capital",
+            "Dimensionado del stock inicial según su operación",
+            "Puesta en marcha ordenada, sin fricción"
           ],
           "products": [
             "Ropa de cama",
@@ -452,13 +453,13 @@
           ]
         },
         {
-          "title": "Lavado industrial",
-          "lead": "Procesos controlados en plantas propias, con estándares de higiene y acabado a la altura del cinco estrellas y del entorno sanitario.",
+          "title": "Cuidado y mantenimiento",
+          "lead": "Cada pieza, siempre en su punto óptimo.",
           "does": [
-            "Recogida programada y clasificación por cliente y tipo de pieza",
-            "Lavado y desinfección con controles de higiene (referencia RABC / UNE-EN 14065)",
-            "Secado, planchado y acabado profesional pieza a pieza",
-            "Control de calidad y retirada de piezas defectuosas antes de la entrega"
+            "Cuidado del textil ciclo tras ciclo con un estándar constante",
+            "Control de calidad pieza a pieza antes de cada entrega",
+            "Retirada y renovación de lo que ya no está a la altura",
+            "El cuidado como soporte; la disponibilidad como promesa"
           ],
           "products": [
             "Ropa plana",
@@ -469,51 +470,51 @@
           ]
         },
         {
-          "title": "Reposición y logística",
-          "lead": "El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo. Rutas pensadas para tu operación.",
+          "title": "Reposición continua",
+          "lead": "Lo que se desgasta se renueva antes de que se note.",
           "does": [
-            "Rutas de recogida y entrega programadas a tu medida",
-            "Existencias de seguridad para cubrir picos de ocupación y eventos",
-            "Entregas en plazo con niveles de servicio acordados",
-            "Gestión de armarios y puntos de uso en tus instalaciones"
+            "Seguimiento del estado y el desgaste de cada línea",
+            "Renovación programada en el momento justo",
+            "Ajuste continuo del stock vivo a su ocupación",
+            "Sin roturas de servicio ni excedentes que sobran"
+          ],
+          "products": [
+            "Renovación programada",
+            "Ajuste de stock vivo",
+            "Existencias de seguridad",
+            "Cobertura en toda España"
+          ]
+        },
+        {
+          "title": "Entrega y logística",
+          "lead": "En su sitio, a punto y a tiempo.",
+          "does": [
+            "Planificación de entregas y recogidas a su medida",
+            "Frecuencias ajustadas a su operación y a sus picos",
+            "Cobertura nacional a través de plantas propias y red de aliados",
+            "Previsibilidad de servicio, sin que tenga que pedirlo"
           ],
           "products": [
             "Entregas programadas",
-            "Existencias de seguridad",
-            "Gestión de antecocina",
+            "Frecuencias a medida",
+            "Gestión de puntos de uso",
             "Cobertura nacional"
           ]
         },
         {
-          "title": "Personalización",
-          "lead": "Tu identidad, tejida en cada detalle. Hacemos que el textil hable tu idioma de marca.",
+          "title": "Control e inventario",
+          "lead": "Saber siempre qué tiene, dónde y en qué estado.",
           "does": [
-            "Bordado, serigrafía y etiquetado con tu identidad corporativa",
-            "Piezas a medida en color, tejido y gramaje",
-            "Etiquetado integrado en cada pieza para su identificación y control",
-            "Líneas diferenciadas por establecimiento, planta o categoría"
+            "Inventario trazado por cliente y ubicación",
+            "Consumo a la vista para decidir con datos",
+            "Informes de servicio, consumo y reposición",
+            "Previsión de necesidades antes de que falte"
           ],
           "products": [
-            "Bordado de logo",
-            "Ribetes y color corporativo",
-            "Etiquetas tejidas",
-            "Piezas a medida"
-          ]
-        },
-        {
-          "title": "Trazabilidad y control de inventario",
-          "lead": "Controlamos tu inventario textil de principio a fin: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
-          "does": [
-            "Identificación y marcado de las piezas resistente al lavado industrial",
-            "Recuento y verificación de piezas en cada recogida y entrega",
-            "Inventario y control de la vida útil de cada pieza",
-            "Informes de consumo, pérdidas y reposición para tu equipo"
-          ],
-          "products": [
-            "Identificación de piezas",
-            "Control de inventario",
-            "Informes de consumo",
-            "Control de pérdidas"
+            "Inventario trazado",
+            "Consumo a la vista",
+            "Informes de servicio",
+            "Previsión de necesidades"
           ]
         }
       ]
@@ -521,23 +522,23 @@
     "sectores": {
       "meta": {
         "title": "Sectores: hostelería, restauración y salud | VELUM",
-        "description": "Cuidado textil integral para hostelería, restauración y salud. Descubre qué hacemos en cada sector y qué productos textiles gestionamos."
+        "description": "Textile care premium para hostelería, restauración y salud. Un mismo estándar adaptado al lenguaje y las urgencias de cada sector."
       },
       "hero": {
         "eyebrow": "Sectores",
-        "title": "Cada sector, su exigencia. La misma tranquilidad.",
-        "sub": "Adaptamos textil, frecuencias y protocolos a la realidad de cada negocio. Esto es lo que hacemos en cada sector y el textil que gestionamos."
+        "title": "Conocemos su mundo. Hablamos su idioma.",
+        "sub": "Hostelería, restauración y salud comparten una exigencia: el textil no puede fallar. Adaptamos un mismo estándar a las urgencias y al lenguaje de cada sector."
       },
       "items": [
         {
           "tag": "Hostelería",
           "title": "Hostelería",
-          "lead": "Para hoteles, resorts y spas de 4 y 5 estrellas donde el tacto de una sábana es parte de la experiencia. Blancura, suavidad y disponibilidad, noche tras noche.",
+          "lead": "El descanso de su huésped empieza por el tacto.",
           "does": [
-            "Gestión integral de lencería de cama y baño con calidad constante",
-            "Textil de spa y piscina con reposición ágil en temporada alta",
-            "Mantelería para la restauración del hotel, lista en cada servicio",
-            "Frecuencias y existencias mínimas ajustadas a la ocupación real"
+            "Dotación, cuidado y reposición de la lencería de cama y baño",
+            "Calidad constante a la altura de su categoría, noche tras noche",
+            "Disponibilidad asegurada también en plena ocupación",
+            "Textil de spa y zonas comunes con reposición ágil"
           ],
           "products": [
             "Sábanas de percal y satén",
@@ -551,12 +552,12 @@
         {
           "tag": "Restauración",
           "title": "Restauración",
-          "lead": "Para restaurantes, catering y banquetes donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, esté lleno o a rebosar.",
+          "lead": "La mesa viste la experiencia antes del primer plato.",
           "does": [
             "Mantelería siempre impecable, planchada y a punto en cada servicio",
             "Uniformidad de sala y cocina cuidada y repuesta",
             "Gestión de picos de eventos, banquetes y temporada",
-            "Líneas y colores a medida del concepto del local"
+            "Líneas y colores a la medida del concepto del local"
           ],
           "products": [
             "Mantelería en satén, trama y lino",
@@ -569,9 +570,9 @@
         {
           "tag": "Salud",
           "title": "Salud",
-          "lead": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad y absoluta fiabilidad.",
+          "lead": "En salud, el textil es parte del cuidado.",
           "does": [
-            "Procesos de lavado validados con control de biocontaminación (RABC)",
+            "Procesos de cuidado validados con control de biocontaminación (RABC)",
             "Trazabilidad y documentación para auditorías",
             "Gestión de ropa de paciente, uniformidad y textil técnico",
             "Reposición fiable: las plantas asistenciales no pueden quedarse sin textil"
@@ -580,7 +581,7 @@
             "Ropa de cama clínica",
             "Pijamas y batas de paciente",
             "Uniformidad sanitaria",
-            "Textil quirúrgico reutilizable",
+            "Textil técnico asistencial",
             "Microfibra y bayetas técnicas"
           ]
         }
