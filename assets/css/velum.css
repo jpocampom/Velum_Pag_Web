@@ -616,3 +616,50 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 /* Guarantee no element forces sideways scrolling */
 html, body { max-width: 100%; }
 img, svg, table { max-width: 100%; }
+
+/* =====================================================================
+   Design refinement pass — premium finishing
+   ===================================================================== */
+
+/* Anchored sections clear the fixed header when reached via nav links */
+section[id] { scroll-margin-top: 92px; }
+
+/* Typographic finishing — balanced headlines, tidy paragraph rag */
+.display, .h-section, .h-mid, .hero h1, .quote, .trust-line,
+.manifesto__body, .sector-card h3, .svc-card h3 { text-wrap: balance; }
+.lede, .svc-card p, .sector-card p, .why-cell p, .process-step p,
+.faq-a, .sust-claim p, .detail-block__head .lede { text-wrap: pretty; }
+
+/* Woven thread texture on dark surfaces — echoes the Tejido mark.
+   Two hairline grids crossing = warp & weft. Kept whisper-faint. */
+.section--ink, .cta-final { position: relative; isolation: isolate; }
+.section--ink::before, .cta-final::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(251,250,246,0.045) 0 1px, transparent 1px 30px),
+    repeating-linear-gradient(0deg,  rgba(251,250,246,0.038) 0 1px, transparent 1px 30px);
+  -webkit-mask-image: radial-gradient(130% 120% at 85% 0%, #000 25%, transparent 78%);
+          mask-image: radial-gradient(130% 120% at 85% 0%, #000 25%, transparent 78%);
+}
+.section--ink > .wrap, .cta-final > .wrap { position: relative; z-index: 1; }
+
+/* Service cards — a quiet sage thread grows along the top edge on hover */
+.svc-card::after {
+  content: ""; position: absolute; left: 0; top: -1px; height: 2px; width: 0;
+  background: var(--sage-deep); transition: width 460ms var(--ease);
+}
+.svc-card:hover::after { width: 100%; }
+
+/* Sector cards — accent the tag on hover */
+.sector-card .sector-tag { transition: color 320ms var(--ease); }
+.sector-card:hover .sector-tag { color: var(--ink); }
+
+/* Reveal — soften the settle with a faint de-blur (motion-safe only) */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] { transition: opacity 760ms var(--ease), transform 760ms var(--ease), filter 760ms var(--ease); }
+  [data-reveal]:not(.in) { filter: blur(5px); }
+  [data-reveal].in { filter: blur(0); }
+}
+
+/* Crisper focus ring on dark surfaces */
+.section--ink :focus-visible, .cta-final :focus-visible, .site-footer :focus-visible { outline-color: var(--sage); }
