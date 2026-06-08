@@ -58,8 +58,8 @@
         "label": "cobertura em toda a Espanha"
       },
       {
-        "num": "100%",
-        "label": "peças rastreadas com RFID"
+        "num": "Total",
+        "label": "rastreabilidade do seu têxtil"
       },
       {
         "num": "1",
@@ -98,8 +98,8 @@
         "icon": "custom"
       },
       {
-        "title": "Rastreabilidade e gestão RFID",
-        "body": "Cada peça identificada e seguida em tempo real: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
+        "title": "Rastreabilidade e controlo de inventário",
+        "body": "Controlamos o seu inventário têxtil de princípio a fim: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
         "icon": "rfid"
       }
     ],
@@ -139,7 +139,7 @@
       {
         "tag": "Saúde",
         "title": "Saúde",
-        "body": "Para hospitais, clínicas e lares onde a higiene não admite meios-termos. Processos validados, rastreabilidade por peça e total fiabilidade em cada entrega.",
+        "body": "Para hospitais, clínicas e lares onde a higiene não admite meios-termos. Processos validados, rastreabilidade e total fiabilidade em cada entrega.",
         "items": [
           "Roupa de cama clínica",
           "Fardamento sanitário",
@@ -195,7 +195,7 @@
       },
       {
         "title": "Tecnicamente profundos",
-        "body": "Unidades próprias, processos controlados e rastreabilidade RFID. Por trás da simplicidade que vê há um domínio técnico que não se improvisa."
+        "body": "Unidades próprias, processos controlados e rastreabilidade do seu têxtil. Por trás da simplicidade que vê há um domínio técnico que não se improvisa."
       }
     ]
   },
@@ -240,7 +240,7 @@
     "claims": [
       "Menor consumo de água e energia por quilo face à lavagem convencional, graças à escala industrial.",
       "Economia circular: reparamos e reutilizamos o têxtil antes de o retirar, e reciclamo-lo de forma responsável no fim da sua vida.",
-      "Rastreabilidade RFID que reduz as perdas de têxtil e prolonga a sua vida útil."
+      "A rastreabilidade do seu têxtil reduz as perdas e prolonga a sua vida útil."
     ]
   },
   "coverage": {
@@ -272,7 +272,7 @@
       },
       {
         "q": "Cumprem a regulamentação de higiene para têxtil sanitário?",
-        "a": "Trabalhamos em conformidade com a norma UNE-EN 14065 (controlo de biocontaminação, RABC) e com padrões de qualidade ISO, com rastreabilidade por peça. A higiene do têxtil sanitário é uma prioridade absoluta e documentada."
+        "a": "Trabalhamos em conformidade com a norma UNE-EN 14065 (controlo de biocontaminação, RABC) e com padrões de qualidade ISO, com rastreabilidade do processo. A higiene do têxtil sanitário é uma prioridade absoluta e documentada."
       },
       {
         "q": "Em que zonas prestam serviço?",
@@ -280,7 +280,7 @@
       },
       {
         "q": "Como gerem a reposição e as perdas de têxtil?",
-        "a": "Cada peça tem identificação RFID e é seguida em tempo real. Repomos consoante a sua ocupação, controlamos o inventário e minimizamos as perdas: sabe a todo o momento o que tem e onde está."
+        "a": "Controlamos o seu inventário e repomos consoante a sua ocupação, minimizando as perdas: sabe a todo o momento o que tem e onde está."
       }
     ]
   },
@@ -335,7 +335,7 @@
             "href": "#servicios"
           },
           {
-            "label": "Rastreabilidade RFID",
+            "label": "Rastreabilidade e controlo",
             "href": "#servicios"
           }
         ]
@@ -446,7 +446,7 @@
     "servicios": {
       "meta": {
         "title": "Serviços de cuidado têxtil · renting, lavandaria e gestão | VELUM",
-        "description": "Renting têxtil, lavandaria industrial, reposição, personalização e rastreabilidade RFID. Veja o que fazemos em cada serviço e que têxteis gerimos."
+        "description": "Renting têxtil, lavandaria industrial, reposição, personalização e controlo de inventário. Veja o que fazemos em cada serviço e que têxteis gerimos."
       },
       "hero": {
         "eyebrow": "Serviços",
@@ -510,7 +510,7 @@
           "does": [
             "Bordado, serigrafia e etiquetagem com a sua identidade corporativa",
             "Peças à medida em cor, tecido e gramagem",
-            "Etiquetagem RFID integrada em cada peça para a sua rastreabilidade",
+            "Etiquetagem integrada em cada peça para a sua identificação e controlo",
             "Linhas diferenciadas por estabelecimento, instalação ou categoria"
           ],
           "products": [
@@ -521,17 +521,17 @@
           ]
         },
         {
-          "title": "Rastreabilidade e gestão RFID",
-          "lead": "Cada peça identificada e seguida em tempo real: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
+          "title": "Rastreabilidade e controlo de inventário",
+          "lead": "Controlamos o seu inventário têxtil de princípio a fim: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
           "does": [
-            "Identificação por peça com chip RFID resistente à lavagem industrial",
-            "Contagem automática na recolha e entrega, sem contagens manuais",
-            "Inventário em tempo real e controlo da vida útil de cada peça",
+            "Identificação e marcação das peças resistente à lavagem industrial",
+            "Contagem e verificação de peças em cada recolha e entrega",
+            "Inventário e controlo da vida útil de cada peça",
             "Relatórios de consumo, perdas e reposição para a sua equipa"
           ],
           "products": [
-            "Chip RFID por peça",
-            "Inventário em tempo real",
+            "Identificação de peças",
+            "Controlo de inventário",
             "Relatórios de consumo",
             "Controlo de perdas"
           ]
@@ -589,10 +589,10 @@
         {
           "tag": "Saúde",
           "title": "Saúde",
-          "lead": "Para hospitais, clínicas e lares onde a higiene não admite matizes. Processos validados, rastreabilidade por peça e absoluta fiabilidade.",
+          "lead": "Para hospitais, clínicas e lares onde a higiene não admite matizes. Processos validados, rastreabilidade e absoluta fiabilidade.",
           "does": [
             "Processos de lavagem validados com controlo de biocontaminação (RABC)",
-            "Rastreabilidade por peça e documentação para auditorias",
+            "Rastreabilidade e documentação para auditorias",
             "Gestão de roupa de doente, fardamento e têxtil técnico",
             "Reposição fiável: os serviços assistenciais não podem ficar sem têxtil"
           ],

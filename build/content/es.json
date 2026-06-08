@@ -58,8 +58,8 @@
         "label": "cobertura en toda España"
       },
       {
-        "num": "100%",
-        "label": "piezas trazadas con RFID"
+        "num": "Total",
+        "label": "trazabilidad de tu textil"
       },
       {
         "num": "1",
@@ -99,8 +99,8 @@
         "icon": "custom"
       },
       {
-        "title": "Trazabilidad y gestión RFID",
-        "body": "Cada pieza identificada y seguida en tiempo real: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
+        "title": "Trazabilidad y control de inventario",
+        "body": "Controlamos tu inventario textil de principio a fin: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
         "icon": "rfid"
       }
     ],
@@ -140,7 +140,7 @@
       {
         "tag": "Salud",
         "title": "Salud",
-        "body": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad por pieza y absoluta fiabilidad en cada entrega.",
+        "body": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad y absoluta fiabilidad en cada entrega.",
         "items": [
           "Ropa de cama clínica",
           "Uniformidad sanitaria",
@@ -195,7 +195,7 @@
       },
       {
         "title": "Técnicamente profundos",
-        "body": "Plantas propias, procesos controlados y trazabilidad RFID. Detrás de la sencillez que ves hay un dominio técnico que no se improvisa."
+        "body": "Plantas propias, procesos controlados y trazabilidad de tu textil. Detrás de la sencillez que ves hay un dominio técnico que no se improvisa."
       }
     ]
   },
@@ -240,7 +240,7 @@
     "claims": [
       "Menor consumo de agua y energía por kilo frente al lavado convencional, gracias a la escala industrial.",
       "Economía circular: reparamos y reutilizamos el textil antes de retirarlo, y lo reciclamos de forma responsable al final de su vida.",
-      "Trazabilidad RFID que reduce las pérdidas de textil y prolonga su vida útil."
+      "La trazabilidad de tu textil reduce las pérdidas y prolonga su vida útil."
     ]
   },
   "coverage": {
@@ -272,7 +272,7 @@
       },
       {
         "q": "¿Cumplís la normativa de higiene para textil sanitario?",
-        "a": "Trabajamos conforme a la norma UNE-EN 14065 (control de biocontaminación, RABC) y a estándares de calidad ISO, con trazabilidad por pieza. La higiene del textil sanitario es una prioridad absoluta y documentada."
+        "a": "Trabajamos conforme a la norma UNE-EN 14065 (control de biocontaminación, RABC) y a estándares de calidad ISO, con trazabilidad del proceso. La higiene del textil sanitario es una prioridad absoluta y documentada."
       },
       {
         "q": "¿En qué zonas prestáis servicio?",
@@ -280,7 +280,7 @@
       },
       {
         "q": "¿Cómo gestionáis la reposición y las pérdidas de textil?",
-        "a": "Cada pieza lleva identificación RFID y se sigue en tiempo real. Reponemos según tu ocupación, controlamos el inventario y minimizamos las pérdidas: sabes en todo momento qué tienes y dónde está."
+        "a": "Controlamos tu inventario y reponemos según tu ocupación, minimizando las pérdidas: sabes en todo momento qué tienes y dónde está."
       }
     ]
   },
@@ -335,7 +335,7 @@
             "href": "#servicios"
           },
           {
-            "label": "Trazabilidad RFID",
+            "label": "Trazabilidad y control",
             "href": "#servicios"
           }
         ]
@@ -426,7 +426,7 @@
     "servicios": {
       "meta": {
         "title": "Servicios de cuidado textil · renting, lavado y gestión | VELUM",
-        "description": "Renting textil, lavado industrial, reposición, personalización y trazabilidad RFID. Descubre qué hacemos en cada servicio y qué textil gestionamos."
+        "description": "Renting textil, lavado industrial, reposición, personalización y control de inventario. Descubre qué hacemos en cada servicio y qué textil gestionamos."
       },
       "hero": {
         "eyebrow": "Servicios",
@@ -490,7 +490,7 @@
           "does": [
             "Bordado, serigrafía y etiquetado con tu identidad corporativa",
             "Piezas a medida en color, tejido y gramaje",
-            "Etiquetado RFID integrado en cada pieza para su trazabilidad",
+            "Etiquetado integrado en cada pieza para su identificación y control",
             "Líneas diferenciadas por establecimiento, planta o categoría"
           ],
           "products": [
@@ -501,17 +501,17 @@
           ]
         },
         {
-          "title": "Trazabilidad y gestión RFID",
-          "lead": "Cada pieza identificada y seguida en tiempo real: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
+          "title": "Trazabilidad y control de inventario",
+          "lead": "Controlamos tu inventario textil de principio a fin: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
           "does": [
-            "Identificación por pieza con chip RFID resistente al lavado industrial",
-            "Conteo automático en recogida y entrega, sin recuentos manuales",
-            "Inventario en tiempo real y control de vida útil de cada pieza",
+            "Identificación y marcado de las piezas resistente al lavado industrial",
+            "Recuento y verificación de piezas en cada recogida y entrega",
+            "Inventario y control de la vida útil de cada pieza",
             "Informes de consumo, pérdidas y reposición para tu equipo"
           ],
           "products": [
-            "Chip RFID por pieza",
-            "Inventario en tiempo real",
+            "Identificación de piezas",
+            "Control de inventario",
             "Informes de consumo",
             "Control de pérdidas"
           ]
@@ -569,10 +569,10 @@
         {
           "tag": "Salud",
           "title": "Salud",
-          "lead": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad por pieza y absoluta fiabilidad.",
+          "lead": "Para hospitales, clínicas y residencias donde la higiene no admite matices. Procesos validados, trazabilidad y absoluta fiabilidad.",
           "does": [
             "Procesos de lavado validados con control de biocontaminación (RABC)",
-            "Trazabilidad por pieza y documentación para auditorías",
+            "Trazabilidad y documentación para auditorías",
             "Gestión de ropa de paciente, uniformidad y textil técnico",
             "Reposición fiable: las plantas asistenciales no pueden quedarse sin textil"
           ],

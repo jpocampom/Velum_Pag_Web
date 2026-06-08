@@ -58,8 +58,8 @@
         "label": "coverage across Spain"
       },
       {
-        "num": "100%",
-        "label": "items tracked with RFID"
+        "num": "Total",
+        "label": "traceability of your textiles"
       },
       {
         "num": "1",
@@ -98,8 +98,8 @@
         "icon": "custom"
       },
       {
-        "title": "RFID traceability and management",
-        "body": "Every item identified and tracked in real time: you know what you have, where it is and what condition it's in. Total control, zero invisible losses.",
+        "title": "Traceability and inventory control",
+        "body": "We control your textile inventory end to end: you know what you have, where it is and what condition it's in. Total control, zero invisible losses.",
         "icon": "rfid"
       }
     ],
@@ -139,7 +139,7 @@
       {
         "tag": "Healthcare",
         "title": "Healthcare",
-        "body": "For hospitals, clinics and care homes where hygiene leaves no room for nuance. Validated processes, item-level traceability and absolute reliability with every delivery.",
+        "body": "For hospitals, clinics and care homes where hygiene leaves no room for nuance. Validated processes, traceability and absolute reliability with every delivery.",
         "items": [
           "Clinical bed linen",
           "Medical uniforms",
@@ -195,7 +195,7 @@
       },
       {
         "title": "Technically deep",
-        "body": "Our own plants, controlled processes and RFID traceability. Behind the simplicity you see lies a technical mastery that can't be improvised."
+        "body": "Our own plants, controlled processes and full textile traceability. Behind the simplicity you see lies a technical mastery that can't be improvised."
       }
     ]
   },
@@ -240,7 +240,7 @@
     "claims": [
       "Lower water and energy use per kilo compared with conventional washing, thanks to industrial scale.",
       "Circular economy: we repair and reuse textiles before retiring them, and recycle them responsibly at the end of their life.",
-      "RFID traceability that reduces textile losses and extends working life."
+      "Textile traceability that reduces losses and extends working life."
     ]
   },
   "coverage": {
@@ -272,7 +272,7 @@
       },
       {
         "q": "Do you comply with hygiene regulations for healthcare textiles?",
-        "a": "We work to standard UNE-EN 14065 (biocontamination control, RABC) and to ISO quality standards, with item-level traceability. The hygiene of healthcare textiles is an absolute, documented priority."
+        "a": "We work to standard UNE-EN 14065 (biocontamination control, RABC) and to ISO quality standards, with documented traceability. The hygiene of healthcare textiles is an absolute, documented priority."
       },
       {
         "q": "Which areas do you serve?",
@@ -280,7 +280,7 @@
       },
       {
         "q": "How do you manage replenishment and textile losses?",
-        "a": "Every item carries RFID identification and is tracked in real time. We replenish according to your occupancy, control inventory and minimise losses: you always know what you have and where it is."
+        "a": "We control your inventory and replenish according to your occupancy, minimising losses: you always know what you have and where it is."
       }
     ]
   },
@@ -335,7 +335,7 @@
             "href": "#servicios"
           },
           {
-            "label": "RFID traceability",
+            "label": "Traceability & control",
             "href": "#servicios"
           }
         ]
@@ -446,7 +446,7 @@
     "servicios": {
       "meta": {
         "title": "Textile care services · rental, laundry & management | VELUM",
-        "description": "Textile rental, industrial laundry, replacement, personalization and RFID traceability. See what we do in each service and the textiles we manage."
+        "description": "Textile rental, industrial laundry, replacement, personalization and inventory control. See what we do in each service and the textiles we manage."
       },
       "hero": {
         "eyebrow": "Services",
@@ -510,7 +510,7 @@
           "does": [
             "Embroidery, screen printing and labelling with your corporate identity",
             "Bespoke pieces in colour, fabric and weight",
-            "Integrated RFID labelling on every item for traceability",
+            "Integrated labelling on every item for identification and control",
             "Distinct lines by property, plant or category"
           ],
           "products": [
@@ -521,17 +521,17 @@
           ]
         },
         {
-          "title": "Traceability & RFID management",
-          "lead": "Every item identified and tracked in real time: you know what you have, where it is and its condition. Full control, zero invisible loss.",
+          "title": "Traceability & inventory control",
+          "lead": "We control your textile inventory end to end: you know what you have, where it is and its condition. Full control, zero invisible loss.",
           "does": [
-            "Per-item identification with laundry-proof RFID chips",
-            "Automatic counting on collection and delivery, no manual counts",
-            "Real-time inventory and service-life tracking of every item",
+            "Item identification and marking that withstands industrial laundering",
+            "Counting and verification of items at each collection and delivery",
+            "Inventory and service-life tracking of your textiles",
             "Consumption, loss and replacement reports for your team"
           ],
           "products": [
-            "RFID chip per item",
-            "Real-time inventory",
+            "Item identification",
+            "Inventory control",
             "Consumption reports",
             "Loss control"
           ]
@@ -589,10 +589,10 @@
         {
           "tag": "Healthcare",
           "title": "Healthcare",
-          "lead": "For hospitals, clinics and care homes where hygiene allows no nuance. Validated processes, per-item traceability and absolute reliability.",
+          "lead": "For hospitals, clinics and care homes where hygiene allows no nuance. Validated processes, traceability and absolute reliability.",
           "does": [
             "Validated wash processes with biocontamination control (RABC)",
-            "Per-item traceability and documentation for audits",
+            "Traceability and documentation for audits",
             "Management of patient linen, uniforms and technical textiles",
             "Reliable replacement: care wards cannot run out of textiles"
           ],
