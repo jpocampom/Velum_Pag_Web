@@ -227,6 +227,7 @@ function head(c, routeId, title, desc) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>document.documentElement.classList.add('has-js')</script>
   <title>${title}</title>
   <meta name="description" content="${desc}" />
   <link rel="canonical" href="${canonical}" />
@@ -277,9 +278,10 @@ function homeMain(c) {
 </section>`;
 
   // Trust bar
-  const stats = c.trust.stats.map((s, i) =>
-    `<div class="stat" data-reveal data-reveal-delay="${i + 1}"><div class="num">${s.num}</div><div class="label">${s.label}</div></div>`
-  ).join("");
+  const stats = c.trust.stats.map((s, i) => {
+    const isWord = !/^[\d.,%+]+$/.test(s.num);
+    return `<div class="stat" data-reveal data-reveal-delay="${i + 1}"><div class="num${isWord ? " is-word" : ""}">${s.num}</div><div class="label">${s.label}</div></div>`;
+  }).join("");
   const trust = `<section class="trustbar" aria-label="Cobertura">
   <div class="wrap">
     <p class="trust-line" data-reveal>${c.trust.line}</p>
@@ -307,6 +309,12 @@ function homeMain(c) {
       <p>${s.body}</p>
     </article>`
   ).join("");
+  const svcCta = `<a class="svc-card svc-card--cta" href="#contacto" data-reveal>
+      <span class="svc-index" aria-hidden="true">→</span>
+      <h3>${c.services.cta.title}</h3>
+      <p>${c.services.cta.text}</p>
+      <span class="link-arrow">${c.services.cta.link}</span>
+    </a>`;
   const services = `<section class="section section--linen" id="servicios">
   <div class="wrap">
     <div class="section-head" data-reveal>
@@ -314,7 +322,7 @@ function homeMain(c) {
       <h2 class="h-section">${c.services.title}</h2>
       <p class="lede">${c.services.intro}</p>
     </div>
-    <div class="services-grid">${svc}</div>
+    <div class="services-grid">${svc}${svcCta}</div>
     <div class="section-more" data-reveal><a class="link-arrow" href="${ROUTES.servicios[c.lang]}">${c.services.more} <span class="arr" aria-hidden="true">→</span></a></div>
   </div>
 </section>`;

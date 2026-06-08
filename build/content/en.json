@@ -103,7 +103,12 @@
         "icon": "rfid"
       }
     ],
-    "more": "See all services"
+    "more": "See all services",
+    "cta": {
+      "title": "Not sure where to start?",
+      "text": "Request a free textile assessment and we'll tell you exactly what you need.",
+      "link": "Request assessment"
+    }
   },
   "sectors": {
     "kicker": "Sectors",

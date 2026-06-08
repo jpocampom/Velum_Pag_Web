@@ -103,7 +103,12 @@
         "body": "Cada pieza identificada y seguida en tiempo real: sabes qué tienes, dónde está y en qué estado. Control total, cero mermas invisibles.",
         "icon": "rfid"
       }
-    ]
+    ],
+    "cta": {
+      "title": "¿No sabes por dónde empezar?",
+      "text": "Pide un diagnóstico textil gratuito y te decimos exactamente qué necesitas.",
+      "link": "Solicitar diagnóstico"
+    }
   },
   "sectors": {
     "kicker": "Sectores",

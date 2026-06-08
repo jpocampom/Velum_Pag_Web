@@ -103,7 +103,12 @@
         "icon": "rfid"
       }
     ],
-    "more": "Ver todos os serviços"
+    "more": "Ver todos os serviços",
+    "cta": {
+      "title": "Não sabe por onde começar?",
+      "text": "Peça um diagnóstico têxtil gratuito e dizemos-lhe exatamente o que precisa.",
+      "link": "Solicitar diagnóstico"
+    }
   },
   "sectors": {
     "kicker": "Setores",
