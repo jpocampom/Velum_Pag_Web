@@ -14,10 +14,13 @@
   --c-ink:       #211F1B;
   --c-sage:      #ADB59C;
   --c-sage-deep: #646F57;
+  --c-indigo:      #2E3A4B;   /* tinte textil noble — acento de marca */
+  --c-indigo-soft: #9DB0C6;   /* índigo claro para superficies oscuras */
   --c-black:     #000;
   /* RGB channels — let semantic tokens compose alpha from a single source */
   --c-ink-rgb:   31, 30, 27;
   --c-paper-rgb: 251, 250, 246;
+  --c-indigo-rgb: 46, 58, 75;
 
   /* ===== Semantic — purpose aliases (what the UI references) ===== */
   /* Palette */
@@ -26,9 +29,13 @@
   --mist:   var(--c-mist);         /* warm light gray surface          */
   --soft:   var(--c-soft);         /* warm mid-gray — secondary text (AA) */
   --ink:    var(--c-ink);          /* warm charcoal — primary ink      */
-  --sage:   var(--c-sage);         /* whisper accent — sage            */
-  --sage-deep: var(--c-sage-deep); /* readable sage for small accents (AA) */
-  --ink-deep: var(--c-black);      /* hover: a hair deeper than ink    */
+  /* Accent — índigo (tinte textil noble): rompe el monocromo editorial, uso <=5% */
+  --accent:      var(--c-indigo);       /* índigo — texto y acento sobre claro */
+  --accent-soft: var(--c-indigo-soft);  /* índigo claro — acento sobre oscuro */
+  --accent-rgb:  46, 58, 75;
+  --sage:      var(--c-indigo-soft);    /* legacy alias → ahora índigo claro */
+  --sage-deep: var(--c-indigo);         /* legacy alias → ahora índigo */
+  --ink-deep:  var(--c-black);          /* hover: un punto más profundo que ink */
 
   /* Hairlines / borders */
   --line:       rgba(var(--c-ink-rgb), 0.12);
