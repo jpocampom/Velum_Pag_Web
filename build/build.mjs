@@ -392,21 +392,13 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Standards strip
-  const stds = c.standards.items.map((s) =>
-    `<div class="std-item" data-reveal><span class="std-code">${s.code}</span><span class="std-desc">${s.desc}</span></div>`
-  ).join("");
-  const standards = `<section class="section section--linen section--tight" id="estandares">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="kicker">${c.standards.kicker}</span>
-      <h2 class="h-section">${c.standards.title}</h2>
-      <p class="lede">${c.standards.intro}</p>
-    </div>
-    <div class="standards-grid">${stds}</div>
-    <p class="std-note" data-reveal>${c.standards.note}</p>
-  </div>
-</section>`;
+  // Standards → compact credential strip rendered inside Sustainability
+  const credItems = c.standards.items.map((s) => `<li>${s.code}</li>`).join("");
+  const credStrip = `<div class="cred-strip" data-reveal>
+        <span class="cred-strip__label">${c.standards.kicker}</span>
+        <ul class="cred-list">${credItems}</ul>
+        <p class="cred-note">${c.standards.note}</p>
+      </div>`;
 
   // Sustainability (dark)
   const claims = c.sustainability.claims.map((cl) =>
@@ -420,6 +412,7 @@ function homeMain(c) {
       <p class="lede">${c.sustainability.body}</p>
     </div>
     <div class="sust-claims">${claims}</div>
+    ${credStrip}
   </div>
 </section>`;
 
@@ -492,7 +485,7 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, services, sectors, process, whySection, manager, standards, sustainability, coverage, faq, contact].join("\n");
+  return [hero, trust, manifesto, services, sectors, process, whySection, manager, sustainability, coverage, faq, contact].join("\n");
 }
 
 /* Minimal stylized Iberia silhouette (decorative, not geographically exact) */
