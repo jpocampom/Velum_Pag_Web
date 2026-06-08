@@ -7,6 +7,7 @@
 import { readFileSync, writeFileSync, mkdirSync, cpSync, existsSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -33,6 +34,14 @@ const LEGAL_FILE = { aviso: "aviso-legal", privacidad: "privacidad", cookies: "c
 const read = (p) => readFileSync(p, "utf8");
 const load = (lang) => JSON.parse(read(resolve(CONTENT, lang + ".json")));
 const legalBody = (lang, file) => read(resolve(CONTENT, "legal", lang, file + ".html"));
+
+/* Content-hash cache busting: query string changes whenever the asset
+   changes, so returning visitors always fetch the latest CSS/JS even
+   though the path stays stable. */
+const assetVer = (rel) =>
+  createHash("sha1").update(readFileSync(resolve(ROOT, rel))).digest("hex").slice(0, 8);
+const CSS_V = assetVer("assets/css/velum.css");
+const JS_V = assetVer("assets/js/velum.js");
 
 function writeOut(urlPath, html) {
   const rel = urlPath === "/" ? "index.html" : urlPath.replace(/^\/|\/$/g, "") + "/index.html";
@@ -256,7 +265,7 @@ function head(c, routeId, title, desc) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="/assets/css/velum.css" />
+  <link rel="stylesheet" href="/assets/css/velum.css?v=${CSS_V}" />
   ${jsonLd(c, routeId)}
 </head>`;
 }
@@ -520,7 +529,7 @@ function iberiaMap() {
 /* ---------- Page assemblers ---------- */
 function skip(c) { return `<a class="skip-link" href="#top">${c.skip}</a>`; }
 function tail(c, routeId) {
-  return `${footer(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js" defer></script>\n</body>\n</html>`;
+  return `${footer(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js?v=${JS_V}" defer></script>\n</body>\n</html>`;
 }
 
 function buildHome(c) {
