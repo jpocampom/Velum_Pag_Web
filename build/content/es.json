@@ -90,7 +90,7 @@
       },
       {
         "title": "Reposición y logística",
-        "body": "Entregas en plazo, stock garantizado y rutas pensadas para tu operación. El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo.",
+        "body": "Entregas en plazo, existencias garantizadas y rutas pensadas para tu operación. El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo.",
         "icon": "logistics"
       },
       {
@@ -130,11 +130,11 @@
       {
         "tag": "Restauración",
         "title": "Restauración",
-        "body": "Para restaurantes, catering y banqueting donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, lista en cada servicio, esté lleno o a rebosar.",
+        "body": "Para restaurantes, catering y banquetes donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, lista en cada servicio, esté lleno o a rebosar.",
         "items": [
           "Mantelería y servilletas",
           "Uniformidad de sala y cocina",
-          "Paños y textil de office"
+          "Paños y textil de antecocina"
         ]
       },
       {
@@ -169,7 +169,7 @@
       },
       {
         "title": "Gestión y reposición",
-        "body": "Nos ocupamos del lavado, las entregas y el stock; tú solo disfrutas del textil siempre a punto."
+        "body": "Nos ocupamos del lavado, las entregas y las existencias; tú solo disfrutas del textil siempre a punto."
       },
       {
         "title": "Mejora continua",
@@ -441,7 +441,7 @@
             "Suministro de textil profesional de calidad hotelera y sanitaria",
             "Mantenimiento, lavado y reposición incluidos en una tarifa por uso",
             "Renovación automática de las piezas al final de su vida útil",
-            "Escalado de stock según temporada y ocupación, sin compras puntuales"
+            "Escalado de existencias según temporada y ocupación, sin compras puntuales"
           ],
           "products": [
             "Ropa de cama",
@@ -473,14 +473,14 @@
           "lead": "El textil llega cuando debe, en la cantidad que debe, sin que tengas que pedirlo. Rutas pensadas para tu operación.",
           "does": [
             "Rutas de recogida y entrega programadas a tu medida",
-            "Stock de seguridad para cubrir picos de ocupación y eventos",
-            "Entregas en plazo con niveles de servicio (SLA) acordados",
+            "Existencias de seguridad para cubrir picos de ocupación y eventos",
+            "Entregas en plazo con niveles de servicio acordados",
             "Gestión de armarios y puntos de uso en tus instalaciones"
           ],
           "products": [
             "Entregas programadas",
-            "Stock de seguridad",
-            "Gestión de office",
+            "Existencias de seguridad",
+            "Gestión de antecocina",
             "Cobertura nacional"
           ]
         },
@@ -536,22 +536,22 @@
           "does": [
             "Gestión integral de lencería de cama y baño con calidad constante",
             "Textil de spa y piscina con reposición ágil en temporada alta",
-            "Mantelería para el F&B del hotel, lista en cada servicio",
-            "Frecuencias y par-stock ajustados a la ocupación real"
+            "Mantelería para la restauración del hotel, lista en cada servicio",
+            "Frecuencias y existencias mínimas ajustadas a la ocupación real"
           ],
           "products": [
-            "Sábanas percal y sateen",
+            "Sábanas de percal y satén",
             "Fundas nórdicas y edredones",
             "Almohadas y protectores de colchón",
             "Toallas de rizo y albornoces",
             "Zapatillas y cortinas de baño",
-            "Colchas, pie de cama y plaids"
+            "Colchas, pie de cama y mantas"
           ]
         },
         {
           "tag": "Restauración",
           "title": "Restauración",
-          "lead": "Para restaurantes, catering y banqueting donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, esté lleno o a rebosar.",
+          "lead": "Para restaurantes, catering y banquetes donde la mesa empieza en el mantel. Mantelería impecable y uniformidad cuidada, esté lleno o a rebosar.",
           "does": [
             "Mantelería siempre impecable, planchada y a punto en cada servicio",
             "Uniformidad de sala y cocina cuidada y repuesta",
