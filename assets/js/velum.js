@@ -99,6 +99,25 @@
     highlights.forEach(function (el) { el.classList.add("is-on"); });
   }
 
+  /* ---------- Gallery carousel: switch sector ---------- */
+  doc.querySelectorAll(".carousel").forEach(function (car) {
+    var tabs = car.querySelectorAll(".car-tab");
+    var panels = car.querySelectorAll(".car-track");
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        var key = tab.getAttribute("data-car");
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle("is-active", on);
+          t.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        panels.forEach(function (p) {
+          p.classList.toggle("is-active", p.getAttribute("data-car-panel") === key);
+        });
+      });
+    });
+  });
+
   /* ---------- Active section in nav ---------- */
   var sections = doc.querySelectorAll("section[id]");
   var navLinks = doc.querySelectorAll(".nav a.nav-link");

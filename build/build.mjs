@@ -489,18 +489,30 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Editorial gallery mosaic
-  const gImgs = [
-    { src: "galeria-rollos", w: 1000, h: 1499 },
-    { src: "cuidado", w: 1500, h: 1001 },
-    { src: "galeria-toallas", w: 1300, h: 868 },
-    { src: "materiales", w: 1100, h: 1650 }
-  ];
-  const galleryTiles = gImgs.map((g, i) =>
-    `<figure class="gallery__tile"><img src="/assets/img/photos/${g.src}.webp" width="${g.w}" height="${g.h}" loading="lazy" decoding="async" alt="${(c.gallery && c.gallery[i]) || ""}" /></figure>`
+  // Gallery carousel organised by sector (tabs + horizontal scroll-snap)
+  const CAR_KEYS = ["hosteleria", "restauracion", "salud"];
+  const CAR_IMGS = {
+    hosteleria: ["sector-hosteleria", "hero-suite", "galeria-rollos", "materiales"],
+    restauracion: ["sector-restauracion", "restauracion-2", "restauracion-3"],
+    salud: ["sector-salud", "salud-2", "salud-3"]
+  };
+  const carTabs = c.sectors.items.map((s, i) =>
+    `<button class="car-tab${i === 0 ? " is-active" : ""}" type="button" role="tab" aria-selected="${i === 0}" data-car="${CAR_KEYS[i]}">${s.tag}</button>`
   ).join("");
-  const gallery = `<section class="section section--tight" aria-label="${c.galleryLabel || "Galería"}">
-  <div class="wrap"><div class="gallery" data-reveal>${galleryTiles}</div></div>
+  const carTracks = CAR_KEYS.map((k, i) => {
+    const slides = CAR_IMGS[k].map((src) =>
+      `<figure class="car-slide"><img src="/assets/img/photos/${src}.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="${c.sectors.items[i].tag} — ${c.sectors.items[i].title}" /></figure>`
+    ).join("");
+    return `<div class="car-track${i === 0 ? " is-active" : ""}" data-car-panel="${k}" role="tabpanel">${slides}</div>`;
+  }).join("");
+  const gallery = `<section class="section section--tight carousel" aria-label="${c.galleryLabel || "Galería"}">
+  <div class="wrap">
+    <div class="car-head" data-reveal>
+      <h2 class="h-mid">${c.galleryLabel}</h2>
+      <div class="car-tabs" role="tablist">${carTabs}</div>
+    </div>
+    <div class="car-viewport" data-reveal data-reveal-delay="1">${carTracks}</div>
+  </div>
 </section>`;
 
   // Standards — sober credentials band (light surface, no green claim)
