@@ -342,12 +342,16 @@ function homeMain(c) {
 </section>`;
 
   // Sectors
+  const SECTOR_IMG = ["sector-hosteleria", "sector-restauracion", "sector-salud"];
   const sec = c.sectors.items.map((s, i) =>
     `<article class="sector-card" data-reveal data-reveal-delay="${i + 1}">
-      <span class="sector-tag">${s.tag}</span>
-      <h3>${s.title}</h3>
-      <p>${s.body}</p>
-      <ul class="sector-items">${s.items.map((it) => `<li>${it}</li>`).join("")}</ul>
+      <figure class="sector-card__media"><img src="/assets/img/photos/${SECTOR_IMG[i] || SECTOR_IMG[0]}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" /></figure>
+      <div class="sector-card__body">
+        <span class="sector-tag">${s.tag}</span>
+        <h3>${s.title}</h3>
+        <p>${s.body}</p>
+        <ul class="sector-items">${s.items.map((it) => `<li>${it}</li>`).join("")}</ul>
+      </div>
     </article>`
   ).join("");
   const sectors = `<section class="section" id="sectores">
