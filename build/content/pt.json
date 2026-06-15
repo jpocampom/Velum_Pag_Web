@@ -62,12 +62,12 @@
   },
   "manifesto": {
     "kicker": "Porque existimos",
-    "title": "O aliado invisível que sustenta a excelência.",
+    "title": "O aliado invisível que sustenta a [[excelência]].",
     "bodyHtml": "Há detalhes que o cliente nunca menciona quando estão bem, e que não perdoa quando falham. O lençol que envolve, a toalha de mesa que veste a sala, o roupão que aconchega. A VELUM existe para que esse têxtil esteja sempre à altura, sem que tenha de pensar nele. <span class=\"promise\">Trabalhamos em silêncio para que a sua marca brilhe em voz alta.</span>"
   },
   "services": {
     "kicker": "O modelo",
-    "title": "Um modelo renting-first, pensado para não falhar.",
+    "title": "Um modelo [[renting-first]], pensado para não falhar.",
     "intro": "Não lhe vendemos uma lavagem: entregamos-lhe um têxtil sempre disponível, sempre a postos. Você define o padrão; nós tratamos de todo o resto, ciclo após ciclo.",
     "more": "Ver todos os serviços",
     "items": [
@@ -173,7 +173,7 @@
   },
   "why": {
     "kicker": "A diferença",
-    "title": "O que muda quando o têxtil deixa de ser o seu problema.",
+    "title": "O que muda quando o têxtil deixa de ser o seu [[problema]].",
     "items": [
       {
         "title": "Um único interlocutor",

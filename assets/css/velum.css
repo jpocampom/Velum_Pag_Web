@@ -125,6 +125,21 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .serif-em { font-style: italic; font-weight: 400; color: var(--sage-deep); }
 .section--ink .serif-em { color: var(--sage); }
 
+/* Pointer highlight — draws a box + cursor around a key word on scroll-in */
+.ph { position: relative; display: inline-block; white-space: nowrap; }
+.ph__t { position: relative; z-index: 1; }
+.ph__box { position: absolute; inset: -0.04em -0.3em; width: auto; height: auto; overflow: visible; pointer-events: none; }
+.ph__rect { fill: none; stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.ph__ptr { position: absolute; right: -0.5em; bottom: -0.46em; width: 0.62em; height: 0.62em; fill: var(--accent); opacity: 0; transform: translate(-5px, -5px) scale(0.6); pointer-events: none; }
+.ph.is-on .ph__rect { transition: stroke-dashoffset 850ms var(--ease); stroke-dashoffset: 0; }
+.ph.is-on .ph__ptr { transition: opacity 280ms 620ms var(--ease), transform 380ms 620ms var(--ease); opacity: 1; transform: translate(0, 0) scale(1); }
+.section--ink .ph__rect { stroke: var(--accent-soft); }
+.section--ink .ph__ptr { fill: var(--accent-soft); }
+@media (prefers-reduced-motion: reduce) {
+  .ph__rect { stroke-dashoffset: 0; transition: none; }
+  .ph__ptr { opacity: 1; transform: none; transition: none; }
+}
+
 .lede { font-size: clamp(16.5px, 1.4vw, 19px); line-height: 1.55; color: rgba(var(--c-ink-rgb),0.78); max-width: 60ch; }
 .section--ink .lede, .cta-final .lede { color: rgba(var(--c-paper-rgb),0.8); }
 .muted { color: var(--soft); }

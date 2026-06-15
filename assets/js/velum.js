@@ -83,6 +83,22 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
+  /* ---------- Pointer highlight: draw box + cursor when in view ---------- */
+  var highlights = doc.querySelectorAll(".ph");
+  if ("IntersectionObserver" in window && highlights.length) {
+    var phio = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("is-on"); phio.unobserve(e.target); }
+        });
+      },
+      { threshold: 0.75 }
+    );
+    highlights.forEach(function (el) { phio.observe(el); });
+  } else {
+    highlights.forEach(function (el) { el.classList.add("is-on"); });
+  }
+
   /* ---------- Active section in nav ---------- */
   var sections = doc.querySelectorAll("section[id]");
   var navLinks = doc.querySelectorAll(".nav a.nav-link");

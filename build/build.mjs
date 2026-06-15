@@ -43,7 +43,17 @@ const assetVer = (rel) =>
 const CSS_V = assetVer("assets/css/velum.css");
 const JS_V = assetVer("assets/js/velum.js");
 
+/* Pointer highlight: [[word]] → animated box + cursor (drawn on scroll-in). */
+function phMarkup(word) {
+  return `<span class="ph"><span class="ph__t">${word}</span>` +
+    `<svg class="ph__box" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><rect class="ph__rect" x="1.5" y="1.5" width="97" height="97" rx="2" pathLength="1"/></svg>` +
+    `<svg class="ph__ptr" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.2 1.2 9.6 4.4 6 5.6 4.6 9.4 Z"/></svg>` +
+    `</span>`;
+}
+const applyHighlights = (html) => html.replace(/\[\[([\s\S]+?)\]\]/g, (_, w) => phMarkup(w));
+
 function writeOut(urlPath, html) {
+  html = applyHighlights(html);
   const rel = urlPath === "/" ? "index.html" : urlPath.replace(/^\/|\/$/g, "") + "/index.html";
   const abs = resolve(ROOT, rel);
   mkdirSync(dirname(abs), { recursive: true });
