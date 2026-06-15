@@ -521,10 +521,9 @@ function homeMain(c) {
   const stdItems = c.standards.items.map((s) =>
     `<div class="std-item"><dt class="std-code">${s.code}</dt><dd class="std-desc">${s.desc}</dd></div>`
   ).join("");
-  const standards = `<section class="section section--linen standards" id="estandares" aria-labelledby="std-title">
+  const standards = `<section class="section section--linen standards" id="estandares" aria-label="${c.standards.kicker}">
   <div class="wrap">
     <div class="standards__head" data-reveal>
-      <h2 class="h-section" id="std-title">${c.standards.title}</h2>
       <p class="lede">${c.standards.intro}</p>
     </div>
     <dl class="standards__grid" data-reveal data-reveal-delay="1">${stdItems}</dl>
