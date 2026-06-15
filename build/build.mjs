@@ -349,19 +349,33 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Sectors
-  const SECTOR_IMG = ["sector-hosteleria", "sector-restauracion", "sector-salud"];
-  const sec = c.sectors.items.map((s, i) =>
-    `<article class="sector-card" data-reveal data-reveal-delay="${i + 1}">
-      <figure class="sector-card__media"><img src="/assets/img/photos/${SECTOR_IMG[i] || SECTOR_IMG[0]}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" /></figure>
+  // Sectors — each card carries a small crossfade carousel of photos
+  // grouped by sector type (no more loose editorial mosaic at the bottom).
+  const SECTOR_PHOTOS = [
+    ["sector-hosteleria", "hero-suite", "galeria-toallas"],
+    ["sector-restauracion", "galeria-rollos"],
+    ["sector-salud", "cuidado", "materiales"]
+  ];
+  const sec = c.sectors.items.map((s, i) => {
+    const photos = SECTOR_PHOTOS[i] || [SECTOR_PHOTOS[0][0]];
+    const slides = photos.map((src, n) =>
+      `<img class="sector-carousel__slide${n === 0 ? " is-active" : ""}" src="/assets/img/photos/${src}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" />`
+    ).join("");
+    const dots = photos.length > 1
+      ? `<div class="sector-carousel__dots" role="tablist" aria-label="${s.tag}">${photos.map((_, n) =>
+          `<button type="button" class="sector-carousel__dot${n === 0 ? " is-active" : ""}" aria-label="${n + 1} / ${photos.length}"${n === 0 ? ' aria-selected="true"' : ""}></button>`
+        ).join("")}</div>`
+      : "";
+    return `<article class="sector-card" data-reveal data-reveal-delay="${i + 1}">
+      <figure class="sector-card__media sector-carousel" data-carousel>${slides}${dots}</figure>
       <div class="sector-card__body">
         <span class="sector-tag">${s.tag}</span>
         <h3>${s.title}</h3>
         <p>${s.body}</p>
         <ul class="sector-items">${s.items.map((it) => `<li>${it}</li>`).join("")}</ul>
       </div>
-    </article>`
-  ).join("");
+    </article>`;
+  }).join("");
   const sectors = `<section class="section" id="sectores">
   <div class="wrap">
     <div class="section-head" data-reveal>
@@ -489,20 +503,6 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Editorial gallery mosaic
-  const gImgs = [
-    { src: "galeria-rollos", w: 1000, h: 1499 },
-    { src: "cuidado", w: 1500, h: 1001 },
-    { src: "galeria-toallas", w: 1300, h: 868 },
-    { src: "materiales", w: 1100, h: 1650 }
-  ];
-  const galleryTiles = gImgs.map((g, i) =>
-    `<figure class="gallery__tile"><img src="/assets/img/photos/${g.src}.webp" width="${g.w}" height="${g.h}" loading="lazy" decoding="async" alt="${(c.gallery && c.gallery[i]) || ""}" /></figure>`
-  ).join("");
-  const gallery = `<section class="section section--tight" aria-label="${c.galleryLabel || "Galería"}">
-  <div class="wrap"><div class="gallery" data-reveal>${galleryTiles}</div></div>
-</section>`;
-
   // Standards — sober credentials band (light surface, no green claim)
   const stdItems = c.standards.items.map((s) =>
     `<div class="std-item"><dt class="std-code">${s.code}</dt><dd class="std-desc">${s.desc}</dd></div>`
@@ -518,7 +518,7 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, standards, coverage, faq, contact].join("\n");
+  return [hero, trust, manifesto, whySection, services, process, sectors, manager, standards, coverage, faq, contact].join("\n");
 }
 
 /* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.

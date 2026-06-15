@@ -237,6 +237,37 @@
   window.addEventListener("scroll", onScrollUI, { passive: true });
   onScrollUI();
 
+  /* ---------- Sector carousels (crossfade, auto + dots) ---------- */
+  doc.querySelectorAll("[data-carousel]").forEach(function (car) {
+    var slides = car.querySelectorAll(".sector-carousel__slide");
+    var dots = car.querySelectorAll(".sector-carousel__dot");
+    if (slides.length < 2) return;
+    var idx = 0;
+    var timer = null;
+
+    function show(n) {
+      n = (n + slides.length) % slides.length;
+      slides[idx].classList.remove("is-active");
+      if (dots[idx]) { dots[idx].classList.remove("is-active"); dots[idx].removeAttribute("aria-selected"); }
+      idx = n;
+      slides[idx].classList.add("is-active");
+      if (dots[idx]) { dots[idx].classList.add("is-active"); dots[idx].setAttribute("aria-selected", "true"); }
+    }
+    function start() {
+      if (reduceMotion) return;
+      stop();
+      timer = window.setInterval(function () { show(idx + 1); }, 4800);
+    }
+    function stop() { if (timer) { window.clearInterval(timer); timer = null; } }
+
+    dots.forEach(function (d, i) {
+      d.addEventListener("click", function () { show(i); start(); });
+    });
+    car.addEventListener("mouseenter", stop);
+    car.addEventListener("mouseleave", start);
+    start();
+  });
+
   /* ---------- Year in footer ---------- */
   doc.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());
