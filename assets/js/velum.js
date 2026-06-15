@@ -265,7 +265,28 @@
     });
     car.addEventListener("mouseenter", stop);
     car.addEventListener("mouseleave", start);
+
+    // Touch / pointer swipe on mobile
+    var x0 = null;
+    car.addEventListener("touchstart", function (e) {
+      x0 = e.touches[0].clientX; stop();
+    }, { passive: true });
+    car.addEventListener("touchend", function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) { show(idx + (dx < 0 ? 1 : -1)); }
+      x0 = null; start();
+    });
+
     start();
+  });
+
+  // Pause every carousel autoplay when the tab is hidden
+  doc.addEventListener("visibilitychange", function () {
+    var hidden = doc.hidden;
+    doc.querySelectorAll("[data-carousel]").forEach(function (car) {
+      car.dispatchEvent(new Event(hidden ? "mouseenter" : "mouseleave"));
+    });
   });
 
   /* ---------- Year in footer ---------- */
