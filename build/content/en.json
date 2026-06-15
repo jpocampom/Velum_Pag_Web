@@ -420,6 +420,13 @@
     }
   },
   "breadcrumbHome": "Home",
+  "galleryLabel": "Our work in pictures",
+  "gallery": [
+    "Hotel bed dressed in flawless white linen",
+    "Hand-folded towels, ready for the room",
+    "Clean linen prepared for service",
+    "Stack of cotton terry towels"
+  ],
   "labels": {
     "does": "What we do",
     "products": "What we manage",

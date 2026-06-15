@@ -411,10 +411,10 @@ function homeMain(c) {
       <h2 class="h-section" style="margin:18px 0 24px;">${c.manager.title}</h2>
       <p class="lede">${c.manager.body}</p>
     </div>
-    <div class="split__visual" data-reveal data-reveal-delay="1" aria-hidden="true">
+    <figure class="split__visual" data-reveal data-reveal-delay="1">
       <span class="badge">${c.manager.badge}</span>
-      ${weaveSVG({ cls: "mark" })}
-    </div>
+      <img src="/assets/img/photos/gestor.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${c.manager.badge}" />
+    </figure>
   </div>
 </section>`;
 
@@ -488,7 +488,21 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, whySection, services, process, sectors, manager, coverage, faq, contact].join("\n");
+  // Editorial gallery mosaic
+  const gImgs = [
+    { src: "galeria-rollos", w: 1000, h: 1499 },
+    { src: "cuidado", w: 1500, h: 1001 },
+    { src: "galeria-toallas", w: 1300, h: 868 },
+    { src: "materiales", w: 1100, h: 1650 }
+  ];
+  const galleryTiles = gImgs.map((g, i) =>
+    `<figure class="gallery__tile"><img src="/assets/img/photos/${g.src}.webp" width="${g.w}" height="${g.h}" loading="lazy" decoding="async" alt="${(c.gallery && c.gallery[i]) || ""}" /></figure>`
+  ).join("");
+  const gallery = `<section class="section section--tight" aria-label="${c.galleryLabel || "Galería"}">
+  <div class="wrap"><div class="gallery" data-reveal>${galleryTiles}</div></div>
+</section>`;
+
+  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, coverage, faq, contact].join("\n");
 }
 
 /* Stylized Iberian Peninsula — recognizable, Portugal distinguished. */

@@ -420,6 +420,13 @@
     }
   },
   "breadcrumbHome": "Início",
+  "galleryLabel": "O nosso trabalho em imagens",
+  "gallery": [
+    "Cama de hotel vestida com roupa branca impecável",
+    "Toalhas dobradas à mão, prontas para o quarto",
+    "Roupa limpa preparada para o serviço",
+    "Pilha de toalhas de turco de algodão"
+  ],
   "labels": {
     "does": "O que fazemos",
     "products": "O que gerimos",

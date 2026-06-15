@@ -402,6 +402,13 @@
   },
   "backHome": "Volver al inicio",
   "breadcrumbHome": "Inicio",
+  "galleryLabel": "Nuestro trabajo en imágenes",
+  "gallery": [
+    "Cama de hotel vestida con lencería blanca impecable",
+    "Toallas dobladas a mano, listas para la habitación",
+    "Lencería limpia preparada para el servicio",
+    "Torre de toallas de rizo de algodón"
+  ],
   "labels": {
     "does": "Qué hacemos",
     "products": "Qué gestionamos",
