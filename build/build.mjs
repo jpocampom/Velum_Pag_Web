@@ -274,15 +274,20 @@ function head(c, routeId, title, desc) {
 function homeMain(c) {
   // Hero
   const hero = `<section class="hero" id="top">
-  ${weaveSVG({ cls: "hero__weave" })}
   <div class="wrap hero__inner">
-    <span class="kicker" data-reveal>${c.hero.eyebrow}</span>
-    <h1 data-reveal data-reveal-delay="1">${c.hero.headlineHtml}</h1>
-    <p class="lede" data-reveal data-reveal-delay="2">${c.hero.sub}</p>
-    <div class="hero-cta" data-reveal data-reveal-delay="3">
-      <a class="btn btn--primary" href="#contacto">${c.hero.ctaPrimary} <span class="arr" aria-hidden="true">→</span></a>
-      <a class="btn btn--ghost" href="#proceso">${c.hero.ctaSecondary}</a>
+    <div class="hero__text">
+      <span class="kicker" data-reveal>${c.hero.eyebrow}</span>
+      <h1 data-reveal data-reveal-delay="1">${c.hero.headlineHtml}</h1>
+      <p class="lede" data-reveal data-reveal-delay="2">${c.hero.sub}</p>
+      <div class="hero-cta" data-reveal data-reveal-delay="3">
+        <a class="btn btn--primary" href="#contacto">${c.hero.ctaPrimary} <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" href="#proceso">${c.hero.ctaSecondary}</a>
+      </div>
     </div>
+    <figure class="hero__media" data-reveal data-reveal-delay="2">
+      <img src="/assets/img/photos/hero-suite.webp" width="1800" height="1200" fetchpriority="high" decoding="async" alt="${c.hero.imageAlt || c.hero.eyebrow}" />
+      ${weaveSVG({ cls: "hero__media-weave" })}
+    </figure>
   </div>
 </section>`;
 
