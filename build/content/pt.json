@@ -5,12 +5,12 @@
   "dir": "ltr",
   "home": "/pt/",
   "meta": {
-    "title": "Renting têxtil e gestão têxtil integral | VELUM",
-    "description": "Renting, lavagem e gestão integral do seu têxtil em toda a Espanha. Um único interlocutor, rastreabilidade total e a tranquilidade de ter tudo sob controlo."
+    "title": "Renting têxtil premium para hotelaria e saúde | VELUM",
+    "description": "Dotação, cuidado e reposição de têxtil com um único interlocutor. Cobertura em toda a Espanha com duas unidades próprias e rede de parceiros homologados. O seu aliado em textile care."
   },
   "brand": {
     "name": "VELUM",
-    "tagline": "O seu têxtil. O nosso compromisso."
+    "tagline": "O aliado invisível que sustenta a excelência."
   },
   "skip": "Saltar para o conteúdo",
   "nav": {
@@ -28,179 +28,181 @@
         "href": "#sectores"
       }
     ],
-    "cta": "Pedir diagnóstico",
+    "cta": "Pedir proposta",
     "menu": "Menu"
   },
   "hero": {
-    "eyebrow": "Cuidado têxtil premium · Espanha",
-    "headlineHtml": "O seu têxtil, impecável.<br>O seu dia, <em class=\"serif-em\">tranquilo</em>.",
-    "sub": "Gerimos o ciclo completo do seu têxtil —fornecimento, lavagem, reposição e rastreabilidade— para que se ocupe apenas do que realmente importa: os seus hóspedes.",
-    "ctaPrimary": "Pedir diagnóstico têxtil",
-    "ctaSecondary": "Ver como trabalhamos"
+    "eyebrow": "Textile care premium · Península Ibérica",
+    "headlineHtml": "Textile care premium<br>para quem <em class=\"serif-em\">não pode falhar</em>.",
+    "sub": "Dotamos, cuidamos e repomos o têxtil de hotelaria, restauração e saúde sob um único interlocutor.",
+    "ctaPrimary": "Falar com um interlocutor",
+    "ctaSecondary": "Ver o modelo",
+    "imageAlt": "Cama de hotel vestida com roupa branca impecável"
   },
   "trust": {
-    "line": "Cobertura nacional para hotelaria, restauração e saúde. Um único interlocutor, de Cádis a Girona.",
+    "line": "O padrão nasce nas nossas unidades e chega, idêntico, a cada canto de Espanha.",
     "stats": [
       {
         "num": "2",
-        "label": "unidades próprias"
+        "label": "unidades próprias onde nasce o padrão"
       },
       {
-        "num": "Nacional",
-        "label": "cobertura em toda a Espanha"
+        "num": "Rede",
+        "label": "nacional de parceiros homologados"
       },
       {
-        "num": "Total",
-        "label": "rastreabilidade do seu têxtil"
+        "num": "Espanha",
+        "label": "o mesmo padrão em todo o país"
       },
       {
         "num": "1",
-        "label": "gestor dedicado por conta"
+        "label": "interlocutor, do princípio ao fim"
       }
     ]
   },
   "manifesto": {
-    "kicker": "A promessa",
-    "title": "Não somos uma lavandaria.",
-    "bodyHtml": "Não vendemos lavagem. Vendemos a certeza de que cada lençol, cada toalha de mesa e cada bata estarão onde têm de estar, impecáveis, quando precisar deles. Somos a equipa que cuida do seu têxtil de princípio a fim —sem sustos, sem chamadas de urgência, sem desculpas— para que a sua marca se sinta em cada toque. <span class=\"promise\">Não compra lavagem. Compra tranquilidade.</span>"
+    "kicker": "Porque existimos",
+    "title": "O aliado invisível que sustenta a excelência.",
+    "bodyHtml": "Há detalhes que o cliente nunca menciona quando estão bem, e que não perdoa quando falham. O lençol que envolve, a toalha de mesa que veste a sala, o roupão que aconchega. A VELUM existe para que esse têxtil esteja sempre à altura, sem que tenha de pensar nele. <span class=\"promise\">Trabalhamos em silêncio para que a sua marca brilhe em voz alta.</span>"
   },
   "services": {
-    "kicker": "Serviços",
-    "title": "Todo o ciclo do seu têxtil, em mãos únicas.",
-    "intro": "Desenhamos um serviço à medida da sua operação e gerimo-lo de ponta a ponta. Você define o nível; nós respondemos pelo resultado.",
+    "kicker": "O modelo",
+    "title": "Um modelo renting-first, pensado para não falhar.",
+    "intro": "Não lhe vendemos uma lavagem: entregamos-lhe um têxtil sempre disponível, sempre a postos. Você define o padrão; nós tratamos de todo o resto, ciclo após ciclo.",
+    "more": "Ver todos os serviços",
     "items": [
       {
-        "title": "Renting têxtil",
-        "body": "Aceda a têxtil de gama alta sem imobilizar capital. Nós fornecemos, mantemos e renovamos; você paga pelo uso e esquece o inventário.",
+        "title": "Dotar",
+        "body": "Vestimos o seu negócio com o têxtil adequado: tecido, gramagem e acabamento escolhidos à medida da sua marca, sem imobilizar o seu capital.",
         "icon": "rent"
       },
       {
-        "title": "Lavandaria industrial",
-        "body": "Processos controlados em unidades próprias, com padrões de higiene e acabamento à altura do cinco estrelas. Cada peça regressa pronta para vestir a sua marca.",
+        "title": "Cuidar",
+        "body": "Cada peça regressa ao seu ponto ótimo, ciclo após ciclo, com um padrão que não varia. O cuidado é o suporte; a disponibilidade é a promessa.",
         "icon": "wash"
       },
       {
-        "title": "Reposição e logística",
-        "body": "Entregas no prazo, stock garantido e rotas pensadas para a sua operação. O têxtil chega quando deve, na quantidade que deve, sem que tenha de o pedir.",
-        "icon": "logistics"
-      },
-      {
-        "title": "Personalização",
-        "body": "Bordados, etiquetagem e peças à medida que fazem o seu têxtil falar a sua língua. A sua identidade, tecida em cada detalhe.",
+        "title": "Repor",
+        "body": "O que se desgasta renova-se antes de se notar. O seu stock vivo ajusta-se sozinho, sem ruturas nem excedentes.",
         "icon": "custom"
       },
       {
-        "title": "Rastreabilidade e controlo de inventário",
-        "body": "Controlamos o seu inventário têxtil de princípio a fim: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
+        "title": "Entregar",
+        "body": "O têxtil chega a postos, no seu lugar e a horas. Previsibilidade em vez de surpresas.",
+        "icon": "logistics"
+      },
+      {
+        "title": "Controlar",
+        "body": "Inventário rastreado e consumo à vista. Sabe sempre o que tem, onde e em que estado.",
         "icon": "rfid"
       }
     ],
-    "more": "Ver todos os serviços",
     "cta": {
-      "title": "Não sabe por onde começar?",
-      "text": "Peça um diagnóstico têxtil gratuito e dizemos-lhe exatamente o que precisa.",
-      "link": "Solicitar diagnóstico"
+      "title": "Vamos falar do seu padrão?",
+      "text": "Propomos-lhe o modelo à medida da sua operação, sem compromisso.",
+      "link": "Pedir proposta"
     }
   },
   "sectors": {
-    "kicker": "Setores",
-    "title": "Conhecemos o seu setor por dentro.",
-    "intro": "Cada operação tem a sua exigência. Adaptamos têxtil, frequências e protocolos à realidade do seu negócio.",
+    "kicker": "A quem servimos",
+    "title": "Três mundos exigentes. Um mesmo padrão.",
+    "intro": "Cada setor tem a sua linguagem e as suas urgências. Conhecemos os três e falamos a língua de cada um.",
+    "more": "Ver todos os setores",
     "items": [
       {
         "tag": "Hotelaria",
-        "title": "Hotelaria",
-        "body": "Para hotéis, resorts e spas de 4 e 5 estrelas onde o toque de um lençol faz parte da experiência. Garantimos brancura, suavidade e disponibilidade, noite após noite, sem que a operação o note.",
+        "title": "Hotéis que se recordam pelo toque.",
+        "body": "A primeira impressão joga-se no quarto. Um têxtil impecável, sempre disponível, que sustenta a promessa da sua categoria noite após noite.",
         "items": [
-          "Roupa de cama",
+          "Lençóis e capas",
           "Toalhas e roupões",
-          "Têxtil de spa",
-          "Cortinas e decoração"
+          "Roupa de banho",
+          "Roupa de cama por categoria"
         ]
       },
       {
         "tag": "Restauração",
-        "title": "Restauração",
-        "body": "Para restaurantes, catering e banquetes onde a mesa começa na toalha. Roupa de mesa impecável e fardamento cuidado, pronto a cada serviço, esteja a sala cheia ou a abarrotar.",
+        "title": "Mesas que vestem a experiência.",
+        "body": "A toalha e o guardanapo falam antes da carta. Cuidamos dessa primeira palavra para que a sua sala diga exatamente o que quer transmitir.",
         "items": [
-          "Roupa de mesa e guardanapos",
-          "Fardamento de sala e cozinha",
-          "Panos e têxtil de copa"
+          "Roupa de mesa",
+          "Guardanapos",
+          "Cobre-mesas",
+          "Têxtil de cozinha"
         ]
       },
       {
         "tag": "Saúde",
-        "title": "Saúde",
-        "body": "Para hospitais, clínicas e lares onde a higiene não admite meios-termos. Processos validados, rastreabilidade e total fiabilidade em cada entrega.",
+        "title": "Confiança que se sente em cada têxtil.",
+        "body": "Na saúde, o têxtil faz parte do cuidado. Higiene, disponibilidade e consistência, geridas com o rigor que o setor exige.",
         "items": [
           "Roupa de cama clínica",
+          "Pijamas e batas de doente",
           "Fardamento sanitário",
-          "Batas e pijamas de doente",
-          "Têxtil cirúrgico"
+          "Têxtil técnico de serviço"
         ]
       }
-    ],
-    "more": "Ver todos os setores"
+    ]
   },
   "process": {
-    "kicker": "Como trabalhamos",
-    "title": "Começar é simples. Continuar, tranquilo.",
-    "intro": "Um método claro de princípio a fim: você conta-nos a sua operação e nós respondemos pelo têxtil, todos os dias.",
+    "kicker": "Como começamos",
+    "title": "Previsibilidade, passo a passo.",
+    "intro": "Um circuito pensado para que o têxtil nunca seja a sua preocupação. Isto é o que acontece quando trabalha com a VELUM.",
     "steps": [
       {
-        "title": "Diagnóstico têxtil gratuito",
-        "body": "Visitamos a sua operação, ouvimos os seus pontos críticos e medimos o seu consumo real de têxtil."
+        "title": "Ouvimos",
+        "body": "Analisamos a sua operação, a sua categoria e os seus picos. O padrão define-o você."
       },
       {
-        "title": "Proposta à medida",
-        "body": "Desenhamos um serviço com peças, frequências e níveis de serviço ajustados ao seu negócio."
+        "title": "Desenhamos a sua dotação",
+        "body": "Selecionamos tecido, gramagem e acabamento, e dimensionamos o têxtil à medida da sua marca, sem imobilizar capital."
       },
       {
-        "title": "Implementação",
+        "title": "Implementamos",
         "body": "Pomos o serviço em marcha com um plano claro, sem interrupções no seu dia a dia."
       },
       {
-        "title": "Gestão e reposição",
-        "body": "Cuidamos da lavagem, das entregas e do stock; você apenas desfruta do têxtil sempre a postos."
+        "title": "Operamos",
+        "body": "Cuidamos, repomos e entregamos ciclo após ciclo. Você só nota que está tudo onde deve estar."
       },
       {
-        "title": "Melhoria contínua",
+        "title": "Melhoramos",
         "body": "Revemos dados e resultados consigo e afinamos o serviço época após época."
       }
     ]
   },
   "why": {
-    "kicker": "Porquê a VELUM",
-    "title": "Porque nos escolhem.",
+    "kicker": "A diferença",
+    "title": "O que muda quando o têxtil deixa de ser o seu problema.",
     "items": [
       {
-        "title": "Discretamente excelentes",
-        "body": "O melhor serviço é o que não se nota. Cuidamos de cada detalhe para que o seu têxtil esteja perfeito sem que tenha de pensar nele."
+        "title": "Um único interlocutor",
+        "body": "Uma pessoa que conhece o seu negócio e responde por tudo. Sem cadeias de fornecedores, sem passar a bola."
       },
       {
-        "title": "Obsessivamente fiáveis",
-        "body": "Cumprimos o que prometemos, entrega após entrega. Prazos, quantidades e qualidade: o que dissemos, quando o dissemos."
+        "title": "O padrão viaja consigo",
+        "body": "Duas unidades próprias onde nasce a qualidade e uma rede nacional de parceiros homologados que a leva, idêntica, a cada canto."
       },
       {
-        "title": "Genuinamente próximos",
-        "body": "Um gestor dedicado que conhece a sua conta pelo nome. Uma só pessoa que responde, sem centrais telefónicas nem respostas enlatadas."
+        "title": "Capital livre, espaço livre",
+        "body": "O têxtil deixa de ser um ativo imobilizado e um armazém que ocupa espaço. O seu investimento regressa ao seu negócio."
       },
       {
-        "title": "Tecnicamente profundos",
-        "body": "Unidades próprias, processos controlados e rastreabilidade do seu têxtil. Por trás da simplicidade que vê há um domínio técnico que não se improvisa."
+        "title": "Adaptação 100%",
+        "body": "Nada de catálogo fechado. Tecido, gramagem e acabamento escolhem-se à medida da sua marca."
       }
     ]
   },
   "manager": {
-    "kicker": "Um único interlocutor",
-    "title": "Uma pessoa que conhece a sua conta como a palma da mão.",
-    "body": "Cada cliente conta com um gestor têxtil dedicado: o mesmo nome, o mesmo número, a mesma pessoa que compreende a sua operação e se antecipa ao que precisa. Sem departamentos a empurrar a responsabilidade uns para os outros, sem voltar a explicar o seu caso de cada vez. Uma chamada, e resolvido.",
-    "badge": "O seu gestor têxtil"
+    "kicker": "Uma só voz",
+    "title": "Uma pessoa. Todas as respostas.",
+    "body": "Esqueça coordenar fornecedores, perseguir entregas ou explicar o seu negócio dez vezes. Com a VELUM tem um interlocutor que conhece a sua operação, antecipa as suas necessidades e responde pelo conjunto. Quando algo importa, sabe exatamente a quem ligar, e essa pessoa já sabe quem você é.",
+    "badge": "O seu interlocutor, do princípio ao fim"
   },
   "standards": {
     "kicker": "Padrões",
     "title": "O rigor que cada setor exige.",
-    "intro": "Trabalhamos em conformidade com as normas que marcam a diferença em higiene, qualidade e ambiente. Estes são os padrões que orientam cada processo.",
+    "intro": "Operamos sob os marcos de referência que definem a higiene, a qualidade e a gestão ambiental do setor, e exigimos o mesmo padrão à nossa rede de parceiros.",
     "items": [
       {
         "code": "UNE-EN 14065",
@@ -223,64 +225,64 @@
         "desc": "Têxtil livre de substâncias nocivas, seguro ao contacto com a pele."
       }
     ],
-    "note": "Padrões de referência do setor que orientam os nossos protocolos. As certificações em vigor são detalhadas a pedido."
+    "note": "Marcos de referência do setor que orientam os nossos protocolos. As certificações em vigor e o seu âmbito são detalhados a pedido."
   },
   "sustainability": {
-    "kicker": "Sustentabilidade",
-    "title": "Cuidar do seu têxtil é também cuidar do que nos rodeia.",
-    "body": "A gestão profissional do têxtil é, por natureza, mais sustentável do que a lavagem em casa ou em pequenas máquinas: prolongamos a vida útil de cada peça e otimizamos cada recurso. Fazemo-lo porque é o correto e porque a sua marca também se mede por isso.",
+    "kicker": "Fazer as coisas bem",
+    "title": "O cuidado também é do ambiente.",
+    "body": "O modelo renting é circular por natureza: prolongamos a vida útil de cada peça, repomos apenas o necessário e evitamos o têxtil descartável. Fazer as coisas bem significa também fazê-las com respeito pelo que vem a seguir.",
     "claims": [
-      "Menor consumo de água e energia por quilo face à lavagem convencional, graças à escala industrial.",
-      "Economia circular: reparamos e reutilizamos o têxtil antes de o retirar, e reciclamo-lo de forma responsável no fim da sua vida.",
-      "A rastreabilidade do seu têxtil reduz as perdas e prolonga a sua vida útil."
+      "Vida útil prolongada — cada peça é cuidada para durar, não para ser substituída.",
+      "Reposição justa — renova-se o necessário, sem excedentes nem desperdício.",
+      "Processos responsáveis — controlo de recursos em cada ciclo."
     ]
   },
   "coverage": {
-    "kicker": "Cobertura",
-    "title": "Toda a Espanha, sob um mesmo padrão.",
-    "body": "Operamos em toda a Península com duas unidades próprias e uma rede de parceiros homologados que trabalham segundo os nossos protocolos. Tenha um ou cem estabelecimentos, o serviço é o mesmo em todo o lado.",
-    "now": "Espanha — disponível agora",
+    "kicker": "Onde chegamos",
+    "title": "O padrão nasce em duas unidades e chega a toda a Espanha.",
+    "body": "As nossas duas unidades próprias são o coração onde se define a qualidade. Uma rede nacional de parceiros homologados estende-a, idêntica, a cada canto do país. O mesmo padrão, esteja onde estiver o seu negócio.",
+    "now": "Espanha — agora",
     "soon": "Portugal — brevemente"
   },
   "faq": {
-    "kicker": "Perguntas frequentes",
-    "title": "O que vai querer saber.",
+    "kicker": "Antes de perguntar",
+    "title": "O que convém saber.",
     "items": [
       {
-        "q": "O que é o renting têxtil e como funciona?",
-        "a": "É o aluguer de roupa de cama, roupa de quarto ou roupa de mesa com lavagem, manutenção e reposição incluídas por uma tarifa periódica. Não compra têxtil nem imobiliza capital: paga pelo uso e nós tratamos de tudo o resto."
+        "q": "A VELUM é uma lavandaria?",
+        "a": "Não. A VELUM é uma plataforma de textile care premium em modelo renting. O cuidado do têxtil faz parte do serviço, mas o que entregamos é disponibilidade: o têxtil adequado, sempre a postos, sem que tenha de o possuir nem geri-lo."
       },
       {
-        "q": "Que vantagens tem externalizar a lavandaria de um hotel ou restaurante?",
-        "a": "Elimina o investimento em maquinaria e pessoal, converte um custo fixo em variável consoante a sua ocupação, ganha espaço e assegura qualidade e disponibilidade constantes. A sua equipa concentra-se no cliente, não no têxtil."
+        "q": "O que significa «renting-first»?",
+        "a": "Significa que não compra têxtil nem imobiliza capital nele. Nós dotamo-lo, mantemo-lo e repomo-lo; você usa-o e paga por tê-lo sempre disponível. A manutenção é o suporte, não o protagonista."
       },
       {
-        "q": "Quanto custa o serviço?",
-        "a": "Depende do volume, do tipo de peça, da ocupação e da frequência. Por isso começamos sempre com um diagnóstico têxtil gratuito: analisamos a sua operação e apresentamos-lhe uma proposta à medida, sem compromisso."
+        "q": "Trabalham em toda a Espanha?",
+        "a": "Sim. O padrão nasce nas nossas duas unidades próprias e estende-se através de uma rede nacional de parceiros homologados. O resultado é o mesmo em qualquer ponto do país. Portugal chegará brevemente."
       },
       {
-        "q": "O renting é mais sustentável do que comprar e lavar?",
-        "a": "Sim. O modelo de gestão profissional prolonga a vida útil de cada peça, otimiza água e energia à escala industrial e reduz o resíduo têxtil através de reparação, reutilização e reciclagem responsável."
+        "q": "Posso escolher o tecido e o acabamento?",
+        "a": "Por completo. Não trabalhamos com catálogo fechado: escolhemos tecido, gramagem e acabamento à medida da sua marca e da sua categoria. A adaptação é de 100%."
       },
       {
-        "q": "Cumprem a regulamentação de higiene para têxtil sanitário?",
-        "a": "Trabalhamos em conformidade com a norma UNE-EN 14065 (controlo de biocontaminação, RABC) e com padrões de qualidade ISO, com rastreabilidade do processo. A higiene do têxtil sanitário é uma prioridade absoluta e documentada."
+        "q": "O que acontece se precisar de mais têxtil na época alta?",
+        "a": "Prevemo-lo consigo. Ajustamos o stock vivo conforme os seus picos para que nunca lhe falte e nunca sobre. Previsibilidade, sem sustos."
       },
       {
-        "q": "Em que zonas prestam serviço?",
-        "a": "Damos cobertura em toda a Espanha com unidades próprias e uma rede de parceiros homologados, e brevemente em Portugal. Onde quer que esteja, o padrão de serviço é o mesmo."
+        "q": "Como sei a todo o momento que têxtil tenho?",
+        "a": "Com inventário rastreado e consumo à vista. Sabe sempre o que tem, onde está e em que estado, sem surpresas nem desacertos."
       },
       {
-        "q": "Como gerem a reposição e as perdas de têxtil?",
-        "a": "Controlamos o seu inventário e repomos consoante a sua ocupação, minimizando as perdas: sabe a todo o momento o que tem e onde está."
+        "q": "Quem me atende quando surge alguma coisa?",
+        "a": "Um único interlocutor que conhece o seu negócio e responde por todo o serviço. Sem cadeias de fornecedores nem respostas a meias."
       }
     ]
   },
   "ctaFinal": {
-    "eyebrow": "Vamos falar",
-    "title": "Descubra quanto pesa o seu têxtil quando deixa de ser o seu problema.",
-    "sub": "Peça um diagnóstico têxtil gratuito. Sem compromisso: analisamos a sua operação e mostramos-lhe o que pode melhorar.",
-    "button": "Pedir diagnóstico gratuito"
+    "eyebrow": "Vamos começar",
+    "title": "Vamos falar daquilo que a sua marca não pode dar-se ao luxo de falhar.",
+    "sub": "Propomos-lhe um modelo à medida da sua operação, com um interlocutor que responde desde o primeiro dia.",
+    "button": "Falar com um interlocutor"
   },
   "form": {
     "title": "Conte-nos sobre a sua operação.",
@@ -302,32 +304,32 @@
     },
     "submit": "Enviar pedido",
     "consentHtml": "Li e aceito a <a href=\"{privacy}\">Política de privacidade</a>. Os seus dados serão utilizados apenas para responder ao seu pedido.",
-    "success": "Obrigado. Um gestor da VELUM entrará em contacto consigo em menos de 24 horas úteis."
+    "success": "Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 24 horas úteis."
   },
   "footer": {
-    "descriptor": "A VELUM é a plataforma ibérica de cuidado têxtil premium para hotelaria, restauração e saúde. Fornecimento, lavagem, reposição e rastreabilidade, geridos de princípio a fim.",
+    "descriptor": "A VELUM é a plataforma ibérica de textile care premium para hotelaria, restauração e saúde. Dotação, cuidado, reposição e controlo, sob um único interlocutor.",
     "groups": [
       {
         "title": "Serviços",
         "links": [
           {
-            "label": "Renting têxtil",
+            "label": "Dotação à medida",
             "href": "#servicios"
           },
           {
-            "label": "Lavandaria industrial",
+            "label": "Cuidado e manutenção",
             "href": "#servicios"
           },
           {
-            "label": "Reposição e logística",
+            "label": "Reposição contínua",
             "href": "#servicios"
           },
           {
-            "label": "Personalização",
+            "label": "Entrega e logística",
             "href": "#servicios"
           },
           {
-            "label": "Rastreabilidade e controlo",
+            "label": "Controlo e inventário",
             "href": "#servicios"
           }
         ]
@@ -399,6 +401,189 @@
     "pt": "Português"
   },
   "backHome": "Voltar ao início",
+  "breadcrumbHome": "Início",
+  "galleryLabel": "O nosso trabalho em imagens",
+  "gallery": [
+    "Cama de hotel vestida com roupa branca impecável",
+    "Toalhas dobradas à mão, prontas para o quarto",
+    "Roupa limpa preparada para o serviço",
+    "Pilha de toalhas de turco de algodão"
+  ],
+  "labels": {
+    "does": "O que fazemos",
+    "products": "O que gerimos",
+    "related": "Serviços relacionados"
+  },
+  "pageCta": {
+    "title": "Vamos falar da sua operação?",
+    "sub": "Propomos-lhe um modelo à medida do seu negócio, com um interlocutor que responde desde o primeiro dia.",
+    "button": "Pedir proposta"
+  },
+  "pages": {
+    "servicios": {
+      "meta": {
+        "title": "Serviços de renting têxtil · dotação, cuidado e reposição | VELUM",
+        "description": "Dotação à medida, cuidado e manutenção, reposição contínua, entrega e controlo de inventário. Todo o seu têxtil resolvido sob um único interlocutor."
+      },
+      "hero": {
+        "eyebrow": "Serviços",
+        "title": "Tudo o que o seu têxtil precisa. Sob um só interlocutor.",
+        "sub": "Um modelo renting-first que dota, cuida e repõe o têxtil do seu negócio para que esteja sempre a postos, sem imobilizar o seu capital nem ocupar o seu tempo."
+      },
+      "items": [
+        {
+          "title": "Dotação à medida",
+          "lead": "Vestimos o seu negócio com o têxtil que a sua marca merece.",
+          "does": [
+            "Seleção de tecido, gramagem e acabamento à medida da sua categoria",
+            "Definição do padrão consigo, sem comprar nem imobilizar capital",
+            "Dimensionamento do stock inicial conforme a sua operação",
+            "Arranque ordenado, sem fricção"
+          ],
+          "products": [
+            "Roupa de cama",
+            "Toalhas e roupões",
+            "Roupa de mesa",
+            "Capas de edredão e almofadas",
+            "Cortinas"
+          ]
+        },
+        {
+          "title": "Cuidado e manutenção",
+          "lead": "Cada peça, sempre no seu ponto ótimo.",
+          "does": [
+            "Cuidado do têxtil ciclo após ciclo com um padrão constante",
+            "Controlo de qualidade peça a peça antes de cada entrega",
+            "Retirada e renovação do que já não está à altura",
+            "O cuidado como suporte; a disponibilidade como promessa"
+          ],
+          "products": [
+            "Roupa plana",
+            "Felpo e atoalhado",
+            "Roupa de mesa",
+            "Fardamento",
+            "Têxtil sanitário"
+          ]
+        },
+        {
+          "title": "Reposição contínua",
+          "lead": "O que se desgasta renova-se antes de se notar.",
+          "does": [
+            "Acompanhamento do estado e do desgaste de cada linha",
+            "Renovação programada no momento certo",
+            "Ajuste contínuo do stock vivo à sua ocupação",
+            "Sem ruturas de serviço nem excedentes a mais"
+          ],
+          "products": [
+            "Renovação programada",
+            "Ajuste de stock vivo",
+            "Existências de segurança",
+            "Cobertura em toda a Espanha"
+          ]
+        },
+        {
+          "title": "Entrega e logística",
+          "lead": "No seu lugar, a postos e a horas.",
+          "does": [
+            "Planeamento de entregas e recolhas à sua medida",
+            "Frequências ajustadas à sua operação e aos seus picos",
+            "Cobertura nacional através de unidades próprias e rede de parceiros",
+            "Previsibilidade de serviço, sem que tenha de o pedir"
+          ],
+          "products": [
+            "Entregas programadas",
+            "Frequências à medida",
+            "Gestão de pontos de utilização",
+            "Cobertura nacional"
+          ]
+        },
+        {
+          "title": "Controlo e inventário",
+          "lead": "Saber sempre o que tem, onde e em que estado.",
+          "does": [
+            "Inventário rastreado por cliente e localização",
+            "Consumo à vista para decidir com dados",
+            "Relatórios de serviço, consumo e reposição",
+            "Previsão de necessidades antes de faltar"
+          ],
+          "products": [
+            "Inventário rastreado",
+            "Consumo à vista",
+            "Relatórios de serviço",
+            "Previsão de necessidades"
+          ]
+        }
+      ]
+    },
+    "sectores": {
+      "meta": {
+        "title": "Setores: hotelaria, restauração e saúde | VELUM",
+        "description": "Textile care premium para hotelaria, restauração e saúde. Um mesmo padrão adaptado à linguagem e às urgências de cada setor."
+      },
+      "hero": {
+        "eyebrow": "Setores",
+        "title": "Conhecemos o seu mundo. Falamos a sua língua.",
+        "sub": "Hotelaria, restauração e saúde partilham uma exigência: o têxtil não pode falhar. Adaptamos um mesmo padrão às urgências e à linguagem de cada setor."
+      },
+      "items": [
+        {
+          "tag": "Hotelaria",
+          "title": "Hotelaria",
+          "lead": "O descanso do seu hóspede começa pelo toque.",
+          "does": [
+            "Dotação, cuidado e reposição da roupa de cama e banho",
+            "Qualidade constante à altura da sua categoria, noite após noite",
+            "Disponibilidade assegurada mesmo em plena ocupação",
+            "Têxtil de spa e zonas comuns com reposição ágil"
+          ],
+          "products": [
+            "Lençóis de percal e cetim",
+            "Capas de edredão e edredões",
+            "Almofadas e protetores de colchão",
+            "Toalhas de felpo e roupões",
+            "Chinelos e cortinas de banho",
+            "Colchas, pés de cama e mantas"
+          ]
+        },
+        {
+          "tag": "Restauração",
+          "title": "Restauração",
+          "lead": "A mesa veste a experiência antes do primeiro prato.",
+          "does": [
+            "Roupa de mesa sempre impecável, engomada e a postos em cada serviço",
+            "Fardamento de sala e cozinha cuidado e reposto",
+            "Gestão de picos de eventos, banquetes e época",
+            "Linhas e cores à medida do conceito do espaço"
+          ],
+          "products": [
+            "Roupa de mesa em cetim, trama e linho",
+            "Caminhos de mesa",
+            "Guardanapos",
+            "Capas de cadeira",
+            "Confeção à medida"
+          ]
+        },
+        {
+          "tag": "Saúde",
+          "title": "Saúde",
+          "lead": "Na saúde, o têxtil faz parte do cuidado.",
+          "does": [
+            "Processos de cuidado validados com controlo de biocontaminação (RABC)",
+            "Rastreabilidade e documentação para auditorias",
+            "Gestão de roupa de doente, fardamento e têxtil técnico",
+            "Reposição fiável: os serviços assistenciais não podem ficar sem têxtil"
+          ],
+          "products": [
+            "Roupa de cama clínica",
+            "Pijamas e batas de doente",
+            "Fardamento sanitário",
+            "Têxtil técnico assistencial",
+            "Microfibra e panos técnicos"
+          ]
+        }
+      ]
+    }
+  },
   "legalPages": {
     "aviso": {
       "title": "Aviso legal",
@@ -417,189 +602,6 @@
       "updated": "junho de 2026",
       "updatedLabel": "Última atualização",
       "metaDescription": "Política de cookies da VELUM: tipos de cookies, consentimento e como geri-los."
-    }
-  },
-  "breadcrumbHome": "Início",
-  "galleryLabel": "O nosso trabalho em imagens",
-  "gallery": [
-    "Cama de hotel vestida com roupa branca impecável",
-    "Toalhas dobradas à mão, prontas para o quarto",
-    "Roupa limpa preparada para o serviço",
-    "Pilha de toalhas de turco de algodão"
-  ],
-  "labels": {
-    "does": "O que fazemos",
-    "products": "O que gerimos",
-    "related": "Serviços relacionados"
-  },
-  "pageCta": {
-    "title": "Vamos falar da sua operação?",
-    "sub": "Peça um diagnóstico têxtil gratuito e mostramos-lhe exatamente o que podemos gerir por si.",
-    "button": "Solicitar diagnóstico gratuito"
-  },
-  "pages": {
-    "servicios": {
-      "meta": {
-        "title": "Serviços de cuidado têxtil · renting, lavandaria e gestão | VELUM",
-        "description": "Renting têxtil, lavandaria industrial, reposição, personalização e controlo de inventário. Veja o que fazemos em cada serviço e que têxteis gerimos."
-      },
-      "hero": {
-        "eyebrow": "Serviços",
-        "title": "Um único serviço. Todo o seu têxtil resolvido.",
-        "sub": "Cobrimos o ciclo completo do têxtil profissional —do fornecimento à rastreabilidade— e adaptamo-lo ao nível de que a sua operação precisa. Isto é o que fazemos em cada serviço e o que gerimos por si."
-      },
-      "items": [
-        {
-          "title": "Renting têxtil",
-          "lead": "Aceda a têxtil de gama alta sem o comprar nem imobilizar capital. Nós fornecemos, mantemos e renovamos; você paga pela utilização.",
-          "does": [
-            "Fornecimento de têxtil profissional de qualidade hoteleira e hospitalar",
-            "Manutenção, lavagem e reposição incluídas numa tarifa por utilização",
-            "Renovação automática das peças no fim da sua vida útil",
-            "Stock ajustado à época e à ocupação, sem compras pontuais"
-          ],
-          "products": [
-            "Roupa de cama",
-            "Toalhas e roupões",
-            "Roupa de mesa",
-            "Edredões e almofadas",
-            "Cortinas"
-          ]
-        },
-        {
-          "title": "Lavandaria industrial",
-          "lead": "Processos controlados em instalações próprias, com padrões de higiene e acabamento à altura do cinco estrelas e do ambiente hospitalar.",
-          "does": [
-            "Recolha programada e triagem por cliente e tipo de peça",
-            "Lavagem e desinfeção com controlos de higiene (referência RABC / EN 14065)",
-            "Secagem, engomadoria e acabamento profissional peça a peça",
-            "Controlo de qualidade e retirada de peças defeituosas antes da entrega"
-          ],
-          "products": [
-            "Roupa plana",
-            "Felpo e atoalhado",
-            "Roupa de mesa",
-            "Fardamento",
-            "Têxtil hospitalar"
-          ]
-        },
-        {
-          "title": "Reposição e logística",
-          "lead": "O têxtil chega quando deve, na quantidade que deve, sem que tenha de o pedir. Rotas pensadas para a sua operação.",
-          "does": [
-            "Rotas de recolha e entrega programadas à sua medida",
-            "Stock de segurança para cobrir picos de ocupação e eventos",
-            "Entregas no prazo com níveis de serviço (SLA) acordados",
-            "Gestão de rouparias e pontos de utilização nas suas instalações"
-          ],
-          "products": [
-            "Entregas programadas",
-            "Stock de segurança",
-            "Gestão de rouparia",
-            "Cobertura nacional"
-          ]
-        },
-        {
-          "title": "Personalização",
-          "lead": "A sua identidade, tecida em cada detalhe. Fazemos com que o têxtil fale a língua da sua marca.",
-          "does": [
-            "Bordado, serigrafia e etiquetagem com a sua identidade corporativa",
-            "Peças à medida em cor, tecido e gramagem",
-            "Etiquetagem integrada em cada peça para a sua identificação e controlo",
-            "Linhas diferenciadas por estabelecimento, instalação ou categoria"
-          ],
-          "products": [
-            "Bordado de logótipo",
-            "Debruns e cor corporativa",
-            "Etiquetas tecidas",
-            "Peças à medida"
-          ]
-        },
-        {
-          "title": "Rastreabilidade e controlo de inventário",
-          "lead": "Controlamos o seu inventário têxtil de princípio a fim: sabe o que tem, onde está e em que estado. Controlo total, zero perdas invisíveis.",
-          "does": [
-            "Identificação e marcação das peças resistente à lavagem industrial",
-            "Contagem e verificação de peças em cada recolha e entrega",
-            "Inventário e controlo da vida útil de cada peça",
-            "Relatórios de consumo, perdas e reposição para a sua equipa"
-          ],
-          "products": [
-            "Identificação de peças",
-            "Controlo de inventário",
-            "Relatórios de consumo",
-            "Controlo de perdas"
-          ]
-        }
-      ]
-    },
-    "sectores": {
-      "meta": {
-        "title": "Setores: hotelaria, restauração e saúde | VELUM",
-        "description": "Cuidado têxtil integral para hotelaria, restauração e saúde. Veja o que fazemos em cada setor e que produtos têxteis gerimos."
-      },
-      "hero": {
-        "eyebrow": "Setores",
-        "title": "Cada setor, a sua exigência. A mesma tranquilidade.",
-        "sub": "Adaptamos têxtil, frequências e protocolos à realidade de cada negócio. Isto é o que fazemos em cada setor e o têxtil que gerimos."
-      },
-      "items": [
-        {
-          "tag": "Hotelaria",
-          "title": "Hotelaria",
-          "lead": "Para hotéis, resorts e spas de 4 e 5 estrelas onde o toque de um lençol faz parte da experiência. Brancura, suavidade e disponibilidade, noite após noite.",
-          "does": [
-            "Gestão integral de roupa de cama e banho com qualidade constante",
-            "Têxtil de spa e piscina com reposição ágil na época alta",
-            "Roupa de mesa para o F&B do hotel, pronta em cada serviço",
-            "Frequências e par-stock ajustados à ocupação real"
-          ],
-          "products": [
-            "Lençóis percal e sateen",
-            "Capas e edredões nórdicos",
-            "Almofadas e protetores de colchão",
-            "Toalhas de felpo e roupões",
-            "Chinelos e cortinas de banho",
-            "Colchas, pés de cama e plaids"
-          ]
-        },
-        {
-          "tag": "Restauração",
-          "title": "Restauração",
-          "lead": "Para restaurantes, catering e banquetes onde a mesa começa na toalha. Roupa de mesa impecável e fardamento cuidado, esteja cheio ou a transbordar.",
-          "does": [
-            "Roupa de mesa sempre impecável, engomada e a postos em cada serviço",
-            "Fardamento de sala e cozinha cuidado e reposto",
-            "Gestão de picos de eventos, banquetes e época",
-            "Linhas e cores à medida do conceito do espaço"
-          ],
-          "products": [
-            "Roupa de mesa em sateen, trama e linho",
-            "Caminhos de mesa",
-            "Guardanapos",
-            "Capas de cadeira",
-            "Confeção à medida"
-          ]
-        },
-        {
-          "tag": "Saúde",
-          "title": "Saúde",
-          "lead": "Para hospitais, clínicas e lares onde a higiene não admite matizes. Processos validados, rastreabilidade e absoluta fiabilidade.",
-          "does": [
-            "Processos de lavagem validados com controlo de biocontaminação (RABC)",
-            "Rastreabilidade e documentação para auditorias",
-            "Gestão de roupa de doente, fardamento e têxtil técnico",
-            "Reposição fiável: os serviços assistenciais não podem ficar sem têxtil"
-          ],
-          "products": [
-            "Roupa de cama clínica",
-            "Pijamas e batas de doente",
-            "Fardamento hospitalar",
-            "Têxtil cirúrgico reutilizável",
-            "Microfibra e panos técnicos"
-          ]
-        }
-      ]
     }
   }
 }
