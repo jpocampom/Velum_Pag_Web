@@ -42,6 +42,8 @@ const assetVer = (rel) =>
   createHash("sha1").update(readFileSync(resolve(ROOT, rel))).digest("hex").slice(0, 8);
 const CSS_V = assetVer("assets/css/velum.css");
 const JS_V = assetVer("assets/js/velum.js");
+/* Versioned photo URL: ?v=<hash> so swapping a photo (same filename) busts cache instantly. */
+const photo = (slug) => `/assets/img/photos/${slug}.webp?v=${assetVer("assets/img/photos/" + slug + ".webp")}`;
 
 /* Pointer highlight: [[word]] → animated box + cursor (drawn on scroll-in). */
 function phMarkup(word) {
@@ -295,7 +297,7 @@ function homeMain(c) {
       </div>
     </div>
     <figure class="hero__media" data-reveal data-reveal-delay="2">
-      <img src="/assets/img/photos/hero-suite.webp" width="1800" height="1200" fetchpriority="high" decoding="async" alt="${c.hero.imageAlt || c.hero.eyebrow}" />
+      <img src="${photo("hero-suite")}" width="1800" height="1200" fetchpriority="high" decoding="async" alt="${c.hero.imageAlt || c.hero.eyebrow}" />
       ${weaveSVG({ cls: "hero__media-weave" })}
     </figure>
   </div>
@@ -353,7 +355,7 @@ function homeMain(c) {
   const SECTOR_IMG = ["sector-hosteleria", "sector-restauracion", "sector-salud"];
   const sec = c.sectors.items.map((s, i) =>
     `<article class="sector-card" data-reveal data-reveal-delay="${i + 1}">
-      <figure class="sector-card__media"><img src="/assets/img/photos/${SECTOR_IMG[i] || SECTOR_IMG[0]}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" /></figure>
+      <figure class="sector-card__media"><img src="${photo(SECTOR_IMG[i] || SECTOR_IMG[0])}" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" /></figure>
       <div class="sector-card__body">
         <span class="sector-tag">${s.tag}</span>
         <h3>${s.title}</h3>
@@ -416,7 +418,7 @@ function homeMain(c) {
     </div>
     <figure class="split__visual" data-reveal data-reveal-delay="1">
       <span class="badge">${c.manager.badge}</span>
-      <img src="/assets/img/photos/gestor.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${c.manager.badge}" />
+      <img src="${photo("gestor")}" width="1500" height="1000" loading="lazy" decoding="async" alt="${c.manager.badge}" />
     </figure>
   </div>
 </section>`;
@@ -501,7 +503,7 @@ function homeMain(c) {
   ).join("");
   const carTracks = CAR_KEYS.map((k, i) => {
     const slides = CAR_IMGS[k].map((src) =>
-      `<figure class="car-slide"><img src="/assets/img/photos/${src}.webp" width="1400" height="1050" loading="lazy" decoding="async" alt="${c.sectors.items[i].tag} — ${c.sectors.items[i].title}" /></figure>`
+      `<figure class="car-slide"><img src="${photo(src)}" width="1400" height="1050" loading="lazy" decoding="async" alt="${c.sectors.items[i].tag} — ${c.sectors.items[i].title}" /></figure>`
     ).join("");
     return `<div class="car-track${i === 0 ? " is-active" : ""}" data-car-panel="${k}" role="tabpanel">${slides}</div>`;
   }).join("");
