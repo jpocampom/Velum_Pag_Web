@@ -317,7 +317,6 @@ function homeMain(c) {
   // Services
   const svc = c.services.items.map((s, i) =>
     `<article class="svc-card" data-reveal data-reveal-delay="${(i % 3) + 1}">
-      <span class="svc-index">${String(i + 1).padStart(2, "0")}</span>
       ${icon(s.icon)}
       <h3>${s.title}</h3>
       <p>${s.body}</p>
@@ -388,7 +387,6 @@ function homeMain(c) {
   // Why (dark)
   const why = c.why.items.map((w, i) =>
     `<div class="why-cell" data-reveal data-reveal-delay="${(i % 2) + 1}">
-      <span class="why-num">${String(i + 1).padStart(2, "0")}</span>
       <h3>${w.title}</h3>
       <p>${w.body}</p>
     </div>`
@@ -502,27 +500,43 @@ function homeMain(c) {
   <div class="wrap"><div class="gallery" data-reveal>${galleryTiles}</div></div>
 </section>`;
 
-  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, coverage, faq, contact].join("\n");
+  // Standards — sober credentials band (light surface, no green claim)
+  const stdItems = c.standards.items.map((s) =>
+    `<div class="std-item"><dt class="std-code">${s.code}</dt><dd class="std-desc">${s.desc}</dd></div>`
+  ).join("");
+  const standards = `<section class="section section--linen standards" id="estandares" aria-labelledby="std-title">
+  <div class="wrap">
+    <div class="standards__head" data-reveal>
+      <h2 class="h-section" id="std-title">${c.standards.title}</h2>
+      <p class="lede">${c.standards.intro}</p>
+    </div>
+    <dl class="standards__grid" data-reveal data-reveal-delay="1">${stdItems}</dl>
+    <p class="standards__note" data-reveal>${c.standards.note}</p>
+  </div>
+</section>`;
+
+  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, standards, coverage, faq, contact].join("\n");
 }
 
 /* Stylized Iberian Peninsula — recognizable, Portugal distinguished. */
 function iberiaMap() {
-  return `<svg viewBox="0 0 460 380" class="iberia" aria-hidden="true" fill="none">
-    <path d="M62 92 L150 74 L250 70 L330 78 L372 70 L398 104 L388 150 L398 196 L368 244 L336 268 L286 300 L236 312 L176 306 L140 300 L110 250 L92 188 L84 134 L70 110 Z"
-      fill="var(--linen)" stroke="rgba(31,30,27,0.5)" stroke-width="1.4" stroke-linejoin="round"/>
-    <path d="M70 110 L84 134 L92 188 L110 250 L140 300 L150 272 L138 210 L128 150 L118 100 Z"
-      fill="var(--mist)" stroke="rgba(31,30,27,0.4)" stroke-width="1.2" stroke-linejoin="round"/>
-    <g fill="var(--ink)">
-      <circle cx="236" cy="178" r="4.5"/><circle cx="352" cy="120" r="3.5"/>
-      <circle cx="250" cy="96" r="3.5"/><circle cx="340" cy="196" r="3.5"/>
-      <circle cx="196" cy="280" r="3.5"/>
-    </g>
-    <g fill="var(--soft)"><circle cx="100" cy="224" r="4"/><circle cx="104" cy="150" r="3"/></g>
-    <g fill="rgba(31,30,27,0.62)" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="0.4">
-      <text x="246" y="176">Madrid</text>
-      <text x="360" y="118">Barcelona</text>
-      <text x="60" y="242">Lisboa</text>
-    </g>
+  return `<svg viewBox="0 0 520 560" class="iberia" aria-hidden="true">
+  <path class="iberia-coast" d="M 70,150 C 64,138 70,126 86,124 C 104,121 120,128 140,126 C 165,123 188,112 214,114 C 246,116 276,110 308,118 C 340,126 368,120 392,134 C 410,145 426,150 440,150 C 452,150 460,160 456,172 C 450,190 432,196 414,200 C 398,204 386,214 374,228 C 366,238 372,250 384,258 C 402,270 420,282 430,302 C 438,318 432,338 414,350 C 396,362 374,366 356,378 C 340,388 326,402 306,410 C 288,417 268,414 250,420 C 234,425 222,438 204,444 C 188,449 170,446 156,438 C 144,431 138,418 130,406 C 120,390 110,378 102,360 C 95,344 96,326 92,308 C 88,288 78,272 74,252 C 70,234 76,216 72,198 C 69,182 64,166 70,150 Z" />
+  <path class="pt-soon" d="M 92,210 C 118,226 130,256 128,288 C 126,318 138,346 134,376 C 131,398 124,418 128,440 C 116,438 104,430 98,416 C 90,398 92,378 86,360 C 80,344 82,326 78,308 C 74,288 70,272 70,252 C 68,236 74,224 92,210 Z" />
+  <path class="iberia-border" d="M 92,210 C 118,226 130,256 128,288 C 126,318 138,346 134,376 C 131,398 124,418 128,440" />
+  <g class="allies">
+    <circle class="ally" cx="118" cy="150" r="5" /><circle class="ally" cx="252" cy="146" r="5" />
+    <circle class="ally" cx="404" cy="178" r="5" /><circle class="ally" cx="316" cy="216" r="5" />
+    <circle class="ally" cx="240" cy="372" r="5" /><circle class="ally" cx="334" cy="356" r="5" />
+  </g>
+  <g class="plants">
+    <circle class="plant" cx="258" cy="262" r="6.5" /><circle class="plant" cx="372" cy="296" r="6.5" />
+  </g>
+  <g class="map-labels" font-family="JetBrains Mono, monospace">
+    <text class="map-label" x="262" y="248">Madrid</text>
+    <text class="map-label" x="404" y="168">Barcelona</text>
+    <text class="map-label pt-label" x="100" y="300">Lisboa</text>
+  </g>
   </svg>`;
 }
 
