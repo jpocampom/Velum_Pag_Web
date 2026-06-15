@@ -128,7 +128,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 /* Pointer highlight — draws a box + cursor around a key word on scroll-in */
 .ph { position: relative; display: inline-block; white-space: nowrap; }
 .ph__t { position: relative; z-index: 1; }
-.ph__box { position: absolute; inset: -0.04em -0.3em; width: auto; height: auto; overflow: visible; pointer-events: none; }
+.ph__box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% + 0.6em); height: calc(100% + 0.14em); overflow: visible; pointer-events: none; }
 .ph__rect { fill: none; stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
 .ph__ptr { position: absolute; right: -0.5em; bottom: -0.46em; width: 0.62em; height: 0.62em; fill: var(--accent); opacity: 0; transform: translate(-5px, -5px) scale(0.6); pointer-events: none; }
 .ph.is-on .ph__rect { transition: stroke-dashoffset 850ms var(--ease); stroke-dashoffset: 0; }
