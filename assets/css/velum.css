@@ -405,10 +405,6 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .gallery { display: grid; gap: clamp(10px, 1.2vw, 16px); grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 760px){ .gallery { grid-template-columns: repeat(4, 1fr); } }
 .gallery__tile { margin: 0; border-radius: var(--radius); overflow: hidden; position: relative; isolation: isolate; aspect-ratio: 3 / 4; }
-.gallery__tile:nth-child(2), .gallery__tile:nth-child(3) { aspect-ratio: 3 / 4; }
-@media (min-width: 760px){
-  .gallery__tile:nth-child(2), .gallery__tile:nth-child(3) { margin-top: clamp(20px, 3vw, 44px); }
-}
 .gallery__tile img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(0.9) contrast(1.03); transition: transform 640ms var(--ease); }
 .gallery__tile:hover img { transform: scale(1.05); }
 .gallery__tile::after { content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply;

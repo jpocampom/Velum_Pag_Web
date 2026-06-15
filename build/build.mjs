@@ -307,7 +307,6 @@ function homeMain(c) {
   const manifesto = `<section class="section manifesto" id="manifiesto">
   <div class="wrap">
     <div data-reveal>
-      <span class="kicker">${c.manifesto.kicker}</span>
       <h2 class="h-section" style="margin-top:18px;">${c.manifesto.title}</h2>
     </div>
     <p class="manifesto__body" data-reveal data-reveal-delay="1">${c.manifesto.bodyHtml}</p>
@@ -356,7 +355,6 @@ function homeMain(c) {
   const sectors = `<section class="section" id="sectores">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="kicker">${c.sectors.kicker}</span>
       <h2 class="h-section">${c.sectors.title}</h2>
       <p class="lede">${c.sectors.intro}</p>
     </div>
@@ -376,7 +374,6 @@ function homeMain(c) {
   const process = `<section class="section section--mist process" id="proceso">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="kicker">${c.process.kicker}</span>
       <h2 class="h-section">${c.process.title}</h2>
       <p class="lede">${c.process.intro}</p>
     </div>
@@ -394,7 +391,6 @@ function homeMain(c) {
   const whySection = `<section class="section section--ink" id="porque">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="kicker">${c.why.kicker}</span>
       <h2 class="h-section">${c.why.title}</h2>
     </div>
     <div class="why-grid">${why}</div>
@@ -405,7 +401,6 @@ function homeMain(c) {
   const manager = `<section class="section" id="gestor">
   <div class="wrap split">
     <div class="split__text" data-reveal>
-      <span class="kicker">${c.manager.kicker}</span>
       <h2 class="h-section" style="margin:18px 0 24px;">${c.manager.title}</h2>
       <p class="lede">${c.manager.body}</p>
     </div>
@@ -421,7 +416,6 @@ function homeMain(c) {
   const coverage = `<section class="section coverage" id="cobertura">
   <div class="wrap">
     <div data-reveal>
-      <span class="kicker">${c.coverage.kicker}</span>
       <h2 class="h-section" style="margin:18px 0 24px;">${c.coverage.title}</h2>
       <p class="lede">${c.coverage.body}</p>
       <div class="coverage__legend">
@@ -443,7 +437,6 @@ function homeMain(c) {
   const faq = `<section class="section section--linen" id="faq">
   <div class="wrap">
     <div class="section-head" data-reveal>
-      <span class="kicker">${c.faq.kicker}</span>
       <h2 class="h-section">${c.faq.title}</h2>
     </div>
     <div class="faq-list">${faqs}</div>
