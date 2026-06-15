@@ -418,29 +418,6 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Standards → compact credential strip rendered inside Sustainability
-  const credItems = c.standards.items.map((s) => `<li>${s.code}</li>`).join("");
-  const credStrip = `<div class="cred-strip" data-reveal>
-        <span class="cred-strip__label">${c.standards.kicker}</span>
-        <ul class="cred-list">${credItems}</ul>
-        <p class="cred-note">${c.standards.note}</p>
-      </div>`;
-
-  // Sustainability (dark)
-  const claims = c.sustainability.claims.map((cl) =>
-    `<div class="sust-claim" data-reveal><span class="dot" aria-hidden="true"></span><p>${cl}</p></div>`
-  ).join("");
-  const sustainability = `<section class="section section--ink" id="sostenibilidad">
-  <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="kicker">${c.sustainability.kicker}</span>
-      <h2 class="h-section">${c.sustainability.title}</h2>
-      <p class="lede">${c.sustainability.body}</p>
-    </div>
-    <div class="sust-claims">${claims}</div>
-    ${credStrip}
-  </div>
-</section>`;
 
   // Coverage
   const coverage = `<section class="section coverage" id="cobertura">
@@ -511,7 +488,7 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, services, sectors, process, whySection, manager, sustainability, coverage, faq, contact].join("\n");
+  return [hero, trust, manifesto, services, sectors, process, whySection, manager, coverage, faq, contact].join("\n");
 }
 
 /* Stylized Iberian Peninsula — recognizable, Portugal distinguished. */

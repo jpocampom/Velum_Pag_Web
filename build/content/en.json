@@ -30,10 +30,6 @@
       {
         "label": "Why VELUM",
         "href": "#porque"
-      },
-      {
-        "label": "Sustainability",
-        "href": "#sostenibilidad"
       }
     ],
     "cta": "Request an assessment",
@@ -367,10 +363,6 @@
           {
             "label": "Why VELUM",
             "href": "#porque"
-          },
-          {
-            "label": "Sustainability",
-            "href": "#sostenibilidad"
           },
           {
             "label": "Contact",

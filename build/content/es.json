@@ -30,10 +30,6 @@
       {
         "label": "Por qué VELUM",
         "href": "#porque"
-      },
-      {
-        "label": "Sostenibilidad",
-        "href": "#sostenibilidad"
       }
     ],
     "cta": "Solicitar propuesta",
@@ -369,10 +365,6 @@
           {
             "label": "Por qué VELUM",
             "href": "#porque"
-          },
-          {
-            "label": "Sostenibilidad",
-            "href": "#sostenibilidad"
           },
           {
             "label": "Contacto",
