@@ -16,20 +16,16 @@
   "nav": {
     "items": [
       {
+        "label": "Acerca",
+        "href": "#manifiesto"
+      },
+      {
         "label": "Servicios",
-        "route": "servicios"
+        "href": "#servicios"
       },
       {
         "label": "Sectores",
-        "route": "sectores"
-      },
-      {
-        "label": "Cómo trabajamos",
-        "href": "#proceso"
-      },
-      {
-        "label": "Por qué VELUM",
-        "href": "#porque"
+        "href": "#sectores"
       }
     ],
     "cta": "Solicitar propuesta",

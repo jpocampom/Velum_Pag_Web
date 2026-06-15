@@ -16,20 +16,16 @@
   "nav": {
     "items": [
       {
+        "label": "About",
+        "href": "#manifiesto"
+      },
+      {
         "label": "Services",
-        "route": "servicios"
+        "href": "#servicios"
       },
       {
         "label": "Sectors",
-        "route": "sectores"
-      },
-      {
-        "label": "How we work",
-        "href": "#proceso"
-      },
-      {
-        "label": "Why VELUM",
-        "href": "#porque"
+        "href": "#sectores"
       }
     ],
     "cta": "Request an assessment",

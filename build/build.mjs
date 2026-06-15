@@ -263,8 +263,8 @@ function head(c, routeId, title, desc) {
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="/assets/css/velum.css?v=${CSS_V}" />
   ${jsonLd(c, routeId)}
 </head>`;
@@ -488,7 +488,7 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, services, sectors, process, whySection, manager, coverage, faq, contact].join("\n");
+  return [hero, trust, manifesto, whySection, services, process, sectors, manager, coverage, faq, contact].join("\n");
 }
 
 /* Stylized Iberian Peninsula — recognizable, Portugal distinguished. */

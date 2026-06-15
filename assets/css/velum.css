@@ -162,9 +162,10 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 /* ---------- Wordmark / logo ---------- */
 .wm {
   font-family: var(--serif);
-  font-weight: 500;
-  letter-spacing: 0.30em;
-  padding-left: 0.30em;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  padding-left: 0;
   line-height: 1;
   display: inline-block;
 }

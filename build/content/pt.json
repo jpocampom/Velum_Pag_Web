@@ -16,20 +16,16 @@
   "nav": {
     "items": [
       {
+        "label": "Sobre",
+        "href": "#manifiesto"
+      },
+      {
         "label": "Serviços",
-        "route": "servicios"
+        "href": "#servicios"
       },
       {
         "label": "Setores",
-        "route": "sectores"
-      },
-      {
-        "label": "Como trabalhamos",
-        "href": "#proceso"
-      },
-      {
-        "label": "Porquê a VELUM",
-        "href": "#porque"
+        "href": "#sectores"
       }
     ],
     "cta": "Pedir diagnóstico",
