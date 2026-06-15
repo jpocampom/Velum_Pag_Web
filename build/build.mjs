@@ -517,21 +517,7 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Standards — sober credentials band (light surface, no green claim)
-  const stdItems = c.standards.items.map((s) =>
-    `<div class="std-item"><dt class="std-code">${s.code}</dt><dd class="std-desc">${s.desc}</dd></div>`
-  ).join("");
-  const standards = `<section class="section section--linen standards" id="estandares" aria-label="${c.standards.kicker}">
-  <div class="wrap">
-    <div class="standards__head" data-reveal>
-      <p class="lede">${c.standards.intro}</p>
-    </div>
-    <dl class="standards__grid" data-reveal data-reveal-delay="1">${stdItems}</dl>
-    <p class="standards__note" data-reveal>${c.standards.note}</p>
-  </div>
-</section>`;
-
-  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, standards, coverage, faq, contact].join("\n");
+  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, coverage, faq, contact].join("\n");
 }
 
 /* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.
