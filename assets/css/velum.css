@@ -570,20 +570,14 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
   .btn, .sector-card, .arr { transition: none !important; }
 }
 
-/* Iberia map */
-.iberia { width: 100%; height: auto; max-width: 440px; margin-inline: auto; color: var(--ink); display: block; }
-.iberia-coast { fill: rgba(var(--c-ink-rgb), 0.05); stroke: rgba(var(--c-ink-rgb), 0.55); stroke-width: 1.4; stroke-linejoin: round; }
-.iberia-border { fill: none; stroke: rgba(var(--c-ink-rgb), 0.45); stroke-width: 1; stroke-dasharray: 4 4; }
-.pt-soon { fill: rgba(var(--c-ink-rgb), 0.03); stroke: rgba(var(--accent-rgb), 0.55); stroke-width: 1; stroke-dasharray: 2 5; }
+/* Iberia map — real geography, strokes kept crisp via non-scaling-stroke */
+.iberia { width: 100%; height: auto; max-width: 460px; margin-inline: auto; color: var(--ink); display: block; }
+.iberia-coast { fill: rgba(var(--c-ink-rgb), 0.06); stroke: rgba(var(--c-ink-rgb), 0.55); stroke-width: 1.2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.pt-soon { fill: rgba(var(--accent-rgb), 0.06); stroke: rgba(var(--accent-rgb), 0.7); stroke-width: 1.2; stroke-dasharray: 3 3; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
 .iberia .plant { fill: var(--accent); }
-.iberia .ally { fill: var(--paper); stroke: var(--accent); stroke-width: 1.6; }
-.iberia .map-label { font-size: 12px; fill: var(--soft); text-anchor: middle; letter-spacing: 0.04em; }
-.iberia .pt-label { fill: var(--accent); opacity: 0.8; }
-@media (prefers-reduced-motion: no-preference) {
-  .iberia-coast { stroke-dasharray: 1500; stroke-dashoffset: 1500; }
-  [data-reveal].in .iberia-coast { animation: draw-coast 1800ms var(--ease) forwards; }
-  @keyframes draw-coast { to { stroke-dashoffset: 0; } }
-}
+.iberia .ally { fill: var(--paper); stroke: var(--accent); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+.iberia .map-label { font-size: 4.4px; fill: var(--soft); text-anchor: middle; letter-spacing: 0.02em; }
+.iberia .pt-label { fill: var(--accent); opacity: 0.85; }
 
 /* Mobile-only nav CTA (inside the slide-out panel) */
 .nav-cta-mobile { display: none; }

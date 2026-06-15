@@ -518,26 +518,10 @@ function homeMain(c) {
   return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, standards, coverage, faq, contact].join("\n");
 }
 
-/* Stylized Iberian Peninsula — recognizable, Portugal distinguished. */
+/* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.
+   Markup lives in build/iberia-map.svg (classed for CSS styling). */
 function iberiaMap() {
-  return `<svg viewBox="0 0 520 560" class="iberia" aria-hidden="true">
-  <path class="iberia-coast" d="M 70,150 C 64,138 70,126 86,124 C 104,121 120,128 140,126 C 165,123 188,112 214,114 C 246,116 276,110 308,118 C 340,126 368,120 392,134 C 410,145 426,150 440,150 C 452,150 460,160 456,172 C 450,190 432,196 414,200 C 398,204 386,214 374,228 C 366,238 372,250 384,258 C 402,270 420,282 430,302 C 438,318 432,338 414,350 C 396,362 374,366 356,378 C 340,388 326,402 306,410 C 288,417 268,414 250,420 C 234,425 222,438 204,444 C 188,449 170,446 156,438 C 144,431 138,418 130,406 C 120,390 110,378 102,360 C 95,344 96,326 92,308 C 88,288 78,272 74,252 C 70,234 76,216 72,198 C 69,182 64,166 70,150 Z" />
-  <path class="pt-soon" d="M 92,210 C 118,226 130,256 128,288 C 126,318 138,346 134,376 C 131,398 124,418 128,440 C 116,438 104,430 98,416 C 90,398 92,378 86,360 C 80,344 82,326 78,308 C 74,288 70,272 70,252 C 68,236 74,224 92,210 Z" />
-  <path class="iberia-border" d="M 92,210 C 118,226 130,256 128,288 C 126,318 138,346 134,376 C 131,398 124,418 128,440" />
-  <g class="allies">
-    <circle class="ally" cx="118" cy="150" r="5" /><circle class="ally" cx="252" cy="146" r="5" />
-    <circle class="ally" cx="404" cy="178" r="5" /><circle class="ally" cx="316" cy="216" r="5" />
-    <circle class="ally" cx="240" cy="372" r="5" /><circle class="ally" cx="334" cy="356" r="5" />
-  </g>
-  <g class="plants">
-    <circle class="plant" cx="258" cy="262" r="6.5" /><circle class="plant" cx="372" cy="296" r="6.5" />
-  </g>
-  <g class="map-labels" font-family="JetBrains Mono, monospace">
-    <text class="map-label" x="262" y="248">Madrid</text>
-    <text class="map-label" x="404" y="168">Barcelona</text>
-    <text class="map-label pt-label" x="100" y="300">Lisboa</text>
-  </g>
-  </svg>`;
+  return read(resolve(__dirname, "iberia-map.svg"));
 }
 
 /* ---------- Page assemblers ---------- */
