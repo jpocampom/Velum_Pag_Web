@@ -358,8 +358,11 @@ function homeMain(c) {
   ];
   const sec = c.sectors.items.map((s, i) => {
     const photos = SECTOR_PHOTOS[i] || [SECTOR_PHOTOS[0][0]];
+    // First slide describes the sector; the rest reuse the localized
+    // textile types so every image carries a distinct, accurate alt.
+    const slideAlt = (n) => n === 0 ? `${s.tag} — ${s.title}` : `${s.tag} — ${s.items[(n - 1) % s.items.length]}`;
     const slides = photos.map((src, n) =>
-      `<img class="sector-carousel__slide${n === 0 ? " is-active" : ""}" src="/assets/img/photos/${src}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${s.tag} — ${s.title}" />`
+      `<img class="sector-carousel__slide${n === 0 ? " is-active" : ""}" src="/assets/img/photos/${src}.webp" width="1500" height="1000" loading="lazy" decoding="async" alt="${slideAlt(n)}" />`
     ).join("");
     const dots = photos.length > 1
       ? `<div class="sector-carousel__dots" role="tablist" aria-label="${s.tag}">${photos.map((_, n) =>
