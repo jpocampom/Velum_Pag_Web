@@ -469,7 +469,8 @@ function homeMain(c) {
       <h2 class="h-section" style="margin:18px 0 24px;">${c.coverage.title}</h2>
       <p class="lede">${c.coverage.body}</p>
       <div class="coverage__legend">
-        <span class="item"><span class="swatch swatch--now" aria-hidden="true"></span>${c.coverage.now}</span>
+        <span class="item"><span class="swatch swatch--plant" aria-hidden="true"></span>${c.coverage.plants}</span>
+        <span class="item"><span class="swatch swatch--ally" aria-hidden="true"></span>${c.coverage.allies}</span>
         <span class="item"><span class="swatch swatch--soon" aria-hidden="true"></span>${c.coverage.soon}</span>
       </div>
     </div>
@@ -532,7 +533,7 @@ function homeMain(c) {
   // Gallery carousel organised by sector (tabs + horizontal scroll-snap)
   const CAR_KEYS = ["hosteleria", "restauracion", "salud"];
   const CAR_IMGS = {
-    hosteleria: ["sector-hosteleria", "hero-suite", "galeria-rollos", "materiales"],
+    hosteleria: ["hosteleria-suite", "hero-suite", "galeria-rollos", "materiales"],
     restauracion: ["sector-restauracion", "restauracion-2", "restauracion-3"],
     salud: ["sector-salud", "salud-2", "salud-3"]
   };

@@ -94,7 +94,7 @@
       },
       {
         "title": "Controlar",
-        "body": "Inventário rastreado e consumo à vista. Sabe sempre o que tem, onde e em que estado.",
+        "body": "Rastreabilidade real com um software de gestão têxtil (Lavander) que instalamos no seu negócio: sabe sempre o que tem, onde e em que estado. Simplicidade para a sua rastreabilidade.",
         "icon": "rfid"
       }
     ],
@@ -146,29 +146,29 @@
     ]
   },
   "process": {
-    "kicker": "Como começamos",
-    "title": "Previsibilidade, passo a passo.",
-    "intro": "Um circuito pensado para que o têxtil nunca seja a sua preocupação. Isto é o que acontece quando trabalha com a VELUM.",
+    "kicker": "Como trabalhamos",
+    "title": "Assim cuidamos do seu têxtil.",
+    "intro": "Por trás de cada entrega impecável há um processo exigente, da recolha à devolução.",
     "steps": [
       {
-        "title": "Ouvimos",
-        "body": "Analisamos a sua operação, a sua categoria e os seus picos. O padrão define-o você."
+        "title": "Recolha e expedições",
+        "body": "Recolhemos e entregamos em rotas planeadas, com a frequência de que a sua operação precisa. Logística pensada para que nunca lhe falte."
       },
       {
-        "title": "Desenhamos a sua dotação",
-        "body": "Selecionamos tecido, gramagem e acabamento, e dimensionamos o têxtil à medida da sua marca, sem imobilizar capital."
+        "title": "Lavagem especializada",
+        "body": "Cada tecido, o seu programa: detergentes profissionais específicos e temperaturas controladas que cuidam da fibra e garantem a higiene."
       },
       {
-        "title": "Implementamos",
-        "body": "Arrancamos em paralelo com o seu fornecedor atual: não retiramos nada até o novo serviço funcionar. A mudança não se nota na sua operação."
+        "title": "Maquinaria e equipamento",
+        "body": "Unidades com maquinaria industrial de última geração e equipamentos calibrados para um acabamento uniforme, ciclo após ciclo."
       },
       {
-        "title": "Operamos",
-        "body": "Cuidamos, repomos e entregamos ciclo após ciclo. Você só nota que está tudo onde deve estar."
+        "title": "Controlo de qualidade",
+        "body": "Revisão peça a peça: o que não atinge o nosso padrão é retirado e reposto antes de sair."
       },
       {
-        "title": "Melhoramos",
-        "body": "Revemos dados e resultados consigo e afinamos o serviço época após época."
+        "title": "Rastreabilidade",
+        "body": "Software de gestão têxtil (Lavander) no seu negócio: cada peça, controlada do princípio ao fim."
       }
     ]
   },
@@ -182,15 +182,19 @@
       },
       {
         "title": "O padrão viaja consigo",
-        "body": "Duas unidades próprias onde nasce a qualidade e uma rede de parceiros homologados —auditados segundo o nosso protocolo e que respondem perante nós— que a leva, idêntica, a cada canto."
+        "body": "Unidades próprias onde nasce a qualidade e uma rede de parceiros homologados —auditados segundo o nosso protocolo e que respondem perante nós— que a leva, idêntica, a cada canto."
       },
       {
-        "title": "Capital livre, espaço livre",
-        "body": "O têxtil deixa de ser um ativo imobilizado e um armazém que ocupa espaço. O seu investimento regressa ao seu negócio."
+        "title": "Capital livre e flexibilidade",
+        "body": "O têxtil deixa de ser um ativo imobilizado: paga por usá-lo, não por possuí-lo. E adapta-se sem fricção —mais dotações, recolhas pontuais, ajustes por época— sem comprar a mais."
       },
       {
         "title": "Feito à sua medida",
         "body": "Nada de catálogo fechado. Escolhe o tecido, a gramagem e o acabamento à medida da sua marca e da sua categoria."
+      },
+      {
+        "title": "Previsibilidade",
+        "body": "O têxtil chega a postos, no seu lugar e a horas, ciclo após ciclo. Sem urgências de última hora nem surpresas para resolver."
       }
     ]
   },
@@ -243,7 +247,9 @@
     "title": "O padrão nasce em duas unidades e chega a toda a Espanha.",
     "body": "As nossas duas unidades próprias, em Madrid e Bilbau, são o coração onde se define a qualidade. Uma rede nacional de parceiros homologados estende-a, idêntica, a cada canto do país. O mesmo padrão, esteja onde estiver o seu negócio.",
     "now": "Espanha — agora",
-    "soon": "Portugal — brevemente"
+    "soon": "Portugal — brevemente",
+    "plants": "Unidades próprias (Madrid e Bilbau)",
+    "allies": "Parceiros homologados"
   },
   "faq": {
     "kicker": "Antes de perguntar",

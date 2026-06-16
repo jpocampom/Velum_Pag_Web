@@ -452,7 +452,7 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 /* =====================================================================
    Why VELUM
    ===================================================================== */
-.why-grid { display: grid; gap: 2px; background: var(--paper-line); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.why-grid { display: grid; gap: 2px; background: var(--paper-line); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .why-cell { background: var(--ink); padding: clamp(32px, 3vw, 52px); display: flex; flex-direction: column; gap: 14px; min-height: 260px; }
 .why-cell .why-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: rgba(var(--c-paper-rgb),0.5); }
 .why-cell h3 { font-family: var(--serif); font-size: clamp(20px, 1.6vw, 25px); font-weight: 400; color: var(--paper); line-height: 1.05; }
@@ -524,6 +524,8 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .coverage__legend .swatch { width: 14px; height: 14px; border-radius: 3px; }
 .swatch--now { background: var(--accent); }
 .swatch--soon { background: var(--mist); border: 1px solid var(--soft); }
+.swatch--plant { background: var(--accent); border-radius: 50%; }
+.swatch--ally { background: var(--paper); border: 1.6px solid var(--accent); border-radius: 50%; }
 
 /* =====================================================================
    Standards — sober credentials band (light surface)

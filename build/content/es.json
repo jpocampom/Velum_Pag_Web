@@ -94,7 +94,7 @@
       },
       {
         "title": "Controlar",
-        "body": "Inventario trazado y consumo a la vista. Sabes siempre qué tienes, dónde y en qué estado.",
+        "body": "Trazabilidad real con un software de gestión textil (Lavander) que instalamos en tu negocio: sabes siempre qué tienes, dónde y en qué estado. Simplicidad para tu trazabilidad.",
         "icon": "rfid"
       }
     ],
@@ -146,29 +146,29 @@
     ]
   },
   "process": {
-    "kicker": "Cómo empezamos",
-    "title": "Previsibilidad, paso a paso.",
-    "intro": "Un circuito pensado para que el textil nunca sea tu preocupación. Esto es lo que sucede cuando trabajas con VELUM.",
+    "kicker": "Cómo trabajamos",
+    "title": "Así cuidamos tu textil.",
+    "intro": "Detrás de cada entrega impecable hay un proceso exigente, de la recogida a la devolución.",
     "steps": [
       {
-        "title": "Escuchamos",
-        "body": "Analizamos tu operación, tu categoría y tus picos. El estándar lo defines tú."
+        "title": "Recogida y expediciones",
+        "body": "Recogemos y entregamos en rutas planificadas, con la frecuencia que tu operación necesita. Logística pensada para que nunca te falte."
       },
       {
-        "title": "Diseñamos tu dotación",
-        "body": "Seleccionamos tejido, gramaje y acabado, y dimensionamos el textil a la medida de tu marca, sin inmovilizar capital."
+        "title": "Lavado especializado",
+        "body": "Cada tejido, su programa: detergentes profesionales específicos y temperaturas controladas que cuidan la fibra y garantizan la higiene."
       },
       {
-        "title": "Implantamos",
-        "body": "Arrancamos en paralelo a tu proveedor actual: no retiramos nada hasta que el nuevo servicio funciona. El cambio no se nota en tu operación."
+        "title": "Maquinaria y equipo",
+        "body": "Plantas con maquinaria industrial de última generación y equipos calibrados para un acabado uniforme, ciclo tras ciclo."
       },
       {
-        "title": "Operamos",
-        "body": "Cuidamos, reponemos y entregamos ciclo tras ciclo. Tú solo notas que todo está donde debe estar."
+        "title": "Control de calidad",
+        "body": "Revisión pieza a pieza: lo que no llega a nuestro estándar se retira y se repone antes de salir."
       },
       {
-        "title": "Mejoramos",
-        "body": "Revisamos datos y resultados contigo y afinamos el servicio temporada tras temporada."
+        "title": "Trazabilidad",
+        "body": "Software de gestión textil (Lavander) en tu negocio: cada pieza, controlada de principio a fin."
       }
     ]
   },
@@ -182,15 +182,19 @@
       },
       {
         "title": "El estándar viaja contigo",
-        "body": "Dos plantas propias donde nace la calidad y una red de aliados homologados —auditados bajo nuestro protocolo y que responden ante nosotros— que la lleva idéntica a cada rincón."
+        "body": "Plantas propias donde nace la calidad y una red de aliados homologados —auditados bajo nuestro protocolo y que responden ante nosotros— que la lleva idéntica a cada rincón."
       },
       {
-        "title": "Capital libre, espacio libre",
-        "body": "El textil deja de ser un activo inmovilizado y un almacén que ocupa. Tu inversión vuelve a tu negocio."
+        "title": "Capital libre y flexibilidad",
+        "body": "El textil deja de ser un activo inmovilizado: pagas por usarlo, no por poseerlo. Y te adaptas sin fricción —más dotaciones, recogidas ad-hoc, ajustes por temporada— sin comprar de más."
       },
       {
         "title": "Hecho a tu medida",
         "body": "Nada de catálogo cerrado. Eliges tejido, gramaje y acabado a la medida de tu marca y tu categoría."
+      },
+      {
+        "title": "Previsibilidad",
+        "body": "El textil llega a punto, en su sitio y a tiempo, ciclo tras ciclo. Sin urgencias de última hora ni sorpresas que resolver."
       }
     ]
   },
@@ -243,6 +247,8 @@
     "title": "El estándar nace en dos plantas y llega a toda España.",
     "body": "Nuestras dos plantas propias, en Madrid y Bilbao, son el corazón donde se define la calidad. Una red nacional de aliados homologados la extiende, idéntica, a cada rincón del país. Mismo estándar, esté donde esté tu negocio.",
     "now": "España — ahora",
+    "plants": "Plantas propias (Madrid y Bilbao)",
+    "allies": "Aliados homologados",
     "soon": "Portugal — próximamente"
   },
   "faq": {

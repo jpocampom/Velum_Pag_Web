@@ -94,7 +94,7 @@
       },
       {
         "title": "Control",
-        "body": "Traced inventory and consumption in plain sight. You always know what you have, where it is and what condition it's in.",
+        "body": "Real traceability with textile management software (Lavander) we install in your business: you always know what you have, where it is and what condition it's in. Simplicity for your traceability.",
         "icon": "rfid"
       }
     ],
@@ -146,29 +146,29 @@
     ]
   },
   "process": {
-    "kicker": "How we begin",
-    "title": "Predictability, step by step.",
-    "intro": "A circuit designed so that textiles are never your concern. This is what happens when you work with VELUM.",
+    "kicker": "How we work",
+    "title": "This is how we care for your textiles.",
+    "intro": "Behind every flawless delivery there's a demanding process, from collection through to return.",
     "steps": [
       {
-        "title": "We listen",
-        "body": "We analyse your operation, your category and your peaks. You define the standard."
+        "title": "Collection and dispatch",
+        "body": "We collect and deliver on planned routes, at whatever frequency your operation needs. Logistics designed so you never run short."
       },
       {
-        "title": "We design your supply",
-        "body": "We select fabric, weight and finish, and size the textiles to suit your brand, without tying up capital."
+        "title": "Specialist laundering",
+        "body": "Each fabric, its own programme: specific professional detergents and controlled temperatures that protect the fibre and guarantee hygiene."
       },
       {
-        "title": "We implement",
-        "body": "We start up alongside your current supplier: we withdraw nothing until the new service is working. The switch is invisible to your operation."
+        "title": "Machinery and equipment",
+        "body": "Plants with state-of-the-art industrial machinery and calibrated equipment for a uniform finish, cycle after cycle."
       },
       {
-        "title": "We operate",
-        "body": "We care for, replenish and deliver, cycle after cycle. All you notice is that everything is exactly where it should be."
+        "title": "Quality control",
+        "body": "Piece-by-piece inspection: anything that doesn't meet our standard is withdrawn and replaced before it goes out."
       },
       {
-        "title": "We improve",
-        "body": "We review data and results with you and fine-tune the service season after season."
+        "title": "Traceability",
+        "body": "Textile management software (Lavander) in your business: every piece, controlled from start to finish."
       }
     ]
   },
@@ -182,15 +182,19 @@
       },
       {
         "title": "The standard travels with you",
-        "body": "Two owned plants where quality is born and a network of approved partners —audited under our protocol and answerable to us— that carries it, identical, to every corner."
+        "body": "Owned plants where quality is born and a network of approved partners —audited under our protocol and answerable to us— that carries it, identical, to every corner."
       },
       {
-        "title": "Free capital, free space",
-        "body": "Textiles stop being a tied-up asset and a warehouse that takes up room. Your investment goes back into your business."
+        "title": "Free capital, full flexibility",
+        "body": "Textiles stop being a tied-up asset: you pay to use them, not to own them. And you adapt with no friction —more stock, ad-hoc collections, seasonal adjustments— without ever overbuying."
       },
       {
         "title": "Made to measure",
         "body": "No fixed catalogue. You choose fabric, weight and finish to suit your brand and your category."
+      },
+      {
+        "title": "Predictability",
+        "body": "Textiles arrive ready, in their place and on time, cycle after cycle. No last-minute rushes and no surprises to deal with."
       }
     ]
   },
@@ -243,7 +247,9 @@
     "title": "The standard is born in two plants and reaches all of Spain.",
     "body": "Our two owned plants, in Madrid and Bilbao, are the heart where quality is defined. A nationwide network of approved partners extends it, identical, to every corner of the country. The same standard, wherever your business is.",
     "now": "Spain — now",
-    "soon": "Portugal — coming soon"
+    "soon": "Portugal — coming soon",
+    "plants": "Owned plants (Madrid and Bilbao)",
+    "allies": "Approved partners"
   },
   "faq": {
     "kicker": "Before you ask",
