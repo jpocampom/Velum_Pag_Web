@@ -6,7 +6,7 @@
   "home": "/en/",
   "meta": {
     "title": "Premium textile rental for hospitality and healthcare | VELUM",
-    "description": "Supply, care and replenishment of textiles with a single point of contact. Coverage across Spain with two owned plants and a network of approved partners. Your ally in textile care."
+    "description": "We're not an industrial laundry: we're textile care. We manage the supply, care and replenishment of your textiles through a single point of contact, across Spain, so linen management stops being your problem."
   },
   "brand": {
     "name": "VELUM",
@@ -34,7 +34,7 @@
   "hero": {
     "eyebrow": "Premium textile care · Iberian Peninsula",
     "headlineHtml": "Premium textile care<br>for those who <em class=\"serif-em\">cannot fail</em>.",
-    "sub": "We supply, care for and replenish the textiles of hospitality, food service and healthcare, all under a single point of contact.",
+    "sub": "We're not an industrial laundry: we're textile care. We manage all your textiles —supply, care and replenishment— so linen stops being your problem.",
     "ctaPrimary": "Talk to a dedicated contact",
     "ctaSecondary": "See the model",
     "imageAlt": "Hotel bed dressed in flawless white linen"
@@ -63,12 +63,12 @@
   "manifesto": {
     "kicker": "Why we exist",
     "title": "The invisible ally behind [[excellence]].",
-    "bodyHtml": "There are details a guest never mentions when they are right, and never forgives when they fail. The sheet that wraps around them, the tablecloth that dresses the table, the bathrobe that envelops them. VELUM exists so that those textiles are always up to the mark, without you ever having to think about them. <span class=\"promise\">We work in silence so your brand can shine out loud.</span>"
+    "bodyHtml": "There are details a guest never mentions when they are right, and never forgives when they fail. The sheet that wraps around them, the tablecloth that dresses the table, the bathrobe that envelops them. We're not an industrial laundry: we're textile care. We take on the full management of your textiles —supplying, caring for and replenishing them— so they're always up to the mark, without you ever having to think about it. <span class=\"promise\">We work in silence so your brand can shine out loud.</span>"
   },
   "services": {
     "kicker": "The model",
     "title": "A [[renting-first]] model, built never to fail.",
-    "intro": "We don't sell you laundering: we hand you textiles that are always available, always ready. You set the standard; we take care of everything else, cycle after cycle.",
+    "intro": "We don't sell you laundering: we manage all your textiles so they're always available and ready. You set the standard; we take care of everything else, cycle after cycle.",
     "more": "See all services",
     "items": [
       {

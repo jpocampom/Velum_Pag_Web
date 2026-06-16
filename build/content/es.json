@@ -6,7 +6,7 @@
   "home": "/",
   "meta": {
     "title": "Renting textil premium para hostelería y salud | VELUM",
-    "description": "Dotación, cuidado y reposición de textil con un único interlocutor. Cobertura en toda España con dos plantas propias y red de aliados homologados. Tu aliado en textile care."
+    "description": "No somos una lavandería industrial: somos textile care. Gestionamos la dotación, el cuidado y la reposición de tu textil con un único interlocutor, en toda España, para que la gestión de la ropa deje de ser tu problema."
   },
   "brand": {
     "name": "VELUM",
@@ -34,7 +34,7 @@
   "hero": {
     "eyebrow": "Textile care premium · Península Ibérica",
     "headlineHtml": "Textile care premium<br>para quienes <em class=\"serif-em\">no pueden fallar</em>.",
-    "sub": "Dotamos, cuidamos y reponemos el textil de hostelería, restauración y salud bajo un único interlocutor.",
+    "sub": "No somos una lavandería industrial: somos textile care. Gestionamos todo tu textil —dotación, cuidado y reposición— para que la ropa deje de ser tu problema.",
     "ctaPrimary": "Hablar con un interlocutor",
     "ctaSecondary": "Ver el modelo",
     "imageAlt": "Cama de hotel vestida con lencería blanca impecable"
@@ -63,12 +63,12 @@
   "manifesto": {
     "kicker": "Por qué existimos",
     "title": "El aliado invisible que sostiene la [[excelencia]].",
-    "bodyHtml": "Hay detalles que el cliente nunca menciona cuando están bien, y que no perdona cuando fallan. La sábana que abraza, el mantel que viste la mesa, el albornoz que envuelve. VELUM existe para que ese textil esté siempre a la altura, sin que tengas que pensarlo. <span class=\"promise\">Trabajamos en silencio para que tu marca brille en voz alta.</span>"
+    "bodyHtml": "Hay detalles que el cliente nunca menciona cuando están bien, y que no perdona cuando fallan. La sábana que abraza, el mantel que viste la mesa, el albornoz que envuelve. No somos una lavandería industrial: somos textile care. Asumimos toda la gestión de tu textil —dotarlo, cuidarlo y reponerlo— para que esté siempre a la altura sin que tengas que pensarlo. <span class=\"promise\">Trabajamos en silencio para que tu marca brille en voz alta.</span>"
   },
   "services": {
     "kicker": "El modelo",
     "title": "Un modelo [[renting-first]], pensado para no fallar.",
-    "intro": "No te vendemos un lavado: te entregamos un textil siempre disponible, siempre a punto. Tú decides el estándar; nosotros nos ocupamos de todo lo demás, ciclo tras ciclo.",
+    "intro": "No te vendemos un lavado: gestionamos todo tu textil para que esté siempre disponible y a punto. Tú decides el estándar; nosotros nos ocupamos de todo lo demás, ciclo tras ciclo.",
     "more": "Ver todos los servicios",
     "items": [
       {
