@@ -734,7 +734,8 @@ section[id] { scroll-margin-top: 92px; }
 
 /* Typographic finishing — balanced headlines, tidy paragraph rag */
 .display, .h-section, .h-mid, .hero h1, .quote, .trust-line,
-.manifesto__body, .sector-card h3, .svc-card h3 { text-wrap: balance; }
+.sector-card h3, .svc-card h3 { text-wrap: balance; }
+.manifesto__body { text-wrap: pretty; }
 .lede, .svc-card p, .sector-card p, .why-cell p, .process-step p,
 .faq-a, .sust-claim p, .detail-block__head .lede { text-wrap: pretty; }
 
