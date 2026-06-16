@@ -300,10 +300,10 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
    ===================================================================== */
 .manifesto .wrap { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
 .manifesto .h-section { max-width: 16ch; }
-.manifesto__body { font-family: var(--serif); font-weight: 300; font-size: clamp(20px, 1.9vw, 28px); line-height: 1.34; max-width: 27em; color: var(--ink); }
+.manifesto__body { font-family: var(--serif); font-weight: 300; font-size: clamp(20px, 1.9vw, 28px); line-height: 1.34; max-width: 30em; color: var(--ink); }
 .manifesto__body .promise { font-style: italic; }
 @media (min-width: 900px){
-  .manifesto .wrap { grid-template-columns: 0.9fr 1.1fr; align-items: center; }
+  .manifesto .wrap { grid-template-columns: 0.72fr 1.28fr; align-items: center; }
 }
 
 /* =====================================================================
