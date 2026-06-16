@@ -1,8 +1,8 @@
 # VELUM — Handoff
 
-Documento de entrega del sitio web de **VELUM**, plataforma ibérica de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
+Documento de entrega del sitio web de **VELUM**, plataforma española de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado, posicionamiento **"no somos una lavandería industrial: somos textile care"**, logo oficial del brand kit (header 56px / footer con tagline), fotografía curada por sector, mapa con Madrid y Bilbao, resalte en subrayado y OG en PNG. Mantén este documento junto al código.
+> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); **datos legales de PCP LAUNDRY, S.L.** cumplimentados; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector; mapa Madrid/Bilbao; resalte en subrayado y OG en PNG. Mantén este documento junto al código.
 
 ---
 
@@ -13,7 +13,7 @@ Documento de entrega del sitio web de **VELUM**, plataforma ibérica de **textil
 | **Repositorio** | GitHub `jpocampom/Velum_Pag_Web` (público) |
 | **Rama de producción / por defecto** | `claude/adoring-cannon-4eRet` |
 | **Hosting** | Vercel, proyecto `velum-pag-web` |
-| **URL producción** | https://velum-pag-web.vercel.app (dominio final previsto: `velum.es`) |
+| **URL producción** | https://velum-pag-web.vercel.app · **dominio final: `byvelum.com`** (canónicos/OG/JSON-LD ya apuntan ahí; falta conectar el DNS en Vercel) |
 | **Despliegue** | Automático: cada `git push` a la rama de producción dispara un deploy en Vercel |
 
 > **Recomendación**: renombrar la rama a `main` (más estándar). GitHub y Vercel se reajustan solos al ser la rama por defecto. No se ha hecho para no alterar el deploy sin confirmación.
@@ -67,7 +67,7 @@ Flujo de trabajo: editar `build/content/*.json` → `npm run build` → revisar 
 
 ## 4. Editar contenido / traducciones
 
-- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 321 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
+- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 353 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
 - Registro: **ES en "tú"** (peninsular), **EN** estándar, **PT-PT** formal ("você").
 - Textos legales (más largos) en `build/content/legal/{idioma}/`.
 - Tras editar: `npm run build`.
@@ -85,7 +85,7 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 
 - **Tipografía** (= brand book): **Cormorant Garamond** (display), **DM Sans** (cuerpo), **JetBrains Mono** (etiquetas/datos).
 - **Logo**: se usa el **lockup oficial del brand kit** (PNG transparente → WebP en `assets/img/`), no una recreación. Header con `velum-lockup` (ink, 56px; blanco vía filtro sobre la portada en vídeo); footer con `velum-lockup-tagline-blanco` (incluye la tagline "Tu textil. Nuestro compromiso."). Favicon/iconos/OG generados desde el símbolo y lockup oficiales (ver §“Marca” abajo). Originales en `…/PCP Laundry/logos-velum/`.
-- **Mensaje / posicionamiento**: hilo conductor **"No somos una lavandería industrial: somos textile care; gestionamos tu textil para que la ropa deje de ser tu problema"**, presente en hero, manifiesto, intro de servicios y `meta.description` (ES/EN/PT). CTA del recuadro de servicios: "Hablemos de tu operación."
+- **Mensaje / posicionamiento**: hilo conductor **"No somos una lavandería industrial: somos textile care; gestionamos tu textil para que la ropa deje de ser tu problema"**, presente en manifiesto, intro de servicios y `meta.description` (ES/EN/PT). El **hero lidera con el beneficio**: «Tu textil siempre impecable y a punto, sin que tengas que ocuparte de nada…». CTA del recuadro de servicios: "Hablemos de tu operación." Copy revisado por agentes (conversión + confianza B2B): garantía de calidad, transición desde el proveedor actual, control sobre los aliados y reaseguro en CTA.
 - **Color**: neutros cálidos (`--paper`, `--linen`, `--mist`, `--ink`, `--soft`) + **acento índigo `#2E3A4B`** (`--accent`), uso ≤5%. Tokens en 3 capas (primitive → semantic) con canales RGB; cambiar `--c-ink`/`--c-paper`/`--c-indigo` reskinea todo.
 - **Imágenes**: fotografía real **curada por tipo de cliente** (carpetas `Fotos/Hosteleria · Restauracion · Hospitalario` en el OneDrive de PCP) con *grading* índigo unificado. Optimizadas a WebP en `assets/img/photos/`.
 - **Motion**: scroll-reveal, PointerHighlight (subrayado), hover de tarjetas, mapa; todo respeta `prefers-reduced-motion`.
@@ -111,6 +111,12 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - Para regenerarlos desde el kit oficial: `python build/generate-brand-assets.py` (toma los PNG de `…/logos-velum/` y produce footer-tagline, iconos sobre fondo ink y OG 1200×630).
 - El `og:image` es **PNG** (renderiza en redes); el favicon usa el **símbolo oficial** (con `favicon.svg` vectorial como alternativa).
 
+### Cookies, consentimiento y analítica (AEPD/RGPD + Google Consent Mode v2)
+- Banner en la 1ª visita con 3 opciones **equiparables** (Aceptar todas / Rechazar todas / Configurar) + **panel de preferencias** por categorías: Necesarias (siempre activas) y Analíticas (opcional, **off por defecto**). Markup en `cookieBanner()` de `build.mjs`; textos en la clave `cookies` de los JSON (3 idiomas).
+- **Google Consent Mode v2** en `assets/js/velum.js`: por defecto todo `denied`; al consentir analíticas se hace `consent update` y se carga **GA4 una sola vez** (IP anonimizada). Constante **`GA_MEASUREMENT_ID`** (placeholder `G-XXXXXXXXXX`): mientras sea el placeholder, **GA NO se carga**; sustitúyela por el ID real de GA4.
+- Preferencia en `localStorage` (`velum_cookie_consent_v2`), **caducidad 12 meses**. Revocar/cambiar en cualquier momento: enlace «Configuración de cookies» del pie **y** botón «Cambiar mis preferencias de cookies» dentro de la Política de cookies (ambos reabren el panel).
+- **Política de cookies y aviso legal conformes** (RGPD/LOPDGDD/LSSI/guía AEPD 2023), trilingües, con tabla de cookies (incl. GA4 `_ga`/`_ga_<ID>`), transferencias a EE. UU. (Data Privacy Framework + SCC) y gestión del consentimiento.
+
 ---
 
 ## 6. Rendimiento y caché (resuelto)
@@ -124,13 +130,13 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 
 ## 7. Pendientes antes de producción ✅ checklist
 
-- [ ] **Datos legales / de empresa**: rellenar todos los `[CORCHETES]` en `build/content/legal/**` y en el JSON-LD / footer (`[RAZÓN SOCIAL]`, CIF, domicilio, datos registrales, email, teléfono, nº de marca OEPM/EUIPO). **Revisión por asesoría legal** antes de publicar.
+- [~] **Datos legales / de empresa**: ✅ cumplimentados razón social (**PCP LAUNDRY, S.L.**), NIF (**B-21947916**), domicilio (**C/ Don Ramón de la Cruz 17, 3.º dcha., 28001 Madrid**) y registro (**RM de Madrid, Hoja M-855.350**) en JSON-LD, footer y textos legales. **Pendiente**: email y teléfono de contacto, estado/registro de la marca VELUM (OEPM/EUIPO), proveedores RGPD (hosting/correo/analítica/gestoría) en privacidad, fecha de última actualización de los legales, y **revisión por asesoría legal** antes de publicar.
 - [ ] **Backend del formulario**: hoy hace confirmación en cliente. Conectar endpoint real (servicio de formularios / función serverless / `mailto`) en el handler `form.submit` de `assets/js/velum.js`.
-- [ ] **Analítica con consentimiento**: insertar el loader en `loadAnalytics()` de `assets/js/velum.js` (se ejecuta solo tras aceptar cookies).
+- [x] **Analítica con consentimiento**: implementado **Google Consent Mode v2** (todo denegado por defecto) + **GA4 con carga diferida** tras consentimiento analítico (IP anonimizada). **Pendiente**: sustituir `GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'` en `assets/js/velum.js` por el ID real, y el `[ID GA]` de la tabla de la Política de cookies.
 - [x] **Imagen Open Graph**: ~~SVG~~ → ahora **`og-velum.png` 1200×630** (lockup + tagline sobre ink). Nota: las redes cachean el OG; al pasar al dominio final, forzar re-scrape en el *debugger* de cada red.
 - [ ] **Cifras y certificaciones**: sustituir afirmaciones por datos verificados de VELUM; los sellos de Estándares (UNE-EN 14065, ISO 9001/14001/50001, OEKO-TEX) deben corresponder a certificaciones vigentes con alcance nombrado.
 - [ ] **Fotografía definitiva**: reemplazar el stock/placeholders por fotos reales de marca cuando estén disponibles (estructura ya preparada).
-- [ ] **Dominio**: apuntar `velum.es` a Vercel y revisar `DOMAIN`/`hreflang`/canónicos en `build/build.mjs`. Portugal hoy se sirve en `/pt/`.
+- [~] **Dominio**: el código ya usa `https://byvelum.com` (DOMAIN/hreflang/canónicos/OG/legales). **Pendiente**: conectar `byvelum.com` en Vercel (DNS). Portugal se sirve en `/pt/`.
 - [ ] **(Opcional) Rama `main`**: renombrar la rama de producción.
 
 ---
