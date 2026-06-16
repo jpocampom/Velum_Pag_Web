@@ -185,9 +185,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   display: inline-block;
 }
 .logo-lockup { display: inline-flex; align-items: center; }
-.logo-img { height: 34px; width: auto; display: block; }
-.footer-brand .logo-img { height: 42px; }
-.footer-brand .logo-img--tagline { height: 66px; }
+.logo-img { height: 46px; width: auto; display: block; }
+.footer-brand .logo-img { height: 52px; }
+.footer-brand .logo-img--tagline { height: 92px; }
 
 /* =====================================================================
    Header
