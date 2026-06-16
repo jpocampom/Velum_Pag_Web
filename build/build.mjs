@@ -300,7 +300,7 @@ function homeMain(c) {
   </div>
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
-    <div class="hero__text">
+    <div class="hero__text liquid-glass">
       <span class="kicker" data-reveal>${c.hero.eyebrow}</span>
       <h1 class="hero__title" data-chars>${c.hero.headlineHtml}</h1>
       <p class="lede" data-reveal data-reveal-delay="2">${c.hero.sub}</p>

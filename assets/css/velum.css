@@ -295,8 +295,11 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
   display: grid; gap: 22px; align-items: end;
   padding-top: clamp(120px, 18vh, 200px); padding-bottom: clamp(46px, 8vh, 92px); }
 @media (min-width: 900px){ .hero--video .hero__inner { grid-template-columns: minmax(0,1fr) auto; } }
-.hero--video .hero__text { max-width: 52ch; }
-.hero--video .kicker, .hero--video .hero__title, .hero--video .lede { text-shadow: 0 1px 28px rgba(12,11,10,0.42); }
+.hero--video .hero__text { max-width: 54ch; align-self: end;
+  padding: clamp(26px, 3vw, 40px) clamp(26px, 3vw, 44px); border-radius: 22px; }
+.hero--video .hero__text.liquid-glass { background: rgba(15,14,12,0.40);
+  backdrop-filter: blur(12px) saturate(120%); -webkit-backdrop-filter: blur(12px) saturate(120%); }
+.hero--video .kicker, .hero--video .hero__title, .hero--video .lede { text-shadow: 0 1px 18px rgba(10,9,8,0.35); }
 .hero--video .kicker { color: rgba(var(--c-paper-rgb), 0.82); }
 .hero--video .hero__title { font-family: var(--serif); font-weight: 300; font-size: var(--fs-hero); line-height: 1.0; letter-spacing: -0.018em; color: var(--paper); margin: 0; }
 .hero--video .hero__title .serif-em { display: inline; }
