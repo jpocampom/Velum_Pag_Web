@@ -302,7 +302,7 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .hero--video .kicker, .hero--video .hero__title, .hero--video .lede { text-shadow: 0 1px 18px rgba(10,9,8,0.35); }
 .hero--video .kicker { color: rgba(var(--c-paper-rgb), 0.82); }
 .hero--video .hero__title { font-family: var(--serif); font-weight: 300; font-size: var(--fs-hero); line-height: 1.0; letter-spacing: -0.018em; color: var(--paper); margin: 0; }
-.hero--video .hero__title .serif-em { display: inline; }
+.hero--video .hero__title .serif-em { display: inline; color: var(--accent-soft); }
 .hero--video .lede { margin-top: 24px; max-width: 62ch; color: rgba(var(--c-paper-rgb), 0.92); }
 .hero--video .hero-cta { margin-top: 32px; }
 .hero--video .btn--primary { background: var(--paper); color: var(--ink); }
