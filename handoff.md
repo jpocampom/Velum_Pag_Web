@@ -2,7 +2,7 @@
 
 Documento de entrega del sitio web de **VELUM**, plataforma ibérica de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras el rediseño completo (posicionamiento, copy, sistema visual índigo, fotografía real, mapa ibérico, PointerHighlight). Mantén este documento junto al código.
+> Actualizado tras el rediseño completo + logo oficial del brand kit (header/footer con tagline), fotografía curada por sector, mapa con Madrid y Bilbao, resalte en subrayado y OG en PNG. Mantén este documento junto al código.
 
 ---
 
@@ -26,16 +26,18 @@ Sin frameworks. Generador estático propio en Node (cero dependencias) que compi
 
 ```
 build/
-  build.mjs            Generador (rutas, plantillas, JSON-LD, sitemap, highlights, cache-busting)
-  make-icons.mjs       Rasteriza el isotipo a PNG (favicon/app icons)
-  iberia-map.svg       Mapa de la Península Ibérica (geografía real) que el build inyecta inline
+  build.mjs                 Generador (rutas, plantillas, JSON-LD, sitemap, highlights, cache-busting)
+  make-icons.mjs            Rasterizador antiguo del isotipo (recreación geométrica; ya no es la fuente)
+  convert-photos.py         Origen JPG → WebP del sitio (mapeo slug, resize, q82)
+  generate-brand-assets.py  Kit oficial → footer-tagline, favicon/iconos y OG (Pillow)
+  iberia-map.svg            Mapa de la Península Ibérica (geografía real) que el build inyecta inline
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
     legal/{es,en,pt}/*.html       Cuerpos legales por idioma
 assets/
   css/velum.css        Sistema de diseño (tokens 3 capas, componentes, motion)
   js/velum.js          Comportamiento (nav, reveals, PointerHighlight, cookies, scroll)
-  img/                 Isotipo, favicon, OG, iconos
+  img/                 Logo oficial (lockups/símbolo), favicon, OG, iconos
   img/photos/          Fotografía real optimizada a WebP (hero, sectores, galería, gestor, materiales)
 index.html · en/ · pt/ · servicios/ · sectores/ · aviso-legal/ …   (GENERADO — no editar a mano)
 sitemap.xml · robots.txt · site.webmanifest · 404.html · vercel.json
@@ -69,7 +71,7 @@ Flujo de trabajo: editar `build/content/*.json` → `npm run build` → revisar 
 - Tras editar: `npm run build`.
 
 ### Marcador de resalte (PointerHighlight)
-Para resaltar una palabra con la caja animada + cursor, envuélvela con dobles corchetes en el JSON:
+Para resaltar una palabra con el **subrayado animado** + cursor (se traza al entrar en viewport), envuélvela con dobles corchetes en el JSON:
 ```
 "title": "Un modelo [[renting-first]], pensado para no fallar."
 ```
@@ -79,19 +81,25 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 
 ## 5. Sistema de diseño (resumen — ver `DESIGN.md`)
 
-- **Tipografía** (= brand book): **Cormorant Garamond** (display/wordmark), **DM Sans** (cuerpo), **JetBrains Mono** (etiquetas/datos). Logo "velum" en minúsculas y **bold** (Cormorant 700).
+- **Tipografía** (= brand book): **Cormorant Garamond** (display), **DM Sans** (cuerpo), **JetBrains Mono** (etiquetas/datos).
+- **Logo**: se usa el **lockup oficial del brand kit** (PNG transparente → WebP en `assets/img/`), no una recreación. Header con `velum-lockup` (ink); footer con `velum-lockup-tagline-blanco` (incluye la tagline "Tu textil. Nuestro compromiso."). Favicon/iconos/OG generados desde el símbolo y lockup oficiales (ver §“Marca” abajo). Originales en `…/PCP Laundry/logos-velum/`.
 - **Color**: neutros cálidos (`--paper`, `--linen`, `--mist`, `--ink`, `--soft`) + **acento índigo `#2E3A4B`** (`--accent`), uso ≤5%. Tokens en 3 capas (primitive → semantic) con canales RGB; cambiar `--c-ink`/`--c-paper`/`--c-indigo` reskinea todo.
-- **Imágenes**: fotografía real con *grading* índigo unificado (`saturate .9 / contrast 1.03` + velo índigo). Optimizadas a WebP en `assets/img/photos/`.
-- **Motion**: scroll-reveal, PointerHighlight, hover de tarjetas, mapa; todo respeta `prefers-reduced-motion`.
-- **Mapa**: `build/iberia-map.svg` — silueta real de Iberia; **2 plantas propias (Madrid y Bilbao)** en índigo sólido + **red de aliados** en círculos huecos; Portugal en discontinuo "próximamente".
+- **Imágenes**: fotografía real **curada por tipo de cliente** (carpetas `Fotos/Hosteleria · Restauracion · Hospitalario` en el OneDrive de PCP) con *grading* índigo unificado. Optimizadas a WebP en `assets/img/photos/`.
+- **Motion**: scroll-reveal, PointerHighlight (subrayado), hover de tarjetas, mapa; todo respeta `prefers-reduced-motion`.
+- **Mapa**: `build/iberia-map.svg` — silueta real de Iberia; **solo las 2 plantas propias (Madrid y Bilbao)** como puntos índigo (sin puntos de aliados; la red de aliados se explica en el copy). Portugal en discontinuo "próximamente". Posiciones validadas con *hit-test* sobre la silueta para que caigan en tierra firme.
 
 ### Orden del home
-hero → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajamos → sectores → galería → gestor/interlocutor → estándares → cobertura (mapa) → FAQ → contacto.
+hero → banda de confianza → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajamos → sectores → galería → gestor/interlocutor → cobertura (mapa) → FAQ → contacto.
 
 ### Añadir/cambiar fotos
-1. Coloca el original en `assets/img/photos/` o procésalo (resize + WebP, calidad ~80). Las actuales rondan 1100–1800 px de ancho, 24–90 KB.
-2. Referencia el WebP en la plantilla correspondiente de `build.mjs` (hero, sectores, galería, gestor) y añade `alt` en el JSON.
-3. `npm run build`. Las imágenes son sustituibles por fotos definitivas de marca sin tocar el diseño.
+1. Coloca el original en `Fotos/` o `assets/img/photos/`.
+2. Mapea origen→slug en `build/convert-photos.py` y ejecútalo (resize a lado máx. ~1600 px + WebP q82). Los slugs (`sector-*`, `hero-suite`, `galeria-rollos`, `materiales`, `restauracion-2/3`, `salud-2/3`, `gestor`) se referencian en `build.mjs`.
+3. `npm run build`. El cache-busting `?v=hash` es automático: cambiar un WebP con el mismo nombre refresca al instante.
+
+### Marca (logo / iconos / OG)
+- Lockups y símbolo viven en `assets/img/` como WebP/PNG (`velum-lockup`, `velum-lockup-blanco`, `velum-lockup-tagline-blanco`; `favicon.png`, `apple-touch-icon.png`, `icon-192/512.png`, `og-velum.png`).
+- Para regenerarlos desde el kit oficial: `python build/generate-brand-assets.py` (toma los PNG de `…/logos-velum/` y produce footer-tagline, iconos sobre fondo ink y OG 1200×630).
+- El `og:image` es **PNG** (renderiza en redes); el favicon usa el **símbolo oficial** (con `favicon.svg` vectorial como alternativa).
 
 ---
 
@@ -108,7 +116,7 @@ hero → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajam
 - [ ] **Datos legales / de empresa**: rellenar todos los `[CORCHETES]` en `build/content/legal/**` y en el JSON-LD / footer (`[RAZÓN SOCIAL]`, CIF, domicilio, datos registrales, email, teléfono, nº de marca OEPM/EUIPO). **Revisión por asesoría legal** antes de publicar.
 - [ ] **Backend del formulario**: hoy hace confirmación en cliente. Conectar endpoint real (servicio de formularios / función serverless / `mailto`) en el handler `form.submit` de `assets/js/velum.js`.
 - [ ] **Analítica con consentimiento**: insertar el loader en `loadAnalytics()` de `assets/js/velum.js` (se ejecuta solo tras aceptar cookies).
-- [ ] **Imagen Open Graph**: hay `og-velum.svg`; varias redes no renderizan SVG → exportar **PNG 1200×630** y actualizar `og:image`.
+- [x] **Imagen Open Graph**: ~~SVG~~ → ahora **`og-velum.png` 1200×630** (lockup + tagline sobre ink). Nota: las redes cachean el OG; al pasar al dominio final, forzar re-scrape en el *debugger* de cada red.
 - [ ] **Cifras y certificaciones**: sustituir afirmaciones por datos verificados de VELUM; los sellos de Estándares (UNE-EN 14065, ISO 9001/14001/50001, OEKO-TEX) deben corresponder a certificaciones vigentes con alcance nombrado.
 - [ ] **Fotografía definitiva**: reemplazar el stock/placeholders por fotos reales de marca cuando estén disponibles (estructura ya preparada).
 - [ ] **Dominio**: apuntar `velum.es` a Vercel y revisar `DOMAIN`/`hreflang`/canónicos en `build/build.mjs`. Portugal hoy se sirve en `/pt/`.
