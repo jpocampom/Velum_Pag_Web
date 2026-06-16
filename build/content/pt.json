@@ -143,8 +143,7 @@
         "items": [
           "Roupa de cama clínica",
           "Pijamas e batas de doente",
-          "Fardamento sanitário",
-          "Têxtil técnico de serviço"
+          "Fardamento sanitário"
         ]
       }
     ]
@@ -213,7 +212,6 @@
         "list": [
           "Lençóis e capas (percal e cetim, da mistura ao 100% algodão)",
           "Capas de edredão e fronhas",
-          "Almofadas, edredões e enchimentos",
           "Protetores de colchão e de almofada",
           "Colchas, pés de cama e mantas"
         ]
@@ -223,7 +221,7 @@
         "desc": "Toque e absorção de gama alta.",
         "list": [
           "Toalhas: rosto, lavabo, duche, banho e lençol de banho",
-          "Roupões e chinelos",
+          "Roupões",
           "Tapetes de banho",
           "Felpo de 400 a 600 g/m², 100% algodão penteado"
         ]
@@ -234,9 +232,7 @@
         "list": [
           "Roupa de mesa e cobre-mesas",
           "Guardanapos e caminhos de mesa",
-          "Molton e sob-toalha",
-          "Capas de cadeira",
-          "Jacquard e tecidos antinódoas"
+          "Molton e sob-toalha"
         ]
       },
       {
@@ -246,7 +242,6 @@
           "Roupa de cama clínica",
           "Pijamas e batas de doente",
           "Fardamento sanitário",
-          "Têxtil técnico de serviço",
           "Tecidos para lavagem industrial (RABC)"
         ]
       }
@@ -617,10 +612,10 @@
           ],
           "products": [
             "Lençóis de percal e cetim",
-            "Capas de edredão e edredões",
-            "Almofadas e protetores de colchão",
+            "Capas de edredão",
+            "Protetores de colchão",
             "Toalhas de felpo e roupões",
-            "Chinelos e cortinas de banho",
+            "Cortinas de banho",
             "Colchas, pés de cama e mantas"
           ]
         },
@@ -638,7 +633,6 @@
             "Roupa de mesa em cetim, trama e linho",
             "Caminhos de mesa",
             "Guardanapos",
-            "Capas de cadeira",
             "Confeção à medida"
           ]
         },
@@ -649,14 +643,13 @@
           "does": [
             "Processos de cuidado validados com controlo de biocontaminação (RABC)",
             "Rastreabilidade e documentação para auditorias",
-            "Gestão de roupa de doente, fardamento e têxtil técnico",
+            "Gestão de roupa de doente e fardamento",
             "Reposição fiável: os serviços assistenciais não podem ficar sem têxtil"
           ],
           "products": [
             "Roupa de cama clínica",
             "Pijamas e batas de doente",
             "Fardamento sanitário",
-            "Têxtil técnico assistencial",
             "Microfibra e panos técnicos"
           ]
         }

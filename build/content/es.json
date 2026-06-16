@@ -143,8 +143,7 @@
         "items": [
           "Ropa de cama clínica",
           "Pijamas y batas de paciente",
-          "Uniformidad sanitaria",
-          "Textil técnico de planta"
+          "Uniformidad sanitaria"
         ]
       }
     ]
@@ -213,7 +212,6 @@
         "list": [
           "Sábanas y fundas (percal y satén, de mezcla a 100% algodón)",
           "Fundas nórdicas y de almohada",
-          "Almohadas, edredones y rellenos",
           "Protectores de colchón y almohada",
           "Colchas, pies de cama y plaids"
         ]
@@ -223,7 +221,7 @@
         "desc": "Tacto y absorción de gama alta.",
         "list": [
           "Toallas: tocador, lavabo, ducha, baño y sábana de baño",
-          "Albornoces y zapatillas",
+          "Albornoces",
           "Alfombrines de baño",
           "Rizo de 400 a 600 g/m², 100% algodón peinado"
         ]
@@ -234,9 +232,7 @@
         "list": [
           "Mantelería y cubremanteles",
           "Servilletas y caminos de mesa",
-          "Muletón y bajo-mantel",
-          "Fundas de silla",
-          "Jacquard y tejidos antimanchas"
+          "Muletón y bajo-mantel"
         ]
       },
       {
@@ -246,7 +242,6 @@
           "Ropa de cama clínica",
           "Pijamas y batas de paciente",
           "Uniformidad sanitaria",
-          "Textil técnico de planta",
           "Tejidos para lavado industrial (RABC)"
         ]
       }
@@ -617,10 +612,10 @@
           ],
           "products": [
             "Sábanas de percal y satén",
-            "Fundas nórdicas y edredones",
-            "Almohadas y protectores de colchón",
+            "Fundas nórdicas",
+            "Protectores de colchón",
             "Toallas de rizo y albornoces",
-            "Zapatillas y cortinas de baño",
+            "Cortinas de baño",
             "Colchas, pie de cama y mantas"
           ]
         },
@@ -638,7 +633,6 @@
             "Mantelería en satén, trama y lino",
             "Caminos de mesa",
             "Servilletas",
-            "Fundas de silla",
             "Confección a medida"
           ]
         },
@@ -649,14 +643,13 @@
           "does": [
             "Procesos de cuidado validados con control de biocontaminación (RABC)",
             "Trazabilidad y documentación para auditorías",
-            "Gestión de ropa de paciente, uniformidad y textil técnico",
+            "Gestión de ropa de paciente y uniformidad",
             "Reposición fiable: las plantas asistenciales no pueden quedarse sin textil"
           ],
           "products": [
             "Ropa de cama clínica",
             "Pijamas y batas de paciente",
             "Uniformidad sanitaria",
-            "Textil técnico asistencial",
             "Microfibra y bayetas técnicas"
           ]
         }

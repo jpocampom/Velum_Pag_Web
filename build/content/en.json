@@ -143,8 +143,7 @@
         "items": [
           "Clinical bed linen",
           "Patient pyjamas and gowns",
-          "Healthcare uniforms",
-          "Technical ward textiles"
+          "Healthcare uniforms"
         ]
       }
     ]
@@ -213,7 +212,6 @@
         "list": [
           "Sheets and covers (percale and sateen, from blends to 100% cotton)",
           "Duvet covers and pillowcases",
-          "Pillows, duvets and fillings",
           "Mattress and pillow protectors",
           "Bedspreads, bed runners and plaids"
         ]
@@ -223,7 +221,7 @@
         "desc": "High-end feel and absorbency.",
         "list": [
           "Towels: face, hand, shower, bath and bath sheets",
-          "Bathrobes and slippers",
+          "Bathrobes",
           "Bath mats",
           "Terry from 400 to 600 g/m², 100% combed cotton"
         ]
@@ -234,9 +232,7 @@
         "list": [
           "Table linen and table overlays",
           "Napkins and table runners",
-          "Underlay felt and table protectors",
-          "Chair covers",
-          "Jacquard and stain-resistant fabrics"
+          "Underlay felt and table protectors"
         ]
       },
       {
@@ -246,7 +242,6 @@
           "Clinical bed linen",
           "Patient pyjamas and gowns",
           "Healthcare uniforms",
-          "Technical ward textiles",
           "Fabrics for industrial laundering (RABC)"
         ]
       }
@@ -617,10 +612,10 @@
           ],
           "products": [
             "Percale and sateen sheets",
-            "Duvet covers and duvets",
-            "Pillows and mattress protectors",
+            "Duvet covers",
+            "Mattress protectors",
             "Terry towels and bathrobes",
-            "Slippers and shower curtains",
+            "Shower curtains",
             "Bedspreads, bed runners and plaids"
           ]
         },
@@ -638,7 +633,6 @@
             "Table linen in sateen, weave and linen",
             "Table runners",
             "Napkins",
-            "Chair covers",
             "Bespoke making-up"
           ]
         },
@@ -649,14 +643,13 @@
           "does": [
             "Validated care processes with biocontamination control (RABC)",
             "Traceability and documentation for audits",
-            "Management of patient linen, uniforms and technical textiles",
+            "Management of patient linen and uniforms",
             "Reliable replenishment: care wards cannot run out of textiles"
           ],
           "products": [
             "Clinical bed linen",
             "Patient pyjamas and gowns",
             "Healthcare uniforms",
-            "Technical care textiles",
             "Microfibre and technical cloths"
           ]
         }
