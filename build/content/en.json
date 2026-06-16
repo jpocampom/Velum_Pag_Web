@@ -402,7 +402,16 @@
     "text": "We use our own and third-party cookies to ensure the site works and, with your consent, for analytics purposes. You can accept them all, reject them or configure your preferences. More information in our <a href=\"/en/cookie-policy/\">Cookie policy</a>.",
     "accept": "Accept all",
     "reject": "Reject all",
-    "configure": "Configure"
+    "configure": "Configure",
+    "save": "Save preferences",
+    "panelTitle": "Cookie preferences",
+    "panelIntro": "You're in control. Necessary cookies keep the site running and can't be switched off. Analytics cookies are only enabled if you allow them, and you can change your choice whenever you like.",
+    "necessaryTitle": "Necessary",
+    "necessaryTag": "Always on",
+    "necessaryDesc": "Essential for the site to work and to remember your privacy preferences. They don't require consent.",
+    "analyticsTitle": "Analytics",
+    "analyticsDesc": "They help us understand how the site is used, in aggregate and anonymously, via Google Analytics. Enabled only with your permission.",
+    "close": "Close"
   },
   "langSwitch": {
     "es": "Español",

@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="/assets/css/velum.css?v=283ce2ac" />
+  <link rel="stylesheet" href="/assets/css/velum.css?v=df987ccb" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://velum.es/#organization","name":"VELUM","legalName":"PCP LAUNDRY, S.L.","url":"https://velum.es/","logo":"https://velum.es/assets/img/velum-logo.svg","description":"Não somos uma lavandaria industrial: somos textile care. Gerimos a dotação, o cuidado e a reposição do seu têxtil com um único interlocutor, em toda a Espanha, para que a gestão da roupa deixe de ser o seu problema.","email":"[CONTACTO@velum.es]","telephone":"[+34 900 000 000]","address":{"@type":"PostalAddress","streetAddress":"Calle Don Ramón de la Cruz 17, piso 3, puerta derecha","addressLocality":"Madrid","postalCode":"28001","addressCountry":"ES"},"areaServed":["ES","PT"],"sameAs":["https://www.linkedin.com/company/velum"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://velum.es/#website","url":"https://velum.es/","name":"VELUM","inLanguage":"pt-PT","publisher":{"@id":"https://velum.es/#organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Dotar","name":"VELUM","description":"Não lhe vendemos uma lavagem: gerimos todo o seu têxtil para que esteja sempre disponível e a postos. Você define o padrão; nós tratamos de todo o resto, ciclo após ciclo.","provider":{"@id":"https://velum.es/#organization"},"areaServed":{"@type":"Country","name":"España"},"audience":{"@type":"BusinessAudience","name":"Hotéis que se recordam pelo toque., Mesas que vestem a experiência., O rigor que o cuidado exige."}}</script>
@@ -359,6 +359,33 @@
     <button class="btn btn--mini-ghost" type="button" data-consent="configure">Configurar</button>
   </div>
 </aside>
-<script src="/assets/js/velum.js?v=6d22fae6" defer></script>
+<div class="cookie-panel" data-cookie-panel hidden>
+  <div class="cookie-panel__backdrop" data-cookie-close></div>
+  <div class="cookie-panel__box" role="dialog" aria-modal="true" aria-labelledby="ckp-title">
+    <button class="cookie-panel__close" type="button" data-cookie-close aria-label="Fechar">&times;</button>
+    <h2 id="ckp-title">Preferências de cookies</h2>
+    <p class="cookie-panel__intro">Você decide. As cookies necessárias mantêm o site a funcionar e não podem ser desativadas. As analíticas só são ativadas se der a sua autorização, e pode alterar a sua escolha quando quiser.</p>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <span class="cookie-cat__name">Necessárias</span>
+        <span class="cookie-cat__tag">Sempre ativas</span>
+      </div>
+      <p>Imprescindíveis para o funcionamento do site e para recordar as suas preferências de privacidade. Não requerem consentimento.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <label class="cookie-cat__name" for="ck-analytics">Analíticas</label>
+        <span class="cookie-switch"><input type="checkbox" id="ck-analytics" data-cat="analytics" /><span class="cookie-switch__track" aria-hidden="true"></span></span>
+      </div>
+      <p>Ajudam-nos a perceber como o site é utilizado, de forma agregada e anónima, através do Google Analytics. Só são ativadas com a sua autorização.</p>
+    </div>
+    <div class="cookie-panel__actions">
+      <button class="btn btn--primary" type="button" data-consent="save">Guardar preferências</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="reject">Recusar todos</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="all">Aceitar todos</button>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/velum.js?v=6b0a005f" defer></script>
 </body>
 </html>

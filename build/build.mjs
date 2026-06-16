@@ -177,17 +177,45 @@ function footer(c, routeId) {
 }
 
 function cookieBanner(c) {
-  return `<aside class="cookie-banner" role="dialog" aria-live="polite" aria-label="${c.cookies.title}">
+  const k = c.cookies;
+  return `<aside class="cookie-banner" role="dialog" aria-live="polite" aria-label="${k.title}">
   <div>
-    <strong style="display:block;font-family:var(--serif);font-size:19px;margin-bottom:6px;">${c.cookies.title}</strong>
-    <p>${c.cookies.text}</p>
+    <strong style="display:block;font-family:var(--serif);font-size:19px;margin-bottom:6px;">${k.title}</strong>
+    <p>${k.text}</p>
   </div>
   <div class="cookie-actions">
-    <button class="btn btn--primary" type="button" data-consent="all">${c.cookies.accept}</button>
-    <button class="btn btn--mini-ghost" type="button" data-consent="reject">${c.cookies.reject}</button>
-    <button class="btn btn--mini-ghost" type="button" data-consent="configure">${c.cookies.configure}</button>
+    <button class="btn btn--primary" type="button" data-consent="all">${k.accept}</button>
+    <button class="btn btn--mini-ghost" type="button" data-consent="reject">${k.reject}</button>
+    <button class="btn btn--mini-ghost" type="button" data-consent="configure">${k.configure}</button>
   </div>
-</aside>`;
+</aside>
+<div class="cookie-panel" data-cookie-panel hidden>
+  <div class="cookie-panel__backdrop" data-cookie-close></div>
+  <div class="cookie-panel__box" role="dialog" aria-modal="true" aria-labelledby="ckp-title">
+    <button class="cookie-panel__close" type="button" data-cookie-close aria-label="${k.close}">&times;</button>
+    <h2 id="ckp-title">${k.panelTitle}</h2>
+    <p class="cookie-panel__intro">${k.panelIntro}</p>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <span class="cookie-cat__name">${k.necessaryTitle}</span>
+        <span class="cookie-cat__tag">${k.necessaryTag}</span>
+      </div>
+      <p>${k.necessaryDesc}</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <label class="cookie-cat__name" for="ck-analytics">${k.analyticsTitle}</label>
+        <span class="cookie-switch"><input type="checkbox" id="ck-analytics" data-cat="analytics" /><span class="cookie-switch__track" aria-hidden="true"></span></span>
+      </div>
+      <p>${k.analyticsDesc}</p>
+    </div>
+    <div class="cookie-panel__actions">
+      <button class="btn btn--primary" type="button" data-consent="save">${k.save}</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="reject">${k.reject}</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="all">${k.accept}</button>
+    </div>
+  </div>
+</div>`;
 }
 
 /* ---------- <head> ---------- */

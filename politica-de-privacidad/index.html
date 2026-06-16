@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="/assets/css/velum.css?v=283ce2ac" />
+  <link rel="stylesheet" href="/assets/css/velum.css?v=df987ccb" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://velum.es/#organization","name":"VELUM","legalName":"PCP LAUNDRY, S.L.","url":"https://velum.es/","logo":"https://velum.es/assets/img/velum-logo.svg","description":"No somos una lavandería industrial: somos textile care. Gestionamos la dotación, el cuidado y la reposición de tu textil con un único interlocutor, en toda España, para que la gestión de la ropa deje de ser tu problema.","email":"[CONTACTO@velum.es]","telephone":"[+34 900 000 000]","address":{"@type":"PostalAddress","streetAddress":"Calle Don Ramón de la Cruz 17, piso 3, puerta derecha","addressLocality":"Madrid","postalCode":"28001","addressCountry":"ES"},"areaServed":["ES","PT"],"sameAs":["https://www.linkedin.com/company/velum"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://velum.es/#website","url":"https://velum.es/","name":"VELUM","inLanguage":"es-ES","publisher":{"@id":"https://velum.es/#organization"}}</script>
 </head>
@@ -173,6 +173,33 @@
     <button class="btn btn--mini-ghost" type="button" data-consent="configure">Configurar</button>
   </div>
 </aside>
-<script src="/assets/js/velum.js?v=6d22fae6" defer></script>
+<div class="cookie-panel" data-cookie-panel hidden>
+  <div class="cookie-panel__backdrop" data-cookie-close></div>
+  <div class="cookie-panel__box" role="dialog" aria-modal="true" aria-labelledby="ckp-title">
+    <button class="cookie-panel__close" type="button" data-cookie-close aria-label="Cerrar">&times;</button>
+    <h2 id="ckp-title">Preferencias de cookies</h2>
+    <p class="cookie-panel__intro">Tú decides. Las cookies necesarias mantienen el sitio en marcha y no se pueden desactivar. Las analíticas solo se activan si das tu permiso, y puedes cambiar tu elección cuando quieras.</p>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <span class="cookie-cat__name">Necesarias</span>
+        <span class="cookie-cat__tag">Siempre activas</span>
+      </div>
+      <p>Imprescindibles para que el sitio funcione y recuerde tus preferencias de privacidad. No requieren consentimiento.</p>
+    </div>
+    <div class="cookie-cat">
+      <div class="cookie-cat__head">
+        <label class="cookie-cat__name" for="ck-analytics">Analíticas</label>
+        <span class="cookie-switch"><input type="checkbox" id="ck-analytics" data-cat="analytics" /><span class="cookie-switch__track" aria-hidden="true"></span></span>
+      </div>
+      <p>Nos ayudan a entender cómo se usa el sitio, de forma agregada y anónima, mediante Google Analytics. Solo se activan con tu permiso.</p>
+    </div>
+    <div class="cookie-panel__actions">
+      <button class="btn btn--primary" type="button" data-consent="save">Guardar preferencias</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="reject">Rechazar todas</button>
+      <button class="btn btn--mini-ghost" type="button" data-consent="all">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/velum.js?v=6b0a005f" defer></script>
 </body>
 </html>

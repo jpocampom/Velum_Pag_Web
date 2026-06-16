@@ -225,69 +225,208 @@
   }
 
   /* =====================================================================
-     Cookie consent — AEPD/RGPD compliant gating.
-     No non-essential scripts run until the user consents. Choice is
-     stored in localStorage; reject is as easy as accept.
+     Cookie consent — AEPD/RGPD compliant + Google Consent Mode v2.
+     No non-essential scripts (GA4) run until the user consents. Consent
+     defaults to DENIED before any tag loads; reject is as easy as accept.
+     Choice is stored in localStorage and expires after 365 days.
      ===================================================================== */
-  var CONSENT_KEY = "velum_cookie_consent_v1";
+
+  // --- Google Consent Mode v2: deny everything by default, before any load.
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+    functionality_storage: "granted",
+    security_storage: "granted",
+    wait_for_update: 500
+  });
+
+  // ┌──────────────────────────────────────────────────────────────────┐
+  // │ CLIENTE: sustituye este valor por tu ID real de GA4 (formato      │
+  // │ 'G-XXXXXXXXXX'). Mientras valga el placeholder, GA NO se carga     │
+  // │ aunque el usuario consienta.                                       │
+  // └──────────────────────────────────────────────────────────────────┘
+  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+
+  var CONSENT_KEY = "velum_cookie_consent_v2";
+  var CONSENT_MAX_AGE_DAYS = 365;
+  var BANNER_DELAY_MS = 900;
+
   var banner = doc.querySelector(".cookie-banner");
+  var panel = doc.querySelector("[data-cookie-panel]");
+  var panelBox = panel ? panel.querySelector(".cookie-panel__box") : null;
+  var analyticsToggle = doc.getElementById("ck-analytics");
+  var gaLoaded = false;
+  var lastFocus = null;
+
+  function gaIdIsReal() {
+    return /^G-[A-Z0-9]{6,}$/.test(GA_MEASUREMENT_ID) &&
+           GA_MEASUREMENT_ID !== "G-XXXXXXXXXX";
+  }
 
   function readConsent() {
-    try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); }
+    var raw;
+    try { raw = JSON.parse(localStorage.getItem(CONSENT_KEY) || "null"); }
     catch (e) { return null; }
+    if (!raw || raw.v !== 2 || typeof raw.analytics !== "boolean" || !raw.ts) {
+      return null;
+    }
+    // Expire stale consent → ask again.
+    var ageMs = Date.now() - new Date(raw.ts).getTime();
+    if (isNaN(ageMs) || ageMs > CONSENT_MAX_AGE_DAYS * 864e5) return null;
+    return raw;
   }
-  function writeConsent(value) {
+
+  function writeConsent(analytics) {
     try {
-      localStorage.setItem(
-        CONSENT_KEY,
-        JSON.stringify({ v: value, ts: new Date().toISOString() })
-      );
+      localStorage.setItem(CONSENT_KEY, JSON.stringify({
+        analytics: !!analytics,
+        ts: new Date().toISOString(),
+        v: 2
+      }));
     } catch (e) {}
   }
-  function hideBanner() { if (banner) banner.removeAttribute("data-show"); }
-  function showBanner() { if (banner) banner.setAttribute("data-show", ""); }
 
-  function loadAnalytics() {
-    // Placeholder: the integrator drops the consented analytics loader
-    // here. Example (commented):
-    // var s = doc.createElement("script");
-    // s.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
-    // s.async = true; doc.head.appendChild(s);
-    root.setAttribute("data-analytics", "granted");
+  function loadGA() {
+    if (gaLoaded || !gaIdIsReal()) return;
+    gaLoaded = true;
+    var s = doc.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" +
+            encodeURIComponent(GA_MEASUREMENT_ID);
+    doc.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID, { anonymize_ip: true });
   }
 
-  function applyConsent(value) {
-    if (value === "all") loadAnalytics();
-  }
-
-  if (banner) {
-    var existing = readConsent();
-    if (existing && existing.v) {
-      applyConsent(existing.v);
+  function applyConsent(analytics) {
+    if (analytics) {
+      gtag("consent", "update", { analytics_storage: "granted" });
+      root.setAttribute("data-analytics", "granted");
+      loadGA();
     } else {
-      // Defer a touch so it animates in after first paint.
-      window.setTimeout(showBanner, 900);
+      gtag("consent", "update", { analytics_storage: "denied" });
+      root.setAttribute("data-analytics", "denied");
     }
+  }
+
+  /* ---------- Banner show/hide ---------- */
+  function showBanner() {
+    if (!banner) return;
+    banner.setAttribute("data-show", "");
+    banner.setAttribute("aria-hidden", "false");
+  }
+  function hideBanner() {
+    if (!banner) return;
+    banner.removeAttribute("data-show");
+    banner.setAttribute("aria-hidden", "true");
+  }
+
+  /* ---------- Preferences panel open/close ---------- */
+  function openPanel() {
+    if (!panel) return;
+    lastFocus = doc.activeElement;
+    // Prefill the toggle with the saved preference (or false).
+    var saved = readConsent();
+    if (analyticsToggle) analyticsToggle.checked = !!(saved && saved.analytics);
+    panel.removeAttribute("hidden");
+    panel.classList.add("is-open");
+    (panelBox || panel).setAttribute("tabindex", "-1");
+    (panelBox || panel).focus();
+  }
+  function closePanel() {
+    if (!panel) return;
+    panel.classList.remove("is-open");
+    panel.setAttribute("hidden", "");
+    if (lastFocus && typeof lastFocus.focus === "function") {
+      lastFocus.focus();
+    }
+    lastFocus = null;
+  }
+
+  // Commit a choice from any control: persist, apply, close UI.
+  function commitConsent(analytics) {
+    writeConsent(analytics);
+    applyConsent(analytics);
+    closePanel();
+    hideBanner();
+  }
+
+  /* ---------- Initial load ---------- */
+  var existing = readConsent();
+  if (existing) {
+    applyConsent(existing.analytics); // silent
+  } else {
+    // No valid consent → deny stays in effect; surface the banner after paint.
+    window.setTimeout(showBanner, BANNER_DELAY_MS);
+  }
+
+  /* ---------- Banner buttons ---------- */
+  if (banner) {
     banner.querySelectorAll("[data-consent]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        var v = btn.getAttribute("data-consent"); // 'all' | 'reject' | 'configure'
-        if (v === "configure") {
-          // Minimal: treat configure as "necessary only" for the static
-          // build; a full CMP panel is the integrator's next step.
-          v = "reject";
+        var v = btn.getAttribute("data-consent"); // 'all'|'reject'|'configure'
+        if (v === "all") {
+          commitConsent(true);
+        } else if (v === "reject") {
+          commitConsent(false);
+        } else if (v === "configure") {
+          openPanel(); // openPanel syncs the toggle with current state
         }
-        writeConsent(v);
-        applyConsent(v);
-        hideBanner();
       });
     });
   }
 
-  // Re-open consent from a footer "cookie settings" link
+  /* ---------- Panel buttons ---------- */
+  if (panel) {
+    panel.querySelectorAll("[data-consent]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-consent"); // 'save'|'reject'|'all'
+        var analytics;
+        if (v === "save") {
+          analytics = !!(analyticsToggle && analyticsToggle.checked);
+        } else if (v === "all") {
+          analytics = true;
+          if (analyticsToggle) analyticsToggle.checked = true;
+        } else { // reject
+          analytics = false;
+          if (analyticsToggle) analyticsToggle.checked = false;
+        }
+        commitConsent(analytics);
+      });
+    });
+
+    // Close controls (× button + backdrop): close panel ONLY. If there is no
+    // prior consent, the banner stays so the user can still choose.
+    panel.querySelectorAll("[data-cookie-close]").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        closePanel();
+        if (!readConsent() && banner && !banner.hasAttribute("data-show")) {
+          showBanner();
+        }
+      });
+    });
+
+    // Escape closes the panel only.
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && panel.classList.contains("is-open")) {
+        closePanel();
+        if (!readConsent() && banner && !banner.hasAttribute("data-show")) {
+          showBanner();
+        }
+      }
+    });
+  }
+
+  /* ---------- Footer "cookie settings" link → reopen panel ---------- */
   doc.querySelectorAll("[data-cookie-settings]").forEach(function (el) {
     el.addEventListener("click", function (e) {
       e.preventDefault();
-      showBanner();
+      openPanel();
     });
   });
 

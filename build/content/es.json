@@ -402,7 +402,16 @@
     "text": "Usamos cookies propias y de terceros para garantizar el funcionamiento del sitio y, con tu consentimiento, para fines analíticos. Puedes aceptarlas todas, rechazarlas o configurar tus preferencias. Más información en nuestra <a href=\"/politica-de-cookies/\">Política de cookies</a>.",
     "accept": "Aceptar todas",
     "reject": "Rechazar todas",
-    "configure": "Configurar"
+    "configure": "Configurar",
+    "save": "Guardar preferencias",
+    "panelTitle": "Preferencias de cookies",
+    "panelIntro": "Tú decides. Las cookies necesarias mantienen el sitio en marcha y no se pueden desactivar. Las analíticas solo se activan si das tu permiso, y puedes cambiar tu elección cuando quieras.",
+    "necessaryTitle": "Necesarias",
+    "necessaryTag": "Siempre activas",
+    "necessaryDesc": "Imprescindibles para que el sitio funcione y recuerde tus preferencias de privacidad. No requieren consentimiento.",
+    "analyticsTitle": "Analíticas",
+    "analyticsDesc": "Nos ayudan a entender cómo se usa el sitio, de forma agregada y anónima, mediante Google Analytics. Solo se activan con tu permiso.",
+    "close": "Cerrar"
   },
   "langSwitch": {
     "es": "Español",
