@@ -184,10 +184,9 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
   line-height: 1;
   display: inline-block;
 }
-.logo-lockup { display: inline-flex; align-items: center; gap: 14px; }
-.logo-lockup .mark { width: 34px; height: 34px; flex: none; color: var(--ink); }
-.logo-lockup .wm { font-size: 25px; }
-.scrolled .logo-lockup .mark, .header-light .logo-lockup .mark { color: var(--ink); }
+.logo-lockup { display: inline-flex; align-items: center; }
+.logo-img { height: 34px; width: auto; display: block; }
+.footer-brand .logo-img { height: 42px; }
 
 /* =====================================================================
    Header

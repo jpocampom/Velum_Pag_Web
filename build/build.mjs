@@ -44,6 +44,8 @@ const CSS_V = assetVer("assets/css/velum.css");
 const JS_V = assetVer("assets/js/velum.js");
 /* Versioned photo URL: ?v=<hash> so swapping a photo (same filename) busts cache instantly. */
 const photo = (slug) => `/assets/img/photos/${slug}.webp?v=${assetVer("assets/img/photos/" + slug + ".webp")}`;
+/* Versioned logo URL (official VELUM lockup, transparent WebP). */
+const logo = (slug) => `/assets/img/${slug}.webp?v=${assetVer("assets/img/" + slug + ".webp")}`;
 
 /* Pointer highlight: [[word]] → animated underline + cursor (drawn on scroll-in). */
 function phMarkup(word) {
@@ -125,8 +127,7 @@ function header(c, routeId) {
   return `<header class="site-header">
   <div class="wrap">
     <a class="logo-lockup" href="${homeUrl}" aria-label="VELUM — ${c.backHome}">
-      ${weaveSVG({ cls: "mark", role: "img", label: "VELUM" })}
-      <span class="wm">VELUM</span>
+      <img class="logo-img" src="${logo("velum-lockup")}" width="466" height="160" alt="VELUM" />
     </a>
     <nav class="nav" id="primary-nav" aria-label="Principal">
       ${navItems}
@@ -153,7 +154,7 @@ function footer(c, routeId) {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo-lockup" href="${ROUTES.home[c.lang]}" aria-label="VELUM">${weaveSVG({ cls: "mark", stroke: "var(--paper)", role: "img", label: "VELUM" })}<span class="wm">VELUM</span></a>
+        <a class="logo-lockup" href="${ROUTES.home[c.lang]}" aria-label="VELUM"><img class="logo-img" src="${logo("velum-lockup-blanco")}" width="466" height="160" alt="VELUM" /></a>
         <p>${c.footer.descriptor}</p>
       </div>
       ${groups}
