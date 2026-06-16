@@ -14,7 +14,7 @@ const ROOT = resolve(__dirname, "..");
 const CONTENT = resolve(__dirname, "content");
 
 /* ---------- Site config ---------- */
-const DOMAIN = "https://velum.es";
+const DOMAIN = "https://byvelum.com";
 const LANGS = ["es", "en", "pt"];
 const HREFLANG = { es: "es-ES", en: "en", pt: "pt-PT" };
 const OGLOCALE = { es: "es_ES", en: "en_GB", pt: "pt_PT" };
@@ -223,7 +223,7 @@ function jsonLd(c, routeId) {
   const org = {
     "@context": "https://schema.org", "@type": "Organization", "@id": DOMAIN + "/#organization",
     name: "VELUM", legalName: "PCP LAUNDRY, S.L.", url: DOMAIN + "/", logo: DOMAIN + "/assets/img/velum-logo.svg",
-    description: c.meta.description, email: "[CONTACTO@velum.es]", telephone: "[+34 900 000 000]",
+    description: c.meta.description, email: "[CONTACTO@byvelum.com]", telephone: "[+34 900 000 000]",
     address: { "@type": "PostalAddress", streetAddress: "Calle Don Ramón de la Cruz 17, piso 3, puerta derecha", addressLocality: "Madrid", postalCode: "28001", addressCountry: "ES" },
     areaServed: ["ES", "PT"], sameAs: ["https://www.linkedin.com/company/velum"]
   };
