@@ -26,6 +26,10 @@
       {
         "label": "Sectors",
         "href": "#sectores"
+      },
+      {
+        "label": "Products",
+        "href": "#productos"
       }
     ],
     "cta": "Request a proposal",
@@ -197,6 +201,57 @@
         "body": "Textiles arrive ready, in their place and on time, cycle after cycle. No last-minute rushes and no surprises to deal with."
       }
     ]
+  },
+  "products": {
+    "kicker": "Our products",
+    "title": "The full range, tailored to your brand.",
+    "intro": "We adapt entirely to your needs. We work with +4 approved first-tier partners covering the full textile range, with the quality, sizes and finishes that each operation demands.",
+    "items": [
+      {
+        "tag": "Bedroom",
+        "desc": "Rest, cared for down to the last detail.",
+        "list": [
+          "Sheets and covers (percale and sateen, from blends to 100% cotton)",
+          "Duvet covers and pillowcases",
+          "Pillows, duvets and fillings",
+          "Mattress and pillow protectors",
+          "Bedspreads, bed runners and plaids"
+        ]
+      },
+      {
+        "tag": "Bathroom",
+        "desc": "High-end feel and absorbency.",
+        "list": [
+          "Towels: face, hand, shower, bath and bath sheets",
+          "Bathrobes and slippers",
+          "Bath mats",
+          "Terry from 400 to 600 g/m², 100% combed cotton"
+        ]
+      },
+      {
+        "tag": "Food service",
+        "desc": "The table, dressed to your standard.",
+        "list": [
+          "Table linen and table overlays",
+          "Napkins and table runners",
+          "Underlay felt and table protectors",
+          "Chair covers",
+          "Jacquard and stain-resistant fabrics"
+        ]
+      },
+      {
+        "tag": "Healthcare",
+        "desc": "Hygiene and durability, with no compromises.",
+        "list": [
+          "Clinical bed linen",
+          "Patient pyjamas and gowns",
+          "Healthcare uniforms",
+          "Technical ward textiles",
+          "Fabrics for industrial laundering (RABC)"
+        ]
+      }
+    ],
+    "footnote": "Compositions and sizes by category —from the 50/50 cotton-polyester blend to 100% cotton—, always tailored to your brand and your standard."
   },
   "manager": {
     "kicker": "One single voice",

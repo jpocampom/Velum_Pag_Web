@@ -556,7 +556,24 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, coverage, faq, contact].join("\n");
+  // Nuestros productos — gama organizada por familia
+  const prodCards = c.products.items.map((p) =>
+    `<article class="product-card" data-reveal>
+      <span class="product-tag">${p.tag}</span>
+      <h3>${p.desc}</h3>
+      <ul class="product-list">${p.list.map((x) => `<li>${x}</li>`).join("")}</ul>
+    </article>`).join("");
+  const products = `<section class="section section--linen" id="productos">
+  <div class="wrap">
+    <span class="kicker" data-reveal>${c.products.kicker}</span>
+    <h2 class="h-section" data-reveal style="margin:14px 0 16px;">${c.products.title}</h2>
+    <p class="lede" data-reveal style="max-width:64ch;">${c.products.intro}</p>
+    <div class="products-grid">${prodCards}</div>
+    <p class="product-foot" data-reveal>${c.products.footnote}</p>
+  </div>
+</section>`;
+
+  return [hero, trust, manifesto, whySection, services, process, sectors, products, gallery, manager, coverage, faq, contact].join("\n");
 }
 
 /* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.

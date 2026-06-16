@@ -26,6 +26,10 @@
       {
         "label": "Sectores",
         "href": "#sectores"
+      },
+      {
+        "label": "Productos",
+        "href": "#productos"
       }
     ],
     "cta": "Solicitar propuesta",
@@ -197,6 +201,57 @@
         "body": "El textil llega a punto, en su sitio y a tiempo, ciclo tras ciclo. Sin urgencias de última hora ni sorpresas que resolver."
       }
     ]
+  },
+  "products": {
+    "kicker": "Nuestros productos",
+    "title": "Toda la gama, a la medida de tu marca.",
+    "intro": "Nos adaptamos al 100% a tus necesidades. Trabajamos con +4 proveedores homologados de primer nivel que cubren toda la gama textil, con la calidad, las medidas y los acabados que cada operación exige.",
+    "items": [
+      {
+        "tag": "Habitación",
+        "desc": "El descanso, cuidado al detalle.",
+        "list": [
+          "Sábanas y fundas (percal y satén, de mezcla a 100% algodón)",
+          "Fundas nórdicas y de almohada",
+          "Almohadas, edredones y rellenos",
+          "Protectores de colchón y almohada",
+          "Colchas, pies de cama y plaids"
+        ]
+      },
+      {
+        "tag": "Baño",
+        "desc": "Tacto y absorción de gama alta.",
+        "list": [
+          "Toallas: tocador, lavabo, ducha, baño y sábana de baño",
+          "Albornoces y zapatillas",
+          "Alfombrines de baño",
+          "Rizo de 400 a 600 g/m², 100% algodón peinado"
+        ]
+      },
+      {
+        "tag": "Restauración",
+        "desc": "La mesa, vestida a tu altura.",
+        "list": [
+          "Mantelería y cubremanteles",
+          "Servilletas y caminos de mesa",
+          "Muletón y bajo-mantel",
+          "Fundas de silla",
+          "Jacquard y tejidos antimanchas"
+        ]
+      },
+      {
+        "tag": "Salud",
+        "desc": "Higiene y resistencia, sin concesiones.",
+        "list": [
+          "Ropa de cama clínica",
+          "Pijamas y batas de paciente",
+          "Uniformidad sanitaria",
+          "Textil técnico de planta",
+          "Tejidos para lavado industrial (RABC)"
+        ]
+      }
+    ],
+    "footnote": "Composiciones y medidas por categoría —de la mezcla 50/50 algodón-poliéster al 100% algodón—, siempre adaptadas a tu marca y tu estándar."
   },
   "manager": {
     "kicker": "Una sola voz",

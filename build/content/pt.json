@@ -26,6 +26,10 @@
       {
         "label": "Setores",
         "href": "#sectores"
+      },
+      {
+        "label": "Produtos",
+        "href": "#productos"
       }
     ],
     "cta": "Pedir proposta",
@@ -197,6 +201,57 @@
         "body": "O têxtil chega a postos, no seu lugar e a horas, ciclo após ciclo. Sem urgências de última hora nem surpresas para resolver."
       }
     ]
+  },
+  "products": {
+    "kicker": "Os nossos produtos",
+    "title": "Toda a gama, à medida da sua marca.",
+    "intro": "Adaptamo-nos a 100% às suas necessidades. Trabalhamos com +4 fornecedores homologados de primeiro nível que cobrem toda a gama têxtil, com a qualidade, as medidas e os acabamentos que cada operação exige.",
+    "items": [
+      {
+        "tag": "Quarto",
+        "desc": "O descanso, cuidado ao pormenor.",
+        "list": [
+          "Lençóis e capas (percal e cetim, da mistura ao 100% algodão)",
+          "Capas de edredão e fronhas",
+          "Almofadas, edredões e enchimentos",
+          "Protetores de colchão e de almofada",
+          "Colchas, pés de cama e mantas"
+        ]
+      },
+      {
+        "tag": "Banho",
+        "desc": "Toque e absorção de gama alta.",
+        "list": [
+          "Toalhas: rosto, lavabo, duche, banho e lençol de banho",
+          "Roupões e chinelos",
+          "Tapetes de banho",
+          "Felpo de 400 a 600 g/m², 100% algodão penteado"
+        ]
+      },
+      {
+        "tag": "Restauração",
+        "desc": "A mesa, vestida à sua altura.",
+        "list": [
+          "Roupa de mesa e cobre-mesas",
+          "Guardanapos e caminhos de mesa",
+          "Molton e sob-toalha",
+          "Capas de cadeira",
+          "Jacquard e tecidos antinódoas"
+        ]
+      },
+      {
+        "tag": "Saúde",
+        "desc": "Higiene e resistência, sem concessões.",
+        "list": [
+          "Roupa de cama clínica",
+          "Pijamas e batas de doente",
+          "Fardamento sanitário",
+          "Têxtil técnico de serviço",
+          "Tecidos para lavagem industrial (RABC)"
+        ]
+      }
+    ],
+    "footnote": "Composições e medidas por categoria —da mistura 50/50 algodão-poliéster ao 100% algodão—, sempre adaptadas à sua marca e ao seu padrão."
   },
   "manager": {
     "kicker": "Uma só voz",

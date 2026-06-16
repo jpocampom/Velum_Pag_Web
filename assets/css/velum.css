@@ -527,6 +527,16 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .swatch--plant { background: var(--accent); border-radius: 50%; }
 .swatch--ally { background: var(--paper); border: 1.6px solid var(--accent); border-radius: 50%; }
 
+/* ---------- Nuestros productos ---------- */
+.products-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: clamp(28px, 4vw, 48px); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.product-card { background: var(--paper); padding: clamp(26px, 2.6vw, 40px); display: flex; flex-direction: column; gap: 12px; }
+.product-tag { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-deep); }
+.product-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 1.7vw, 26px); line-height: 1.08; }
+.product-list { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-direction: column; gap: 9px; }
+.product-list li { position: relative; padding-left: 18px; font-size: 15px; color: rgba(var(--c-ink-rgb),0.78); line-height: 1.45; }
+.product-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 9px; height: 1px; background: var(--sage-deep); }
+.product-foot { margin-top: clamp(20px, 2.4vw, 32px); font-size: 14px; color: var(--soft); max-width: 72ch; }
+
 /* =====================================================================
    Standards — sober credentials band (light surface)
    ===================================================================== */
