@@ -154,7 +154,7 @@ function footer(c, routeId) {
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <a class="logo-lockup" href="${ROUTES.home[c.lang]}" aria-label="VELUM"><img class="logo-img" src="${logo("velum-lockup-blanco")}" width="466" height="160" alt="VELUM" /></a>
+        <a class="logo-lockup" href="${ROUTES.home[c.lang]}" aria-label="VELUM — Tu textil. Nuestro compromiso."><img class="logo-img logo-img--tagline" src="${logo("velum-lockup-tagline-blanco")}" width="531" height="240" alt="VELUM — Tu textil. Nuestro compromiso." /></a>
         <p>${c.footer.descriptor}</p>
       </div>
       ${groups}
@@ -264,15 +264,17 @@ function head(c, routeId, title, desc) {
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${canonical}" />
-  <meta property="og:image" content="${DOMAIN}/assets/img/og-velum.svg" />
+  <meta property="og:image" content="${DOMAIN}/assets/img/og-velum.png?v=${assetVer("assets/img/og-velum.png")}" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${desc}" />
-  <meta name="twitter:image" content="${DOMAIN}/assets/img/og-velum.svg" />
+  <meta name="twitter:image" content="${DOMAIN}/assets/img/og-velum.png?v=${assetVer("assets/img/og-velum.png")}" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon.png?v=${assetVer("assets/img/favicon.png")}" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=${assetVer("assets/img/apple-touch-icon.png")}" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

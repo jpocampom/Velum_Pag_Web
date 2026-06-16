@@ -187,6 +187,7 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 .logo-lockup { display: inline-flex; align-items: center; }
 .logo-img { height: 34px; width: auto; display: block; }
 .footer-brand .logo-img { height: 42px; }
+.footer-brand .logo-img--tagline { height: 66px; }
 
 /* =====================================================================
    Header
