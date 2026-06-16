@@ -32,7 +32,7 @@
     "menu": "Menú"
   },
   "hero": {
-    "eyebrow": "Textile care premium · Península Ibérica",
+    "eyebrow": "Textile care premium · España",
     "headlineHtml": "Textile care premium<br>para quienes <em class=\"serif-em\">no pueden fallar.</em>",
     "sub": "Tu textil siempre impecable y a punto, sin que tengas que ocuparte de nada. Tanto si gestionas un hotel como un restaurante o un hospital, lo asumimos todo —dotación, cuidado y reposición— con un único interlocutor, de principio a fin.",
     "ctaPrimary": "Pedir presupuesto",
@@ -316,7 +316,7 @@
     "success": "Gracias. Un interlocutor de VELUM se pondrá en contacto contigo en menos de 24 horas laborables."
   },
   "footer": {
-    "descriptor": "VELUM es la plataforma ibérica de textile care premium para hostelería, restauración y salud. Dotación, cuidado, reposición y control, bajo un único interlocutor.",
+    "descriptor": "VELUM es la plataforma española de textile care premium para hostelería, restauración y salud. Dotación, cuidado, reposición y control, bajo un único interlocutor.",
     "groups": [
       {
         "title": "Servicios",
@@ -381,7 +381,7 @@
     "legalTitle": "Legal",
     "cookieSettings": "Configuración de cookies",
     "copyright": "VELUM. Todos los derechos reservados.",
-    "trademark": "VELUM™ es una marca de [RAZÓN SOCIAL]."
+    "trademark": "VELUM™ es una marca de PCP LAUNDRY, S.L."
   },
   "legalLinks": {
     "aviso": {

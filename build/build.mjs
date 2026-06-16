@@ -194,9 +194,9 @@ function cookieBanner(c) {
 function jsonLd(c, routeId) {
   const org = {
     "@context": "https://schema.org", "@type": "Organization", "@id": DOMAIN + "/#organization",
-    name: "VELUM", url: DOMAIN + "/", logo: DOMAIN + "/assets/img/velum-logo.svg",
+    name: "VELUM", legalName: "PCP LAUNDRY, S.L.", url: DOMAIN + "/", logo: DOMAIN + "/assets/img/velum-logo.svg",
     description: c.meta.description, email: "[CONTACTO@velum.es]", telephone: "[+34 900 000 000]",
-    address: { "@type": "PostalAddress", streetAddress: "[CALLE Y NÚMERO]", addressLocality: "[CIUDAD]", postalCode: "[CP]", addressCountry: "ES" },
+    address: { "@type": "PostalAddress", streetAddress: "Calle Don Ramón de la Cruz 17, piso 3, puerta derecha", addressLocality: "Madrid", postalCode: "28001", addressCountry: "ES" },
     areaServed: ["ES", "PT"], sameAs: ["https://www.linkedin.com/company/velum"]
   };
   const website = {
