@@ -2,7 +2,7 @@
 
 Documento de entrega del sitio web de **VELUM**, plataforma ibérica de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras el rediseño completo + logo oficial del brand kit (header/footer con tagline), fotografía curada por sector, mapa con Madrid y Bilbao, resalte en subrayado y OG en PNG. Mantén este documento junto al código.
+> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado, posicionamiento **"no somos una lavandería industrial: somos textile care"**, logo oficial del brand kit (header 56px / footer con tagline), fotografía curada por sector, mapa con Madrid y Bilbao, resalte en subrayado y OG en PNG. Mantén este documento junto al código.
 
 ---
 
@@ -30,15 +30,17 @@ build/
   make-icons.mjs            Rasterizador antiguo del isotipo (recreación geométrica; ya no es la fuente)
   convert-photos.py         Origen JPG → WebP del sitio (mapeo slug, resize, q82)
   generate-brand-assets.py  Kit oficial → footer-tagline, favicon/iconos y OG (Pillow)
+  transcode-videos.py       Vídeos 4K → MP4 1080p web (crop 16:9, 8s, sin audio) + poster
   iberia-map.svg            Mapa de la Península Ibérica (geografía real) que el build inyecta inline
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
     legal/{es,en,pt}/*.html       Cuerpos legales por idioma
 assets/
   css/velum.css        Sistema de diseño (tokens 3 capas, componentes, motion)
-  js/velum.js          Comportamiento (nav, reveals, PointerHighlight, cookies, scroll)
+  js/velum.js          Comportamiento (nav, reveals, PointerHighlight, portada-vídeo, cookies, scroll)
   img/                 Logo oficial (lockups/símbolo), favicon, OG, iconos
-  img/photos/          Fotografía real optimizada a WebP (hero, sectores, galería, gestor, materiales)
+  img/photos/          Fotografía real optimizada a WebP (sectores, galería, gestor, materiales)
+  video/               Portada: velum-hero-1..5.mp4 (1080p, ~6.4 MB total) + hero-poster.webp
 index.html · en/ · pt/ · servicios/ · sectores/ · aviso-legal/ …   (GENERADO — no editar a mano)
 sitemap.xml · robots.txt · site.webmanifest · 404.html · vercel.json
 README.md · handoff.md · PRODUCT.md · DESIGN.md
@@ -82,14 +84,22 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 ## 5. Sistema de diseño (resumen — ver `DESIGN.md`)
 
 - **Tipografía** (= brand book): **Cormorant Garamond** (display), **DM Sans** (cuerpo), **JetBrains Mono** (etiquetas/datos).
-- **Logo**: se usa el **lockup oficial del brand kit** (PNG transparente → WebP en `assets/img/`), no una recreación. Header con `velum-lockup` (ink); footer con `velum-lockup-tagline-blanco` (incluye la tagline "Tu textil. Nuestro compromiso."). Favicon/iconos/OG generados desde el símbolo y lockup oficiales (ver §“Marca” abajo). Originales en `…/PCP Laundry/logos-velum/`.
+- **Logo**: se usa el **lockup oficial del brand kit** (PNG transparente → WebP en `assets/img/`), no una recreación. Header con `velum-lockup` (ink, 56px; blanco vía filtro sobre la portada en vídeo); footer con `velum-lockup-tagline-blanco` (incluye la tagline "Tu textil. Nuestro compromiso."). Favicon/iconos/OG generados desde el símbolo y lockup oficiales (ver §“Marca” abajo). Originales en `…/PCP Laundry/logos-velum/`.
+- **Mensaje / posicionamiento**: hilo conductor **"No somos una lavandería industrial: somos textile care; gestionamos tu textil para que la ropa deje de ser tu problema"**, presente en hero, manifiesto, intro de servicios y `meta.description` (ES/EN/PT). CTA del recuadro de servicios: "Hablemos de tu operación."
 - **Color**: neutros cálidos (`--paper`, `--linen`, `--mist`, `--ink`, `--soft`) + **acento índigo `#2E3A4B`** (`--accent`), uso ≤5%. Tokens en 3 capas (primitive → semantic) con canales RGB; cambiar `--c-ink`/`--c-paper`/`--c-indigo` reskinea todo.
 - **Imágenes**: fotografía real **curada por tipo de cliente** (carpetas `Fotos/Hosteleria · Restauracion · Hospitalario` en el OneDrive de PCP) con *grading* índigo unificado. Optimizadas a WebP en `assets/img/photos/`.
 - **Motion**: scroll-reveal, PointerHighlight (subrayado), hover de tarjetas, mapa; todo respeta `prefers-reduced-motion`.
 - **Mapa**: `build/iberia-map.svg` — silueta real de Iberia; **solo las 2 plantas propias (Madrid y Bilbao)** como puntos índigo (sin puntos de aliados; la red de aliados se explica en el copy). Portugal en discontinuo "próximamente". Posiciones validadas con *hit-test* sobre la silueta para que caigan en tierra firme.
 
 ### Orden del home
-hero → banda de confianza → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajamos → sectores → galería → gestor/interlocutor → cobertura (mapa) → FAQ → contacto.
+**portada en vídeo** → banda de confianza → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajamos → sectores → galería → gestor/interlocutor → cobertura (mapa) → FAQ → contacto.
+
+### Portada en vídeo (hero)
+- El hero es a pantalla completa (`.hero--video`): **5 vídeos** (`assets/video/velum-hero-1..5.mp4`) apilados que hacen **crossfade** cada 6,5 s mediante un único temporizador en `velum.js` (sincronizado, fundido de 1,4 s). Sólo el primero precarga con `poster`; el resto se cargan al activarse.
+- El **slogan** (titular + sub) va encima sobre un **panel acristalado** (`liquid-glass`, opacidad ~0.26 + blur) para legibilidad sobre cualquier fotograma; el énfasis "no pueden fallar" usa índigo claro `--accent-soft`.
+- El **header flota en claro** sobre el vídeo (logo en blanco vía filtro, nav clara) y vuelve a oscuro al hacer scroll (clase `over-hero` en `velum.js`).
+- Respeta `prefers-reduced-motion`: sin rotación ni animación de entrada.
+- **Cambiar/añadir vídeos**: coloca los originales y edita la lista `ORDER` en `build/transcode-videos.py`; ejecútalo (requiere `pip install imageio-ffmpeg`, trae ffmpeg). Genera `velum-hero-N.mp4` 1080p + `hero-poster.webp`. Luego `npm run build` (cache-bust `?v=` automático). El nº de clips se detecta solo en el build (array `[1..5]` en `build.mjs`, ajústalo si cambias la cantidad).
 
 ### Añadir/cambiar fotos
 1. Coloca el original en `Fotos/` o `assets/img/photos/`.
@@ -106,8 +116,9 @@ hero → banda de confianza → manifiesto (Acerca) → por qué VELUM → servi
 ## 6. Rendimiento y caché (resuelto)
 
 - **Cache-busting por hash de contenido**: `velum.css`/`velum.js` se enlazan con `?v=<sha1>`. Cada cambio genera una URL nueva → los navegadores cargan la versión fresca al instante (evita assets "congelados").
-- `vercel.json`: CSS/JS `immutable` (van versionados); `/assets/img` con `max-age=1d + stale-while-revalidate`; cabeceras de seguridad.
-- Imágenes con `loading="lazy"`, `width/height` (sin CLS) y `decoding="async"`; hero con `fetchpriority="high"`.
+- `vercel.json`: CSS/JS y `/assets/video` `immutable` (van versionados); `/assets/img` con `max-age=1d + stale-while-revalidate`; cabeceras de seguridad. **`buildCommand` = `node build/build.mjs`** (se quitó `make-icons` para no pisar los iconos oficiales ya commiteados).
+- Imágenes con `loading="lazy"`, `width/height` (sin CLS) y `decoding="async"`.
+- **Vídeo de portada**: ~6,4 MB en total (5 clips 1080p), `muted`/`playsinline`/`loop`; sólo el 1º precarga, con `poster` para el LCP.
 
 ---
 
@@ -129,5 +140,6 @@ hero → banda de confianza → manifiesto (Acerca) → por qué VELUM → servi
 - Repositorio: `jpocampom/Velum_Pag_Web`. Identidad (isotipo «Tejido», paleta, tipografía) procedente del brand book de VELUM.
 - Plantas propias reales: **Madrid y Bilbao**; el resto de cobertura nacional es vía red de aliados homologados (reflejado en mapa y copy).
 - Catálogos de referencia de producto usados para el copy: Distrihogar Hotel Division y Resuinsa Profesional.
+- Vídeos de portada: originales 4K en `…/Pagina Web/Videos/` (elegidos por el cliente); las versiones web ligeras se generan con `build/transcode-videos.py`.
 - `PRODUCT.md` y `DESIGN.md` documentan el posicionamiento y el sistema de diseño en detalle.
 - El árbol de trabajo puede mostrar avisos de fin de línea (CRLF↔LF) en Windows; es cosmético y no afecta al contenido. Un `.gitattributes` con `* text=auto eol=lf` lo normalizaría.
