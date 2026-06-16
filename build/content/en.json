@@ -34,7 +34,7 @@
   "hero": {
     "eyebrow": "Premium textile care · Iberian Peninsula",
     "headlineHtml": "Premium textile care<br>for those who <em class=\"serif-em\">cannot fail.</em>",
-    "sub": "Your linen always flawless and ready, without you lifting a finger. Hotel, restaurant or hospital — we handle everything: supply, care and replenishment, with a single point of contact from start to finish.",
+    "sub": "Your linen always flawless and ready, without you having to deal with a thing. Whether you run a hotel, a restaurant or a hospital, we take it all on —supply, care and replenishment— with a single point of contact, from start to finish.",
     "ctaPrimary": "Request a quote",
     "ctaSecondary": "See the business model",
     "imageAlt": "Hotel bed dressed in flawless white linen",
@@ -64,7 +64,7 @@
   "manifesto": {
     "kicker": "Why we exist",
     "title": "The invisible ally behind [[excellence]].",
-    "bodyHtml": "There are details a guest never mentions when they are right, and never forgives when they fail. The sheet that wraps around them, the tablecloth that dresses the table, the bathrobe that envelops them. We're not an industrial laundry: we're textile care. We take on the full management of your textiles —supplying, caring for and replenishing them— so they're always up to the mark, without you ever having to think about it. <span class=\"promise\">We work in silence so your brand can shine out loud.</span>"
+    "bodyHtml": "There are details your guests never mention when they are right, and never forgive when they fail. The sheet that wraps around them, the tablecloth that dresses the table, the bathrobe that envelops them. We're not an industrial laundry: we're textile care. We take on the full management of your textiles —supplying, caring for and replenishing them— so they're always up to the mark, without you ever having to think about it. <span class=\"promise\">We work in silence so your brand can shine out loud.</span>"
   },
   "services": {
     "kicker": "The model",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Care",
-        "body": "Every piece returns to its best, cycle after cycle, to a standard that never wavers. Care is the support; availability is the promise.",
+        "body": "Every piece returns to its best, cycle after cycle, to a standard that never varies. If it doesn't meet that standard, it doesn't reach your business: we withdraw it and replace it before you ever see it.",
         "icon": "wash"
       },
       {
@@ -100,14 +100,14 @@
     ],
     "cta": {
       "title": "Let’s talk about your operation.",
-      "text": "We'll propose a model tailored to your operation, with no obligation.",
-      "link": "Request a proposal"
+      "text": "We'll study your operation and propose a model tailored to you, with no obligation.",
+      "link": "Request a quote"
     }
   },
   "sectors": {
     "kicker": "Who we serve",
     "title": "Three demanding worlds. One single standard.",
-    "intro": "Every sector has its own language and its own urgencies. We know all three and we speak the language of each one.",
+    "intro": "Every sector has its own language and its own urgencies. We know all three and we meet the demands of each one.",
     "more": "See all sectors",
     "items": [
       {
@@ -134,7 +134,7 @@
       },
       {
         "tag": "Healthcare",
-        "title": "Trust you can feel in every textile.",
+        "title": "The rigour that care demands.",
         "body": "In healthcare, textiles are part of the care. Hygiene, availability and consistency, managed with the rigour the sector demands.",
         "items": [
           "Clinical bed linen",
@@ -160,7 +160,7 @@
       },
       {
         "title": "We implement",
-        "body": "We get the service up and running with a clear plan, without disrupting your day-to-day."
+        "body": "We start up alongside your current supplier: we withdraw nothing until the new service is working. The switch is invisible to your operation."
       },
       {
         "title": "We operate",
@@ -182,15 +182,15 @@
       },
       {
         "title": "The standard travels with you",
-        "body": "Two owned plants where quality is born and a nationwide network of approved partners that carries it, identical, to every corner."
+        "body": "Two owned plants where quality is born and a network of approved partners —audited under our protocol and answerable to us— that carries it, identical, to every corner."
       },
       {
         "title": "Free capital, free space",
         "body": "Textiles stop being a tied-up asset and a warehouse that takes up room. Your investment goes back into your business."
       },
       {
-        "title": "100% tailored",
-        "body": "No fixed catalogue. Fabric, weight and finish are chosen to suit your brand."
+        "title": "Made to measure",
+        "body": "No fixed catalogue. You choose fabric, weight and finish to suit your brand and your category."
       }
     ]
   },
@@ -259,15 +259,23 @@
       },
       {
         "q": "Do you work across all of Spain?",
-        "a": "Yes. The standard is born in our two owned plants and extends through a nationwide network of approved partners. The result is the same anywhere in the country. Portugal is coming soon."
+        "a": "Yes. The standard is born in our two owned plants and extends through a nationwide network of approved partners: audited under our protocol and answerable to us, not to you. The result is the same anywhere in the country. Portugal is coming soon."
       },
       {
         "q": "Can I choose the fabric and the finish?",
-        "a": "Entirely. We don't work from a fixed catalogue: we choose fabric, weight and finish to suit your brand and your category. It's 100% tailored."
+        "a": "Entirely. We don't work from a fixed catalogue: we choose fabric, weight and finish to suit your brand and your segment."
       },
       {
         "q": "What happens if I need more textiles in peak season?",
         "a": "We plan for it with you. We adjust your live stock to your peaks so you never run short and never have too much. Predictability, with no nasty surprises."
+      },
+      {
+        "q": "What's the switch from my current supplier like?",
+        "a": "No upheaval. We start up alongside your current supplier and withdraw nothing until the new service is working. The transition is invisible to your operation."
+      },
+      {
+        "q": "And what if something goes wrong?",
+        "a": "We work with safety stock so an unexpected hitch never becomes your problem, and you have a direct phone line, not a voicemail. If something comes up, we sort it out."
       },
       {
         "q": "How do I know what textiles I have at any moment?",
@@ -282,8 +290,8 @@
   "ctaFinal": {
     "eyebrow": "Let's begin",
     "title": "Let's talk about what your brand cannot afford to get wrong.",
-    "sub": "We'll propose a model tailored to your operation, with a point of contact who answers from day one.",
-    "button": "Talk to a dedicated contact"
+    "sub": "We'll propose a model tailored to your operation, with a point of contact who answers from day one. No obligation, no commitment for asking; we'll reply within 24 business hours.",
+    "button": "Request a quote"
   },
   "form": {
     "title": "Tell us about your operation.",

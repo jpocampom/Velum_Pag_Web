@@ -34,7 +34,7 @@
   "hero": {
     "eyebrow": "Textile care premium · Península Ibérica",
     "headlineHtml": "Textile care premium<br>para quienes <em class=\"serif-em\">no pueden fallar.</em>",
-    "sub": "Tu textil siempre impecable y a punto, sin que tengas que ocuparte de nada. Seas hotel, restaurante u hospital, nos encargamos de todo —dotación, cuidado y reposición— con un único interlocutor, de principio a fin.",
+    "sub": "Tu textil siempre impecable y a punto, sin que tengas que ocuparte de nada. Tanto si gestionas un hotel como un restaurante o un hospital, lo asumimos todo —dotación, cuidado y reposición— con un único interlocutor, de principio a fin.",
     "ctaPrimary": "Pedir presupuesto",
     "ctaSecondary": "Ver el modelo de negocio",
     "imageAlt": "Cama de hotel vestida con lencería blanca impecable",
@@ -64,7 +64,7 @@
   "manifesto": {
     "kicker": "Por qué existimos",
     "title": "El aliado invisible que sostiene la [[excelencia]].",
-    "bodyHtml": "Hay detalles que el cliente nunca menciona cuando están bien, y que no perdona cuando fallan. La sábana que abraza, el mantel que viste la mesa, el albornoz que envuelve. No somos una lavandería industrial: somos textile care. Asumimos toda la gestión de tu textil —dotarlo, cuidarlo y reponerlo— para que esté siempre a la altura sin que tengas que pensarlo. <span class=\"promise\">Trabajamos en silencio para que tu marca brille en voz alta.</span>"
+    "bodyHtml": "Hay detalles que tu cliente nunca menciona cuando están bien, y que no perdona cuando fallan. La sábana que abraza, el mantel que viste la mesa, el albornoz que envuelve. No somos una lavandería industrial: somos textile care. Asumimos toda la gestión de tu textil —dotarlo, cuidarlo y reponerlo— para que esté siempre a la altura sin que tengas que pensarlo. <span class=\"promise\">Trabajamos en silencio para que tu marca brille en voz alta.</span>"
   },
   "services": {
     "kicker": "El modelo",
@@ -79,7 +79,7 @@
       },
       {
         "title": "Cuidar",
-        "body": "Cada pieza vuelve a su punto óptimo, ciclo tras ciclo, con un estándar que no varía. El cuidado es el soporte; la disponibilidad es la promesa.",
+        "body": "Cada pieza vuelve a su punto óptimo, ciclo tras ciclo, con un estándar que no varía. Si no llega a ese estándar, no llega a tu negocio: la retiramos y la reponemos antes de que la veas.",
         "icon": "wash"
       },
       {
@@ -100,14 +100,14 @@
     ],
     "cta": {
       "title": "Hablemos de tu operación.",
-      "text": "Te proponemos el modelo a la medida de tu operación, sin compromiso.",
-      "link": "Solicitar propuesta"
+      "text": "Estudiamos tu operación y te proponemos un modelo a tu medida, sin compromiso.",
+      "link": "Pedir presupuesto"
     }
   },
   "sectors": {
     "kicker": "A quién servimos",
     "title": "Tres mundos exigentes. Un mismo estándar.",
-    "intro": "Cada sector tiene su lenguaje y sus urgencias. Conocemos los tres y hablamos el idioma de cada uno.",
+    "intro": "Cada sector tiene su lenguaje y sus urgencias. Conocemos los tres y respondemos a las exigencias de cada uno.",
     "more": "Ver todos los sectores",
     "items": [
       {
@@ -134,7 +134,7 @@
       },
       {
         "tag": "Salud",
-        "title": "Confianza que se nota en cada textil.",
+        "title": "El rigor que el cuidado exige.",
         "body": "En salud, el textil es parte del cuidado. Higiene, disponibilidad y consistencia, gestionadas con el rigor que el sector exige.",
         "items": [
           "Ropa de cama clínica",
@@ -160,7 +160,7 @@
       },
       {
         "title": "Implantamos",
-        "body": "Ponemos el servicio en marcha con un plan claro, sin interrupciones en tu día a día."
+        "body": "Arrancamos en paralelo a tu proveedor actual: no retiramos nada hasta que el nuevo servicio funciona. El cambio no se nota en tu operación."
       },
       {
         "title": "Operamos",
@@ -182,15 +182,15 @@
       },
       {
         "title": "El estándar viaja contigo",
-        "body": "Dos plantas propias donde nace la calidad y una red nacional de aliados homologados que la lleva, idéntica, a cada rincón."
+        "body": "Dos plantas propias donde nace la calidad y una red de aliados homologados —auditados bajo nuestro protocolo y que responden ante nosotros— que la lleva idéntica a cada rincón."
       },
       {
         "title": "Capital libre, espacio libre",
         "body": "El textil deja de ser un activo inmovilizado y un almacén que ocupa. Tu inversión vuelve a tu negocio."
       },
       {
-        "title": "Adaptación 100%",
-        "body": "Nada de catálogo cerrado. Tejido, gramaje y acabado se eligen a la medida de tu marca."
+        "title": "Hecho a tu medida",
+        "body": "Nada de catálogo cerrado. Eliges tejido, gramaje y acabado a la medida de tu marca y tu categoría."
       }
     ]
   },
@@ -259,15 +259,23 @@
       },
       {
         "q": "¿Trabajáis en toda España?",
-        "a": "Sí. El estándar nace en nuestras dos plantas propias y se extiende a través de una red nacional de aliados homologados. El resultado es el mismo en cualquier punto del país. Portugal llegará próximamente."
+        "a": "Sí. El estándar nace en nuestras dos plantas propias y se extiende a través de una red nacional de aliados homologados: auditados bajo nuestro protocolo y que responden ante nosotros, no ante ti. El resultado es el mismo en cualquier punto del país. Portugal llegará próximamente."
       },
       {
         "q": "¿Puedo elegir el tejido y el acabado?",
-        "a": "Por completo. No trabajamos con catálogo cerrado: elegimos tejido, gramaje y acabado a la medida de tu marca y de tu categoría. La adaptación es del 100%."
+        "a": "Por completo. No trabajamos con catálogo cerrado: elegimos tejido, gramaje y acabado a la medida de tu marca y de tu categoría."
       },
       {
         "q": "¿Qué pasa si necesito más textil en temporada alta?",
         "a": "Lo prevemos contigo. Ajustamos el stock vivo según tus picos para que nunca te falte y nunca te sobre. Previsibilidad, sin sustos."
+      },
+      {
+        "q": "¿Cómo es el cambio desde mi proveedor actual?",
+        "a": "Sin sobresaltos. Arrancamos en paralelo a tu proveedor actual y no retiramos nada hasta que el nuevo servicio funciona. La transición no se nota en tu operación."
+      },
+      {
+        "q": "¿Y si algo falla?",
+        "a": "Trabajamos con stock de seguridad para que un imprevisto no se convierta en tu problema, y tienes un teléfono directo, no un buzón. Si surge algo, lo resolvemos nosotros."
       },
       {
         "q": "¿Cómo sé en todo momento qué textil tengo?",
@@ -282,8 +290,8 @@
   "ctaFinal": {
     "eyebrow": "Empecemos",
     "title": "Hablemos de lo que tu marca no puede permitirse fallar.",
-    "sub": "Te proponemos un modelo a la medida de tu operación, con un interlocutor que responde desde el primer día.",
-    "button": "Hablar con un interlocutor"
+    "sub": "Te proponemos un modelo a la medida de tu operación, con un interlocutor que responde desde el primer día. Sin compromiso ni permanencia por solicitarlo; te respondemos en menos de 24 h laborables.",
+    "button": "Pedir presupuesto"
   },
   "form": {
     "title": "Cuéntanos sobre tu operación.",
