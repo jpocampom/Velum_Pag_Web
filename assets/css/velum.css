@@ -128,15 +128,15 @@ h1, h2, h3, h4 { margin: 0; font-weight: 400; }
 /* Pointer highlight — draws a box + cursor around a key word on scroll-in */
 .ph { position: relative; display: inline-block; white-space: nowrap; }
 .ph__t { position: relative; z-index: 1; }
-.ph__box { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% + 0.6em); height: calc(100% + 0.14em); overflow: visible; pointer-events: none; }
-.ph__rect { fill: none; stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
-.ph__ptr { position: absolute; right: -0.5em; bottom: -0.46em; width: 0.62em; height: 0.62em; fill: var(--accent); opacity: 0; transform: translate(-5px, -5px) scale(0.6); pointer-events: none; }
-.ph.is-on .ph__rect { transition: stroke-dashoffset 850ms var(--ease); stroke-dashoffset: 0; }
-.ph.is-on .ph__ptr { transition: opacity 280ms 620ms var(--ease), transform 380ms 620ms var(--ease); opacity: 1; transform: translate(0, 0) scale(1); }
-.section--ink .ph__rect { stroke: var(--accent-soft); }
+.ph__line { position: absolute; left: -0.06em; bottom: -0.1em; width: calc(100% + 0.12em); height: 0.34em; overflow: visible; pointer-events: none; }
+.ph__rule { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.ph__ptr { position: absolute; right: -0.42em; bottom: -0.34em; width: 0.62em; height: 0.62em; fill: var(--accent); opacity: 0; transform: translate(-5px, -5px) scale(0.6); pointer-events: none; }
+.ph.is-on .ph__rule { transition: stroke-dashoffset 700ms var(--ease); stroke-dashoffset: 0; }
+.ph.is-on .ph__ptr { transition: opacity 280ms 520ms var(--ease), transform 380ms 520ms var(--ease); opacity: 1; transform: translate(0, 0) scale(1); }
+.section--ink .ph__rule { stroke: var(--accent-soft); }
 .section--ink .ph__ptr { fill: var(--accent-soft); }
 @media (prefers-reduced-motion: reduce) {
-  .ph__rect { stroke-dashoffset: 0; transition: none; }
+  .ph__rule { stroke-dashoffset: 0; transition: none; }
   .ph__ptr { opacity: 1; transform: none; transition: none; }
 }
 

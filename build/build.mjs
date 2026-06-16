@@ -45,10 +45,10 @@ const JS_V = assetVer("assets/js/velum.js");
 /* Versioned photo URL: ?v=<hash> so swapping a photo (same filename) busts cache instantly. */
 const photo = (slug) => `/assets/img/photos/${slug}.webp?v=${assetVer("assets/img/photos/" + slug + ".webp")}`;
 
-/* Pointer highlight: [[word]] → animated box + cursor (drawn on scroll-in). */
+/* Pointer highlight: [[word]] → animated underline + cursor (drawn on scroll-in). */
 function phMarkup(word) {
   return `<span class="ph"><span class="ph__t">${word}</span>` +
-    `<svg class="ph__box" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><rect class="ph__rect" x="1.5" y="1.5" width="97" height="97" rx="2" pathLength="1"/></svg>` +
+    `<svg class="ph__line" viewBox="0 0 100 4" preserveAspectRatio="none" aria-hidden="true"><line class="ph__rule" x1="0.5" y1="2" x2="99.5" y2="2" pathLength="1"/></svg>` +
     `<svg class="ph__ptr" viewBox="0 0 12 12" aria-hidden="true"><path d="M1.2 1.2 9.6 4.4 6 5.6 4.6 9.4 Z"/></svg>` +
     `</span>`;
 }
