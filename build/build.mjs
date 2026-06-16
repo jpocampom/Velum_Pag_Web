@@ -46,6 +46,9 @@ const JS_V = assetVer("assets/js/velum.js");
 const photo = (slug) => `/assets/img/photos/${slug}.webp?v=${assetVer("assets/img/photos/" + slug + ".webp")}`;
 /* Versioned logo URL (official VELUM lockup, transparent WebP). */
 const logo = (slug) => `/assets/img/${slug}.webp?v=${assetVer("assets/img/" + slug + ".webp")}`;
+/* Versioned hero video / poster URLs. */
+const vid = (slug) => `/assets/video/${slug}.mp4?v=${assetVer("assets/video/" + slug + ".mp4")}`;
+const vidPoster = () => `/assets/video/hero-poster.webp?v=${assetVer("assets/video/hero-poster.webp")}`;
 
 /* Pointer highlight: [[word]] → animated underline + cursor (drawn on scroll-in). */
 function phMarkup(word) {
@@ -287,22 +290,26 @@ function head(c, routeId, title, desc) {
 
 /* ---------- Home sections ---------- */
 function homeMain(c) {
-  // Hero
-  const hero = `<section class="hero" id="top">
+  // Hero — portada en vídeo: 5 clips en crossfade sincronizado + slogan encima
+  const heroClips = [1, 2, 3, 4, 5].map((n, i) =>
+    `<video class="hero__vid${i === 0 ? " is-active" : ""}" muted loop playsinline ${i === 0 ? "autoplay " : ""}preload="${i === 0 ? "auto" : "none"}"${i === 0 ? ` poster="${vidPoster()}"` : ""} aria-hidden="true"><source src="${vid("velum-hero-" + n)}" type="video/mp4" /></video>`
+  ).join("\n      ");
+  const hero = `<section class="hero hero--video" id="top">
+  <div class="hero__bg">
+      ${heroClips}
+  </div>
+  <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
     <div class="hero__text">
       <span class="kicker" data-reveal>${c.hero.eyebrow}</span>
-      <h1 data-reveal data-reveal-delay="1">${c.hero.headlineHtml}</h1>
+      <h1 class="hero__title" data-chars>${c.hero.headlineHtml}</h1>
       <p class="lede" data-reveal data-reveal-delay="2">${c.hero.sub}</p>
       <div class="hero-cta" data-reveal data-reveal-delay="3">
         <a class="btn btn--primary" href="#contacto">${c.hero.ctaPrimary} <span class="arr" aria-hidden="true">→</span></a>
-        <a class="btn btn--ghost" href="#proceso">${c.hero.ctaSecondary}</a>
+        <a class="btn btn--ghost btn--glass" href="#proceso">${c.hero.ctaSecondary}</a>
       </div>
     </div>
-    <figure class="hero__media" data-reveal data-reveal-delay="2">
-      <img src="${photo("hero-suite")}" width="1800" height="1200" fetchpriority="high" decoding="async" alt="${c.hero.imageAlt || c.hero.eyebrow}" />
-      ${weaveSVG({ cls: "hero__media-weave" })}
-    </figure>
+    ${c.hero.tag ? `<div class="hero__tag liquid-glass" data-reveal data-reveal-delay="4">${c.hero.tag}</div>` : ""}
   </div>
 </section>`;
 

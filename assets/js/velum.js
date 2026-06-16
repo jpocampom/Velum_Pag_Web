@@ -10,13 +10,80 @@
 
   /* ---------- Header: solid on scroll ---------- */
   var header = doc.querySelector(".site-header");
+  var heroVideo = doc.querySelector(".hero--video");
   function onScroll() {
     if (!header) return;
-    if (window.scrollY > 24) header.classList.add("scrolled");
-    else header.classList.remove("scrolled");
+    var scrolled = window.scrollY > 24;
+    header.classList.toggle("scrolled", scrolled);
+    // Over the video hero (home, at top) the header floats on a dark backdrop.
+    if (heroVideo) header.classList.toggle("over-hero", !scrolled);
   }
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* ---------- Hero portada: crossfade de vídeos + entrada por caracteres ---------- */
+  var prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  (function heroVideoRotate() {
+    var stage = doc.querySelector(".hero__bg");
+    if (!stage) return;
+    var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
+    if (!vids.length) return;
+    vids.forEach(function (v) { v.muted = true; v.preload = "auto"; });
+    var playFirst = vids[0].play();
+    if (playFirst && playFirst.catch) playFirst.catch(function () {});
+    if (prefersReduce || vids.length < 2) return;
+    var idx = 0;
+    var PERIOD = 6500;
+    window.setInterval(function () {
+      var next = (idx + 1) % vids.length;
+      var nv = vids[next];
+      try { nv.currentTime = 0; } catch (e) {}
+      var p = nv.play();
+      if (p && p.catch) p.catch(function () {});
+      nv.classList.add("is-active");
+      var prev = idx;
+      vids[prev].classList.remove("is-active");
+      idx = next;
+      window.setTimeout(function () {
+        if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
+      }, 1500);
+    }, PERIOD);
+  })();
+
+  (function animateHeroTitle() {
+    var title = doc.querySelector(".hero__title[data-chars]");
+    if (!title) return;
+    if (prefersReduce) { title.classList.add("is-in"); return; }
+    var CHAR = 26, counter = { n: 0 };
+    function emitText(text, dest) {
+      text.split(/(\s+)/).forEach(function (tok) {
+        if (tok === "") return;
+        if (/^\s+$/.test(tok)) { dest.appendChild(doc.createTextNode(" ")); return; }
+        var w = doc.createElement("span"); w.className = "word";
+        for (var i = 0; i < tok.length; i++) {
+          var s = doc.createElement("span");
+          s.className = "char";
+          s.textContent = tok.charAt(i);
+          s.style.transitionDelay = (counter.n++ * CHAR) + "ms";
+          w.appendChild(s);
+        }
+        dest.appendChild(w);
+      });
+    }
+    function walk(src, dest) {
+      Array.prototype.slice.call(src.childNodes).forEach(function (node) {
+        if (node.nodeType === 3) emitText(node.textContent, dest);
+        else if (node.nodeName === "BR") dest.appendChild(doc.createElement("br"));
+        else { var clone = node.cloneNode(false); dest.appendChild(clone); walk(node, clone); }
+      });
+    }
+    var frag = doc.createDocumentFragment();
+    walk(title, frag);
+    title.textContent = "";
+    title.appendChild(frag);
+    window.setTimeout(function () { title.classList.add("is-in"); }, 200);
+  })();
 
   /* ---------- Mobile nav toggle ---------- */
   var toggle = doc.querySelector(".nav-toggle");
