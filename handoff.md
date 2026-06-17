@@ -2,7 +2,7 @@
 
 Documento de entrega del sitio web de **VELUM**, plataforma española de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); **datos legales de PCP LAUNDRY, S.L.** cumplimentados; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector; mapa Madrid/Bilbao; resalte en subrayado y OG en PNG. Mantén este documento junto al código.
+> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); nueva sección **Nuestros Productos** (gama completa + adaptación de lo básico a lo personalizado) y sección **Cómo trabajamos tu textil**; **+6 aliados** en el mapa y en las cifras; **trazabilidad con software (Lavander)**; **datos legales de PCP LAUNDRY, S.L.**; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector. Mantén este documento junto al código.
 
 ---
 
@@ -67,7 +67,7 @@ Flujo de trabajo: editar `build/content/*.json` → `npm run build` → revisar 
 
 ## 4. Editar contenido / traducciones
 
-- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 353 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
+- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 383 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
 - Registro: **ES en "tú"** (peninsular), **EN** estándar, **PT-PT** formal ("você").
 - Textos legales (más largos) en `build/content/legal/{idioma}/`.
 - Tras editar: `npm run build`.
@@ -89,10 +89,13 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - **Color**: neutros cálidos (`--paper`, `--linen`, `--mist`, `--ink`, `--soft`) + **acento índigo `#2E3A4B`** (`--accent`), uso ≤5%. Tokens en 3 capas (primitive → semantic) con canales RGB; cambiar `--c-ink`/`--c-paper`/`--c-indigo` reskinea todo.
 - **Imágenes**: fotografía real **curada por tipo de cliente** (carpetas `Fotos/Hosteleria · Restauracion · Hospitalario` en el OneDrive de PCP) con *grading* índigo unificado. Optimizadas a WebP en `assets/img/photos/`.
 - **Motion**: scroll-reveal, PointerHighlight (subrayado), hover de tarjetas, mapa; todo respeta `prefers-reduced-motion`.
-- **Mapa**: `build/iberia-map.svg` — silueta real de Iberia; **solo las 2 plantas propias (Madrid y Bilbao)** como puntos índigo (sin puntos de aliados; la red de aliados se explica en el copy). Portugal en discontinuo "próximamente". Posiciones validadas con *hit-test* sobre la silueta para que caigan en tierra firme.
+- **Mapa**: `build/iberia-map.svg` — silueta real de Iberia; **2 plantas propias (Madrid y Bilbao)** como puntos índigo sólidos (con etiqueta) + **6 aliados** como círculos huecos (Barcelona, Zaragoza, Valencia, Sevilla, Málaga, A Coruña). Leyenda: «Plantas propias / Aliados homologados / Portugal — próximamente». Portugal en discontinuo. Posiciones validadas con *hit-test* sobre la silueta para que caigan en tierra firme. La banda de cifras refleja **+6 aliados nacionales homologados**.
 
 ### Orden del home
-**portada en vídeo** → banda de confianza → manifiesto (Acerca) → por qué VELUM → servicios → cómo trabajamos → sectores → galería → gestor/interlocutor → cobertura (mapa) → FAQ → contacto.
+**portada en vídeo** → banda de confianza → manifiesto (Acerca) → por qué VELUM (5 ventajas, incl. Previsibilidad) → servicios (incl. Controlar = trazabilidad con software **Lavander**) → **cómo trabajamos tu textil** (recogida/expediciones, lavado especializado, maquinaria, control, trazabilidad) → sectores → **Nuestros Productos** → galería → gestor/interlocutor → cobertura (mapa) → FAQ → contacto.
+
+### Nuestros productos
+- Sección `id="productos"` (clave `products` en los JSON): intro comercial (gama completa + adaptación, **de lo básico a lo personalizado**) + rejilla de 4 familias (Habitación, Baño, Restauración, Salud) con tipos/formatos, y cierre sobre personalización (bordados, logos, medidas a medida). Añadida al `nav` como «Productos/Products/Produtos». Gama basada en los catálogos de los proveedores homologados.
 
 ### Portada en vídeo (hero)
 - El hero es a pantalla completa (`.hero--video`): **5 vídeos** (`assets/video/velum-hero-1..5.mp4`) apilados que hacen **crossfade** cada 6,5 s mediante un único temporizador en `velum.js` (sincronizado, fundido de 1,4 s). Sólo el primero precarga con `poster`; el resto se cargan al activarse.
@@ -144,8 +147,9 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 ## 8. Notas
 
 - Repositorio: `jpocampom/Velum_Pag_Web`. Identidad (isotipo «Tejido», paleta, tipografía) procedente del brand book de VELUM.
-- Plantas propias reales: **Madrid y Bilbao**; el resto de cobertura nacional es vía red de aliados homologados (reflejado en mapa y copy).
-- Catálogos de referencia de producto usados para el copy: Distrihogar Hotel Division y Resuinsa Profesional.
+- Plantas propias reales: **Madrid y Bilbao**; cobertura nacional vía **red de +6 aliados homologados** (lavanderías que prestan el servicio). Reflejado en mapa, cifras y copy.
+- **Decisión del cliente: NO nombrar públicamente** (por ahora) ni a proveedores ni a aliados. Se muestran como "red homologada" sin marca. Referencia interna —no publicar sin permiso—: aliados/lavanderías **McLean, Metinta** (y posible **Hispalimpia**); proveedores de producto **Royal Europe Textile, Stranfford, Vayoil, Distrihogar, Bassols, Resuinsa**.
+- La gama de **Nuestros Productos** se basó en los catálogos de esos proveedores (sin nombrarlos). Solo se listan productos que VELUM **sí** ofrece: se excluyeron almohadas/edredones/rellenos, zapatillas, fundas de silla, jacquard/antimanchas y textil técnico de planta.
 - Vídeos de portada: originales 4K en `…/Pagina Web/Videos/` (elegidos por el cliente); las versiones web ligeras se generan con `build/transcode-videos.py`.
 - `PRODUCT.md` y `DESIGN.md` documentan el posicionamiento y el sistema de diseño en detalle.
 - El árbol de trabajo puede mostrar avisos de fin de línea (CRLF↔LF) en Windows; es cosmético y no afecta al contenido. Un `.gitattributes` con `* text=auto eol=lf` lo normalizaría.
