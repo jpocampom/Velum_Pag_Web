@@ -29,6 +29,14 @@
     if (!stages.length) return;
     var heroMq = window.matchMedia("(max-width: 980px)");
     var timer = null;
+    // Un "clip" (.hero__vid) puede ser un <video> (desktop) o un <div> con dos
+    // capas <video> (móvil: blur + nítido). Estos helpers operan sobre el/los vídeo(s) reales.
+    function realVids(node) { return node.tagName === "VIDEO" ? [node] : Array.prototype.slice.call(node.querySelectorAll("video")); }
+    function playClip(node) { realVids(node).forEach(function (v) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); }); }
+    function pauseClip(node) { realVids(node).forEach(function (v) { try { v.pause(); } catch (e) {} }); }
+    function loadClip(node) { realVids(node).forEach(function (v) { try { v.load(); } catch (e) {} }); }
+    function preloadClip(node, val) { realVids(node).forEach(function (v) { v.preload = val; }); }
+    function seekClip(node) { realVids(node).forEach(function (v) { try { v.currentTime = 0; } catch (e) {} }); }
     function visibleStage() {
       for (var i = 0; i < stages.length; i++) {
         if (stages[i].offsetParent !== null) return stages[i];
@@ -40,29 +48,27 @@
       var stage = visibleStage();
       // Pause clips in the hidden stack(s)
       stages.forEach(function (s) {
-        if (s !== stage) s.querySelectorAll(".hero__vid").forEach(function (v) { try { v.pause(); } catch (e) {} });
+        if (s !== stage) s.querySelectorAll(".hero__vid").forEach(function (v) { pauseClip(v); });
       });
       var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
       if (!vids.length) return;
       // Preload the whole (lightweight) visible stack so crossfades never show a blank frame.
-      vids.forEach(function (v, i) { v.muted = true; v.preload = "auto"; if (i !== 0) { try { v.load(); } catch (e) {} } v.classList.toggle("is-active", i === 0); });
-      var p = vids[0].play();
-      if (p && p.catch) p.catch(function () {});
+      vids.forEach(function (v, i) { preloadClip(v, "auto"); if (i !== 0) { loadClip(v); } v.classList.toggle("is-active", i === 0); });
+      playClip(vids[0]);
       if (prefersReduce || vids.length < 2) return;
       var idx = 0;
       timer = window.setInterval(function () {
         var next = (idx + 1) % vids.length;
         var nv = vids[next];
-        vids[(next + 1) % vids.length].preload = "auto"; // warm up the upcoming clip
-        try { nv.currentTime = 0; } catch (e) {}
-        var pp = nv.play();
-        if (pp && pp.catch) pp.catch(function () {});
+        preloadClip(vids[(next + 1) % vids.length], "auto"); // warm up the upcoming clip
+        seekClip(nv);
+        playClip(nv);
         nv.classList.add("is-active");
         var prev = idx;
         vids[prev].classList.remove("is-active");
         idx = next;
         window.setTimeout(function () {
-          if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
+          if (idx !== prev) { pauseClip(vids[prev]); }
         }, 1500);
       }, 6500);
     }
