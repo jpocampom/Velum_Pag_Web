@@ -45,12 +45,9 @@
       var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
       if (!vids.length) return;
       // Preload the whole (lightweight) visible stack so crossfades never show a blank frame.
-      vids.forEach(function (v, i) { v.muted = true; v.preload = "auto"; if (i !== 0) { try { v.load(); } catch (e) {} } v.classList.toggle("is-active", i === 0); });
-      var p = vids[0].play();
-      if (p && p.catch) p.catch(function () {});
-      if (prefersReduce || vids.length < 2) return;
+      vids.forEach(function (v, i) { v.muted = true; v.playsInline = true; v.preload = "auto"; if (i !== 0) { try { v.load(); } catch (e) {} } v.classList.toggle("is-active", i === 0); });
       var idx = 0;
-      timer = window.setInterval(function () {
+      function rotate() {
         var next = (idx + 1) % vids.length;
         var nv = vids[next];
         vids[(next + 1) % vids.length].preload = "auto"; // warm up the upcoming clip
@@ -64,10 +61,34 @@
         window.setTimeout(function () {
           if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
         }, 1500);
-      }, 6500);
+      }
+      function startTimer() {
+        if (timer || prefersReduce || vids.length < 2) return;
+        timer = window.setInterval(rotate, 6500);
+      }
+      // Arranca la rotación SOLO cuando el clip activo está realmente reproduciéndose,
+      // así un autoplay bloqueado (iOS bajo consumo / ahorro de datos) no deja
+      // pasando posters en negro: se queda en el primer clip hasta que arranca.
+      function tryPlay() {
+        var v = vids[idx] || vids[0];
+        var p = v.play();
+        if (p && p.then) p.then(startTimer).catch(function () {});
+        else if (!v.paused) startTimer();
+      }
+      vids[0].addEventListener("playing", startTimer);
+      tryPlay();
+      // Fallback: si el navegador bloqueó el autoplay, arráncalo al primer gesto.
+      var kick = function () { tryPlay(); };
+      ["touchstart", "pointerdown", "click", "scroll"].forEach(function (ev) {
+        window.addEventListener(ev, kick, { once: true, passive: true });
+      });
     }
     setup();
     if (heroMq.addEventListener) heroMq.addEventListener("change", setup);
+    // Reanuda al volver a la pestaña/app (móvil suele pausar en segundo plano).
+    doc.addEventListener("visibilitychange", function () {
+      if (!doc.hidden) { var s = visibleStage(); var a = s && s.querySelector(".hero__vid.is-active"); if (a) { var p = a.play(); if (p && p.catch) p.catch(function () {}); } }
+    });
   })();
 
   (function animateHeroTitle() {
