@@ -401,9 +401,9 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .svc-card:hover { background: var(--linen); }
 .svc-card--cta { background: var(--ink); color: var(--paper); }
 .svc-card--cta:hover { background: var(--ink-deep); }
-.svc-card--cta .svc-index { color: rgba(var(--c-paper-rgb),0.55); }
+.svc-card.svc-card--cta .svc-index { color: rgba(var(--c-paper-rgb),0.6); }
 .svc-card--cta h3 { color: var(--paper); }
-.svc-card--cta p { color: rgba(var(--c-paper-rgb),0.74); }
+.svc-card.svc-card--cta p { color: rgba(var(--c-paper-rgb),0.8); }
 .svc-card--cta .link-arrow { margin-top: auto; align-self: flex-start; color: var(--paper); border-bottom-color: var(--paper-line); }
 .svc-card--cta .link-arrow:hover { border-bottom-color: var(--paper); }
 .svc-card .svc-index { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: var(--soft); }
