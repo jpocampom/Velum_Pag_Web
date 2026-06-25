@@ -2,7 +2,7 @@
 
 Documento de entrega del sitio web de **VELUM**, plataforma española de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); nueva sección **Nuestros Productos** (gama completa + adaptación de lo básico a lo personalizado) y sección **Cómo trabajamos tu textil**; **+6 aliados** en el mapa y en las cifras; **trazabilidad con software (Lavander)**; **datos legales de PCP LAUNDRY, S.L.**; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector. Mantén este documento junto al código.
+> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); nueva sección **Nuestros Productos** (gama completa + adaptación de lo básico a lo personalizado) y sección **Cómo trabajamos tu textil**; **+6 aliados** en el mapa y en las cifras; **trazabilidad con software (Lavander)**; **datos legales de PCP LAUNDRY, S.L.**; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector; **versión móvil con dock inferior estilo app** (responsive, un solo código). Mantén este documento junto al código.
 
 ---
 
@@ -67,7 +67,7 @@ Flujo de trabajo: editar `build/content/*.json` → `npm run build` → revisar 
 
 ## 4. Editar contenido / traducciones
 
-- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 383 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
+- Todo el texto vive en `build/content/{es,en,pt}.json` con la **misma estructura de claves** en los tres idiomas (paridad exacta: 390 claves). El **español es la versión maestra**; al cambiar ES, replica en EN y PT.
 - Registro: **ES en "tú"** (peninsular), **EN** estándar, **PT-PT** formal ("você").
 - Textos legales (más largos) en `build/content/legal/{idioma}/`.
 - Tras editar: `npm run build`.
@@ -103,6 +103,11 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - El **header flota en claro** sobre el vídeo (logo en blanco vía filtro, nav clara) y vuelve a oscuro al hacer scroll (clase `over-hero` en `velum.js`).
 - Respeta `prefers-reduced-motion`: sin rotación ni animación de entrada.
 - **Cambiar/añadir vídeos**: coloca los originales y edita la lista `ORDER` en `build/transcode-videos.py`; ejecútalo (requiere `pip install imageio-ffmpeg`, trae ffmpeg). Genera `velum-hero-N.mp4` 1080p + `hero-poster.webp`. Luego `npm run build` (cache-bust `?v=` automático). El nº de clips se detecta solo en el build (array `[1..5]` en `build.mjs`, ajústalo si cambias la cantidad).
+
+### Versión móvil (dock inferior tipo app)
+- **No hay dos sitios**: es **una sola web responsive**. En escritorio se ve el header arriba; en **móvil (≤980 px)** aparece un **dock flotante** abajo (estilo app) y se oculta el menú hamburguesa. Al ser un único código, **web y móvil se actualizan siempre juntas** en cada push.
+- El dock (`mobileDock()` en `build.mjs`, estilos `.mobile-dock`/`.dock-*` en CSS, lógica en `velum.js`) lleva un icono por sección (Inicio, Acerca, Servicios, Productos, Sectores, Cobertura · separador · Contacto), con **estado activo** (índigo claro + punto) y **tooltip** de la sección en vista (IntersectionObserver), más una píldora **«Pedir presupuesto»**. Etiquetas en la clave `dock` de los JSON (3 idiomas). Para añadir/quitar iconos: edita el array `DOCK` en `build.mjs` (cada item: `id` de sección + `icon` + `key` de etiqueta) y la clave `dock`.
+- En móvil el **hero de vídeo** usa altura reducida (`74svh`) y `object-position` reencuadrado para que el clip 16:9 no se recorte tanto en vertical.
 
 ### Añadir/cambiar fotos
 1. Coloca el original en `Fotos/` o `assets/img/photos/`.
