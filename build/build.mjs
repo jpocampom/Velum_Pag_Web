@@ -123,8 +123,8 @@ const DOCK = [
   { id: "top", icon: "home", key: "inicio" },
   { id: "manifiesto", icon: "about", key: "acerca" },
   { id: "servicios", icon: "grid", key: "servicios" },
-  { id: "productos", icon: "box", key: "productos" },
   { id: "sectores", icon: "people", key: "sectores" },
+  { id: "productos", icon: "box", key: "productos" },
   { id: "cobertura", icon: "pin", key: "cobertura" },
   { sep: true },
   { id: "contacto", icon: "mail", key: "contacto" }
