@@ -44,7 +44,8 @@
       });
       var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
       if (!vids.length) return;
-      vids.forEach(function (v, i) { v.muted = true; v.preload = "auto"; v.classList.toggle("is-active", i === 0); });
+      // Lazy: only the active + next preload, so the first clip starts fast.
+      vids.forEach(function (v, i) { v.muted = true; v.preload = (i < 2 ? "auto" : "none"); v.classList.toggle("is-active", i === 0); });
       var p = vids[0].play();
       if (p && p.catch) p.catch(function () {});
       if (prefersReduce || vids.length < 2) return;
@@ -52,6 +53,7 @@
       timer = window.setInterval(function () {
         var next = (idx + 1) % vids.length;
         var nv = vids[next];
+        vids[(next + 1) % vids.length].preload = "auto"; // warm up the upcoming clip
         try { nv.currentTime = 0; } catch (e) {}
         var pp = nv.play();
         if (pp && pp.catch) pp.catch(function () {});
