@@ -8,7 +8,7 @@
     <circle class="ally" cx="213" cy="427" r="2.1"/><!-- Zaragoza -->
     <circle class="ally" cx="166" cy="483" r="2.1"/><!-- Sevilla (interior) -->
     <circle class="ally" cx="181" cy="490" r="2.1"/><!-- Málaga (costa sur) -->
-    <circle class="ally" cx="146" cy="403" r="2.1"/><!-- A Coruña -->
+    <circle class="ally" cx="135" cy="427" r="2.1"/><!-- Oporto (costa NO de Portugal) -->
   </g>
   <g class="plants"><circle class="plant" cx="186" cy="446" r="2.8"/><circle class="plant" cx="194" cy="412" r="2.8"/></g>
   <g class="map-labels" font-family="JetBrains Mono, monospace">
