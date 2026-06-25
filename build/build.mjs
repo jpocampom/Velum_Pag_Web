@@ -414,7 +414,7 @@ function homeMain(c) {
       <span class="svc-index" aria-hidden="true">→</span>
       <h3>${c.services.cta.title}</h3>
       <p>${c.services.cta.text}</p>
-      <span class="link-arrow">${c.services.cta.link}</span>
+      <span class="svc-cta-btn">${c.services.cta.link} <span class="arr" aria-hidden="true">→</span></span>
     </a>`;
   const services = `<section class="section section--linen" id="servicios">
   <div class="wrap">

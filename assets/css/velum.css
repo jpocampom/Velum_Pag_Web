@@ -406,6 +406,20 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .svc-card.svc-card--cta p { color: rgba(var(--c-paper-rgb),0.8); }
 .svc-card--cta .link-arrow { margin-top: auto; align-self: flex-start; color: var(--paper); border-bottom-color: var(--paper-line); }
 .svc-card--cta .link-arrow:hover { border-bottom-color: var(--paper); }
+/* CTA glass button inside the dark services box */
+.svc-card--cta .svc-cta-btn {
+  display: inline-flex; align-items: center; gap: 9px; align-self: flex-start; margin-top: auto;
+  padding: 13px 28px; border-radius: 999px; cursor: pointer;
+  font-family: inherit; font-size: 14px; font-weight: 500; letter-spacing: 0.01em; color: var(--paper);
+  background: rgba(var(--c-paper-rgb), 0.10);
+  border: 1px solid rgba(var(--c-paper-rgb), 0.45);
+  backdrop-filter: blur(7px) saturate(130%); -webkit-backdrop-filter: blur(7px) saturate(130%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), 0 8px 26px rgba(0,0,0,0.30);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.svc-card--cta .svc-cta-btn .arr { transition: transform var(--dur) var(--ease); }
+.svc-card--cta:hover .svc-cta-btn { background: var(--paper); color: var(--ink); border-color: var(--paper); box-shadow: 0 12px 32px rgba(0,0,0,0.34); }
+.svc-card--cta:hover .svc-cta-btn .arr { transform: translateX(4px); }
 .svc-card .svc-index { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: var(--soft); }
 .svc-card .svc-icon { width: 40px; height: 40px; color: var(--accent); margin-bottom: 6px; }
 .svc-card h3 { font-family: var(--serif); font-size: clamp(20px, 1.6vw, 25px); font-weight: 400; line-height: 1.05; }
