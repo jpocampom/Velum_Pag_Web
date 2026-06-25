@@ -548,8 +548,12 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .mobile-dock { display: none; }
 @media (max-width: 980px) {
   .site-header .nav-toggle { display: none; }
-  body { padding-bottom: 100px; }
-  .to-top { bottom: 96px; }
+  body { padding-bottom: 124px; }
+  .to-top { bottom: 120px; }
+  /* En móvil el dock flotante ya lleva el CTA y la navegación: quitamos los
+     botones y el tag del hero (evita duplicar «Pedir presupuesto» y el solape). */
+  .hero--video .hero-cta, .hero--video .hero__tag { display: none; }
+  .hero--video .hero__inner { padding-bottom: 128px; }
   .mobile-dock { display: flex; flex-direction: column; align-items: center; gap: 10px;
     position: fixed; left: 0; right: 0; bottom: 6px; z-index: 1150; pointer-events: none; }
   .mobile-dock > * { pointer-events: auto; }
