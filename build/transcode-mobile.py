@@ -1,29 +1,28 @@
 #!/usr/bin/env python3
-"""Vídeos de portada para MÓVIL: MISMO encuadre 16:9 que escritorio (fotograma
-completo, no recortado a vertical), pequeño y ligero. En la web se muestran con
-object-fit:contain sobre una copia desenfocada (blur-fill), así se ve toda la
-imagen sin franjas negras. Genera assets/video/velum-hero-m-{1..5}.mp4 + poster."""
+"""Vídeos de portada para MÓVIL — usa metraje VERTICAL real (9:16) que llena
+la pantalla del teléfono edge-to-edge, sin recortes raros ni blur. Salida
+720x1280 ligera. Genera assets/video/velum-hero-m-{1..5}.mp4 + poster vertical."""
 import subprocess
 from pathlib import Path
 import imageio_ffmpeg
 from PIL import Image
 
 FF = imageio_ffmpeg.get_ffmpeg_exe()
-SRC = Path(r"C:\Users\JPO\Pax Capital Partners\PCP - Documents\PCP\1. Compañias\1. Activos\4. PCP Laundry\Pagina Web\Videos")
+SRC = Path(r"C:\Users\JPO\Pax Capital Partners\PCP - Documents\PCP\1. Compañias\1. Activos\4. PCP Laundry\Pagina Web\Videos\Videos Verticales")
 OUT = Path(r"C:\Users\JPO\ClaudeCode\Velum_Pag_Web\assets\video")
 OUT.mkdir(parents=True, exist_ok=True)
 
-# Mismo orden y mismas fuentes que el desktop
+# 5 clips verticales — se eligen para reflejar las escenas del desktop por
+# familia de ID (8247, 6466, 6863) + dos para completar variedad.
 ORDER = [
-    "8247208-hd_1920_1080_25fps.mp4",
-    "4935317_People_Person_3840x2160.mp4",
-    "6466561-uhd_4096_2160_25fps.mp4",
-    "6631692-uhd_4096_2160_25fps.mp4",
-    "6863738-uhd_4096_2160_25fps.mp4",
+    "8247209-hd_1080_1920_25fps.mp4",   # ↔ desktop #1
+    "6998327-hd_1080_1920_25fps.mp4",
+    "6466562-uhd_2160_4096_25fps.mp4",  # ↔ desktop #3 (familia 6466)
+    "8756826-uhd_2160_4096_25fps.mp4",
+    "6863732-uhd_2160_4096_25fps.mp4",  # ↔ desktop #5 (familia 6863)
 ]
 
-# Encuadre 16:9 completo (idéntico al desktop) pero a 960x540 y ligero
-VF = "scale=960:540:force_original_aspect_ratio=increase,crop=960:540,fps=24"
+VF = "scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,fps=24"
 DUR = "6"
 
 for i, name in enumerate(ORDER, 1):
@@ -37,7 +36,7 @@ for i, name in enumerate(ORDER, 1):
     subprocess.run(cmd, check=True, capture_output=True)
     print(f"      {dst.stat().st_size/1024:.0f} KB")
 
-# Poster móvil (frame ~1.5s del primer vídeo, fotograma completo) -> webp
+# Poster móvil (frame ~1.5s del primer vídeo vertical) -> webp
 poster_png = OUT / "_poster_m.png"
 subprocess.run([FF, "-y", "-ss", "1.5", "-i", str(SRC / ORDER[0]),
                 "-vframes", "1", "-vf", VF, str(poster_png)],

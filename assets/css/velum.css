@@ -289,11 +289,6 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 @media (max-width: 980px) { .hero__bg--d { display: none; } .hero__bg--m { display: block; } }
 .hero__vid { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.4s var(--ease); will-change: opacity; }
 .hero__vid.is-active { opacity: 1; }
-/* Móvil: clip de dos capas — fondo desenfocado + fotograma completo (contain) */
-.hero__vid--m { object-fit: unset; }
-.hero__layer { position: absolute; inset: 0; width: 100%; height: 100%; }
-.hero__layer--blur { object-fit: cover; transform: scale(1.18); filter: blur(34px) saturate(1.12) brightness(0.62); }
-.hero__layer--main { object-fit: contain; }
 .hero__scrim { position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background:
     linear-gradient(to top, rgba(18,17,15,0.74) 0%, rgba(18,17,15,0.30) 30%, rgba(18,17,15,0) 56%),

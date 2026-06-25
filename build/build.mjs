@@ -356,14 +356,9 @@ function homeMain(c) {
   // Hero — portada en vídeo: 5 clips en crossfade sincronizado + slogan encima
   const clip = (src, poster, active) =>
     `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline ${active ? "autoplay " : ""}preload="${active ? "auto" : "none"}"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
-  // Móvil: cada clip son DOS capas con la misma fuente — fondo desenfocado (cover)
-  // + vídeo nítido completo (contain). Así se ve el fotograma entero sin franjas.
-  const layer = (cls, src, poster, active) =>
-    `<video class="hero__layer ${cls}" muted loop playsinline ${active ? "autoplay " : ""}preload="${active ? "auto" : "none"}"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
-  const clipM = (src, poster, active) =>
-    `<div class="hero__vid hero__vid--m${active ? " is-active" : ""}" aria-hidden="true">${layer("hero__layer--blur", src, "", active)}${layer("hero__layer--main", src, poster, active)}</div>`;
   const heroClipsD = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-" + n), i === 0 ? vidPoster() : "", i === 0)).join("\n      ");
-  const heroClipsM = [1, 2, 3, 4, 5].map((n, i) => clipM(vid("velum-hero-m-" + n), i === 0 ? vidPosterM() : "", i === 0)).join("\n      ");
+  // Móvil: metraje vertical 9:16 real → object-fit:cover llena la pantalla.
+  const heroClipsM = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-m-" + n), i === 0 ? vidPosterM() : "", i === 0)).join("\n      ");
   const hero = `<section class="hero hero--video" id="top">
   <div class="hero__bg hero__bg--d">
       ${heroClipsD}
