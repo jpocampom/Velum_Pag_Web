@@ -25,30 +25,47 @@
   var prefersReduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   (function heroVideoRotate() {
-    var stage = doc.querySelector(".hero__bg");
-    if (!stage) return;
-    var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
-    if (!vids.length) return;
-    vids.forEach(function (v) { v.muted = true; v.preload = "auto"; });
-    var playFirst = vids[0].play();
-    if (playFirst && playFirst.catch) playFirst.catch(function () {});
-    if (prefersReduce || vids.length < 2) return;
-    var idx = 0;
-    var PERIOD = 6500;
-    window.setInterval(function () {
-      var next = (idx + 1) % vids.length;
-      var nv = vids[next];
-      try { nv.currentTime = 0; } catch (e) {}
-      var p = nv.play();
+    var stages = doc.querySelectorAll(".hero__bg");
+    if (!stages.length) return;
+    var heroMq = window.matchMedia("(max-width: 980px)");
+    var timer = null;
+    function visibleStage() {
+      for (var i = 0; i < stages.length; i++) {
+        if (stages[i].offsetParent !== null) return stages[i];
+      }
+      return stages[0];
+    }
+    function setup() {
+      if (timer) { window.clearInterval(timer); timer = null; }
+      var stage = visibleStage();
+      // Pause clips in the hidden stack(s)
+      stages.forEach(function (s) {
+        if (s !== stage) s.querySelectorAll(".hero__vid").forEach(function (v) { try { v.pause(); } catch (e) {} });
+      });
+      var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
+      if (!vids.length) return;
+      vids.forEach(function (v, i) { v.muted = true; v.preload = "auto"; v.classList.toggle("is-active", i === 0); });
+      var p = vids[0].play();
       if (p && p.catch) p.catch(function () {});
-      nv.classList.add("is-active");
-      var prev = idx;
-      vids[prev].classList.remove("is-active");
-      idx = next;
-      window.setTimeout(function () {
-        if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
-      }, 1500);
-    }, PERIOD);
+      if (prefersReduce || vids.length < 2) return;
+      var idx = 0;
+      timer = window.setInterval(function () {
+        var next = (idx + 1) % vids.length;
+        var nv = vids[next];
+        try { nv.currentTime = 0; } catch (e) {}
+        var pp = nv.play();
+        if (pp && pp.catch) pp.catch(function () {});
+        nv.classList.add("is-active");
+        var prev = idx;
+        vids[prev].classList.remove("is-active");
+        idx = next;
+        window.setTimeout(function () {
+          if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
+        }, 1500);
+      }, 6500);
+    }
+    setup();
+    if (heroMq.addEventListener) heroMq.addEventListener("change", setup);
   })();
 
   (function animateHeroTitle() {

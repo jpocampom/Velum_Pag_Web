@@ -49,6 +49,7 @@ const logo = (slug) => `/assets/img/${slug}.webp?v=${assetVer("assets/img/" + sl
 /* Versioned hero video / poster URLs. */
 const vid = (slug) => `/assets/video/${slug}.mp4?v=${assetVer("assets/video/" + slug + ".mp4")}`;
 const vidPoster = () => `/assets/video/hero-poster.webp?v=${assetVer("assets/video/hero-poster.webp")}`;
+const vidPosterM = () => `/assets/video/hero-poster-m.webp?v=${assetVer("assets/video/hero-poster-m.webp")}`;
 
 /* Pointer highlight: [[word]] → animated underline + cursor (drawn on scroll-in). */
 function phMarkup(word) {
@@ -355,12 +356,16 @@ function head(c, routeId, title, desc) {
 /* ---------- Home sections ---------- */
 function homeMain(c) {
   // Hero — portada en vídeo: 5 clips en crossfade sincronizado + slogan encima
-  const heroClips = [1, 2, 3, 4, 5].map((n, i) =>
-    `<video class="hero__vid${i === 0 ? " is-active" : ""}" muted loop playsinline ${i === 0 ? "autoplay " : ""}preload="${i === 0 ? "auto" : "none"}"${i === 0 ? ` poster="${vidPoster()}"` : ""} aria-hidden="true"><source src="${vid("velum-hero-" + n)}" type="video/mp4" /></video>`
-  ).join("\n      ");
+  const clip = (src, poster, active) =>
+    `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline preload="none"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
+  const heroClipsD = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-" + n), i === 0 ? vidPoster() : "", i === 0)).join("\n      ");
+  const heroClipsM = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-m-" + n), i === 0 ? vidPosterM() : "", i === 0)).join("\n      ");
   const hero = `<section class="hero hero--video" id="top">
-  <div class="hero__bg">
-      ${heroClips}
+  <div class="hero__bg hero__bg--d">
+      ${heroClipsD}
+  </div>
+  <div class="hero__bg hero__bg--m" aria-hidden="true">
+      ${heroClipsM}
   </div>
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__inner">
