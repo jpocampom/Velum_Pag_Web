@@ -357,7 +357,7 @@ function head(c, routeId, title, desc) {
 function homeMain(c) {
   // Hero — portada en vídeo: 5 clips en crossfade sincronizado + slogan encima
   const clip = (src, poster, active) =>
-    `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline preload="none"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
+    `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline ${active ? "autoplay " : ""}preload="${active ? "auto" : "none"}"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
   const heroClipsD = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-" + n), i === 0 ? vidPoster() : "", i === 0)).join("\n      ");
   const heroClipsM = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-m-" + n), i === 0 ? vidPosterM() : "", i === 0)).join("\n      ");
   const hero = `<section class="hero hero--video" id="top">
