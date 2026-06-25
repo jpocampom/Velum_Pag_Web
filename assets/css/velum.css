@@ -537,6 +537,44 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 .product-list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 9px; height: 1px; background: var(--sage-deep); }
 .product-foot { margin-top: clamp(20px, 2.4vw, 32px); font-size: 14px; color: var(--soft); max-width: 72ch; }
 
+/* ---------- Mobile dock (app-style bottom nav) ---------- */
+.mobile-dock { display: none; }
+@media (max-width: 980px) {
+  .site-header .nav-toggle { display: none; }
+  body { padding-bottom: 100px; }
+  .to-top { bottom: 96px; }
+  .mobile-dock { display: flex; flex-direction: column; align-items: center; gap: 10px;
+    position: fixed; left: 0; right: 0; bottom: 14px; z-index: 1150; pointer-events: none; }
+  .mobile-dock > * { pointer-events: auto; }
+  .dock-bar { display: flex; align-items: center; gap: 2px; padding: 7px; border-radius: 22px;
+    max-width: calc(100vw - 20px);
+    background: rgba(18,17,15,0.92); backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06); }
+  .dock-item { position: relative; width: 46px; height: 46px; flex: none; display: inline-flex;
+    align-items: center; justify-content: center; border-radius: 14px;
+    color: rgba(var(--c-paper-rgb),0.62);
+    transition: color var(--dur) var(--ease), background var(--dur) var(--ease); }
+  .dock-item svg { width: 23px; height: 23px; }
+  .dock-item:active { background: rgba(var(--c-paper-rgb),0.06); }
+  .dock-item.is-active { color: var(--accent-soft); background: rgba(var(--c-paper-rgb),0.08); }
+  .dock-dot { display: none; }
+  .dock-item.is-active .dock-dot { display: block; position: absolute; bottom: 6px; left: 50%;
+    transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background: var(--accent-soft); }
+  .dock-item.is-active::after { content: attr(data-label); position: absolute; bottom: calc(100% + 12px);
+    left: 50%; transform: translateX(-50%); background: rgba(18,17,15,0.96); color: var(--paper);
+    font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; padding: 7px 12px; border-radius: 9px;
+    white-space: nowrap; pointer-events: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+  .dock-item.is-active::before { content: ""; position: absolute; bottom: calc(100% + 5px); left: 50%;
+    transform: translateX(-50%); border: 6px solid transparent; border-top-color: rgba(18,17,15,0.96); pointer-events: none; }
+  .dock-sep { width: 1px; height: 26px; background: rgba(var(--c-paper-rgb),0.16); margin: 0 5px; flex: none; }
+  .dock-cta { font-family: inherit; font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: var(--paper);
+    padding: 9px 22px; border-radius: 999px; background: rgba(18,17,15,0.72);
+    border: 1px solid rgba(var(--c-paper-rgb),0.22); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .dock-cta:hover { background: var(--paper); color: var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) { .dock-item { transition: none; } }
+
 /* =====================================================================
    Standards — sober credentials band (light surface)
    ===================================================================== */

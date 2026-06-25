@@ -109,6 +109,42 @@ const ICONS = {
 };
 const icon = (name) => `<svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
 
+/* ---------- Mobile dock (bottom nav, app-style) ---------- */
+const DOCK_ICONS = {
+  home: '<path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/>',
+  about: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.6h.01"/>',
+  grid: '<rect x="4" y="4" width="6.2" height="6.2" rx="1"/><rect x="13.8" y="4" width="6.2" height="6.2" rx="1"/><rect x="4" y="13.8" width="6.2" height="6.2" rx="1"/><rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1"/>',
+  box: '<path d="M12 3 21 7.8 12 12.6 3 7.8z"/><path d="M3 7.8V16.2L12 21l9-4.8V7.8"/><path d="M12 12.6V21"/>',
+  people: '<circle cx="9" cy="9" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16 6.5a3 3 0 0 1 0 5.5M21 19a6 6 0 0 0-4-5.6"/>',
+  pin: '<path d="M12 21s6.5-5.8 6.5-10.5a6.5 6.5 0 1 0-13 0C5.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.3" r="2.4"/>',
+  mail: '<rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.5 7 12 13l8.5-6"/>'
+};
+const DOCK = [
+  { id: "top", icon: "home", key: "inicio" },
+  { id: "manifiesto", icon: "about", key: "acerca" },
+  { id: "servicios", icon: "grid", key: "servicios" },
+  { id: "productos", icon: "box", key: "productos" },
+  { id: "sectores", icon: "people", key: "sectores" },
+  { id: "cobertura", icon: "pin", key: "cobertura" },
+  { sep: true },
+  { id: "contacto", icon: "mail", key: "contacto" }
+];
+function dockIcon(name) {
+  return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${DOCK_ICONS[name] || ""}</svg>`;
+}
+function mobileDock(c, routeId) {
+  const base = routeId === "home" ? "" : ROUTES.home[c.lang];
+  const items = DOCK.map((d) => {
+    if (d.sep) return `<span class="dock-sep" aria-hidden="true"></span>`;
+    const label = (c.dock && c.dock[d.key]) || d.key;
+    return `<a class="dock-item" href="${base}#${d.id}" data-dock="${d.id}" aria-label="${label}" data-label="${label}">${dockIcon(d.icon)}<span class="dock-dot" aria-hidden="true"></span></a>`;
+  }).join("");
+  return `<nav class="mobile-dock" aria-label="${c.nav.menu}">
+    <div class="dock-bar">${items}</div>
+    <a class="dock-cta" href="${base}#contacto">${c.hero.ctaPrimary}</a>
+  </nav>`;
+}
+
 /* ---------- Shared chrome ---------- */
 function langSwitch(c, routeId) {
   const links = LANGS.map((l) => {
@@ -585,7 +621,7 @@ function iberiaMap() {
 /* ---------- Page assemblers ---------- */
 function skip(c) { return `<a class="skip-link" href="#top">${c.skip}</a>`; }
 function tail(c, routeId) {
-  return `${footer(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js?v=${JS_V}" defer></script>\n</body>\n</html>`;
+  return `${footer(c, routeId)}\n${mobileDock(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js?v=${JS_V}" defer></script>\n</body>\n</html>`;
 }
 
 function buildHome(c) {

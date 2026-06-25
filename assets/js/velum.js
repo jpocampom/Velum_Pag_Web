@@ -210,6 +210,31 @@
     sections.forEach(function (s) { spy.observe(s); });
   }
 
+  /* ---------- Mobile dock: highlight the section in view ---------- */
+  var dockItems = doc.querySelectorAll(".mobile-dock .dock-item");
+  if ("IntersectionObserver" in window && dockItems.length && sections.length) {
+    var dockMap = {};
+    dockItems.forEach(function (a) {
+      var id = a.getAttribute("data-dock");
+      if (id) dockMap[id] = a;
+    });
+    function setDock(id) {
+      dockItems.forEach(function (a) {
+        a.classList.toggle("is-active", a.getAttribute("data-dock") === id);
+      });
+    }
+    var dockSpy = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && dockMap[e.target.id]) setDock(e.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    sections.forEach(function (s) { if (dockMap[s.id]) dockSpy.observe(s); });
+    setDock("top");
+  }
+
   /* ---------- Contact form (front-end demo handling) ---------- */
   var form = doc.querySelector(".form");
   if (form) {

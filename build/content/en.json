@@ -13,6 +13,15 @@
     "tagline": "The invisible ally behind excellence."
   },
   "skip": "Skip to content",
+  "dock": {
+    "inicio": "Home",
+    "acerca": "About",
+    "servicios": "Services",
+    "productos": "Products",
+    "sectores": "Sectors",
+    "cobertura": "Coverage",
+    "contacto": "Contact"
+  },
   "nav": {
     "items": [
       {

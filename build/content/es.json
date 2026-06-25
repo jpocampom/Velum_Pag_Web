@@ -13,6 +13,15 @@
     "tagline": "El aliado invisible que sostiene la excelencia."
   },
   "skip": "Saltar al contenido",
+  "dock": {
+    "inicio": "Inicio",
+    "acerca": "Acerca",
+    "servicios": "Servicios",
+    "productos": "Productos",
+    "sectores": "Sectores",
+    "cobertura": "Cobertura",
+    "contacto": "Contacto"
+  },
   "nav": {
     "items": [
       {
