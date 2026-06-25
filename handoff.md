@@ -107,7 +107,7 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 ### Versión móvil (dock inferior tipo app)
 - **No hay dos sitios**: es **una sola web responsive**. En escritorio se ve el header arriba; en **móvil (≤980 px)** aparece un **dock flotante** abajo (estilo app) y se oculta el menú hamburguesa. Al ser un único código, **web y móvil se actualizan siempre juntas** en cada push.
 - El dock (`mobileDock()` en `build.mjs`, estilos `.mobile-dock`/`.dock-*` en CSS, lógica en `velum.js`) lleva un icono por sección (Inicio, Acerca, Servicios, Productos, Sectores, Cobertura · separador · Contacto), con **estado activo** (índigo claro + punto) y **tooltip** de la sección en vista (IntersectionObserver), más una píldora **«Pedir presupuesto»**. Etiquetas en la clave `dock` de los JSON (3 idiomas). Para añadir/quitar iconos: edita el array `DOCK` en `build.mjs` (cada item: `id` de sección + `icon` + `key` de etiqueta) y la clave `dock`.
-- En móvil el **hero de vídeo** usa altura reducida (`74svh`) y `object-position` reencuadrado para que el clip 16:9 no se recorte tanto en vertical.
+- **Hero de vídeo en móvil**: hay **clips verticales 9:16** dedicados (`velum-hero-m-1..5.mp4`, 1080×1920) que llenan la pantalla del teléfono sin recorte lateral. El generador crea dos pilas (`.hero__bg--d` 16:9 escritorio / `.hero__bg--m` 9:16 móvil); el CSS muestra una u otra según el ancho (≤980 px) y `velum.js` reproduce/rota solo la pila visible (la oculta no se descarga). Para regenerar los verticales: mismo flujo que los de escritorio pero con `scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920`.
 
 ### Añadir/cambiar fotos
 1. Coloca el original en `Fotos/` o `assets/img/photos/`.
