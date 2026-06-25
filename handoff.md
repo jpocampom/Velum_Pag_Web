@@ -38,6 +38,11 @@ build/
                             contorno está estilizado → en costas hay que AJUSTAR al trazado real
                             (este sobresale ~+16, norte ~+6, sur ~-7). Plantas Madrid/Bilbao;
                             aliados = Barcelona, Valencia, Zaragoza, Sevilla, Málaga, A Coruña.
+                            OJO 2: la costa este peninsular ≠ Baleares (las islas están en el
+                            trazado a x~251; la costa de Valencia está en x~214). OJO 3: Portugal
+                            (`pt-soon`) es un trazado APARTE y comprimido (caja y[414.7,477.7], otra
+                            escala); Lisboa va en su costa oeste a ~66% de altura → (123,456), NO con
+                            la fórmula de España.
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
     legal/{es,en,pt}/*.html       Cuerpos legales por idioma
