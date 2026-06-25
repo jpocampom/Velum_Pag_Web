@@ -60,11 +60,13 @@
         idx = next;
         window.setTimeout(function () {
           if (idx !== prev) { try { vids[prev].pause(); } catch (e) {} }
-        }, 1500);
+        }, 1400);
       }
       function startTimer() {
         if (timer || prefersReduce || vids.length < 2) return;
-        timer = window.setInterval(rotate, 6500);
+        // 6000ms < duración del clip (8s): el clip visible nunca hace loop antes
+        // del crossfade, así no se ven "saltos" al pasar de un vídeo a otro.
+        timer = window.setInterval(rotate, 6000);
       }
       // Arranca la rotación SOLO cuando el clip activo está realmente reproduciéndose,
       // así un autoplay bloqueado (iOS bajo consumo / ahorro de datos) no deja

@@ -22,8 +22,10 @@ ORDER = [
     "6863732-uhd_2160_4096_25fps.mp4",  # ↔ desktop #5 (familia 6863)
 ]
 
+# Duración 8s: mayor que el intervalo de rotación (6s) para que el clip visible
+# nunca llegue a hacer loop (reinicio) antes del crossfade -> sin "saltos".
 VF = "scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280,fps=24"
-DUR = "6"
+DUR = "8"
 
 for i, name in enumerate(ORDER, 1):
     src = SRC / name
