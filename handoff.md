@@ -32,6 +32,12 @@ build/
   generate-brand-assets.py  Kit oficial → footer-tagline, favicon/iconos y OG (Pillow)
   transcode-videos.py       Vídeos 4K → MP4 1080p web (crop 16:9, 8s, sin audio) + poster
   iberia-map.svg            Mapa de la Península Ibérica (geografía real) que el build inyecta inline
+                            Puntos GEOREFERENCIADOS: viewBox 114.1 390.8 142.2 123.3; contorno con
+                            x∈[133.57,251.26], y∈[395.82,509.06]. Transform aprox. (Madrid casa):
+                            x=133.57+(lon+9.4989)*9.1816 ; y=395.82+(43.789-lat)*14.540. OJO: el
+                            contorno está estilizado → en costas hay que AJUSTAR al trazado real
+                            (este sobresale ~+16, norte ~+6, sur ~-7). Plantas Madrid/Bilbao;
+                            aliados = Barcelona, Valencia, Zaragoza, Sevilla, Málaga, A Coruña.
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
     legal/{es,en,pt}/*.html       Cuerpos legales por idioma
@@ -107,7 +113,7 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 ### Versión móvil (dock inferior tipo app)
 - **No hay dos sitios**: es **una sola web responsive**. En escritorio se ve el header arriba; en **móvil (≤980 px)** aparece un **dock flotante** abajo (estilo app) y se oculta el menú hamburguesa. Al ser un único código, **web y móvil se actualizan siempre juntas** en cada push.
 - El dock (`mobileDock()` en `build.mjs`, estilos `.mobile-dock`/`.dock-*` en CSS, lógica en `velum.js`) lleva un icono por sección (Inicio, Acerca, Servicios, Productos, Sectores, Cobertura · separador · Contacto), con **estado activo** (índigo claro + punto) y **tooltip** de la sección en vista (IntersectionObserver), más una píldora **«Solicitar propuesta»** (hereda `hero.ctaPrimary`). Etiquetas en la clave `dock` de los JSON (3 idiomas). Para añadir/quitar iconos: edita el array `DOCK` en `build.mjs` (cada item: `id` de sección + `icon` + `key` de etiqueta) y la clave `dock`.
-- **Hero de vídeo en móvil**: usa **metraje VERTICAL 9:16 real** (no recortes del 16:9): el cliente aportó clips verticales en `…/Pagina Web/Videos/Videos Verticales/`. El script **`build/transcode-mobile.py`** elige 5 (lista `ORDER`) y los saca a `velum-hero-m-1..5.mp4` (720×1280, ~150–525 KB) + `hero-poster-m.webp`. Con `object-fit:cover` llenan la pantalla del teléfono edge-to-edge, sin recortes raros ni desenfoque. El generador crea dos pilas (`.hero__bg--d` 16:9 escritorio / `.hero__bg--m` 9:16 móvil); el CSS muestra una u otra según el ancho (≤980 px) y `velum.js` reproduce/rota solo la pila visible (la oculta no se descarga). Para regenerar: edita `ORDER` en `transcode-mobile.py` y ejecútalo, luego `npm run build`.
+- **Hero de vídeo en móvil**: usa **metraje VERTICAL 9:16 real** (no recortes del 16:9): el cliente aportó clips verticales en `…/Pagina Web/Videos/Videos Verticales/`. El script **`build/transcode-mobile.py`** elige 5 (lista `ORDER`) y los saca a `velum-hero-m-1..5.mp4` (720×1280, ~150–525 KB) + `hero-poster-m.webp`. Con `object-fit:cover` llenan la pantalla del teléfono edge-to-edge, sin recortes raros ni desenfoque. El generador crea dos pilas (`.hero__bg--d` 16:9 escritorio / `.hero__bg--m` 9:16 móvil); el CSS muestra una u otra según el ancho (≤980 px) y `velum.js` reproduce/rota solo la pila visible (la oculta no se descarga). Para regenerar: edita `ORDER` en `transcode-mobile.py` y ejecútalo, luego `npm run build`. **Tiempos**: los clips duran **8 s** y la rotación va a **6 s** (`setInterval(rotate, 6000)`); el clip de vídeo DEBE durar más que el intervalo, si no hace *loop* visible (reinicio) antes del crossfade = "salto". Autoplay robusto: la rotación no arranca hasta que el clip reproduce de verdad, y si iOS (bajo consumo) bloquea el autoplay, arranca al primer toque/scroll.
 
 ### Añadir/cambiar fotos
 1. Coloca el original en `Fotos/` o `assets/img/photos/`.
