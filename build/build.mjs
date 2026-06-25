@@ -126,9 +126,7 @@ const DOCK = [
   { id: "servicios", icon: "grid", key: "servicios" },
   { id: "sectores", icon: "people", key: "sectores" },
   { id: "productos", icon: "box", key: "productos" },
-  { id: "cobertura", icon: "pin", key: "cobertura" },
-  { sep: true },
-  { id: "contacto", icon: "mail", key: "contacto" }
+  { id: "cobertura", icon: "pin", key: "cobertura" }
 ];
 function dockIcon(name) {
   return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${DOCK_ICONS[name] || ""}</svg>`;

@@ -44,8 +44,8 @@
       });
       var vids = Array.prototype.slice.call(stage.querySelectorAll(".hero__vid"));
       if (!vids.length) return;
-      // Lazy: only the active + next preload, so the first clip starts fast.
-      vids.forEach(function (v, i) { v.muted = true; v.preload = (i < 2 ? "auto" : "none"); v.classList.toggle("is-active", i === 0); });
+      // Preload the whole (lightweight) visible stack so crossfades never show a blank frame.
+      vids.forEach(function (v, i) { v.muted = true; v.preload = "auto"; if (i !== 0) { try { v.load(); } catch (e) {} } v.classList.toggle("is-active", i === 0); });
       var p = vids[0].play();
       if (p && p.catch) p.catch(function () {});
       if (prefersReduce || vids.length < 2) return;
