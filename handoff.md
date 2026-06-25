@@ -37,12 +37,16 @@ build/
                             x=133.57+(lon+9.4989)*9.1816 ; y=395.82+(43.789-lat)*14.540. OJO: el
                             contorno está estilizado → en costas hay que AJUSTAR al trazado real
                             (este sobresale ~+16, norte ~+6, sur ~-7). Plantas Madrid/Bilbao;
-                            aliados = Barcelona, Valencia, Zaragoza, Sevilla, Málaga, A Coruña.
+                            aliados = Barcelona (244,431), Valencia (211,458), Zaragoza (213,427), Sevilla
+                            (166,483), Málaga (181,490) y Oporto (135,427). Plantas: Madrid (186,446)
+                            y Bilbao (194,412). Lisboa (123,456) y Oporto van con estilo `.ally`
+                            (círculo hueco borde índigo, igual que los aliados).
                             OJO 2: la costa este peninsular ≠ Baleares (las islas están en el
                             trazado a x~251; la costa de Valencia está en x~214). OJO 3: Portugal
                             (`pt-soon`) es un trazado APARTE y comprimido (caja y[414.7,477.7], otra
-                            escala); Lisboa va en su costa oeste a ~66% de altura → (123,456), NO con
-                            la fórmula de España.
+                            escala); Lisboa/Oporto van en su costa oeste (~66% y ~19% de altura), NO
+                            con la fórmula de España. Estilos en CSS: `.plant` relleno índigo;
+                            `.ally` hueco con borde índigo; `.pt-label` etiqueta índigo.
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
     legal/{es,en,pt}/*.html       Cuerpos legales por idioma
