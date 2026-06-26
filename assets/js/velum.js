@@ -227,6 +227,35 @@
     });
   });
 
+  /* ---------- Products page: family tabs ---------- */
+  (function productTabs() {
+    var tabs = Array.prototype.slice.call(doc.querySelectorAll(".prod-tab"));
+    if (!tabs.length) return;
+    var panels = Array.prototype.slice.call(doc.querySelectorAll(".prod-panel"));
+    function activate(i) {
+      tabs.forEach(function (t) {
+        var on = t.getAttribute("data-ptab") === String(i);
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p) {
+        var on = p.id === "ppanel-" + i;
+        p.classList.toggle("is-active", on);
+        if (on) { p.removeAttribute("hidden"); } else { p.setAttribute("hidden", ""); }
+      });
+    }
+    tabs.forEach(function (t, idx) {
+      t.addEventListener("click", function () { activate(t.getAttribute("data-ptab")); });
+      t.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        e.preventDefault();
+        var next = e.key === "ArrowRight" ? (idx + 1) % tabs.length : (idx - 1 + tabs.length) % tabs.length;
+        tabs[next].focus(); activate(tabs[next].getAttribute("data-ptab"));
+      });
+    });
+  })();
+
   /* ---------- Active section in nav ---------- */
   var sections = doc.querySelectorAll("section[id]");
   var navLinks = doc.querySelectorAll(".nav a.nav-link");

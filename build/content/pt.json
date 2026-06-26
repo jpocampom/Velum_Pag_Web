@@ -799,6 +799,10 @@
           {
             "name": "Pijamas, batas e fardamento",
             "body": "Peças e fardamento em tecidos homologados para desinfeção térmica; identificação por cor, tamanho e etiquetagem para rastreabilidade."
+          },
+          {
+            "name": "Lares e bloco operatório",
+            "body": "Resguardos e protetores absorventes, babetes para geriatria e campos cirúrgicos (abertos ou fechados), em tecidos homologados para lavagem a alta temperatura."
           }
         ]
       }

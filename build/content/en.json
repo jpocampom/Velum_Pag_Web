@@ -799,6 +799,10 @@
           {
             "name": "Patient gowns and uniforms",
             "body": "Garments and uniforms in fabrics approved for thermal disinfection; identification by colour, size and labelling for traceability."
+          },
+          {
+            "name": "Care homes and surgery",
+            "body": "Absorbent underpads and protectors, bibs for geriatric care and surgical drapes (open or closed), in fabrics approved for high-temperature laundering."
           }
         ]
       }

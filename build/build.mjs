@@ -724,17 +724,21 @@ function buildProducts(c) {
   const homeUrl = ROUTES.home[c.lang];
   const claims = p.claims.map((cl) =>
     `<div class="prod-claim" data-reveal><h3>${cl.title}</h3><p>${cl.body}</p></div>`).join("");
-  const families = p.families.map((fam, i) => {
+  const tabs = p.families.map((fam, i) =>
+    `<button class="prod-tab${i === 0 ? " is-active" : ""}" type="button" role="tab" id="ptab-${i}" aria-selected="${i === 0 ? "true" : "false"}" aria-controls="ppanel-${i}" data-ptab="${i}">${fam.tag}</button>`).join("");
+  const panels = p.families.map((fam, i) => {
     const groups = fam.groups.map((g) =>
       `<div class="prod-group"><h4>${g.name}</h4><p>${g.body}</p></div>`).join("");
-    return `<article class="prod-family" id="familia-${i + 1}" data-reveal>
-      <div class="prod-family__head">
-        <span class="prod-fam-tag">${fam.tag}</span>
-        <h3 class="h-mid">${fam.title}</h3>
-        <p class="lede">${fam.lead}</p>
-      </div>
-      <div class="prod-groups">${groups}</div>
-    </article>`;
+    return `<div class="prod-panel${i === 0 ? " is-active" : ""}" role="tabpanel" id="ppanel-${i}" aria-labelledby="ptab-${i}"${i !== 0 ? " hidden" : ""}>
+      <article class="prod-family" id="familia-${i + 1}">
+        <div class="prod-family__head">
+          <span class="prod-fam-tag">${fam.tag}</span>
+          <h3 class="h-mid">${fam.title}</h3>
+          <p class="lede">${fam.lead}</p>
+        </div>
+        <div class="prod-groups">${groups}</div>
+      </article>
+    </div>`;
   }).join("");
   const custItems = p.custom.items.map((x) => `<li>${x}</li>`).join("");
   const certItems = p.certs.items.map((ct) =>
@@ -761,7 +765,10 @@ ${header(c, "productos")}
         <h2 class="h-section">${p.gamaTitle}</h2>
         <p class="lede">${p.gamaIntro}</p>
       </div>
-      <div class="prod-families">${families}</div>
+      <div class="prod-gama" data-reveal>
+        <div class="prod-tabs" role="tablist" aria-label="${p.hero.eyebrow}">${tabs}</div>
+        <div class="prod-panels">${panels}</div>
+      </div>
     </div>
   </section>
   <section class="section section--mist">
