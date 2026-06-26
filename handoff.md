@@ -119,6 +119,18 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - Respeta `prefers-reduced-motion`: sin rotación ni animación de entrada.
 - **Cambiar/añadir vídeos**: coloca los originales y edita la lista `ORDER` en `build/transcode-videos.py`; ejecútalo (requiere `pip install imageio-ffmpeg`, trae ffmpeg). Genera `velum-hero-N.mp4` 1080p + `hero-poster.webp`. Luego `npm run build` (cache-bust `?v=` automático). El nº de clips se detecta solo en el build (array `[1..5]` en `build.mjs`, ajústalo si cambias la cantidad).
 
+### Página de Productos (`/productos`, `/en/products`, `/pt/produtos`)
+- **Página dedicada, profesional y comercial** generada por `buildProducts()` desde la clave `productosPage` de los JSON (ES/EN/PT, paridad 228 claves). Estructura: hero + 4 *claims* + gama por **4 familias** (Habitación, Baño, Restauración, Salud) con grupos y specs reales (densidades 250–1.000 hilos, rizo 420–650 g/m², gramajes, etc.) + **Personalización** + **Certificaciones** (OEKO-TEX® STANDARD 100, STeP, UNE-EN ISO 15797, RFID) + CTA.
+- **Contenido AGNÓSTICO de proveedor** (no se nombra a nadie) y con las **exclusiones** del cliente aplicadas (sin almohadas/edredones/rellenos, zapatillas, jacquard/antimanchas, fundas de silla, textil técnico de planta). Fuente: catálogos PDF en `…/Pagina Web/PDF & Pag WEBs/` (Hotel Division + Resuinsa). Webs de referencia del cliente (royaleuropetextile, stranfford, vayoiltextil, distrihogar, bassols, resuinsa) — revisar si se quiere ampliar Salud.
+- **Fusión sectores↔productos**: cada tarjeta de sector (home) lleva ahora «Qué textil cubrimos» + enlace **«Ver toda la gama» → /productos**. La antigua sección de productos del home se **eliminó** (unificación). Nav y dock «Productos» enlazan a la página (item con `route: "productos"`). Ruta en `ROUTES`, incluida en sitemap/hreflang automáticamente.
+- Estilos: `.prod-claims/.prod-claim`, `.prod-families/.prod-family/.prod-groups/.prod-group`, `.prod-custom/.prod-custom-list`, `.prod-certs/.prod-cert`, y `.sector-products*` en `velum.css`.
+
+### Home — interacciones y maquetación
+- **Párrafos justificados** en todo el contenido (`text-align: justify` + `hyphens: auto`) — ver bloque en `velum.css`.
+- **«Por qué VELUM»** (`.why-cell`): en escritorio (hover) solo se ve el **título**; la descripción **se despliega al pasar el ratón** (afford. `+` que gira). En táctil/móvil se muestra todo (`@media (hover: hover)`).
+- **«El Modelo»** (`.svc-card`): tarjetas más compactas (menos padding/min-height) para que ocupen menos.
+- **Proceso «Cómo trabajamos»**: reconvertido de lista a **infografía de flujo** (`.flow`/`.flow-step`/`.flow-node`/`.flow-icon`): horizontal con nodos conectados en escritorio, timeline vertical en móvil.
+
 ### Versión móvil (dock inferior tipo app)
 - **No hay dos sitios**: es **una sola web responsive**. En escritorio se ve el header arriba; en **móvil (≤980 px)** aparece un **dock flotante** abajo (estilo app) y se oculta el menú hamburguesa. Al ser un único código, **web y móvil se actualizan siempre juntas** en cada push.
 - El dock (`mobileDock()` en `build.mjs`, estilos `.mobile-dock`/`.dock-*` en CSS, lógica en `velum.js`) lleva un icono por sección (Inicio, Acerca, Servicios, Productos, Sectores, Cobertura · separador · Contacto), con **estado activo** (índigo claro + punto) y **tooltip** de la sección en vista (IntersectionObserver), más una píldora **«Solicitar propuesta»** (hereda `hero.ctaPrimary`). Etiquetas en la clave `dock` de los JSON (3 idiomas). Para añadir/quitar iconos: edita el array `DOCK` en `build.mjs` (cada item: `id` de sección + `icon` + `key` de etiqueta) y la clave `dock`.
