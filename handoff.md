@@ -37,7 +37,7 @@ build/
                             x=133.57+(lon+9.4989)*9.1816 ; y=395.82+(43.789-lat)*14.540. OJO: el
                             contorno está estilizado → en costas hay que AJUSTAR al trazado real
                             (este sobresale ~+16, norte ~+6, sur ~-7). Plantas Madrid/Bilbao;
-                            aliados = Barcelona (244,431), Valencia (211,458), Zaragoza (213,427), Sevilla
+                            aliados = Barcelona (236,441), Valencia (211,458), Zaragoza (213,427), Sevilla
                             (166,483), Málaga (181,490) y Oporto (135,427). Plantas: Madrid (186,446)
                             y Bilbao (194,412). Lisboa (123,456) y Oporto van con estilo `.ally`
                             (círculo hueco borde índigo, igual que los aliados).
@@ -123,7 +123,9 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - **Página dedicada, profesional y comercial** generada por `buildProducts()` desde la clave `productosPage` de los JSON (ES/EN/PT, paridad 228 claves). Estructura: hero + 4 *claims* + gama por **4 familias** (Habitación, Baño, Restauración, Salud) con grupos y specs reales (densidades 250–1.000 hilos, rizo 420–650 g/m², gramajes, etc.) + **Personalización** + **Certificaciones** (OEKO-TEX® STANDARD 100, STeP, UNE-EN ISO 15797, RFID) + CTA.
 - **Contenido AGNÓSTICO de proveedor** (no se nombra a nadie) y con las **exclusiones** del cliente aplicadas (sin almohadas/edredones/rellenos, zapatillas, jacquard/antimanchas, fundas de silla, textil técnico de planta). Fuente: catálogos PDF en `…/Pagina Web/PDF & Pag WEBs/` (Hotel Division + Resuinsa). Webs de referencia del cliente (royaleuropetextile, stranfford, vayoiltextil, distrihogar, bassols, resuinsa) — revisar si se quiere ampliar Salud.
 - **Fusión sectores↔productos**: cada tarjeta de sector (home) lleva ahora «Qué textil cubrimos» + enlace **«Ver toda la gama» → /productos**. La antigua sección de productos del home se **eliminó** (unificación). Nav y dock «Productos» enlazan a la página (item con `route: "productos"`). Ruta en `ROUTES`, incluida en sitemap/hreflang automáticamente.
-- Estilos: `.prod-claims/.prod-claim`, `.prod-families/.prod-family/.prod-groups/.prod-group`, `.prod-custom/.prod-custom-list`, `.prod-certs/.prod-cert`, y `.sector-products*` en `velum.css`.
+- **Interactivo**: las 4 familias van en **pestañas** (`.prod-tabs`/`.prod-tab` + `.prod-panel`), con JS `productTabs()` en `velum.js` (accesible, flechas del teclado, fade al cambiar). Salud tiene 4 grupos (incl. «Residencias y quirófano») a partir de la investigación de las webs (WebFetch funciona desde el agente principal; Stranfford da error SSL).
+- Estilos: `.prod-claims/.prod-claim`, `.prod-tabs/.prod-tab/.prod-panel`, `.prod-family/.prod-groups/.prod-group`, `.prod-custom/.prod-custom-list`, `.prod-certs/.prod-cert`, y `.sector-products*` en `velum.css`.
+- **Foto del gestor** («tu interlocutor»): es el apretón de manos (`assets/img/photos/gestor.webp`, origen `Fotos/pexels-fauxels-3184465.jpg`).
 
 ### Home — interacciones y maquetación
 - **Párrafos justificados** en todo el contenido (`text-align: justify` + `hyphens: auto`) — ver bloque en `velum.css`.
