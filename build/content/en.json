@@ -38,7 +38,7 @@
       },
       {
         "label": "Products",
-        "href": "#productos"
+        "route": "productos"
       }
     ],
     "cta": "Request a proposal",
@@ -155,7 +155,9 @@
           "Healthcare uniforms"
         ]
       }
-    ]
+    ],
+    "productsLabel": "Textiles we cover",
+    "verGama": "See the full range"
   },
   "process": {
     "kicker": "How we work",
@@ -683,6 +685,161 @@
       "updated": "June 2026",
       "updatedLabel": "Last updated",
       "metaDescription": "VELUM cookie policy: types of cookies, consent and how to manage them."
+    }
+  },
+  "productosPage": {
+    "meta": {
+      "title": "Products — Premium textile range for hospitality, dining and healthcare | VELUM",
+      "description": "The full textile range: bed linen, bath, table and healthcare textiles. From essential kit to bespoke collections, with approved fabrics built for industrial laundering."
+    },
+    "hero": {
+      "eyebrow": "Products",
+      "title": "The full textile range, tailored to your brand.",
+      "sub": "From essential kit to fully bespoke collections. Selected, approved fabrics built for industrial laundering — and for upholding your brand's promise, cycle after cycle."
+    },
+    "claims": [
+      {
+        "title": "Built for industrial laundering",
+        "body": "High-tenacity fabrics that withstand 75–95 °C without losing weight, whiteness or absorbency (UNE-EN ISO 15797)."
+      },
+      {
+        "title": "From basic to bespoke",
+        "body": "Your embroidered logo, your colour palette, your exact sizes and exclusive finishing."
+      },
+      {
+        "title": "Certified, traceable quality",
+        "body": "Textiles under OEKO-TEX® STANDARD 100 and sustainable production; optional RFID traceability that survives laundering."
+      },
+      {
+        "title": "Durability that protects your investment",
+        "body": "Minimal shrinkage and strong recovery, made for your operation's rotation pace."
+      }
+    ],
+    "gamaTitle": "Our range, by family.",
+    "gamaIntro": "Everything your operation needs, organised and tailored to you — from basic to fully bespoke.",
+    "families": [
+      {
+        "tag": "Room",
+        "title": "Rest, cared for down to the detail.",
+        "lead": "We dress the bed from basic to fully bespoke, with fabrics that improve wash after wash.",
+        "groups": [
+          {
+            "name": "Sheets and cases",
+            "body": "Percale and sateen, from blends to 100% cotton, in thread counts from 250 to 1,000 — Egyptian cotton included. Made-to-measure hems and a colour range (white, ivory, beige, grey and blue)."
+          },
+          {
+            "name": "Duvet and pillow covers",
+            "body": "Bag, bottle or flange finishes; sizes from single to King, in the same qualities as the sheet line."
+          },
+          {
+            "name": "Protectors and toppers",
+            "body": "Waterproof, breathable protectors; siliconised-fibre toppers (1,100 g/m²) or feather-down (1,900 g/m²) for high-end comfort."
+          },
+          {
+            "name": "Bedspreads, plaids and bed runners",
+            "body": "Piqué and ottoman from 195 to 285 g/m²; polar and raschel blankets and plaids up to 600 g/m², in a wide colour range."
+          }
+        ]
+      },
+      {
+        "tag": "Bath",
+        "title": "High-end touch and absorbency.",
+        "lead": "The full terry range, from light and fluffy to maximum weight, always with minimal shrinkage.",
+        "groups": [
+          {
+            "name": "Towels by use",
+            "body": "Face, hand, shower, bath and bath-sheet in 100% cotton American terry, 420 to 650 g/m², plain or with a border."
+          },
+          {
+            "name": "Bathrobes",
+            "body": "American terry, velour-sheared, waffle or velour, 250 to 550 g/m²; shawl or kimono collar, sizes up to XXXL."
+          },
+          {
+            "name": "Bath mats",
+            "body": "High-weight terry, 650 to 850 g/m², plain or with a decorative border."
+          },
+          {
+            "name": "Pool and spa",
+            "body": "Solid, high-fastness colour towels (450–600 g/m²) for gym, spa, sauna and pool."
+          }
+        ]
+      },
+      {
+        "tag": "Dining",
+        "title": "The table, dressed to your standard.",
+        "lead": "Highly durable table linen, crease-resistant and soft to the touch, fit for industrial laundering.",
+        "groups": [
+          {
+            "name": "Tablecloths and overlays",
+            "body": "100% cotton or blend sateen, coloured weave and linen; Soft System finish, in white and a wide colour range, with coordinated drops for any table."
+          },
+          {
+            "name": "Napkins and table runners",
+            "body": "Same fabric and finish as the cloth to match; standard 55×55 cm napkin and made-to-measure runners."
+          },
+          {
+            "name": "Kitchen linen",
+            "body": "Cloths and towels in cotton and blends fit for industrial laundering, with hemstitch or scallop finishes."
+          }
+        ]
+      },
+      {
+        "tag": "Healthcare",
+        "title": "Hygiene and resistance, no compromise.",
+        "lead": "Healthcare textiles for demanding hygiene protocols and RABC industrial laundering, without sacrificing patient comfort.",
+        "groups": [
+          {
+            "name": "Clinical bed linen",
+            "body": "Sheets, cases and draw sheets in percale and sateen approved for high-temperature laundering (UNE-EN ISO 15797)."
+          },
+          {
+            "name": "Sanitary mattress protection",
+            "body": "Microfibre or Tencel protectors with a polyurethane barrier: waterproof, breathable and washable up to 95 °C."
+          },
+          {
+            "name": "Patient gowns and uniforms",
+            "body": "Garments and uniforms in fabrics approved for thermal disinfection; identification by colour, size and labelling for traceability."
+          }
+        ]
+      }
+    ],
+    "custom": {
+      "kicker": "Personalisation",
+      "title": "From basic to fully bespoke.",
+      "body": "Every piece can carry your mark — and if it doesn't exist yet, we develop it for you.",
+      "items": [
+        "Embroidered logo, monogram or initials",
+        "Your colour palette and finishing (scallop, hemstitch, satin ribbon)",
+        "Exact sizes: mattress depth, table format and garment sizes",
+        "RFID labelling for traceability and lifecycle control"
+      ]
+    },
+    "certs": {
+      "title": "Certified quality, end to end.",
+      "items": [
+        {
+          "name": "OEKO-TEX® STANDARD 100",
+          "body": "Textiles free of harmful substances."
+        },
+        {
+          "name": "Sustainable production (STeP)",
+          "body": "Environmental, safety and social criteria."
+        },
+        {
+          "name": "UNE-EN ISO 15797",
+          "body": "Fit for industrial laundering without losing performance."
+        },
+        {
+          "name": "RFID traceability",
+          "body": "Per-piece control: washes, stock and lifecycle."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Request your proposal",
+      "title": "Shall we talk about your textile kit?",
+      "sub": "We study your operation and propose the range and model tailored to you, with no commitment.",
+      "button": "Request a proposal"
     }
   }
 }

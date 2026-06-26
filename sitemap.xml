@@ -73,6 +73,30 @@
     <lastmod>2026-06-06</lastmod>
   </url>
   <url>
+    <loc>https://byvelum.com/productos/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://byvelum.com/productos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byvelum.com/en/products/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://byvelum.com/pt/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byvelum.com/productos/"/>
+    <lastmod>2026-06-06</lastmod>
+  </url>
+  <url>
+    <loc>https://byvelum.com/en/products/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://byvelum.com/productos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byvelum.com/en/products/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://byvelum.com/pt/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byvelum.com/productos/"/>
+    <lastmod>2026-06-06</lastmod>
+  </url>
+  <url>
+    <loc>https://byvelum.com/pt/produtos/</loc>
+    <xhtml:link rel="alternate" hreflang="es-ES" href="https://byvelum.com/productos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://byvelum.com/en/products/"/>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://byvelum.com/pt/produtos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://byvelum.com/productos/"/>
+    <lastmod>2026-06-06</lastmod>
+  </url>
+  <url>
     <loc>https://byvelum.com/aviso-legal/</loc>
     <xhtml:link rel="alternate" hreflang="es-ES" href="https://byvelum.com/aviso-legal/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://byvelum.com/en/legal-notice/"/>

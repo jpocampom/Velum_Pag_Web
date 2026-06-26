@@ -24,6 +24,7 @@ const ROUTES = {
   home:       { es: "/",                         en: "/en/",                  pt: "/pt/" },
   servicios:  { es: "/servicios/",               en: "/en/services/",         pt: "/pt/servicos/" },
   sectores:   { es: "/sectores/",                en: "/en/sectors/",          pt: "/pt/setores/" },
+  productos:  { es: "/productos/",               en: "/en/products/",         pt: "/pt/produtos/" },
   aviso:      { es: "/aviso-legal/",             en: "/en/legal-notice/",     pt: "/pt/aviso-legal/" },
   privacidad: { es: "/politica-de-privacidad/",  en: "/en/privacy-policy/",   pt: "/pt/politica-de-privacidade/" },
   cookies:    { es: "/politica-de-cookies/",     en: "/en/cookie-policy/",    pt: "/pt/politica-de-cookies/" }
@@ -125,7 +126,7 @@ const DOCK = [
   { id: "manifiesto", icon: "about", key: "acerca" },
   { id: "servicios", icon: "grid", key: "servicios" },
   { id: "sectores", icon: "people", key: "sectores" },
-  { id: "productos", icon: "box", key: "productos" },
+  { id: "productos", icon: "box", key: "productos", route: "productos" },
   { id: "cobertura", icon: "pin", key: "cobertura" }
 ];
 function dockIcon(name) {
@@ -136,7 +137,8 @@ function mobileDock(c, routeId) {
   const items = DOCK.map((d) => {
     if (d.sep) return `<span class="dock-sep" aria-hidden="true"></span>`;
     const label = (c.dock && c.dock[d.key]) || d.key;
-    return `<a class="dock-item" href="${base}#${d.id}" data-dock="${d.id}" aria-label="${label}" data-label="${label}">${dockIcon(d.icon)}<span class="dock-dot" aria-hidden="true"></span></a>`;
+    const href = d.route ? ROUTES[d.route][c.lang] : `${base}#${d.id}`;
+    return `<a class="dock-item" href="${href}" data-dock="${d.id}" aria-label="${label}" data-label="${label}">${dockIcon(d.icon)}<span class="dock-dot" aria-hidden="true"></span></a>`;
   }).join("");
   return `<nav class="mobile-dock" aria-label="${c.nav.menu}">
     <div class="dock-bar">${items}</div>
@@ -438,7 +440,11 @@ function homeMain(c) {
         <span class="sector-tag">${s.tag}</span>
         <h3>${s.title}</h3>
         <p>${s.body}</p>
-        <ul class="sector-items">${s.items.map((it) => `<li>${it}</li>`).join("")}</ul>
+        <div class="sector-products">
+          <span class="sector-products__label">${c.sectors.productsLabel}</span>
+          <ul class="sector-items">${s.items.map((it) => `<li>${it}</li>`).join("")}</ul>
+          <a class="link-arrow sector-products__more" href="${ROUTES.productos[c.lang]}">${c.sectors.verGama} <span class="arr" aria-hidden="true">→</span></a>
+        </div>
       </div>
     </article>`
   ).join("");
@@ -607,24 +613,9 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Nuestros productos — gama organizada por familia
-  const prodCards = c.products.items.map((p) =>
-    `<article class="product-card" data-reveal>
-      <span class="product-tag">${p.tag}</span>
-      <h3>${p.desc}</h3>
-      <ul class="product-list">${p.list.map((x) => `<li>${x}</li>`).join("")}</ul>
-    </article>`).join("");
-  const products = `<section class="section section--linen" id="productos">
-  <div class="wrap">
-    <span class="kicker" data-reveal>${c.products.kicker}</span>
-    <h2 class="h-section" data-reveal style="margin:14px 0 16px;">${c.products.title}</h2>
-    <p class="lede" data-reveal style="max-width:64ch;">${c.products.intro}</p>
-    <div class="products-grid">${prodCards}</div>
-    <p class="product-foot" data-reveal>${c.products.footnote}</p>
-  </div>
-</section>`;
-
-  return [hero, trust, manifesto, whySection, services, process, sectors, products, gallery, manager, coverage, faq, contact].join("\n");
+  // La gama completa de productos vive ahora en su página dedicada (/productos);
+  // los sectores enlazan a ella. Por eso la sección de productos sale del home.
+  return [hero, trust, manifesto, whySection, services, process, sectors, gallery, manager, coverage, faq, contact].join("\n");
 }
 
 /* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.
@@ -728,6 +719,79 @@ ${header(c, routeId)}
 ${tail(c, routeId)}`;
 }
 
+function buildProducts(c) {
+  const p = c.productosPage;
+  const homeUrl = ROUTES.home[c.lang];
+  const claims = p.claims.map((cl) =>
+    `<div class="prod-claim" data-reveal><h3>${cl.title}</h3><p>${cl.body}</p></div>`).join("");
+  const families = p.families.map((fam, i) => {
+    const groups = fam.groups.map((g) =>
+      `<div class="prod-group"><h4>${g.name}</h4><p>${g.body}</p></div>`).join("");
+    return `<article class="prod-family" id="familia-${i + 1}" data-reveal>
+      <div class="prod-family__head">
+        <span class="prod-fam-tag">${fam.tag}</span>
+        <h3 class="h-mid">${fam.title}</h3>
+        <p class="lede">${fam.lead}</p>
+      </div>
+      <div class="prod-groups">${groups}</div>
+    </article>`;
+  }).join("");
+  const custItems = p.custom.items.map((x) => `<li>${x}</li>`).join("");
+  const certItems = p.certs.items.map((ct) =>
+    `<div class="prod-cert"><h4>${ct.name}</h4><p>${ct.body}</p></div>`).join("");
+  return `${head(c, "productos", p.meta.title, p.meta.description)}
+<body>
+${skip(c)}
+${header(c, "productos")}
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="breadcrumb"><a href="${homeUrl}">${c.breadcrumbHome}</a> <span aria-hidden="true">/</span> <span aria-current="page">${p.hero.eyebrow}</span></nav>
+      <span class="kicker" style="margin-top:20px;">${p.hero.eyebrow}</span>
+      <h1 class="display" style="margin-top:14px;font-size:var(--fs-section);max-width:18ch;">${p.hero.title}</h1>
+      <p class="lede" style="margin-top:22px;max-width:64ch;">${p.hero.sub}</p>
+    </div>
+  </section>
+  <section class="section section--linen">
+    <div class="wrap"><div class="prod-claims">${claims}</div></div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head" data-reveal>
+        <h2 class="h-section">${p.gamaTitle}</h2>
+        <p class="lede">${p.gamaIntro}</p>
+      </div>
+      <div class="prod-families">${families}</div>
+    </div>
+  </section>
+  <section class="section section--mist">
+    <div class="wrap prod-custom">
+      <div class="prod-custom__lead" data-reveal>
+        <span class="kicker">${p.custom.kicker}</span>
+        <h2 class="h-section" style="margin:16px 0 18px;">${p.custom.title}</h2>
+        <p class="lede">${p.custom.body}</p>
+      </div>
+      <ul class="prod-custom-list" data-reveal data-reveal-delay="1">${custItems}</ul>
+    </div>
+  </section>
+  <section class="section section--linen">
+    <div class="wrap">
+      <div class="section-head" data-reveal><h2 class="h-section">${p.certs.title}</h2></div>
+      <div class="prod-certs">${certItems}</div>
+    </div>
+  </section>
+  <section class="section cta-final">
+    <div class="wrap" style="text-align:center;display:grid;gap:22px;justify-items:center;">
+      <span class="kicker">${p.cta.eyebrow}</span>
+      <h2 class="h-section" style="max-width:20ch;">${p.cta.title}</h2>
+      <p class="lede" style="max-width:54ch;">${p.cta.sub}</p>
+      <a class="btn btn--primary" href="${homeUrl}#contacto">${p.cta.button} <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+${tail(c, "productos")}`;
+}
+
 function buildLegal(c, routeId) {
   const page = c.legalPages[routeId]; // { title, updated }
   const body = legalBody(c.lang, LEGAL_FILE[routeId]);
@@ -826,6 +890,7 @@ function run() {
     built.push(writeOut(ROUTES.home[lang], buildHome(c)));
     built.push(writeOut(ROUTES.servicios[lang], buildDetail(c, "servicios")));
     built.push(writeOut(ROUTES.sectores[lang], buildDetail(c, "sectores")));
+    built.push(writeOut(ROUTES.productos[lang], buildProducts(c)));
     for (const routeId of ["aviso", "privacidad", "cookies"]) {
       built.push(writeOut(ROUTES[routeId][lang], buildLegal(c, routeId)));
     }

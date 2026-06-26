@@ -38,7 +38,7 @@
       },
       {
         "label": "Produtos",
-        "href": "#productos"
+        "route": "productos"
       }
     ],
     "cta": "Pedir proposta",
@@ -155,7 +155,9 @@
           "Fardamento sanitário"
         ]
       }
-    ]
+    ],
+    "productsLabel": "Que têxteis cobrimos",
+    "verGama": "Ver toda a gama"
   },
   "process": {
     "kicker": "Como trabalhamos",
@@ -683,6 +685,161 @@
       "updated": "junho de 2026",
       "updatedLabel": "Última atualização",
       "metaDescription": "Política de cookies da VELUM: tipos de cookies, consentimento e como geri-los."
+    }
+  },
+  "productosPage": {
+    "meta": {
+      "title": "Produtos — Gama têxtil premium para hotelaria, restauração e saúde | VELUM",
+      "description": "Toda a gama têxtil: roupa de cama, banho, mesa e têxtil sanitário. Da dotação essencial a coleções à medida, com tecidos homologados aptos para lavagem industrial."
+    },
+    "hero": {
+      "eyebrow": "Produtos",
+      "title": "Toda a gama têxtil, à medida da sua marca.",
+      "sub": "Da dotação essencial a coleções totalmente personalizadas. Tecidos selecionados e homologados, pensados para a lavagem industrial e para sustentar a promessa da sua marca, ciclo após ciclo."
+    },
+    "claims": [
+      {
+        "title": "Pensado para a lavagem industrial",
+        "body": "Tecidos de alta tenacidade, aptos para processos a 75–95 °C sem perder gramagem, brancura nem absorção (UNE-EN ISO 15797)."
+      },
+      {
+        "title": "Do básico ao personalizado",
+        "body": "O seu logótipo bordado, a sua paleta de cor, as suas medidas exatas e acabamentos de confeção exclusivos."
+      },
+      {
+        "title": "Qualidade certificada e rastreável",
+        "body": "Têxtil sob OEKO-TEX® STANDARD 100 e produção sustentável; rastreabilidade opcional por RFID resistente à lavagem."
+      },
+      {
+        "title": "Durabilidade que protege o seu investimento",
+        "body": "Encolhimento mínimo e grande recuperação, confecionado para o ritmo de rotação da sua operação."
+      }
+    ],
+    "gamaTitle": "A nossa gama, por famílias.",
+    "gamaIntro": "Tudo o que a sua operação precisa, organizado e à sua medida — do básico ao totalmente personalizado.",
+    "families": [
+      {
+        "tag": "Quarto",
+        "title": "O descanso, cuidado ao detalhe.",
+        "lead": "Vestimos a cama do básico ao totalmente personalizado, com tecidos que melhoram lavagem após lavagem.",
+        "groups": [
+          {
+            "name": "Lençóis e fronhas",
+            "body": "Percal e cetim, de mistura a 100% algodão, em densidades de 250 a 1.000 fios — incluindo algodão egípcio. Embainhados à medida e gama de cor (branco, marfim, bege, cinza e azul)."
+          },
+          {
+            "name": "Capas de edredão e de almofada",
+            "body": "Confeções tipo saco, garrafa ou com folho; tamanhos de individual a King, nas mesmas qualidades da linha de lençóis."
+          },
+          {
+            "name": "Protetores e toppers",
+            "body": "Protetores impermeáveis e respiráveis; toppers de fibra siliconizada (1.100 g/m²) ou pena-penugem (1.900 g/m²) para um conforto de gama alta."
+          },
+          {
+            "name": "Colchas, plaids e pés de cama",
+            "body": "Piqué e otomano de 195 a 285 g/m²; mantas e plaids polar e raschel até 600 g/m², com ampla carta de cor."
+          }
+        ]
+      },
+      {
+        "tag": "Banho",
+        "title": "Toque e absorção de gama alta.",
+        "lead": "Toda a gama de turco, do fofo ligeiro à gramagem máxima, sempre com encolhimento mínimo.",
+        "groups": [
+          {
+            "name": "Toalhas por uso",
+            "body": "Rosto, lavabo, duche, banho e lençol de banho em turco americano 100% algodão, de 420 a 650 g/m², lisas ou com cercadura."
+          },
+          {
+            "name": "Roupões",
+            "body": "Turco americano, tosquiado aveludado, favo de mel ou velur, de 250 a 550 g/m²; gola smoking ou kimono, tamanhos até XXXL."
+          },
+          {
+            "name": "Tapetes de banho",
+            "body": "Turco de alta gramagem, de 650 a 850 g/m², lisos ou com cercadura decorativa."
+          },
+          {
+            "name": "Piscina e spa",
+            "body": "Toalhas de cor sólida de alta solidez (450–600 g/m²) para ginásio, spa, sauna e piscina."
+          }
+        ]
+      },
+      {
+        "tag": "Restauração",
+        "title": "A mesa, vestida ao seu nível.",
+        "lead": "Toalhas de mesa de grande resistência, antirrugas e suaves ao toque, aptas para lavagem industrial.",
+        "groups": [
+          {
+            "name": "Toalhas e cobre-toalhas",
+            "body": "Cetim 100% algodão ou mistura, trama de cor e linho; acabamento Soft System, em branco e ampla carta de cor, com quedas coordenadas para qualquer mesa."
+          },
+          {
+            "name": "Guardanapos e passadeiras",
+            "body": "Mesmo tecido e acabamento da toalha para conjugar; guardanapo padrão 55×55 cm e passadeiras à medida."
+          },
+          {
+            "name": "Roupa de cozinha",
+            "body": "Panos e toalhas em algodão e misturas aptas para lavagem industrial, com acabamentos de festo ou bainha aberta."
+          }
+        ]
+      },
+      {
+        "tag": "Saúde",
+        "title": "Higiene e resistência, sem concessões.",
+        "lead": "Têxtil sanitário para protocolos de higiene exigentes e lavagem industrial RABC, sem abdicar do conforto do paciente.",
+        "groups": [
+          {
+            "name": "Roupa de cama clínica",
+            "body": "Lençóis, fronhas e resguardos em percal e cetim homologados para lavagem a alta temperatura (UNE-EN ISO 15797)."
+          },
+          {
+            "name": "Proteção de colchão sanitária",
+            "body": "Protetores de microfibra ou Tencel com barreira de poliuretano: impermeáveis, respiráveis e laváveis até 95 °C."
+          },
+          {
+            "name": "Pijamas, batas e fardamento",
+            "body": "Peças e fardamento em tecidos homologados para desinfeção térmica; identificação por cor, tamanho e etiquetagem para rastreabilidade."
+          }
+        ]
+      }
+    ],
+    "custom": {
+      "kicker": "Personalização",
+      "title": "Do básico ao totalmente personalizado.",
+      "body": "Cada peça pode levar o seu selo — e, se não existir, desenvolvemo-la para si.",
+      "items": [
+        "Bordado de logótipo, anagrama ou iniciais",
+        "A sua paleta de cor e acabamentos de confeção (festo, bainha aberta, fita de cetim)",
+        "Medidas exatas: altura de colchão, formato de mesa e tamanhos",
+        "Etiquetagem RFID para rastreabilidade e controlo de vida útil"
+      ]
+    },
+    "certs": {
+      "title": "Qualidade certificada, de princípio a fim.",
+      "items": [
+        {
+          "name": "OEKO-TEX® STANDARD 100",
+          "body": "Têxtil livre de substâncias nocivas."
+        },
+        {
+          "name": "Produção sustentável (STeP)",
+          "body": "Critérios ambientais, de segurança e sociais."
+        },
+        {
+          "name": "UNE-EN ISO 15797",
+          "body": "Apto para lavagem industrial sem perder prestações."
+        },
+        {
+          "name": "Rastreabilidade RFID",
+          "body": "Controlo por peça: lavagens, stock e vida útil."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Solicite a sua proposta",
+      "title": "Falamos da sua dotação têxtil?",
+      "sub": "Estudamos a sua operação e propomos a gama e o modelo à sua medida, sem compromisso.",
+      "button": "Pedir proposta"
     }
   }
 }

@@ -38,7 +38,7 @@
       },
       {
         "label": "Productos",
-        "href": "#productos"
+        "route": "productos"
       }
     ],
     "cta": "Solicitar propuesta",
@@ -155,7 +155,9 @@
           "Uniformidad sanitaria"
         ]
       }
-    ]
+    ],
+    "productsLabel": "Qué textil cubrimos",
+    "verGama": "Ver toda la gama"
   },
   "process": {
     "kicker": "Cómo trabajamos",
@@ -683,6 +685,161 @@
       "updated": "junio de 2026",
       "updatedLabel": "Última actualización",
       "metaDescription": "Política de cookies de VELUM: tipos de cookies, consentimiento y cómo gestionarlas."
+    }
+  },
+  "productosPage": {
+    "meta": {
+      "title": "Productos — Gama textil premium para hostelería, restauración y salud | VELUM",
+      "description": "Toda la gama textil: ropa de cama, baño, mesa y textil sanitario. De la dotación esencial a colecciones a medida, con tejidos homologados aptos para lavado industrial."
+    },
+    "hero": {
+      "eyebrow": "Productos",
+      "title": "Toda la gama textil, a la medida de tu marca.",
+      "sub": "De la dotación esencial a colecciones totalmente personalizadas. Tejidos seleccionados y homologados, pensados para el lavado industrial y para sostener la promesa de tu marca, ciclo tras ciclo."
+    },
+    "claims": [
+      {
+        "title": "Pensado para el lavado industrial",
+        "body": "Tejidos de alta tenacidad, aptos para procesos a 75–95 °C sin perder gramaje, blancura ni absorción (UNE-EN ISO 15797)."
+      },
+      {
+        "title": "De lo básico a lo personalizado",
+        "body": "Tu logo bordado, tu paleta de color, tus medidas exactas y acabados de confección exclusivos."
+      },
+      {
+        "title": "Calidad certificada y trazable",
+        "body": "Textil bajo OEKO-TEX® STANDARD 100 y producción sostenible; trazabilidad opcional por RFID resistente al lavado."
+      },
+      {
+        "title": "Durabilidad que protege tu inversión",
+        "body": "Mínimo encogimiento y gran recuperación, confeccionado para el ritmo de rotación de tu operación."
+      }
+    ],
+    "gamaTitle": "Nuestra gama, por familias.",
+    "gamaIntro": "Todo lo que tu operación necesita, organizado y a tu medida —de lo básico a lo totalmente personalizado.",
+    "families": [
+      {
+        "tag": "Habitación",
+        "title": "El descanso, cuidado al detalle.",
+        "lead": "Vestimos la cama de lo básico a lo totalmente personalizado, con tejidos que mejoran lavado tras lavado.",
+        "groups": [
+          {
+            "name": "Sábanas y fundas",
+            "body": "Percal y sátén, de mezcla a 100% algodón, en densidades de 250 a 1.000 hilos —incluido algodón egipcio—. Embozos a medida y gama de color (blanco, marfil, beige, gris y azul)."
+          },
+          {
+            "name": "Fundas nórdicas y de almohada",
+            "body": "Confecciones tipo saco, botella o con volante; tallas de individual a King, en las mismas calidades que la línea de sábanas."
+          },
+          {
+            "name": "Protectores y toppers",
+            "body": "Protectores impermeables y transpirables; toppers de fibra siliconada (1.100 g/m²) o pluma-plumón (1.900 g/m²) para un confort de gama alta."
+          },
+          {
+            "name": "Colchas, plaids y pies de cama",
+            "body": "Piqué y otomán de 195 a 285 g/m²; mantas y plaids polar y raschel hasta 600 g/m², con amplia carta de color."
+          }
+        ]
+      },
+      {
+        "tag": "Baño",
+        "title": "Tacto y absorción de gama alta.",
+        "lead": "Toda la gama de rizo, del esponjado ligero al máximo gramaje, siempre con mínimo encogimiento.",
+        "groups": [
+          {
+            "name": "Toallas por uso",
+            "body": "Tocador, lavabo, ducha, baño y sábana de baño en rizo americano 100% algodón, de 420 a 650 g/m², lisas o con cenefa."
+          },
+          {
+            "name": "Albornoces",
+            "body": "Rizo americano, tundido aterciopelado, nido de abeja o velour, de 250 a 550 g/m²; cuello smoking o kimono, tallas hasta XXXL."
+          },
+          {
+            "name": "Alfombrines",
+            "body": "Rizo de alto gramaje, de 650 a 850 g/m², lisos o con cenefa decorativa."
+          },
+          {
+            "name": "Piscina y spa",
+            "body": "Toallas de color sólido de alta solidez (450–600 g/m²) para gimnasio, spa, sauna y piscina."
+          }
+        ]
+      },
+      {
+        "tag": "Restauración",
+        "title": "La mesa, vestida a tu altura.",
+        "lead": "Mantelería de gran resistencia, antiarrugas y suave al tacto, apta para lavado industrial.",
+        "groups": [
+          {
+            "name": "Mantelería y cubremanteles",
+            "body": "Sátén 100% algodón o mezcla, trama color y lino; acabado Soft System, en blanco y amplia carta de color, con caídas coordinadas para cualquier mesa."
+          },
+          {
+            "name": "Servilletas y caminos de mesa",
+            "body": "Mismo tejido y acabado que el mantel para conjuntar; servilleta estándar 55×55 cm y caminos a medida."
+          },
+          {
+            "name": "Lencería de cocina",
+            "body": "Litos y paños en algodón y mezclas aptas para lavado industrial, con acabados de festón o vainica."
+          }
+        ]
+      },
+      {
+        "tag": "Salud",
+        "title": "Higiene y resistencia, sin concesiones.",
+        "lead": "Textil sanitario para protocolos de higiene exigentes y lavado industrial RABC, sin renunciar al confort del paciente.",
+        "groups": [
+          {
+            "name": "Ropa de cama clínica",
+            "body": "Sábanas, fundas y entremetidas en percal y sátén homologados para lavado a alta temperatura (UNE-EN ISO 15797)."
+          },
+          {
+            "name": "Protección de colchón sanitaria",
+            "body": "Protectores de microfibra o Tencel con barrera de poliuretano: impermeables, transpirables y lavables hasta 95 °C."
+          },
+          {
+            "name": "Pijamas, batas y uniformidad",
+            "body": "Prendas y uniformidad en tejidos homologados para desinfección térmica; identificación por color, talla y etiquetado para trazabilidad."
+          }
+        ]
+      }
+    ],
+    "custom": {
+      "kicker": "Personalización",
+      "title": "De lo básico a lo totalmente personalizado.",
+      "body": "Cada pieza puede llevar tu sello —y si no existe, lo desarrollamos para ti.",
+      "items": [
+        "Bordado de logo, anagrama o iniciales",
+        "Tu paleta de color y acabados de confección (festón, vainica, cinta de raso)",
+        "Medidas exactas: altura de colchón, formato de mesa y tallas",
+        "Etiquetado RFID para trazabilidad y control de vida útil"
+      ]
+    },
+    "certs": {
+      "title": "Calidad certificada, de principio a fin.",
+      "items": [
+        {
+          "name": "OEKO-TEX® STANDARD 100",
+          "body": "Textil libre de sustancias nocivas."
+        },
+        {
+          "name": "Producción sostenible (STeP)",
+          "body": "Criterios medioambientales, de seguridad y sociales."
+        },
+        {
+          "name": "UNE-EN ISO 15797",
+          "body": "Apto para lavado industrial sin perder prestaciones."
+        },
+        {
+          "name": "Trazabilidad RFID",
+          "body": "Control por pieza: lavados, stock y vida útil."
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "Solicita tu propuesta",
+      "title": "¿Hablamos de tu dotación textil?",
+      "sub": "Estudiamos tu operación y te proponemos la gama y el modelo a tu medida, sin compromiso.",
+      "button": "Solicitar propuesta"
     }
   }
 }
