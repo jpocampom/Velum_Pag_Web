@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="/assets/css/velum.css?v=aec8b813" />
+  <link rel="stylesheet" href="/assets/css/velum.css?v=a0af17b9" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://byvelum.com/#organization","name":"VELUM","legalName":"PCP LAUNDRY, S.L.","url":"https://byvelum.com/","logo":"https://byvelum.com/assets/img/velum-logo.svg","description":"We're not an industrial laundry: we're textile care. We manage the supply, care and replenishment of your textiles through a single point of contact, across Spain, so linen management stops being your problem.","email":"[CONTACTO@byvelum.com]","telephone":"[+34 900 000 000]","address":{"@type":"PostalAddress","streetAddress":"Calle Don Ramón de la Cruz 17, piso 3, puerta derecha","addressLocality":"Madrid","postalCode":"28001","addressCountry":"ES"},"areaServed":["ES","PT"],"sameAs":["https://www.linkedin.com/company/velum"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://byvelum.com/#website","url":"https://byvelum.com/","name":"VELUM","inLanguage":"en","publisher":{"@id":"https://byvelum.com/#organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Supply","name":"VELUM","description":"We don't sell you laundering: we manage all your textiles so they're always available and ready. You set the standard; we take care of everything else, cycle after cycle.","provider":{"@id":"https://byvelum.com/#organization"},"areaServed":{"@type":"Country","name":"España"},"audience":{"@type":"BusinessAudience","name":"Hotels remembered for how they feel., Tables that dress the experience., The rigour that care demands."}}</script>
@@ -172,27 +172,42 @@
       <h2 class="h-section">This is how we care for your textiles.</h2>
       <p class="lede">Behind every flawless delivery there's a demanding process, from collection through to return.</p>
     </div>
-    <div class="process-steps"><div class="process-step" data-reveal>
-      <div class="step-num">01</div>
-      <div class="step-head"><h3>Collection and dispatch</h3></div>
-      <div class="step-body"><p>We collect and deliver on planned routes, at whatever frequency your operation needs. Logistics designed so you never run short.</p></div>
-    </div><div class="process-step" data-reveal>
-      <div class="step-num">02</div>
-      <div class="step-head"><h3>Specialist laundering</h3></div>
-      <div class="step-body"><p>Each fabric, its own programme: specific professional detergents and controlled temperatures that protect the fibre and guarantee hygiene.</p></div>
-    </div><div class="process-step" data-reveal>
-      <div class="step-num">03</div>
-      <div class="step-head"><h3>Machinery and equipment</h3></div>
-      <div class="step-body"><p>Plants with state-of-the-art industrial machinery and calibrated equipment for a uniform finish, cycle after cycle.</p></div>
-    </div><div class="process-step" data-reveal>
-      <div class="step-num">04</div>
-      <div class="step-head"><h3>Quality control</h3></div>
-      <div class="step-body"><p>Piece-by-piece inspection: anything that doesn't meet our standard is withdrawn and replaced before it goes out.</p></div>
-    </div><div class="process-step" data-reveal>
-      <div class="step-num">05</div>
-      <div class="step-head"><h3>Traceability</h3></div>
-      <div class="step-body"><p>Textile management software (Lavander) in your business: every piece, controlled from start to finish.</p></div>
-    </div></div>
+    <ol class="flow"><li class="flow-step" data-reveal data-reveal-delay="1">
+      <div class="flow-node"><span class="flow-num">01</span></div>
+      <div class="flow-card">
+        <svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h10v9H3z"/><path d="M13 10h4l4 3.5V16h-8z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg>
+        <h3>Collection and dispatch</h3>
+        <p>We collect and deliver on planned routes, at whatever frequency your operation needs. Logistics designed so you never run short.</p>
+      </div>
+    </li><li class="flow-step" data-reveal data-reveal-delay="2">
+      <div class="flow-node"><span class="flow-num">02</span></div>
+      <div class="flow-card">
+        <svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="6.6"/><circle cx="12" cy="13" r="2.6"/><path d="M5 4.5h14M8.5 4.5v3.2"/></svg>
+        <h3>Specialist laundering</h3>
+        <p>Each fabric, its own programme: specific professional detergents and controlled temperatures that protect the fibre and guarantee hygiene.</p>
+      </div>
+    </li><li class="flow-step" data-reveal data-reveal-delay="3">
+      <div class="flow-node"><span class="flow-num">03</span></div>
+      <div class="flow-card">
+        <svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.2v3M12 17.8v3M3.2 12h3M17.8 12h3M5.7 5.7l2.1 2.1M16.2 16.2l2.1 2.1M18.3 5.7l-2.1 2.1M7.8 16.2l-2.1 2.1"/></svg>
+        <h3>Machinery and equipment</h3>
+        <p>Plants with state-of-the-art industrial machinery and calibrated equipment for a uniform finish, cycle after cycle.</p>
+      </div>
+    </li><li class="flow-step" data-reveal data-reveal-delay="1">
+      <div class="flow-node"><span class="flow-num">04</span></div>
+      <div class="flow-card">
+        <svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3.1 7.7-7 9-3.9-1.3-7-4.4-7-9V6z"/><path d="M9 12.2l2.1 2.1L15 10"/></svg>
+        <h3>Quality control</h3>
+        <p>Piece-by-piece inspection: anything that doesn't meet our standard is withdrawn and replaced before it goes out.</p>
+      </div>
+    </li><li class="flow-step" data-reveal data-reveal-delay="2">
+      <div class="flow-node"><span class="flow-num">05</span></div>
+      <div class="flow-card">
+        <svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14.5 14.5h2v2M20 14.5v5.5M14.5 20h3"/></svg>
+        <h3>Traceability</h3>
+        <p>Textile management software (Lavander) in your business: every piece, controlled from start to finish.</p>
+      </div>
+    </li></ol>
   </div>
 </section>
 <section class="section" id="sectores">

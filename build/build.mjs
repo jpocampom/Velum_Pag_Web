@@ -453,13 +453,24 @@ function homeMain(c) {
   </div>
 </section>`;
 
-  // Process
+  // Process — infografía de flujo conectado (icono + nodo numerado por etapa)
+  const FLOW_ICONS = [
+    '<path d="M3 7h10v9H3z"/><path d="M13 10h4l4 3.5V16h-8z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/>',
+    '<circle cx="12" cy="13" r="6.6"/><circle cx="12" cy="13" r="2.6"/><path d="M5 4.5h14M8.5 4.5v3.2"/>',
+    '<circle cx="12" cy="12" r="3.2"/><path d="M12 3.2v3M12 17.8v3M3.2 12h3M17.8 12h3M5.7 5.7l2.1 2.1M16.2 16.2l2.1 2.1M18.3 5.7l-2.1 2.1M7.8 16.2l-2.1 2.1"/>',
+    '<path d="M12 3l7 3v5c0 4.6-3.1 7.7-7 9-3.9-1.3-7-4.4-7-9V6z"/><path d="M9 12.2l2.1 2.1L15 10"/>',
+    '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14.5 14.5h2v2M20 14.5v5.5M14.5 20h3"/>'
+  ];
+  const stepIcon = (i) => `<svg class="flow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${FLOW_ICONS[i % FLOW_ICONS.length]}</svg>`;
   const steps = c.process.steps.map((s, i) =>
-    `<div class="process-step" data-reveal>
-      <div class="step-num">${String(i + 1).padStart(2, "0")}</div>
-      <div class="step-head"><h3>${s.title}</h3></div>
-      <div class="step-body"><p>${s.body}</p></div>
-    </div>`
+    `<li class="flow-step" data-reveal data-reveal-delay="${(i % 3) + 1}">
+      <div class="flow-node"><span class="flow-num">${String(i + 1).padStart(2, "0")}</span></div>
+      <div class="flow-card">
+        ${stepIcon(i)}
+        <h3>${s.title}</h3>
+        <p>${s.body}</p>
+      </div>
+    </li>`
   ).join("");
   const process = `<section class="section section--mist process" id="proceso">
   <div class="wrap">
@@ -467,7 +478,7 @@ function homeMain(c) {
       <h2 class="h-section">${c.process.title}</h2>
       <p class="lede">${c.process.intro}</p>
     </div>
-    <div class="process-steps">${steps}</div>
+    <ol class="flow">${steps}</ol>
   </div>
 </section>`;
 

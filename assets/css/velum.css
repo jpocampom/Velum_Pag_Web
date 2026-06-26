@@ -395,9 +395,10 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
 .svc-card {
   border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  padding: clamp(28px, 3vw, 44px); display: flex; flex-direction: column; gap: 16px;
-  min-height: 280px; position: relative; transition: background 420ms var(--ease);
+  padding: clamp(18px, 1.9vw, 26px); display: flex; flex-direction: column; gap: 11px;
+  min-height: 0; position: relative; transition: background 420ms var(--ease);
 }
+.svc-card .svc-icon { width: 32px; height: 32px; margin-bottom: 2px; }
 .svc-card:hover { background: var(--linen); }
 .svc-card--cta { background: var(--ink); color: var(--paper); }
 .svc-card--cta:hover { background: var(--ink-deep); }
@@ -451,33 +452,59 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 /* =====================================================================
    Process
    ===================================================================== */
-.process { counter-reset: step; }
-.process-steps { display: grid; gap: 0; }
-.process-step {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-areas: "num head" "num body";
-  column-gap: clamp(18px, 3vw, 32px); row-gap: 6px;
-  padding-block: clamp(24px, 3.2vh, 40px); border-top: 1px solid var(--line); align-items: baseline;
-}
-.process-step:last-child { border-bottom: 1px solid var(--line); }
-.process-step .step-num { grid-area: num; font-family: var(--serif); font-size: clamp(23px, 2.2vw, 32px); font-weight: 300; color: var(--sage-deep); line-height: 1; }
-.process-step .step-head { grid-area: head; }
-.process-step .step-body { grid-area: body; display: flex; flex-direction: column; }
-.process-step h3 { font-family: var(--serif); font-size: clamp(19px, 1.6vw, 24px); font-weight: 400; line-height: 1.08; }
-.process-step p { color: rgba(var(--c-ink-rgb),0.74); margin: 0; max-width: 54ch; }
-@media (min-width: 760px){
-  .process-step { grid-template-columns: 84px 0.8fr 1.4fr; grid-template-areas: "num head body"; align-items: baseline; }
+/* Proceso — infografía de flujo conectado */
+.flow { list-style: none; margin: clamp(34px, 4.5vw, 56px) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, 1fr); }
+.flow-step { position: relative; display: flex; flex-direction: column; align-items: center;
+  text-align: center; gap: 13px; padding: 0 clamp(8px, 1vw, 16px); }
+/* conector horizontal entre nodos */
+.flow-step::before { content: ""; position: absolute; top: 26px; right: 50%; width: 100%; height: 2px;
+  background: var(--line); z-index: 0; }
+.flow-step:first-child::before { display: none; }
+.flow-node { position: relative; z-index: 1; width: 52px; height: 52px; border-radius: 50%;
+  background: var(--paper); border: 1.5px solid var(--accent); display: grid; place-items: center; }
+.flow-num { font-family: var(--serif); font-size: 19px; font-weight: 400; color: var(--accent); line-height: 1; }
+.flow-icon { width: 30px; height: 30px; color: var(--accent); }
+.flow-card { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+.flow-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(17px, 1.4vw, 21px); line-height: 1.1; text-wrap: balance; }
+.flow-card p { color: rgba(var(--c-ink-rgb),0.72); font-size: 14.5px; line-height: 1.55; margin: 0; max-width: 30ch; }
+@media (max-width: 860px) {
+  .flow { grid-template-columns: 1fr; }
+  .flow-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 18px;
+    padding: 0 0 clamp(22px, 3vw, 30px); }
+  .flow-step::before { top: 0; right: auto; left: 25px; width: 2px; height: 100%; }
+  .flow-step:first-child::before { display: block; }
+  .flow-step:last-child::before { display: none; }
+  .flow-node { flex: 0 0 auto; }
+  .flow-card { align-items: flex-start; gap: 6px; }
+  .flow-card p { max-width: none; text-align: left; }
 }
 
 /* =====================================================================
    Why VELUM
    ===================================================================== */
 .why-grid { display: grid; gap: 2px; background: var(--paper-line); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.why-cell { background: var(--ink); padding: clamp(32px, 3vw, 52px); display: flex; flex-direction: column; gap: 14px; min-height: 260px; }
+.why-cell { background: var(--ink); padding: clamp(26px, 2.6vw, 40px); display: flex; flex-direction: column; gap: 12px; min-height: 140px; }
 .why-cell .why-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.16em; color: rgba(var(--c-paper-rgb),0.5); }
-.why-cell h3 { font-family: var(--serif); font-size: clamp(20px, 1.6vw, 25px); font-weight: 400; color: var(--paper); line-height: 1.05; }
+.why-cell h3 { font-family: var(--serif); font-size: clamp(20px, 1.6vw, 25px); font-weight: 400; color: var(--paper); line-height: 1.1; transition: color 320ms var(--ease); }
 .why-cell p { color: rgba(var(--c-paper-rgb),0.72); font-size: 16px; margin: 0; }
+/* En escritorio (con ratón): por defecto solo el título; al pasar el cursor se
+   despliega la descripción. En táctil/móvil se muestra todo (no hay hover). */
+@media (hover: hover) and (pointer: fine) {
+  .why-cell { cursor: default; }
+  .why-cell p {
+    max-height: 0; opacity: 0; overflow: hidden;
+    transition: max-height 560ms var(--ease), opacity 380ms var(--ease);
+  }
+  .why-cell h3::after {
+    content: "+"; margin-left: 8px; font-family: var(--mono); font-size: 0.7em;
+    color: var(--accent-soft); opacity: 0.7; transition: opacity 320ms var(--ease), transform 320ms var(--ease);
+    display: inline-block; vertical-align: middle;
+  }
+  .why-cell:hover h3, .why-cell:focus-within h3 { color: var(--accent-soft); }
+  .why-cell:hover h3::after, .why-cell:focus-within h3::after { opacity: 0; transform: rotate(45deg); }
+  .why-cell:hover p, .why-cell:focus-within p { max-height: 28em; opacity: 1; }
+}
 
 /* =====================================================================
    Manager / split feature
@@ -975,6 +1002,15 @@ section[id] { scroll-margin-top: 92px; }
 .manifesto__body { text-wrap: pretty; }
 .lede, .svc-card p, .sector-card p, .why-cell p, .process-step p,
 .faq-a, .sust-claim p, .detail-block__head .lede { text-wrap: pretty; }
+
+/* Párrafos de contenido justificados en toda la web (guionado para evitar huecos) */
+.lede, .manifesto__body, .svc-card p, .sector-card p, .process-step p,
+.why-cell p, .product-card p, .product-list li, .faq-a, .faq-a p,
+.detail-block__head .lede, .detail-list li, .legal-body p, .legal-body li,
+.prod-family p, .prod-fam-list li {
+  text-align: justify; text-justify: inter-word;
+  hyphens: auto; -webkit-hyphens: auto;
+}
 
 /* Woven thread texture on dark surfaces — echoes the Tejido mark.
    Two hairline grids crossing = warp & weft. Kept whisper-faint. */
