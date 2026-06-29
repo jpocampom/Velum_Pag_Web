@@ -222,8 +222,8 @@ function cookieBanner(c) {
   </div>
   <div class="cookie-actions">
     <button class="btn btn--primary" type="button" data-consent="all">${k.accept}</button>
-    <button class="btn btn--mini-ghost" type="button" data-consent="reject">${k.reject}</button>
-    <button class="btn btn--mini-ghost" type="button" data-consent="configure">${k.configure}</button>
+    <button class="btn btn--primary" type="button" data-consent="reject">${k.reject}</button>
+    <button class="btn btn--ghost btn--cookie-config" type="button" data-consent="configure">${k.configure}</button>
   </div>
 </aside>
 <div class="cookie-panel" data-cookie-panel hidden>
@@ -258,11 +258,12 @@ function cookieBanner(c) {
 /* ---------- <head> ---------- */
 function jsonLd(c, routeId) {
   const org = {
-    "@context": "https://schema.org", "@type": "Organization", "@id": DOMAIN + "/#organization",
+    "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": DOMAIN + "/#organization",
     name: "VELUM", legalName: "PCP LAUNDRY, S.L.", url: DOMAIN + "/", logo: DOMAIN + "/assets/img/velum-logo.svg",
-    description: c.meta.description, email: "[CONTACTO@byvelum.com]", telephone: "[+34 900 000 000]",
+    image: DOMAIN + "/assets/img/og-velum.png", description: c.meta.description, email: "hola@byvelum.com",
+    priceRange: "€€€",
     address: { "@type": "PostalAddress", streetAddress: "Calle Don Ramón de la Cruz 17, piso 3, puerta derecha", addressLocality: "Madrid", postalCode: "28001", addressCountry: "ES" },
-    areaServed: ["ES", "PT"], sameAs: ["https://www.linkedin.com/company/velum"]
+    areaServed: ["ES", "PT"]
   };
   const website = {
     "@context": "https://schema.org", "@type": "WebSite", "@id": DOMAIN + "/#website",
@@ -299,6 +300,27 @@ function jsonLd(c, routeId) {
       name: p.hero.title,
       itemListElement: p.items.map((it, i) => ({
         "@type": "ListItem", position: i + 1, name: it.title
+      }))
+    });
+  }
+  if (routeId === "productos") {
+    const p = c.productosPage;
+    blocks.push({
+      "@context": "https://schema.org", "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: c.breadcrumbHome, item: DOMAIN + ROUTES.home[c.lang] },
+        { "@type": "ListItem", position: 2, name: p.hero.eyebrow, item: DOMAIN + ROUTES.productos[c.lang] }
+      ]
+    });
+    blocks.push({
+      "@context": "https://schema.org", "@type": "OfferCatalog",
+      name: p.gamaTitle, provider: { "@id": DOMAIN + "/#organization" },
+      itemListElement: p.families.map((fam) => ({
+        "@type": "OfferCatalog", name: fam.title,
+        itemListElement: fam.groups.map((g, j) => ({
+          "@type": "Offer", position: j + 1,
+          itemOffered: { "@type": "Product", name: g.name, description: g.body, category: fam.tag }
+        }))
       }))
     });
   }
@@ -340,6 +362,10 @@ function head(c, routeId, title, desc) {
   <meta name="twitter:title" content="${title}" />
   <meta name="twitter:description" content="${desc}" />
   <meta name="twitter:image" content="${DOMAIN}/assets/img/og-velum.png?v=${assetVer("assets/img/og-velum.png")}" />
+  <meta property="og:image:alt" content="VELUM — Cuidado textil premium" />
+  <meta name="twitter:image:alt" content="VELUM — Cuidado textil premium" />${routeId === "home" ? `
+  <link rel="preload" as="image" href="${vidPoster()}" media="(min-width: 981px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="${vidPosterM()}" media="(max-width: 980px)" fetchpriority="high" />` : ""}
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon.png?v=${assetVer("assets/img/favicon.png")}" />
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png?v=${assetVer("assets/img/apple-touch-icon.png")}" />
@@ -347,7 +373,8 @@ function head(c, routeId, title, desc) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
   <link rel="stylesheet" href="/assets/css/velum.css?v=${CSS_V}" />
   ${jsonLd(c, routeId)}
 </head>`;
@@ -357,7 +384,7 @@ function head(c, routeId, title, desc) {
 function homeMain(c) {
   // Hero — portada en vídeo: 5 clips en crossfade sincronizado + slogan encima
   const clip = (src, poster, active) =>
-    `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline ${active ? "autoplay " : ""}preload="${active ? "auto" : "none"}"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
+    `<video class="hero__vid${active ? " is-active" : ""}" muted loop playsinline ${active ? "autoplay " : ""}preload="${active ? "metadata" : "none"}"${poster ? ` poster="${poster}"` : ""} aria-hidden="true"><source src="${src}" type="video/mp4" /></video>`;
   const heroClipsD = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-" + n), i === 0 ? vidPoster() : "", i === 0)).join("\n      ");
   // Móvil: metraje vertical 9:16 real → object-fit:cover llena la pantalla.
   const heroClipsM = [1, 2, 3, 4, 5].map((n, i) => clip(vid("velum-hero-m-" + n), i === 0 ? vidPosterM() : "", i === 0)).join("\n      ");

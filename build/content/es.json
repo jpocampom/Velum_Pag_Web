@@ -5,8 +5,8 @@
   "dir": "ltr",
   "home": "/",
   "meta": {
-    "title": "Renting textil premium para hostelería y salud | VELUM",
-    "description": "No somos una lavandería industrial: somos textile care. Gestionamos la dotación, el cuidado y la reposición de tu textil con un único interlocutor, en toda España, para que la gestión de la ropa deje de ser tu problema."
+    "title": "Renting textil premium para hostelería, restauración y salud | VELUM",
+    "description": "No somos una lavandería: somos textile care premium. Gestionamos la dotación, el cuidado y la reposición de tu textil con un único interlocutor, en toda España."
   },
   "brand": {
     "name": "VELUM",
@@ -200,7 +200,7 @@
       },
       {
         "title": "Capital libre y flexibilidad",
-        "body": "El textil deja de ser un activo inmovilizado: pagas por usarlo, no por poseerlo. Y te adaptas sin fricción —más dotaciones, recogidas ad-hoc, ajustes por temporada— sin comprar de más."
+        "body": "El textil deja de ser un activo inmovilizado: pagas por usarlo, no por poseerlo. Y te adaptas sin fricción —más dotaciones, recogidas a demanda, ajustes por temporada— sin comprar de más."
       },
       {
         "title": "Hecho a tu medida",
@@ -699,7 +699,7 @@
     },
     "hero": {
       "eyebrow": "Productos",
-      "title": "Toda la gama textil, a la medida de tu marca.",
+      "title": "Gama textil premium en renting: cama, baño, mesa y textil sanitario.",
       "sub": "De la dotación esencial a colecciones totalmente personalizadas. Tejidos seleccionados y homologados, pensados para el lavado industrial y para sostener la promesa de tu marca, ciclo tras ciclo."
     },
     "claims": [
@@ -730,7 +730,7 @@
         "groups": [
           {
             "name": "Sábanas y fundas",
-            "body": "Percal y sátén, de mezcla a 100% algodón, en densidades de 250 a 1.000 hilos —incluido algodón egipcio—. Embozos a medida y gama de color (blanco, marfil, beige, gris y azul)."
+            "body": "Percal y satén, de mezcla a 100% algodón, en densidades de 250 a 1.000 hilos —incluido algodón egipcio—. Embozos a medida y gama de color (blanco, marfil, beige, gris y azul)."
           },
           {
             "name": "Fundas nórdicas y de almohada",
@@ -795,7 +795,7 @@
         "groups": [
           {
             "name": "Ropa de cama clínica",
-            "body": "Sábanas, fundas y entremetidas en percal y sátén homologados para lavado a alta temperatura (UNE-EN ISO 15797)."
+            "body": "Sábanas, fundas y entremetidas en percal y satén homologados para lavado a alta temperatura (UNE-EN ISO 15797)."
           },
           {
             "name": "Protección de colchón sanitaria",

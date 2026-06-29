@@ -5,8 +5,8 @@
   "dir": "ltr",
   "home": "/en/",
   "meta": {
-    "title": "Premium textile rental for hospitality and healthcare | VELUM",
-    "description": "We're not an industrial laundry: we're textile care. We manage the supply, care and replenishment of your textiles through a single point of contact, across Spain, so linen management stops being your problem."
+    "title": "Premium textile rental for hospitality, food service & healthcare | VELUM",
+    "description": "We're not a laundry: we're premium textile care. We manage the supply, care and replenishment of your linen through a single point of contact, across Spain."
   },
   "brand": {
     "name": "VELUM",
@@ -699,7 +699,7 @@
     },
     "hero": {
       "eyebrow": "Products",
-      "title": "The full textile range, tailored to your brand.",
+      "title": "Premium textile range for rental: bed, bath, table and healthcare linen.",
       "sub": "From essential kit to fully bespoke collections. Selected, approved fabrics built for industrial laundering — and for upholding your brand's promise, cycle after cycle."
     },
     "claims": [
