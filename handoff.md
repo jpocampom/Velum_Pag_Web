@@ -45,7 +45,7 @@ build/
                             trazado a x~251; la costa de Valencia está en x~214). OJO 3: Portugal
                             (`pt-soon`) es un trazado APARTE y comprimido (caja y[414.7,477.7], otra
                             escala); Lisboa/Oporto van en su costa oeste (~66% y ~19% de altura), NO
-                            con la fórmula de España. Estilos en CSS: `.plant` relleno índigo;
+                            con la fórmula de España. Las **etiquetas de ciudad se localizan**: tokens `{{C_MADRID/BILBAO/LISBOA}}` en el SVG, resueltos en `iberiaMap(c)` desde `coverage.cities` (EN="Lisbon"; ES/PT="Lisboa"). Estilos en CSS: `.plant` relleno índigo;
                             `.ally` hueco con borde índigo; `.pt-label` etiqueta índigo.
   content/
     es.json en.json pt.json      Contenido por idioma (FUENTE DE VERDAD; ES es la versión maestra)
