@@ -365,7 +365,7 @@
   // │ 'G-XXXXXXXXXX'). Mientras valga el placeholder, GA NO se carga     │
   // │ aunque el usuario consienta.                                       │
   // └──────────────────────────────────────────────────────────────────┘
-  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+  var GA_MEASUREMENT_ID = "G-CTES2DEV33";
 
   var CONSENT_KEY = "velum_cookie_consent_v2";
   var CONSENT_MAX_AGE_DAYS = 365;

@@ -658,7 +658,7 @@ function iberiaMap(c) {
 /* ---------- Page assemblers ---------- */
 function skip(c) { return `<a class="skip-link" href="#top">${c.skip}</a>`; }
 function tail(c, routeId) {
-  return `${footer(c, routeId)}\n${mobileDock(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js?v=${JS_V}" defer></script>\n</body>\n</html>`;
+  return `${footer(c, routeId)}\n${mobileDock(c, routeId)}\n${cookieBanner(c)}\n<script src="/assets/js/velum.js?v=${JS_V}" defer></script>\n<script defer src="/_vercel/insights/script.js"></script>\n</body>\n</html>`;
 }
 
 function buildHome(c) {
