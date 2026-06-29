@@ -531,7 +531,7 @@ function homeMain(c) {
         <span class="item"><span class="swatch swatch--soon" aria-hidden="true"></span>${c.coverage.soon}</span>
       </div>
     </div>
-    <div class="coverage__map" data-reveal data-reveal-delay="1">${iberiaMap()}</div>
+    <div class="coverage__map" data-reveal data-reveal-delay="1">${iberiaMap(c)}</div>
   </div>
 </section>`;
 
@@ -620,8 +620,12 @@ function homeMain(c) {
 
 /* Iberian Peninsula — real geography (Spain + Portugal), Portugal distinguished.
    Markup lives in build/iberia-map.svg (classed for CSS styling). */
-function iberiaMap() {
-  return read(resolve(__dirname, "iberia-map.svg"));
+function iberiaMap(c) {
+  const cities = (c && c.coverage && c.coverage.cities) || {};
+  return read(resolve(__dirname, "iberia-map.svg"))
+    .replaceAll("{{C_MADRID}}", cities.madrid || "Madrid")
+    .replaceAll("{{C_BILBAO}}", cities.bilbao || "Bilbao")
+    .replaceAll("{{C_LISBOA}}", cities.lisboa || "Lisboa");
 }
 
 /* ---------- Page assemblers ---------- */

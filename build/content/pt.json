@@ -310,7 +310,12 @@
     "now": "Espanha — agora",
     "soon": "Portugal — brevemente",
     "plants": "Unidades próprias (Madrid e Bilbau)",
-    "allies": "Parceiros homologados"
+    "allies": "Parceiros homologados",
+    "cities": {
+      "madrid": "Madrid",
+      "bilbao": "Bilbao",
+      "lisboa": "Lisboa"
+    }
   },
   "faq": {
     "kicker": "Antes de perguntar",

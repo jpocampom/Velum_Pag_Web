@@ -310,7 +310,12 @@
     "now": "Spain — now",
     "soon": "Portugal — coming soon",
     "plants": "Owned plants (Madrid and Bilbao)",
-    "allies": "Approved partners"
+    "allies": "Approved partners",
+    "cities": {
+      "madrid": "Madrid",
+      "bilbao": "Bilbao",
+      "lisboa": "Lisbon"
+    }
   },
   "faq": {
     "kicker": "Before you ask",
