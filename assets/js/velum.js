@@ -210,19 +210,27 @@
 
   /* ---------- Gallery carousel: switch sector ---------- */
   doc.querySelectorAll(".carousel").forEach(function (car) {
-    var tabs = car.querySelectorAll(".car-tab");
-    var panels = car.querySelectorAll(".car-track");
-    tabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        var key = tab.getAttribute("data-car");
-        tabs.forEach(function (t) {
-          var on = t === tab;
-          t.classList.toggle("is-active", on);
-          t.setAttribute("aria-selected", on ? "true" : "false");
-        });
-        panels.forEach(function (p) {
-          p.classList.toggle("is-active", p.getAttribute("data-car-panel") === key);
-        });
+    var tabs = Array.prototype.slice.call(car.querySelectorAll(".car-tab"));
+    var panels = Array.prototype.slice.call(car.querySelectorAll(".car-track"));
+    function activate(tab) {
+      var key = tab.getAttribute("data-car");
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle("is-active", p.getAttribute("data-car-panel") === key);
+      });
+    }
+    tabs.forEach(function (tab, idx) {
+      tab.addEventListener("click", function () { activate(tab); });
+      tab.addEventListener("keydown", function (e) {
+        if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+        e.preventDefault();
+        var n = e.key === "ArrowRight" ? (idx + 1) % tabs.length : (idx - 1 + tabs.length) % tabs.length;
+        tabs[n].focus(); activate(tabs[n]);
       });
     });
   });
@@ -309,9 +317,21 @@
   /* ---------- Contact form (front-end demo handling) ---------- */
   var form = doc.querySelector(".form");
   if (form) {
+    var fields = Array.prototype.slice.call(form.querySelectorAll("input, select, textarea"));
+    // Clear the invalid state as soon as the user fixes a field (a11y).
+    fields.forEach(function (f) {
+      f.addEventListener("input", function () { if (f.checkValidity()) f.removeAttribute("aria-invalid"); });
+      f.addEventListener("change", function () { if (f.checkValidity()) f.removeAttribute("aria-invalid"); });
+    });
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
+      // Mark invalid fields for screen readers and focus the first one.
+      var firstInvalid = null;
+      fields.forEach(function (f) {
+        if (!f.checkValidity()) { f.setAttribute("aria-invalid", "true"); if (!firstInvalid) firstInvalid = f; }
+        else { f.removeAttribute("aria-invalid"); }
+      });
+      if (firstInvalid) { try { firstInvalid.focus(); } catch (e) {} form.reportValidity(); return; }
       // No backend in the static build — surface success and let the
       // integrator wire a real endpoint (mailto / form service / API).
       form.classList.add("sent");

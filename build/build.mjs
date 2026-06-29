@@ -622,13 +622,13 @@ function homeMain(c) {
     salud: ["sector-salud", "salud-2", "salud-3"]
   };
   const carTabs = c.sectors.items.map((s, i) =>
-    `<button class="car-tab${i === 0 ? " is-active" : ""}" type="button" role="tab" aria-selected="${i === 0}" data-car="${CAR_KEYS[i]}">${s.tag}</button>`
+    `<button class="car-tab${i === 0 ? " is-active" : ""}" type="button" role="tab" id="cartab-${CAR_KEYS[i]}" aria-selected="${i === 0}" aria-controls="carpanel-${CAR_KEYS[i]}" tabindex="${i === 0 ? "0" : "-1"}" data-car="${CAR_KEYS[i]}">${s.tag}</button>`
   ).join("");
   const carTracks = CAR_KEYS.map((k, i) => {
     const slides = CAR_IMGS[k].map((src) =>
       `<figure class="car-slide"><img src="${photo(src)}" width="1400" height="1050" loading="lazy" decoding="async" alt="${c.sectors.items[i].tag} — ${c.sectors.items[i].title}" /></figure>`
     ).join("");
-    return `<div class="car-track${i === 0 ? " is-active" : ""}" data-car-panel="${k}" role="tabpanel">${slides}</div>`;
+    return `<div class="car-track${i === 0 ? " is-active" : ""}" data-car-panel="${k}" id="carpanel-${k}" role="tabpanel" aria-labelledby="cartab-${k}">${slides}</div>`;
   }).join("");
   const gallery = `<section class="section section--tight carousel" aria-label="${c.galleryLabel || "Galería"}">
   <div class="wrap">
