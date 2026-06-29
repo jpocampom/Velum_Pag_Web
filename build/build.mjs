@@ -856,6 +856,7 @@ ${tail(c, routeId)}`;
 
 /* ---------- Static files ---------- */
 function sitemap() {
+  const today = new Date().toISOString().slice(0, 10); // fecha del build (frescura para crawlers)
   const pages = Object.keys(ROUTES);
   const urls = pages.map((p) => {
     const alts = LANGS.map((l) =>
@@ -865,7 +866,7 @@ function sitemap() {
     <loc>${DOMAIN + ROUTES[p][l]}</loc>
 ${alts}
     <xhtml:link rel="alternate" hreflang="x-default" href="${DOMAIN + ROUTES[p].es}"/>
-    <lastmod>2026-06-06</lastmod>
+    <lastmod>${today}</lastmod>
   </url>`).join("\n");
   }).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
