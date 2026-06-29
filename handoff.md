@@ -2,7 +2,7 @@
 
 Documento de entrega del sitio web de **VELUM**, plataforma española de **textile care premium** (renting textil para hostelería, restauración y salud). Sitio **estático, trilingüe (ES · EN · PT)**, sin dependencias de runtime, desplegado en Vercel con cada push.
 
-> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); nueva sección **Nuestros Productos** (gama completa + adaptación de lo básico a lo personalizado) y sección **Cómo trabajamos tu textil**; **+6 aliados** en el mapa y en las cifras; **trazabilidad con software (Lavander)**; **datos legales de PCP LAUNDRY, S.L.**; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio byvelum.com**; logo oficial del brand kit; fotografía curada por sector; **versión móvil con dock inferior estilo app** (responsive, un solo código). Mantén este documento junto al código.
+> Actualizado tras: **portada en vídeo** (5 clips en crossfade) con el slogan sobre panel acristalado; **copy comercial revisado** (posicionamiento "no somos lavandería industrial: somos textile care"); nueva sección **Nuestros Productos** (gama completa + adaptación de lo básico a lo personalizado) y sección **Cómo trabajamos tu textil**; **+6 aliados** en el mapa y en las cifras; **trazabilidad con software (Lavander)**; **datos legales de PCP LAUNDRY, S.L.**; **consentimiento de cookies AEPD + Google Consent Mode v2 (GA4 diferido)**; **dominio by-velum.com**; logo oficial del brand kit; fotografía curada por sector; **versión móvil con dock inferior estilo app** (responsive, un solo código). Mantén este documento junto al código.
 
 ---
 
@@ -13,7 +13,7 @@ Documento de entrega del sitio web de **VELUM**, plataforma española de **texti
 | **Repositorio** | GitHub `jpocampom/Velum_Pag_Web` (público) |
 | **Rama de producción / por defecto** | `claude/adoring-cannon-4eRet` |
 | **Hosting** | Vercel, proyecto `velum-pag-web` |
-| **URL producción** | https://velum-pag-web.vercel.app · **dominio final: `byvelum.com`** (canónicos/OG/JSON-LD ya apuntan ahí; falta conectar el DNS en Vercel) |
+| **URL producción** | https://velum-pag-web.vercel.app · **dominio final: `by-velum.com`** (canónicos/OG/JSON-LD ya apuntan ahí; falta conectar el DNS en Vercel) |
 | **Despliegue** | Automático: cada `git push` a la rama de producción dispara un deploy en Vercel |
 
 > **Recomendación**: renombrar la rama a `main` (más estándar). GitHub y Vercel se reajustan solos al ser la rama por defecto. No se ha hecho para no alterar el deploy sin confirmación.
@@ -167,7 +167,7 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 
 ## 7. Pendientes antes de producción ✅ checklist
 
-- [~] **Datos legales / de empresa**: ✅ razón social (**PCP LAUNDRY, S.L.**), NIF (**B-21947916**), domicilio, registro (Hoja M-855.350). ✅ **Barrido de cumplimiento (jun. 2026)**: rellenados TODOS los placeholders legales (3 idiomas) — email **provisional** `hola@byvelum.com` (contacto) / `privacidad@byvelum.com` (privacidad), encargados (**Vercel Inc.** hosting + **Google Analytics 4 / Google Ireland Ltd.**), transferencias **DPF/SCC**, **DPD: no designado** (art. 37), marca **en proceso de registro**, fecha **junio de 2026**. Banner: **Aceptar y Rechazar con el mismo peso visual** (btn--primary) — corregido el dark pattern AEPD. **Pendiente cliente**: crear los buzones `hola@`/`privacidad@byvelum.com` (o cambiar el email), confirmar correo/ofimática (Google Workspace?) y **revisión por asesoría legal** antes de publicar.
+- [~] **Datos legales / de empresa**: ✅ razón social (**PCP LAUNDRY, S.L.**), NIF (**B-21947916**), domicilio, registro (Hoja M-855.350). ✅ **Barrido de cumplimiento (jun. 2026)**: rellenados TODOS los placeholders legales (3 idiomas) — email **provisional** `hola@by-velum.com` (contacto) / `privacidad@by-velum.com` (privacidad), encargados (**Vercel Inc.** hosting + **Google Analytics 4 / Google Ireland Ltd.**), transferencias **DPF/SCC**, **DPD: no designado** (art. 37), marca **en proceso de registro**, fecha **junio de 2026**. Banner: **Aceptar y Rechazar con el mismo peso visual** (btn--primary) — corregido el dark pattern AEPD. **Pendiente cliente**: crear los buzones `hola@`/`privacidad@by-velum.com` (o cambiar el email), confirmar correo/ofimática (Google Workspace?) y **revisión por asesoría legal** antes de publicar.
 - [ ] **Backend del formulario**: hoy hace confirmación en cliente. Conectar endpoint real (servicio de formularios / función serverless / `mailto`) en el handler `form.submit` de `assets/js/velum.js`.
 - [x] **Analítica**: (1) **GA4 `G-CTES2DEV33`** conectado en `assets/js/velum.js` con **Consent Mode v2** — carga solo tras consentimiento analítico. (2) **Vercel Web Analytics** (cookieless, RGPD) vía `<script defer src="/_vercel/insights/script.js">` en `tail()`; **requiere activar Web Analytics en el panel de Vercel** (no es el método Next.js). NO usar `@vercel/analytics` (eso es para React/Next). CSP incluye `vitals.vercel-insights.com`.
 - [x] **SEO/posicionamiento (barrido jun. 2026)**: títulos con los 3 sectores + meta descriptions a ~155; H1 de productos con keywords; **datos estructurados** Organization+LocalBusiness, BreadcrumbList + **OfferCatalog** en /productos, FAQPage en home, og:image:alt. Sitemap/hreflang/canónicos ya correctos.
@@ -175,7 +175,7 @@ El build transforma `[[palabra]]` en el componente, que se anima al entrar en vi
 - [x] **Imagen Open Graph**: ~~SVG~~ → ahora **`og-velum.png` 1200×630** (lockup + tagline sobre ink). Nota: las redes cachean el OG; al pasar al dominio final, forzar re-scrape en el *debugger* de cada red.
 - [ ] **Cifras y certificaciones**: sustituir afirmaciones por datos verificados de VELUM; los sellos de Estándares (UNE-EN 14065, ISO 9001/14001/50001, OEKO-TEX) deben corresponder a certificaciones vigentes con alcance nombrado.
 - [ ] **Fotografía definitiva**: reemplazar el stock/placeholders por fotos reales de marca cuando estén disponibles (estructura ya preparada).
-- [~] **Dominio**: el código ya usa `https://byvelum.com` (DOMAIN/hreflang/canónicos/OG/legales). **Pendiente**: conectar `byvelum.com` en Vercel (DNS). Portugal se sirve en `/pt/`.
+- [~] **Dominio**: el código ya usa `https://www.by-velum.com` (DOMAIN/hreflang/canónicos/OG/legales). **Pendiente**: conectar `by-velum.com` en Vercel (DNS). Portugal se sirve en `/pt/`.
 - [ ] **(Opcional) Rama `main`**: renombrar la rama de producción.
 
 ---

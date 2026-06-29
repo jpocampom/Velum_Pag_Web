@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://byvelum.com/sitemap.xml
+Sitemap: https://www.by-velum.com/sitemap.xml
