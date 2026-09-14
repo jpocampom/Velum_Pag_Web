@@ -21,6 +21,7 @@ desde una única fuente de contenido por idioma. Pensado para máxima velocidad
 build/
   build.mjs              Generador estático (Node, sin dependencias)
   make-icons.mjs         Rasterizador PNG del isotipo (favicon/app icons)
+  make-firmas.mjs        Firmas de correo HTML del equipo → /firmas/
   content/
     es.json en.json pt.json     Contenido por idioma (única fuente de verdad)
     legal/{es,en,pt}/*.html      Cuerpos de las páginas legales por idioma
@@ -45,6 +46,7 @@ sitemap.xml robots.txt site.webmanifest 404.html   (GENERADO / estático)
 npm run icons   # genera los PNG del isotipo (una vez, o si cambia la marca)
 npm run build   # genera las 18 páginas + sitemap/robots/manifest/SVGs
 npm run all     # iconos + build
+npm run firmas  # genera /firmas/ (firmas de correo HTML + página de copia)
 npm run serve   # servidor local de desarrollo → http://localhost:8080
 ```
 
