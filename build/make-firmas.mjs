@@ -5,7 +5,7 @@
    con botón "Copiar firma".
    Run: node build/make-firmas.mjs
    ===================================================================== */
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, readFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -16,6 +16,9 @@ mkdirSync(OUT, { recursive: true });
 const DOMAIN = "https://www.by-velum.com";
 const LOGO_PATH = "/assets/img/velum-firma-logo.png"; // 419x116 (PNG, no WebP/SVG: Outlook no los soporta)
 const LOGO_W = 168, LOGO_H = 47;
+/* El logotipo va incrustado en base64: la firma funciona al pegarla en Outlook sin depender
+   de que la imagen esté publicada en la web (Outlook la convierte en imagen adjunta inline). */
+const LOGO_SRC = "data:image/png;base64," + readFileSync(resolve(ROOT, "assets/img/velum-firma-logo.png")).toString("base64");
 
 const INK = "#211F1B", SOFT = "#66625A", ACCENT = "#2E3A4B", LINE = "#E4DED1";
 const SERIF = "'Cormorant Garamond', Georgia, 'Times New Roman', serif";
@@ -40,7 +43,7 @@ export const PEOPLE = [
 const ent = (s) => s.replace(/[^\x20-\x7E\n]/g, (ch) => `&#${ch.codePointAt(0)};`);
 const telHref = (p) => "tel:" + p.replace(/[^\d+]/g, "");
 
-export function signatureHtml(p, { logoSrc = DOMAIN + LOGO_PATH } = {}) {
+export function signatureHtml(p, { logoSrc = LOGO_SRC } = {}) {
   const c = COMPANY;
   const cargoRow = p.cargo
     ? `<tr><td style="padding:0 0 2px;font-family:${SANS};font-size:13px;line-height:18px;color:${SOFT};">${ent(p.cargo)}</td></tr>`
@@ -98,7 +101,7 @@ function indexHtml() {
           <a class="btn btn--ghost" href="./${p.slug}.html" target="_blank" rel="noopener">Abrir HTML</a>
         </div>
       </header>
-      <div class="card__body" id="sig-${p.slug}">${signatureHtml(p, { logoSrc: ".." + LOGO_PATH })}</div>
+      <div class="card__body" id="sig-${p.slug}">${signatureHtml(p)}</div>
       <template id="tpl-${p.slug}">${signatureHtml(p)}</template>
     </section>`).join("\n");
 
@@ -138,7 +141,7 @@ function indexHtml() {
 <body>
 <div class="wrap">
   <h1>Firmas de correo VELUM</h1>
-  <p class="lede">Firmas HTML del equipo, con el logotipo oficial alojado en <strong>${DOMAIN.replace("https://", "")}</strong>. Pulse <em>Copiar firma</em> y pegue en el editor de firmas de su cliente de correo.</p>
+  <p class="lede">Firmas HTML del equipo con el logotipo oficial incrustado. Pulse <em>Copiar firma</em> y pegue en el editor de firmas de su cliente de correo. Si el botón no funciona, abra la firma con <em>Abrir HTML</em>, seleccione todo (Ctrl+A), copie (Ctrl+C) y pegue.</p>
 
   <div class="steps">
     <h3>Instalación</h3>
@@ -148,7 +151,7 @@ function indexHtml() {
       <li><strong>Apple Mail:</strong> Mail &rarr; Ajustes &rarr; Firmas &rarr; +, pegue y desmarque &laquo;Usar siempre mi tipo de letra predeterminado&raquo;.</li>
       <li><strong>iPhone / Android:</strong> la firma del ordenador no se sincroniza. En el móvil use la versión de texto: nombre, VELUM &middot; Textile care premium, teléfono, correo y ${COMPANY.web}.</li>
     </ol>
-    <p>El logotipo se carga desde la web (no se adjunta como archivo), así que no genera adjuntos ni pesa en el correo. Compruebe la firma enviándose un mensaje de prueba antes de usarla.</p>
+    <p>El logotipo viaja incrustado en la firma (unos 15&nbsp;KB), así que se ve aunque el destinatario bloquee las imágenes externas. Compruebe la firma enviándose un mensaje de prueba antes de usarla.</p>
   </div>
 
   ${cards}
