@@ -24,8 +24,6 @@ const SANS = "'DM Sans', Helvetica, Arial, sans-serif";
 const COMPANY = {
   brand: "VELUM",
   claim: "Textile care premium",
-  legal: "PCP Laundry, S.L.",
-  address: "Calle Don Ramón de la Cruz 17, 3º dcha. · 28001 Madrid",
   web: "www.by-velum.com",
   tagline: "El aliado invisible que sostiene la excelencia.",
   privacyEmail: "privacidad@by-velum.com",
@@ -68,8 +66,7 @@ export function signatureHtml(p, { logoSrc = DOMAIN + LOGO_PATH } = {}) {
     <td colspan="2" style="padding:14px 0 0;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;border-top:1px solid ${LINE};width:100%;">
         <tr><td style="padding:10px 0 0;font-family:${SERIF};font-size:14px;line-height:18px;font-style:italic;color:${SOFT};">${c.tagline}</td></tr>
-        <tr><td style="padding:4px 0 0;font-family:${SANS};font-size:11px;line-height:15px;color:${SOFT};">${c.legal} &middot; ${c.address}</td></tr>
-        <tr><td style="padding:8px 0 0;font-family:${SANS};font-size:10px;line-height:14px;color:#8E8A80;">Este mensaje y sus adjuntos se dirigen exclusivamente a su destinatario y pueden contener información confidencial. Si lo ha recibido por error, comuníquelo al remitente y elimínelo. Responsable del tratamiento: ${c.legal}. Puede ejercer sus derechos de acceso, rectificación, supresión y demás previstos en el RGPD en <a href="mailto:${c.privacyEmail}" style="color:#8E8A80;text-decoration:underline;">${c.privacyEmail}</a>.</td></tr>
+        <tr><td style="padding:8px 0 0;font-family:${SANS};font-size:10px;line-height:14px;color:#8E8A80;">Este mensaje y sus adjuntos se dirigen exclusivamente a su destinatario y pueden contener información confidencial. Si lo ha recibido por error, comuníquelo al remitente y elimínelo. Puede ejercer sus derechos de acceso, rectificación, supresión y demás previstos en el RGPD en <a href="mailto:${c.privacyEmail}" style="color:#8E8A80;text-decoration:underline;">${c.privacyEmail}</a>.</td></tr>
       </table>
     </td>
   </tr>
