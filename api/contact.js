@@ -11,6 +11,25 @@ export default async function handler(req, res) {
   // TEMPORARY diagnostics: GET /api/contact?diag=1 reports whether config is
   // present (flags + masked addresses, never secrets) and validates the Resend
   // key with a read-only call. Sends no email. Remove after go-live check.
+  // TEMPORARY: token-gated test send to CONTACT_TO only; returns Resend's raw answer.
+  if (req.method === "GET" && /[?&]diag=send\b/.test(req.url || "") && /[?&]t=a0a57d21245856fe9dcf124d\b/.test(req.url || "")) {
+    const KEY = process.env.RESEND_API_KEY, TO = process.env.CONTACT_TO;
+    const FROM = process.env.CONTACT_FROM || "VELUM <no-reply@by-velum.com>";
+    if (!KEY || !TO) return res.status(500).json({ ok: false, error: "not_configured" });
+    const r = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        from: FROM, to: [TO],
+        subject: "Prueba de diagnóstico · formulario web VELUM",
+        text: "Correo de prueba enviado desde /api/contact para verificar la entrega. Puedes borrarlo.",
+      }),
+    });
+    const body = await r.text().catch(() => "");
+    console.log("diag_send", r.status, body);
+    return res.status(200).json({ resendStatus: r.status, resendBody: body, from: FROM.replace(/([^<\s@]{2})[^<\s@]*@/, "$1***@") });
+  }
+
   if (req.method === "GET" && /[?&]diag=1\b/.test(req.url || "")) {
     const KEY = process.env.RESEND_API_KEY;
     const mask = (v) => {
@@ -55,7 +74,7 @@ export default async function handler(req, res) {
     const clean = (s) => String(s == null ? "" : s).trim().slice(0, 2000);
 
     // Honeypot — real users leave this empty. Silently accept & drop bots.
-    if (clean(body._hp)) return res.status(200).json({ ok: true });
+    if (clean(body._hp)) { console.warn("honeypot_drop"); return res.status(200).json({ ok: true }); }
 
     const nombre = clean(body.nombre);
     const empresa = clean(body.empresa);
@@ -115,6 +134,8 @@ export default async function handler(req, res) {
       console.error("resend_error", r.status, detail);
       return res.status(502).json({ ok: false, error: "send_failed" });
     }
+    const sent = await r.json().catch(() => ({}));
+    console.log("sent", { id: sent.id || null });
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error("contact_handler_error", err);
