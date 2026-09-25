@@ -593,6 +593,7 @@ function homeMain(c) {
     <form class="form" data-reveal data-reveal-delay="1" novalidate>
       <div class="form-grid">
         <p class="form-title" style="font-family:var(--serif);font-size:24px;margin:0 0 8px;">${c.form.title}</p>
+        <div class="hp" aria-hidden="true"><label>No rellenar<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label></div>
         <div class="row two">
           <div class="field"><label for="f-nombre">${f.nombre}</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required /></div>
           <div class="field"><label for="f-empresa">${f.empresa}</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" required /></div>
@@ -607,7 +608,8 @@ function homeMain(c) {
         </div>
         <div class="field"><label for="f-mensaje">${f.mensaje}</label><textarea id="f-mensaje" name="mensaje" rows="3"></textarea></div>
         <label class="consent"><input type="checkbox" name="consent" required /> <span>${consent}</span></label>
-        <div><button class="btn btn--primary" type="submit">${c.form.submit} <span class="arr" aria-hidden="true">→</span></button></div>
+        <div><button class="btn btn--primary" type="submit" data-label="${c.form.submit}" data-sending="${c.form.sending}">${c.form.submit} <span class="arr" aria-hidden="true">→</span></button></div>
+        <p class="form-error" role="alert" hidden>${c.form.error}</p>
       </div>
       <p class="form-success" role="status">${c.form.success}</p>
     </form>

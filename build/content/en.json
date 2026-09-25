@@ -385,7 +385,9 @@
     },
     "submit": "Send request",
     "consentHtml": "I have read and accept the <a href=\"{privacy}\">Privacy policy</a>. Your data will be used solely to respond to your request.",
-    "success": "Thank you. A VELUM contact will be in touch with you within 24 business hours."
+    "success": "Thank you. A VELUM contact will be in touch with you within 24 business hours.",
+    "sending": "Sending…",
+    "error": "We couldn't send your request. Please try again in a moment."
   },
   "footer": {
     "descriptor": "VELUM is the Spanish platform for premium textile care in hospitality, food service and healthcare. Supply, care, replenishment and control, under a single point of contact.",

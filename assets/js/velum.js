@@ -332,11 +332,40 @@
         else { f.removeAttribute("aria-invalid"); }
       });
       if (firstInvalid) { try { firstInvalid.focus(); } catch (e) {} form.reportValidity(); return; }
-      // No backend in the static build — surface success and let the
-      // integrator wire a real endpoint (mailto / form service / API).
-      form.classList.add("sent");
-      var ok = form.querySelector(".form-success");
-      if (ok) { ok.setAttribute("tabindex", "-1"); ok.focus(); }
+
+      var btn = form.querySelector('button[type="submit"]');
+      var errEl = form.querySelector(".form-error");
+      if (errEl) errEl.setAttribute("hidden", "");
+
+      // Collect fields by name (checkbox → boolean) + context.
+      var payload = {};
+      fields.forEach(function (f) {
+        if (!f.name) return;
+        payload[f.name] = (f.type === "checkbox") ? f.checked : f.value;
+      });
+      payload.lang = root.getAttribute("lang") || "es";
+      payload.page = location.pathname;
+
+      var restore = btn ? btn.innerHTML : "";
+      if (btn) { btn.disabled = true; if (btn.dataset.sending) btn.textContent = btn.dataset.sending; }
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (res) {
+          if (res && res.ok) {
+            form.classList.add("sent");
+            var ok = form.querySelector(".form-success");
+            if (ok) { ok.setAttribute("tabindex", "-1"); ok.focus(); }
+          } else if (errEl) { errEl.removeAttribute("hidden"); errEl.focus && errEl.focus(); }
+        })
+        .catch(function () { if (errEl) errEl.removeAttribute("hidden"); })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.innerHTML = restore; }
+        });
     });
   }
 

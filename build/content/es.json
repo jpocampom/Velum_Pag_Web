@@ -385,7 +385,9 @@
     },
     "submit": "Enviar solicitud",
     "consentHtml": "He leído y acepto la <a href=\"{privacy}\">Política de privacidad</a>. Tus datos se usarán únicamente para responder a tu solicitud.",
-    "success": "Gracias. Un interlocutor de VELUM se pondrá en contacto contigo en menos de 24 horas laborables."
+    "success": "Gracias. Un interlocutor de VELUM se pondrá en contacto contigo en menos de 24 horas laborables.",
+    "sending": "Enviando…",
+    "error": "No se ha podido enviar. Inténtalo de nuevo en unos minutos."
   },
   "footer": {
     "descriptor": "VELUM es la plataforma española de textile care premium para hostelería, restauración y salud. Dotación, cuidado, reposición y control, bajo un único interlocutor.",

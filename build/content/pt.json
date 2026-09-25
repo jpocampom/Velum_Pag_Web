@@ -385,7 +385,9 @@
     },
     "submit": "Enviar pedido",
     "consentHtml": "Li e aceito a <a href=\"{privacy}\">Política de privacidade</a>. Os seus dados serão utilizados apenas para responder ao seu pedido.",
-    "success": "Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 24 horas úteis."
+    "success": "Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 24 horas úteis.",
+    "sending": "A enviar…",
+    "error": "Não foi possível enviar. Tente novamente dentro de momentos."
   },
   "footer": {
     "descriptor": "A VELUM é a plataforma espanhola de textile care premium para hotelaria, restauração e saúde. Dotação, cuidado, reposição e controlo, sob um único interlocutor.",

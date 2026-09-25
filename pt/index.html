@@ -43,7 +43,7 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" /></noscript>
-  <link rel="stylesheet" href="/assets/css/velum.css?v=0d9b7627" />
+  <link rel="stylesheet" href="/assets/css/velum.css?v=ebc9cdfb" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":["Organization","LocalBusiness"],"@id":"https://www.by-velum.com/#organization","name":"VELUM","legalName":"PCP LAUNDRY, S.L.","url":"https://www.by-velum.com/","logo":"https://www.by-velum.com/assets/img/velum-logo.svg","image":"https://www.by-velum.com/assets/img/og-velum.png","description":"Não somos uma lavandaria: somos textile care premium. Gerimos a dotação, o cuidado e a reposição do seu têxtil com um único interlocutor, em toda a Espanha.","email":"hola@by-velum.com","priceRange":"€€€","address":{"@type":"PostalAddress","streetAddress":"Calle Don Ramón de la Cruz 17, piso 3, puerta derecha","addressLocality":"Madrid","postalCode":"28001","addressCountry":"ES"},"areaServed":["ES","PT"]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://www.by-velum.com/#website","url":"https://www.by-velum.com/","name":"VELUM","inLanguage":"pt-PT","publisher":{"@id":"https://www.by-velum.com/#organization"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Dotar","name":"VELUM","description":"Não lhe vendemos uma lavagem: gerimos todo o seu têxtil para que esteja sempre disponível e a postos. Você define o padrão; nós tratamos de todo o resto, ciclo após ciclo.","provider":{"@id":"https://www.by-velum.com/#organization"},"areaServed":{"@type":"Country","name":"España"},"audience":{"@type":"BusinessAudience","name":"Hotéis que se recordam pelo toque., Mesas que vestem a experiência., O rigor que o cuidado exige."}}</script>
@@ -358,6 +358,7 @@
     <form class="form" data-reveal data-reveal-delay="1" novalidate>
       <div class="form-grid">
         <p class="form-title" style="font-family:var(--serif);font-size:24px;margin:0 0 8px;">Conte-nos sobre a sua operação.</p>
+        <div class="hp" aria-hidden="true"><label>No rellenar<input type="text" name="_hp" tabindex="-1" autocomplete="off" /></label></div>
         <div class="row two">
           <div class="field"><label for="f-nombre">Nome completo</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" required /></div>
           <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" required /></div>
@@ -372,7 +373,8 @@
         </div>
         <div class="field"><label for="f-mensaje">Conte-nos do que precisa</label><textarea id="f-mensaje" name="mensaje" rows="3"></textarea></div>
         <label class="consent"><input type="checkbox" name="consent" required /> <span>Li e aceito a <a href="/pt/politica-de-privacidade/">Política de privacidade</a>. Os seus dados serão utilizados apenas para responder ao seu pedido.</span></label>
-        <div><button class="btn btn--primary" type="submit">Enviar pedido <span class="arr" aria-hidden="true">→</span></button></div>
+        <div><button class="btn btn--primary" type="submit" data-label="Enviar pedido" data-sending="A enviar…">Enviar pedido <span class="arr" aria-hidden="true">→</span></button></div>
+        <p class="form-error" role="alert" hidden>Não foi possível enviar. Tente novamente dentro de momentos.</p>
       </div>
       <p class="form-success" role="status">Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 24 horas úteis.</p>
     </form>
@@ -442,7 +444,7 @@
     </div>
   </div>
 </div>
-<script src="/assets/js/velum.js?v=1acd4f2a" defer></script>
+<script src="/assets/js/velum.js?v=c178183f" defer></script>
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

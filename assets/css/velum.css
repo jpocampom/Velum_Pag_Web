@@ -989,6 +989,11 @@ body.nav-open .nav-toggle span::after { transform: translateY(-7px) rotate(-45de
 html, body { max-width: 100%; }
 img, svg, table { max-width: 100%; }
 
+/* Contact form: honeypot (bots only) + error message */
+.hp { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.form-error { color: #E9A08F; font-size: 14px; margin: 8px 0 0; }
+.form-error[hidden] { display: none; }
+
 /* =====================================================================
    Design refinement pass — premium finishing
    ===================================================================== */
