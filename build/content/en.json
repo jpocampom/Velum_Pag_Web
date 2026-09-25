@@ -362,7 +362,7 @@
   "ctaFinal": {
     "eyebrow": "Let's begin",
     "title": "Let's talk about what your brand cannot afford to get wrong.",
-    "sub": "We'll propose a model tailored to your operation, with a point of contact who answers from day one. No obligation, no commitment for asking; we'll reply within 24 business hours.",
+    "sub": "We'll propose a model tailored to your operation, with a point of contact who answers from day one. No obligation, no commitment for asking; we'll reply within 72 business hours.",
     "button": "Request a proposal"
   },
   "form": {
@@ -385,7 +385,7 @@
     },
     "submit": "Send request",
     "consentHtml": "I have read and accept the <a href=\"{privacy}\">Privacy policy</a>. Your data will be used solely to respond to your request.",
-    "success": "Thank you. A VELUM contact will be in touch with you within 24 business hours.",
+    "success": "Thank you. A VELUM contact will be in touch with you within 72 business hours.",
     "sending": "Sending…",
     "error": "We couldn't send your request. Please try again in a moment."
   },

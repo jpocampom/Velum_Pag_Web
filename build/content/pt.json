@@ -362,7 +362,7 @@
   "ctaFinal": {
     "eyebrow": "Vamos começar",
     "title": "Vamos falar daquilo que a sua marca não pode dar-se ao luxo de falhar.",
-    "sub": "Propomos-lhe um modelo à medida da sua operação, com um interlocutor que responde desde o primeiro dia. Sem compromisso nem permanência por o solicitar; respondemos-lhe em menos de 24 h úteis.",
+    "sub": "Propomos-lhe um modelo à medida da sua operação, com um interlocutor que responde desde o primeiro dia. Sem compromisso nem permanência por o solicitar; respondemos-lhe em menos de 72 h úteis.",
     "button": "Pedir proposta"
   },
   "form": {
@@ -385,7 +385,7 @@
     },
     "submit": "Enviar pedido",
     "consentHtml": "Li e aceito a <a href=\"{privacy}\">Política de privacidade</a>. Os seus dados serão utilizados apenas para responder ao seu pedido.",
-    "success": "Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 24 horas úteis.",
+    "success": "Obrigado. Um interlocutor da VELUM entrará em contacto consigo em menos de 72 horas úteis.",
     "sending": "A enviar…",
     "error": "Não foi possível enviar. Tente novamente dentro de momentos."
   },
