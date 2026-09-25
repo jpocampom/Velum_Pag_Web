@@ -8,6 +8,43 @@
    ===================================================================== */
 
 export default async function handler(req, res) {
+  // TEMPORARY diagnostics: GET /api/contact?diag=1 reports whether config is
+  // present (flags + masked addresses, never secrets) and validates the Resend
+  // key with a read-only call. Sends no email. Remove after go-live check.
+  if (req.method === "GET" && /[?&]diag=1\b/.test(req.url || "")) {
+    const KEY = process.env.RESEND_API_KEY;
+    const mask = (v) => {
+      if (!v) return null;
+      return String(v).replace(/([^<\s@]{2})[^<\s@]*@/, "$1***@");
+    };
+    let resend = "no_key";
+    let domain = null;
+    if (KEY) {
+      try {
+        const r = await fetch("https://api.resend.com/domains", { headers: { Authorization: `Bearer ${KEY}` } });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok) {
+          resend = "key_ok_full_access";
+          const d = Array.isArray(j.data) ? j.data.find((x) => /by-velum\.com$/.test(x.name)) : null;
+          domain = d ? d.status : "not_found";
+        } else {
+          // restricted_api_key = valid "sending access" key (expected & fine)
+          resend = j.name || `http_${r.status}`;
+        }
+      } catch (e) { resend = "unreachable"; }
+    }
+    return res.status(200).json({
+      ok: true,
+      configured: {
+        RESEND_API_KEY: !!KEY,
+        CONTACT_TO: mask(process.env.CONTACT_TO),
+        CONTACT_FROM: mask(process.env.CONTACT_FROM) || "(default) VELUM <no***@by-velum.com>",
+      },
+      resend,
+      domain,
+    });
+  }
+
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ ok: false, error: "method_not_allowed" });
