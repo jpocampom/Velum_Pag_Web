@@ -852,5 +852,8 @@
       "sub": "We study your operation and propose the range and model tailored to you, with no commitment.",
       "button": "Request a proposal"
     }
+  },
+  "contact": {
+    "call": "Prefer to call?"
   }
 }

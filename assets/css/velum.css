@@ -994,6 +994,14 @@ img, svg, table { max-width: 100%; }
 .form-error { color: #E9A08F; font-size: 14px; margin: 8px 0 0; }
 .form-error[hidden] { display: none; }
 
+/* Contact phone (footer + contact section) */
+.footer-contact { margin: 16px 0 0; font-family: var(--mono); font-size: 14px; letter-spacing: 0.04em; }
+.footer-contact a { color: rgba(251,250,246,0.82); border-bottom: 1px solid var(--paper-line); padding-bottom: 2px; transition: color 240ms var(--ease), border-color 240ms var(--ease); }
+.footer-contact a:hover { color: var(--paper); border-color: var(--paper); }
+.contact-phone { margin: 20px 0 0; font-size: 15px; color: rgba(251,250,246,0.66); }
+.contact-phone a { font-family: var(--mono); letter-spacing: 0.04em; color: var(--paper); border-bottom: 1px solid var(--paper-line); padding-bottom: 2px; transition: border-color 240ms var(--ease); margin-left: 6px; }
+.contact-phone a:hover { border-color: var(--paper); }
+
 /* =====================================================================
    Design refinement pass — premium finishing
    ===================================================================== */

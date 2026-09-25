@@ -18,6 +18,8 @@ const DOMAIN = "https://www.by-velum.com";
 const LANGS = ["es", "en", "pt"];
 const HREFLANG = { es: "es-ES", en: "en", pt: "pt-PT" };
 const OGLOCALE = { es: "es_ES", en: "en_GB", pt: "pt_PT" };
+const PHONE_DISPLAY = "+34 691 248 908";
+const PHONE_HREF = "tel:+34691248908";
 
 // Canonical page → per-language URL path
 const ROUTES = {
@@ -196,6 +198,7 @@ function footer(c, routeId) {
       <div class="footer-brand">
         <a class="logo-lockup" href="${ROUTES.home[c.lang]}" aria-label="VELUM — Tu textil. Nuestro compromiso."><img class="logo-img logo-img--tagline" src="${logo("velum-lockup-tagline-blanco")}" width="531" height="240" alt="VELUM — Tu textil. Nuestro compromiso." /></a>
         <p>${c.footer.descriptor}</p>
+        <p class="footer-contact"><a href="${PHONE_HREF}">${PHONE_DISPLAY}</a></p>
       </div>
       ${groups}
     </div>
@@ -261,6 +264,7 @@ function jsonLd(c, routeId) {
     "@context": "https://schema.org", "@type": ["Organization", "LocalBusiness"], "@id": DOMAIN + "/#organization",
     name: "VELUM", legalName: "PCP LAUNDRY, S.L.", url: DOMAIN + "/", logo: DOMAIN + "/assets/img/velum-logo.svg",
     image: DOMAIN + "/assets/img/og-velum.png", description: c.meta.description, email: "hola@by-velum.com",
+    telephone: PHONE_DISPLAY,
     priceRange: "€€€",
     address: { "@type": "PostalAddress", streetAddress: "Calle Don Ramón de la Cruz 17, piso 3, puerta derecha", addressLocality: "Madrid", postalCode: "28001", addressCountry: "ES" },
     areaServed: ["ES", "PT"]
@@ -589,6 +593,7 @@ function homeMain(c) {
       <span class="kicker">${c.ctaFinal.eyebrow}</span>
       <h2 class="h-section" style="margin:18px 0 24px;">${c.ctaFinal.title}</h2>
       <p class="lede">${c.ctaFinal.sub}</p>
+      <p class="contact-phone">${c.contact.call} <a href="${PHONE_HREF}">${PHONE_DISPLAY}</a></p>
     </div>
     <form class="form" data-reveal data-reveal-delay="1" novalidate>
       <div class="form-grid">

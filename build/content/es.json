@@ -852,5 +852,8 @@
       "sub": "Estudiamos tu operación y te proponemos la gama y el modelo a tu medida, sin compromiso.",
       "button": "Solicitar propuesta"
     }
+  },
+  "contact": {
+    "call": "¿Prefieres llamar?"
   }
 }
