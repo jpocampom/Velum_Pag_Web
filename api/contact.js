@@ -40,6 +40,8 @@ export default async function handler(req, res) {
     const TO = process.env.CONTACT_TO;
     const FROM = process.env.CONTACT_FROM || "VELUM <no-reply@by-velum.com>";
     if (!KEY || !TO) {
+      // Log which variable is missing (never the values) so it shows in Runtime Logs.
+      console.error("not_configured", { RESEND_API_KEY: !!KEY, CONTACT_TO: !!TO, CONTACT_FROM: !!process.env.CONTACT_FROM });
       return res.status(500).json({ ok: false, error: "not_configured" });
     }
 
