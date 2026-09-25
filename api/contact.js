@@ -4,7 +4,7 @@
    Secrets/config come from environment variables (never in code):
      RESEND_API_KEY   (required)  Resend API key
      CONTACT_TO       (required)  destination inbox for leads
-     CONTACT_FROM     (optional)  verified sender, e.g. "VELUM <no-reply@by-velum.com>"
+     CONTACT_FROM     (optional)  verified sender, e.g. "VELUM <hola@by-velum.com>"
    ===================================================================== */
 
 export default async function handler(req, res) {
@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   // TEMPORARY: token-gated test send to CONTACT_TO only; returns Resend's raw answer.
   if (req.method === "GET" && /[?&]diag=send\b/.test(req.url || "") && /[?&]t=a0a57d21245856fe9dcf124d\b/.test(req.url || "")) {
     const KEY = process.env.RESEND_API_KEY, TO = process.env.CONTACT_TO;
-    const FROM = process.env.CONTACT_FROM || "VELUM <no-reply@by-velum.com>";
+    const FROM = process.env.CONTACT_FROM || "VELUM <hola@by-velum.com>";
     if (!KEY || !TO) return res.status(500).json({ ok: false, error: "not_configured" });
     const r = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -57,7 +57,7 @@ export default async function handler(req, res) {
       configured: {
         RESEND_API_KEY: !!KEY,
         CONTACT_TO: mask(process.env.CONTACT_TO),
-        CONTACT_FROM: mask(process.env.CONTACT_FROM) || "(default) VELUM <no***@by-velum.com>",
+        CONTACT_FROM: mask(process.env.CONTACT_FROM) || "(default) VELUM <ho***@by-velum.com>",
       },
       resend,
       domain,
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
 
     const KEY = process.env.RESEND_API_KEY;
     const TO = process.env.CONTACT_TO;
-    const FROM = process.env.CONTACT_FROM || "VELUM <no-reply@by-velum.com>";
+    const FROM = process.env.CONTACT_FROM || "VELUM <hola@by-velum.com>";
     if (!KEY || !TO) {
       // Log which variable is missing (never the values) so it shows in Runtime Logs.
       console.error("not_configured", { RESEND_API_KEY: !!KEY, CONTACT_TO: !!TO, CONTACT_FROM: !!process.env.CONTACT_FROM });
