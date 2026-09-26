@@ -3,9 +3,12 @@
    Receives the contact form POST and sends the lead by email via Resend.
    Secrets/config come from environment variables (never in code):
      RESEND_API_KEY   (required)  Resend API key
-     CONTACT_TO       (required)  destination inbox for leads
+     CONTACT_TO       (required)  destination inbox(es) for leads, comma-separated
      CONTACT_FROM     (optional)  verified sender, e.g. "VELUM <hola@by-velum.com>"
    ===================================================================== */
+
+// CONTACT_TO may hold several recipients separated by commas.
+const recipients = (v) => String(v || "").split(",").map((x) => x.trim()).filter(Boolean);
 
 export default async function handler(req, res) {
   // TEMPORARY diagnostics: GET /api/contact?diag=1 reports whether config is
@@ -20,7 +23,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: FROM, to: [TO],
+        from: FROM, to: recipients(TO),
         subject: "Prueba de diagnóstico · formulario web VELUM",
         text: "Correo de prueba enviado desde /api/contact para verificar la entrega. Puedes borrarlo.",
       }),
@@ -56,7 +59,7 @@ export default async function handler(req, res) {
       ok: true,
       configured: {
         RESEND_API_KEY: !!KEY,
-        CONTACT_TO: mask(process.env.CONTACT_TO),
+        CONTACT_TO: recipients(process.env.CONTACT_TO).map(mask),
         CONTACT_FROM: mask(process.env.CONTACT_FROM) || "(default) VELUM <ho***@by-velum.com>",
       },
       resend,
@@ -121,7 +124,7 @@ export default async function handler(req, res) {
       headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
       body: JSON.stringify({
         from: FROM,
-        to: [TO],
+        to: recipients(TO),
         reply_to: email,
         subject: `Nuevo contacto · ${empresa}${sector ? " · " + sector : ""}`,
         html,
